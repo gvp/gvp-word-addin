@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<map fontName="ThamesM">
+  <entry from="&#x0066;" to="а̄" />
+  <entry from="&#x0046;" to="А̄" />
+  <entry from="&#x0061;" to="а̃" />
+  <entry from="&#x0041;" to="а̄̃" />
+  <entry from="&#x006C;" to="д̣" />
+  <entry from="&#x004C;" to="Д̣" />
+  <entry from="&#x0064;" to="е̄" />
+  <entry from="&#x0063;" to="е̃" />
+  <entry from="&#x0062;" to="ӣ" />
+  <entry from="&#x0042;" to="Ӣ" />
+  <entry from="&#x0071;" to="и̃" />
+  <entry from="&#x0051;" to="ӣ̃" />
+  <entry from="&#x006B;" to="л̣" />
+  <entry from="&#x004B;" to="Л̣" />
+  <entry from="&#x0076;" to="м̇" />
+  <entry from="&#x0056;" to="М̇" />
+  <entry from="&#x0079;" to="н̇" />
+  <entry from="&#x0059;" to="Н̇" />
+  <entry from="&#x0053;" to="н̃" obsolete="true" />
+  <entry from="&#x0075;" to="н̃" />
+  <entry from="&#x0055;" to="Н̃" />
+  <entry from="&#x0074;" to="н̣" />
+  <entry from="&#x0054;" to="Н̣" />
+  <entry from="&#x004A;" to="о̄" />
+  <entry from="&#x006A;" to="о̃" />
+  <entry from="&#x0043;" to="о̄̃" />
+  <entry from="&#x0072;" to="р̇" />
+  <entry from="&#x0068;" to="р̣" />
+  <entry from="&#x0048;" to="Р̣" />
+  <entry from="&#x0052;" to="р̣̄" />
+  <entry from="&#x0067;" to="р̣̄" />
+  <entry from="&#x0047;" to="Р̣̄" />
+  <entry from="&#x006E;" to="т̣" />
+  <entry from="&#x004E;" to="Т̣" />
+  <entry from="&#x0065;" to="ӯ" />
+  <entry from="&#x0045;" to="Ӯ" />
+  <entry from="&#x0057;" to="у̃" obsolete="true" />
+  <entry from="&#x007A;" to="у̃" />
+  <entry from="&#x005A;" to="ӯ̃" />
+  <entry from="&#x007B;" to="х̣" />
+  <entry from="&#x0058;" to="Х̣" />
+  <entry from="&#x0069;" to="ш́" />
+  <entry from="&#x0049;" to="Ш́" />
+  <entry from="&#x006F;" to="ш̣" />
+  <entry from="&#x004F;" to="Ш̣" />
+  <entry from="&#x0044;" to="э̃" />
+</map>
