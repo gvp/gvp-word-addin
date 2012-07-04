@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Xml.Linq;
 using StringDictionary = System.Collections.Generic.IDictionary<System.String, System.String>;
 using Word = Microsoft.Office.Interop.Word;
-using System.Diagnostics;
-using System.Text;
 
 namespace VedicEditor
 {
@@ -68,12 +67,12 @@ namespace VedicEditor
 
         }
 
-        private Word.Words GetWordsToProceed()
+        private Word.Range GetRangeToOperate()
         {
             if (Application.Selection.Type == Word.WdSelectionType.wdSelectionNormal)
-                return Application.Selection.Words;
+                return Application.Selection.Range;
             else
-                return Application.ActiveDocument.Words;
+                return Application.ActiveDocument.Content;
         }
 
         public void Transform()
@@ -84,13 +83,7 @@ namespace VedicEditor
             stopwatch.Start();
             try
             {
-                var words = GetWordsToProceed();
-                for (int n = 1; n <= words.Count; n++)
-                {
-                    var word = words[n];
-                    if (ProcessRange(word))
-                        word.Font.Name = toFontName;
-                }
+                Transform(GetRangeToOperate());
             }
             finally
             {
@@ -100,64 +93,37 @@ namespace VedicEditor
             }
         }
 
-        private bool ProcessRange(Word.Range range)
+        private void Transform(Word.Range range)
         {
+            var fontName = range.Font.Name;
+
+            /// Test if the whole range has the only font name.
+            if (String.IsNullOrEmpty(fontName))
+            {
+                var subranges = range.GetSubRanges();
+                foreach (var subrange in subranges)
+                    Transform(subrange);
+                return;
+            }
+
             CharacterTransformation transformation;
-            //var fontName = range.Font.Name;
-            //if (!String.IsNullOrEmpty(fontName))
-            //{
-            //    if (fontName == toFontName || !transformations.TryGetValue(fontName, out transformation))
-            //        return false;
+            if (fontName == toFontName || !transformations.TryGetValue(fontName, out transformation))
+                return;
 
-            //    var text = range.Text;
-            //    var builder = new StringBuilder(text.Length);
-            //    foreach (var character in text)
-            //        builder.Append(transformation(character.ToString()));
-            //    range.Text = builder.ToString();
-            //    return true;
-            //}
-
-            var modified = false;
             for (int pos = 1; pos <= range.Characters.Count; pos++)
             {
                 var character = range.Characters[pos];
-                var fontName = character.Font.Name;
-                if (fontName == toFontName || !transformations.TryGetValue(fontName, out transformation))
+                var originalText = character.Text;
+                var transformedText = transformation(originalText);
+                if (transformedText == originalText)
                     continue;
-                character.Text = transformation(character.Text);
-                modified = true;
+
+                character.Text = transformedText;
+                /// Correct position for cases where transformed text is longer.
+                pos += transformedText.Length - originalText.Length;
             }
-            return modified;
+            range.Font.Name = toFontName;
         }
-
-        //private void TransformUsingFind()
-        //{
-        //    var find = Application.Selection.Find;
-        //    find.ClearFormatting();
-        //    find.Forward = true;
-        //    //find.Wrap = Word.WdFindWrap.wdFindContinue;
-        //    if (!String.IsNullOrWhiteSpace(fromFontName))
-        //        find.Font.Name = fromFontName;
-        //    find.Execute();
-        //    while (find.Found)
-        //    {
-        //        var range = Application.Selection.Range;
-        //        var text = range.Text;
-        //        var builder = new StringBuilder();
-        //        foreach (var character in text)
-        //            builder.Append(TransformCharacter(character.ToString()));
-
-        //        text = builder.ToString();
-        //        //for (int pos = 1; pos <= range.Characters.Count; pos++)
-        //        //{
-        //        //    var character = range.Characters[pos];
-        //        //    character.Text = TransformCharacter(character.Text);
-        //        //}
-        //        range.Text = text;
-        //        range.Font.Name = toFontName;
-        //        find.Execute();
-        //    }
-        //}
 
         private static StringDictionary ReadMap(string resourceName)
         {
@@ -169,4 +135,24 @@ namespace VedicEditor
                 .ToDictionary(e => e.Attribute("from").Value.Normalize(), e => e.Attribute("to").Value.Normalize());
         }
     }
+
+    public static class WordExtensions
+    {
+        public static IEnumerable<Word.Range> GetSubRanges(this Word.Range range)
+        {
+            if (range.Paragraphs.Count > 1)
+                return
+                    from Word.Paragraph paragraph in range.Paragraphs
+                    select paragraph.Range;
+
+            if (range.Sentences.Count > 1)
+                return range.Sentences.OfType<Word.Range>();
+
+            if (range.Words.Count > 1)
+                return range.Words.OfType<Word.Range>();
+
+            return range.Characters.OfType<Word.Range>();
+        }
+    }
+
 }
