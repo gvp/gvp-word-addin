@@ -262,6 +262,8 @@
     <Content Include="Resources\ThamesM.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Resources\Amita Times.xml" />
+    <Content Include="Resources\Balaram.xml" />
   </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

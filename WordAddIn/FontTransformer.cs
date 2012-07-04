@@ -48,7 +48,7 @@ namespace VedicEditor
                 };
         }
 
-        public static readonly string[] LatinFonts = { "Rama Garamond Plus", "Balaram" };
+        public static readonly string[] LatinFonts = { "Rama Garamond Plus", "Balaram", "Amita Times" };
         public static readonly string[] CyrillicFonts = { "Amita Times Cyr", "ThamesM" };
 
         public static IEnumerable<String> Fonts

@@ -63,6 +63,29 @@ namespace VedicEditor.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;map&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C4;&quot; to=&quot;Ā&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E4;&quot; to=&quot;ā&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00CE;&quot; to=&quot;Ã&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E3;&quot; to=&quot;ã&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C3;&quot; to=&quot;ā̃&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00D2;&quot; to=&quot;Ḍ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00F2;&quot; to=&quot;ḍ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E1;&quot; to=&quot;ē&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00FD;&quot; to=&quot;ẽ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C1;&quot; to=&quot;ē̃&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00D9;&quot; to=&quot;Ḥ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00F9;&quot; to=&quot;ḥ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string Amita_Times {
+            get {
+                return ResourceManager.GetString("Amita Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;map&gt;
         ///  &lt;entry from=&quot;&amp;#x0406;&quot; to=&quot;А̄&quot; /&gt;
         ///  &lt;entry from=&quot;&amp;#x2026;&quot; to=&quot;а̄&quot; /&gt;
         ///  &lt;entry from=&quot;&amp;#x0402;&quot; to=&quot;а̃&quot; /&gt;
@@ -80,6 +103,29 @@ namespace VedicEditor.Properties {
         internal static string Amita_Times_Cyr {
             get {
                 return ResourceManager.GetString("Amita Times Cyr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;map&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C4;&quot; to=&quot;Ā&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E4;&quot; to=&quot;ā&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E3;&quot; to=&quot;ã&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00D2;&quot; to=&quot;Ḍ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00F2;&quot; to=&quot;ḍ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00D9;&quot; to=&quot;Ḥ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00F9;&quot; to=&quot;ḥ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C9;&quot; to=&quot;Ī&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E9;&quot; to=&quot;ī&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00FB;&quot; to=&quot;l̐&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00FF;&quot; to=&quot;ḷ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C0;&quot; to=&quot;Ṁ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00 [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string Balaram {
+            get {
+                return ResourceManager.GetString("Balaram", resourceCulture);
             }
         }
         
