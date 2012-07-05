@@ -130,6 +130,29 @@ namespace VedicEditor.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;map&gt;
+        ///  &lt;entry from=&quot;&amp;#x00A1;&quot; to=&quot;ā&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00A2;&quot; to=&quot;ī&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00A3;&quot; to=&quot;ū&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00A4;&quot; to=&quot;ṛ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00A5;&quot; to=&quot;ṝ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00A7;&quot; to=&quot;ṙ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00AB;&quot; to=&quot;ḻ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00AC;&quot; to=&quot;ḻ̄&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00AE;&quot; to=&quot;ē&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00B0;&quot; to=&quot;ō&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00B4;&quot; to=&quot;ṅ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00B5;&quot; to=&quot;ñ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string DVRoman_TTSurekh {
+            get {
+                return ResourceManager.GetString("DVRoman-TTSurekh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Конечный шрифт.
         /// </summary>
         internal static string EndFont {
@@ -193,6 +216,29 @@ namespace VedicEditor.Properties {
         internal static string Rama_Garamond_Plus {
             get {
                 return ResourceManager.GetString("Rama Garamond Plus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;map&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C4;&quot; to=&quot;Ā&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E4;&quot; to=&quot;ā&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E3;&quot; to=&quot;ã&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00D2;&quot; to=&quot;Ḍ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00F2;&quot; to=&quot;ḍ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00D9;&quot; to=&quot;Ḥ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00F9;&quot; to=&quot;ḥ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C9;&quot; to=&quot;Ī&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E9;&quot; to=&quot;ī&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00FB;&quot; to=&quot;l̐&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00FF;&quot; to=&quot;ḷ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C0;&quot; to=&quot;Ṁ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00 [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string ScaSeries {
+            get {
+                return ResourceManager.GetString("ScaSeries", resourceCulture);
             }
         }
         

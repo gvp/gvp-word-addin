@@ -127,6 +127,9 @@
   <data name="Balaram" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\balaram.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="DVRoman-TTSurekh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\dvroman-ttsurekh.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="EndFont" xml:space="preserve">
     <value>Конечный шрифт</value>
   </data>
@@ -138,6 +141,9 @@
   </data>
   <data name="Rama Garamond Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\rama garamond plus.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="ScaSeries" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\scaseries.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="ThamesM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\thamesm.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

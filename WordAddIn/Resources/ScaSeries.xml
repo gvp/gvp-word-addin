@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<map>
+  <entry from="&#x00C4;" to="Ā" />
+  <entry from="&#x00E4;" to="ā" />
+  <entry from="&#x00E3;" to="ã" />
+  <entry from="&#x00D2;" to="Ḍ" />
+  <entry from="&#x00F2;" to="ḍ" />
+  <entry from="&#x00D9;" to="Ḥ" />
+  <entry from="&#x00F9;" to="ḥ" />
+  <entry from="&#x00C9;" to="Ī" />
+  <entry from="&#x00E9;" to="ī" />
+  <entry from="&#x00FB;" to="l̐" />
+  <entry from="&#x00FF;" to="ḷ" />
+  <entry from="&#x00C0;" to="Ṁ" />
+  <entry from="&#x00E0;" to="ṁ" />
+  <entry from="&#x25CA;" to="m̐" />
+  <entry from="&#x00CC;" to="Ṅ" />
+  <entry from="&#x00EC;" to="ṅ" />
+  <entry from="&#x00CF;" to="Ñ" />
+  <entry from="&#x00EF;" to="ñ" />
+  <entry from="&#x00CB;" to="Ṇ" />
+  <entry from="&#x00EB;" to="ṇ" />
+  <entry from="&#x00D5;" to="Õ" />
+  <entry from="&#x00C5;" to="Ṛ" />
+  <entry from="&#x00E5;" to="ṛ" />
+  <entry from="&#x00E8;" to="ṝ" />
+  <entry from="&#x00C7;" to="Ś" />
+  <entry from="&#x00E7;" to="ś" />
+  <entry from="&#x00D1;" to="Ṣ" />
+  <entry from="&#x00F1;" to="ṣ" />
+  <entry from="&#x00D6;" to="Ṭ" />
+  <entry from="&#x00F6;" to="ṭ" />
+  <entry from="&#x00DC;" to="Ū" />
+  <entry from="&#x00FC;" to="ū" />
+</map>

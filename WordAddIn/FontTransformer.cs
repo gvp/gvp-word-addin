@@ -47,7 +47,9 @@ namespace VedicEditor
                 };
         }
 
-        public static readonly string[] LatinFonts = { "Rama Garamond Plus", "Balaram", "Amita Times" };
+        public static readonly string[] LatinFonts = { "Rama Garamond Plus", "Balaram", "Amita Times", "DVRoman-TTSurekh"
+                                                         , "ScaBenguit", "ScaCheltenham", "ScaFelixTitling", "ScaFrizQuadrata", "ScaGoudy", "ScaHelvetica", "ScaKorinna", "ScaOptima", "ScaPalatino", "ScaSabon", "ScaTimes"
+                                                     };
         public static readonly string[] CyrillicFonts = { "Amita Times Cyr", "ThamesM" };
 
         public static IEnumerable<String> Fonts
@@ -125,8 +127,9 @@ namespace VedicEditor
             range.Font.Name = toFontName;
         }
 
-        private static StringDictionary ReadMap(string resourceName)
+        private static StringDictionary ReadMap(string fontName)
         {
+            var resourceName = fontName.StartsWith("Sca") ? "ScaSeries" : fontName;
             var resource = Properties.Resources.ResourceManager.GetString(resourceName);
             if (resource == null)
                 return null;
