@@ -69,14 +69,6 @@ namespace VedicEditor
 
         }
 
-        private Word.Range GetRangeToOperate()
-        {
-            if (Application.Selection.Type == Word.WdSelectionType.wdSelectionNormal)
-                return Application.Selection.Range;
-            else
-                return Application.ActiveDocument.Content;
-        }
-
         public void Transform()
         {
             Application.UndoRecord.StartCustomRecord("Преобразование шрифта");
@@ -85,7 +77,10 @@ namespace VedicEditor
             stopwatch.Start();
             try
             {
-                Transform(GetRangeToOperate());
+                var range = Application.Selection.Range;
+                Transform(range);
+                range.Font.Name = toFontName;
+                range.Select();
             }
             finally
             {
@@ -124,7 +119,6 @@ namespace VedicEditor
                 /// Correct position for cases where transformed text is longer.
                 pos += transformedText.Length - originalText.Length;
             }
-            range.Font.Name = toFontName;
         }
 
         private static StringDictionary ReadMap(string fontName)
