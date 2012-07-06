@@ -148,9 +148,6 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="FontConverter">
-      <HintPath>..\FontConverter\bin\Debug\FontConverter.exe</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -207,15 +204,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TransliterationConverter.xaml.cs">
-      <DependentUpon>TransliterationConverter.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TransliterationConverterWrapper.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TransliterationConverterWrapper.Designer.cs">
-      <DependentUpon>TransliterationConverterWrapper.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -226,8 +214,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TransliterationConverterWrapper.resx">
-      <DependentUpon>TransliterationConverterWrapper.cs</DependentUpon>
+    <EmbeddedResource Include="Ribbon.resx">
+      <DependentUpon>Ribbon.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -236,6 +224,12 @@
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Ribbon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon.Designer.cs">
+      <DependentUpon>Ribbon.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
@@ -250,12 +244,6 @@
     <None Include="VedicFontConverter_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="TransliterationConverter.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\Amita Times Cyr.xml" />
     <Content Include="Resources\Rama Garamond Plus.xml" />
     <Content Include="Resources\Lat2Cyr.xml" />
@@ -267,6 +255,7 @@
     <Content Include="Resources\ScaSeries.xml" />
     <Content Include="Resources\DVRoman-TTSurekh.xml" />
   </ItemGroup>
+  <ItemGroup />
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Include additional build rules for an Office application add-in. -->

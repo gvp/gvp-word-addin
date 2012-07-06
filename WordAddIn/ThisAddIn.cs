@@ -1,24 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Linq;
-using Word = Microsoft.Office.Interop.Word;
-using Office = Microsoft.Office.Core;
-using Microsoft.Office.Tools.Word;
+﻿using System.Linq;
 
 namespace VedicEditor
 {
     public partial class ThisAddIn
     {
-        private TransliterationConverterWrapper converterControl;
-        private Microsoft.Office.Tools.CustomTaskPane converterTaskPane;
-
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
-            converterControl = new TransliterationConverterWrapper();
-            converterTaskPane = this.CustomTaskPanes.Add(converterControl, "Transliteration Converter");
-            converterTaskPane.Visible = true;
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
