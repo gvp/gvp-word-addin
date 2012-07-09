@@ -2,16 +2,17 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security;
+using System.Resources;
 
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Отредактируйте эти значения атрибутов, чтобы изменить сведения,
 // сопоставленные со сборкой.
-[assembly: AssemblyTitle("VedicEditorAddIn")]
+[assembly: AssemblyTitle("Ведический редактор")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VedicEditorAddIn")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyCompany("Gaudia Vedanta Publications")]
+[assembly: AssemblyProduct("VedicEditor")]
+[assembly: AssemblyCopyright("Copyright ©GVP,  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -35,3 +36,4 @@ using System.Security;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguageAttribute("ru-RU")]
