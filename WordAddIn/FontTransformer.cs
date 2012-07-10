@@ -15,37 +15,59 @@ namespace VedicEditor
         private readonly IDictionary<String, CharacterTransformation> transformations = new Dictionary<String, CharacterTransformation>(4);
 
         private readonly String toFontName;
+        private readonly StringDictionary toMap;
 
         public FontTransformer(String toFontName)
         {
             this.toFontName = toFontName ?? Application.ActiveDocument.Styles[Word.WdBuiltinStyle.wdStyleDefaultParagraphFont].Font.Name;
 
-            var toMap = ReadMap(toFontName);
+            toMap = ReadMap(toFontName);
             if (toMap != null)
                 toMap = toMap.ToLookup(x => x.Value, x => x.Key).ToDictionary(x => x.Key, x => x.First());
-
-            var lat2cyr = ReadMap("Lat2Cyr");
-            foreach (var fontName in LatinFonts)
-                transformations.Add(fontName, GetTransformation(ReadMap(fontName), lat2cyr, toMap));
-
-            foreach (var fontName in CyrillicFonts)
-                transformations.Add(fontName, GetTransformation(ReadMap(fontName), toMap));
         }
 
-        private static CharacterTransformation GetTransformation(params StringDictionary[] maps)
+        private IEnumerable<StringDictionary> GetMapsFor(String fontName)
         {
-            maps = maps.Where(m => m != null).ToArray();
-            return c =>
-                {
-                    string value;
+            if (fontName != toFontName)
+            {
+                var fromMap = ReadMap(fontName);
+                if (fromMap != null)
+                    yield return fromMap;
 
-                    foreach (var map in maps)
-                        if (map.TryGetValue(c, out value))
-                            c = value;
+                if (LatinFonts.Contains(fontName))
+                    yield return Lat2Cyr;
+            }
 
-                    return c;
-                };
+            if (toMap != null)
+                yield return toMap;
         }
+
+        private CharacterTransformation CreateTransformationFor(String fontName)
+        {
+            var maps = GetMapsFor(fontName).ToArray(); ///Important to materialize enumerable.
+            return c =>
+            {
+                string value;
+
+                foreach (var map in maps)
+                    if (map.TryGetValue(c, out value))
+                        c = value;
+
+                return c;
+            };
+        }
+
+        private CharacterTransformation GetTransformation(String fontName)
+        {
+            CharacterTransformation transformation;
+            if (transformations.TryGetValue(fontName, out transformation))
+                return transformation;
+
+            transformations.Add(fontName, transformation = CreateTransformationFor(fontName));
+            return transformation;
+        }
+
+        private static readonly StringDictionary Lat2Cyr = ReadMap("Lat2Cyr");
 
         public static readonly string[] LatinFonts = { "Rama Garamond Plus", "Balaram", "Amita Times", "DVRoman-TTSurekh"
                                                          , "ScaBenguit", "ScaCheltenham", "ScaFelixTitling", "ScaFrizQuadrata", "ScaGoudy", "ScaHelvetica", "ScaKorinna", "ScaOptima", "ScaPalatino", "ScaSabon", "ScaTimes"
@@ -103,8 +125,8 @@ namespace VedicEditor
                 return;
             }
 
-            CharacterTransformation transformation;
-            if (fontName == toFontName || !transformations.TryGetValue(fontName, out transformation))
+            var transformation = GetTransformation(fontName);
+            if (transformation == null)
                 return;
 
             for (int pos = 1; pos <= range.Characters.Count; pos++)
