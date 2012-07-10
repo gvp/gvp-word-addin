@@ -10,18 +10,11 @@ namespace VedicEditor
     {
         private void Ribbon_Load(object sender, RibbonUIEventArgs e)
         {
-            foreach (var fontName in FontTransformer.CyrillicFonts)
-            {
-                var item = Factory.CreateRibbonDropDownItem();
-                item.Label = fontName;
-                dropDownFont.Items.Add(item);
-            }
-            dropDownFont.SelectedItem = dropDownFont.Items.Where(x => x.Label == "ThamesM").FirstOrDefault();
         }
 
-        private void buttonLaunch_Click(object sender, RibbonControlEventArgs e)
+        private void buttonConvertToThamesM_Click(object sender, RibbonControlEventArgs e)
         {
-            var transformer = new FontTransformer(dropDownFont.SelectedItem.Label);
+            var transformer = new FontTransformer("ThamesM");
             transformer.Transform();
         }
     }

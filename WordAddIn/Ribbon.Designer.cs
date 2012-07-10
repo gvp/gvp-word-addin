@@ -35,41 +35,34 @@
         private void InitializeComponent()
         {
             this.tabVedicEditor = this.Factory.CreateRibbonTab();
-            this.group1 = this.Factory.CreateRibbonGroup();
-            this.dropDownFont = this.Factory.CreateRibbonDropDown();
-            this.buttonLaunch = this.Factory.CreateRibbonButton();
+            this.groupDiacrytics = this.Factory.CreateRibbonGroup();
+            this.buttonConvertToThamesM = this.Factory.CreateRibbonButton();
             this.tabVedicEditor.SuspendLayout();
-            this.group1.SuspendLayout();
+            this.groupDiacrytics.SuspendLayout();
             // 
             // tabVedicEditor
             // 
-            this.tabVedicEditor.Groups.Add(this.group1);
+            this.tabVedicEditor.Groups.Add(this.groupDiacrytics);
             this.tabVedicEditor.Label = "Ведический редактор";
             this.tabVedicEditor.Name = "tabVedicEditor";
             // 
-            // group1
+            // groupDiacrytics
             // 
-            this.group1.Items.Add(this.dropDownFont);
-            this.group1.Items.Add(this.buttonLaunch);
-            this.group1.Label = "Преобразование шрифтов";
-            this.group1.Name = "group1";
+            this.groupDiacrytics.Items.Add(this.buttonConvertToThamesM);
+            this.groupDiacrytics.Label = "Диакритические знаки";
+            this.groupDiacrytics.Name = "groupDiacrytics";
             // 
-            // dropDownFont
+            // buttonConvertToThamesM
             // 
-            this.dropDownFont.Label = "Желаемый шрифт";
-            this.dropDownFont.Name = "dropDownFont";
-            this.dropDownFont.ShowImage = true;
-            this.dropDownFont.ShowItemImage = false;
-            this.dropDownFont.ShowLabel = false;
-            this.dropDownFont.SizeString = "Желаемый шрифт";
-            // 
-            // buttonLaunch
-            // 
-            this.buttonLaunch.Label = "Преобразовать";
-            this.buttonLaunch.Name = "buttonLaunch";
-            this.buttonLaunch.OfficeImageId = "ReplaceDialog";
-            this.buttonLaunch.ShowImage = true;
-            this.buttonLaunch.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonLaunch_Click);
+            this.buttonConvertToThamesM.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.buttonConvertToThamesM.Label = "Привести к ThamesM";
+            this.buttonConvertToThamesM.Name = "buttonConvertToThamesM";
+            this.buttonConvertToThamesM.OfficeImageId = "ReplaceDialog";
+            this.buttonConvertToThamesM.ScreenTip = "Привести к шрифту ThamesM";
+            this.buttonConvertToThamesM.ShowImage = true;
+            this.buttonConvertToThamesM.SuperTip = "Преобразование выделенного текста так, чтобы все символы с диакритическими знакам" +
+    "и корректно отображались в шрифте ThamesM";
+            this.buttonConvertToThamesM.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonConvertToThamesM_Click);
             // 
             // Ribbon
             // 
@@ -79,17 +72,16 @@
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.Ribbon_Load);
             this.tabVedicEditor.ResumeLayout(false);
             this.tabVedicEditor.PerformLayout();
-            this.group1.ResumeLayout(false);
-            this.group1.PerformLayout();
+            this.groupDiacrytics.ResumeLayout(false);
+            this.groupDiacrytics.PerformLayout();
 
         }
 
         #endregion
 
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tabVedicEditor;
-        internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
-        internal Microsoft.Office.Tools.Ribbon.RibbonDropDown dropDownFont;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonLaunch;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupDiacrytics;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonConvertToThamesM;
     }
 
     partial class ThisRibbonCollection
