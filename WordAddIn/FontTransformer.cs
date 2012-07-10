@@ -119,7 +119,7 @@ namespace VedicEditor
             /// Test if the whole range has the only font name.
             if (String.IsNullOrEmpty(fontName) && range.Characters.Count > 1)
             {
-                var subranges = range.GetSubRanges();
+                var subranges = range.GetSubRanges().ToArray();
                 foreach (var subrange in subranges)
                     Transform(subrange);
                 return;
