@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
+using System.Text;
 using System.Xml.Linq;
 using StringDictionary = System.Collections.Generic.IDictionary<System.String, System.String>;
 using Word = Microsoft.Office.Interop.Word;
@@ -10,10 +12,6 @@ namespace VedicEditor
 {
     class FontTransformer
     {
-        private delegate String CharacterTransformation(String character);
-
-        private readonly IDictionary<String, CharacterTransformation> transformations = new Dictionary<String, CharacterTransformation>(4);
-
         private readonly String toFontName;
         private readonly StringDictionary toMap;
 
@@ -30,7 +28,7 @@ namespace VedicEditor
         {
             if (fontName != toFontName)
             {
-                var fromMap = ReadMap(fontName);
+                var fromMap = GetMap(fontName);
                 if (fromMap != null)
                     yield return fromMap;
 
@@ -42,45 +40,12 @@ namespace VedicEditor
                 yield return toMap;
         }
 
-        private CharacterTransformation CreateTransformationFor(String fontName)
-        {
-            var maps = GetMapsFor(fontName).ToArray(); ///Important to materialize enumerable.
-            return c =>
-            {
-                string value;
-
-                foreach (var map in maps)
-                    if (map.TryGetValue(c, out value))
-                        c = value;
-
-                return c;
-            };
-        }
-
-        private CharacterTransformation GetTransformation(String fontName)
-        {
-            CharacterTransformation transformation;
-            if (transformations.TryGetValue(fontName, out transformation))
-                return transformation;
-
-            transformations.Add(fontName, transformation = CreateTransformationFor(fontName));
-            return transformation;
-        }
-
         private static readonly StringDictionary Lat2Cyr = ReadMap("Lat2Cyr");
 
         public static readonly string[] LatinFonts = { "Rama Garamond Plus", "Balaram", "Amita Times", "DVRoman-TTSurekh"
                                                          , "ScaBenguit", "ScaCheltenham", "ScaFelixTitling", "ScaFrizQuadrata", "ScaGoudy", "ScaHelvetica", "ScaKorinna", "ScaOptima", "ScaPalatino", "ScaSabon", "ScaTimes"
                                                      };
         public static readonly string[] CyrillicFonts = { "Amita Times Cyr", "ThamesM" };
-
-        public static IEnumerable<String> Fonts
-        {
-            get
-            {
-                return LatinFonts.Union(CyrillicFonts);
-            }
-        }
 
         private Word.Application Application
         {
@@ -114,33 +79,63 @@ namespace VedicEditor
 
         private void Transform(Word.Range range)
         {
-            var fontName = range.Font.Name;
-
-            /// Test if the whole range has the only font name.
-            if (String.IsNullOrEmpty(fontName) && range.Characters.Count > 1)
-            {
-                var subranges = range.GetSubRanges().ToArray();
-                foreach (var subrange in subranges)
-                    Transform(subrange);
-                return;
-            }
-
-            var transformation = GetTransformation(fontName);
-            if (transformation == null)
-                return;
-
             for (int pos = 1; pos <= range.Characters.Count; pos++)
             {
                 var character = range.Characters[pos];
+                var fontName = character.Font.Name;
+                if (fontName == toFontName)
+                    continue;
+
                 var originalText = character.Text;
-                var transformedText = transformation(originalText);
+                var transformedText = originalText.Normalize(NormalizationForm.FormD);
+
+                var fromMap = GetMap(fontName);
+                if (fromMap != null)
+                    transformedText = Transform(transformedText, fromMap);
+
+                if (CyrillicFonts.Contains(toFontName) && transformedText.First().IsBasicLatin())
+                {
+                    transformedText = Transform(transformedText, Lat2Cyr);
+
+                    /// Replace Cyrillic 'е' with Cyrillic 'э' in the beginning of the words
+                    if (transformedText.First() == '\x0435')
+                    {
+                        var word = character.Duplicate;
+                        word.StartOf(Word.WdUnits.wdWord, Word.WdMovementType.wdExtend);
+                        if (word.Start == character.Start)
+                            transformedText = '\x044D' + transformedText.Substring(1);
+                    }
+                }
+
+                transformedText = Transform(transformedText, toMap).Normalize(NormalizationForm.FormC);
+
                 if (transformedText == originalText)
                     continue;
 
                 character.Text = transformedText;
                 /// Correct position for cases where transformed text is longer.
-                pos += transformedText.Length - originalText.Length;
+                pos += new StringInfo(transformedText).LengthInTextElements - new StringInfo(originalText).LengthInTextElements;
             }
+        }
+
+        private static String Transform(String character, StringDictionary map)
+        {
+            string result;
+            if (map.TryGetValue(character, out result))
+                return result;
+            return character;
+        }
+
+        private readonly IDictionary<String, StringDictionary> maps = new Dictionary<String, StringDictionary>(4);
+
+        private StringDictionary GetMap(String name)
+        {
+            StringDictionary map;
+            if (maps.TryGetValue(name, out map))
+                return map;
+            map = ReadMap(name);
+            maps.Add(name, map);
+            return map;
         }
 
         private static StringDictionary ReadMap(string fontName)
@@ -151,27 +146,7 @@ namespace VedicEditor
                 return null;
             return XElement.Parse(resource)
                 .Elements("entry").Where(x => !x.Attributes("obsolete").Any())
-                .ToDictionary(e => e.Attribute("from").Value.Normalize(), e => e.Attribute("to").Value.Normalize());
+                .ToDictionary(e => e.Attribute("from").Value.Normalize(NormalizationForm.FormD), e => e.Attribute("to").Value.Normalize(NormalizationForm.FormD));
         }
     }
-
-    public static class WordExtensions
-    {
-        public static IEnumerable<Word.Range> GetSubRanges(this Word.Range range)
-        {
-            if (range.Paragraphs.Count > 1)
-                return
-                    from Word.Paragraph paragraph in range.Paragraphs
-                    select paragraph.Range;
-
-            if (range.Sentences.Count > 1)
-                return range.Sentences.OfType<Word.Range>();
-
-            if (range.Words.Count > 1)
-                return range.Words.OfType<Word.Range>();
-
-            return range.Characters.OfType<Word.Range>();
-        }
-    }
-
 }
