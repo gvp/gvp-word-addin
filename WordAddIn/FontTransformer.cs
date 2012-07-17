@@ -65,6 +65,8 @@ namespace VedicEditor
             try
             {
                 var range = Application.Selection.Range;
+                if (range.Characters.Count == 0)
+                    return;
                 Transform(range);
                 range.Font.Name = toFontName;
                 range.Select();
@@ -79,9 +81,10 @@ namespace VedicEditor
 
         private void Transform(Word.Range range)
         {
+            Word.Range character = null;
             for (int pos = 1; pos <= range.Characters.Count; pos++)
             {
-                var character = range.Characters[pos];
+                character = range.Characters[pos];
                 var fontName = character.Font.Name;
                 if (fontName == toFontName)
                     continue;
@@ -116,6 +119,9 @@ namespace VedicEditor
                 /// Correct position for cases where transformed text is longer.
                 pos += new StringInfo(transformedText).LengthInTextElements - new StringInfo(originalText).LengthInTextElements;
             }
+
+            /// Address an inappropriate behaviour when changing the last character makes range exclude it.
+            range.End = character.End;
         }
 
         private static String Transform(String character, StringDictionary map)
