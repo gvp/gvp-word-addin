@@ -260,6 +260,7 @@
     <Content Include="Resources\Balaram.xml" />
     <Content Include="Resources\ScaSeries.xml" />
     <Content Include="Resources\DVRoman-TTSurekh.xml" />
+    <Content Include="Resources\GVPalatino.xml" />
   </ItemGroup>
   <ItemGroup />
   <!-- Include the build rules for a C# project. -->

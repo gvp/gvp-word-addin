@@ -162,6 +162,29 @@ namespace VedicEditor.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;map&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C4;&quot; to=&quot;Ā&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E4;&quot; to=&quot;ā&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C2;&quot; to=&quot;Ã&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E2;&quot; to=&quot;ã&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00D3;&quot; to=&quot;ā̃&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00DA;&quot; to=&quot;Ā̃&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00D2;&quot; to=&quot;Ḍ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00F2;&quot; to=&quot;ḍ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C6;&quot; to=&quot;Ẽ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E6;&quot; to=&quot;ẽ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00D9;&quot; to=&quot;Ḥ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00F9;&quot; to=&quot;ḥ&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string GVPalatino {
+            get {
+                return ResourceManager.GetString("GVPalatino", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Исходный шрифт.
         /// </summary>
         internal static string InitialFont {

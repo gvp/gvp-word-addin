@@ -43,6 +43,7 @@ namespace VedicEditor
         private static readonly StringDictionary Lat2Cyr = ReadMap("Lat2Cyr");
 
         public static readonly string[] LatinFonts = { "Rama Garamond Plus", "Balaram", "Amita Times", "DVRoman-TTSurekh"
+                                                         , "GVPalatino"
                                                          , "ScaBenguit", "ScaCheltenham", "ScaFelixTitling", "ScaFrizQuadrata", "ScaGoudy", "ScaHelvetica", "ScaKorinna", "ScaOptima", "ScaPalatino", "ScaSabon", "ScaTimes"
                                                      };
         public static readonly string[] CyrillicFonts = { "Amita Times Cyr", "ThamesM" };
