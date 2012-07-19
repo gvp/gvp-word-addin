@@ -261,6 +261,7 @@
     <Content Include="Resources\ScaSeries.xml" />
     <Content Include="Resources\DVRoman-TTSurekh.xml" />
     <Content Include="Resources\GVPalatino.xml" />
+    <Content Include="Resources\ThamesSanskrit.xml" />
   </ItemGroup>
   <ItemGroup />
   <!-- Include the build rules for a C# project. -->

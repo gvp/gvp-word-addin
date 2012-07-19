@@ -268,5 +268,28 @@ namespace VedicEditor.Properties {
                 return ResourceManager.GetString("ThamesM", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;map fontName=&quot;ThamesSanskrit&quot;&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E0;&quot; to=&quot;а&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C0;&quot; to=&quot;А&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x0066;&quot; to=&quot;а̄&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x0046;&quot; to=&quot;А̄&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E1;&quot; to=&quot;б&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C1;&quot; to=&quot;Б&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E2;&quot; to=&quot;в&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C2;&quot; to=&quot;В&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E3;&quot; to=&quot;г&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C3;&quot; to=&quot;Г&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00E4;&quot; to=&quot;д&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x00C4;&quot; to=&quot;Д&quot; /&gt;
+        ///  &lt;e [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string ThamesSanskrit {
+            get {
+                return ResourceManager.GetString("ThamesSanskrit", resourceCulture);
+            }
+        }
     }
 }
