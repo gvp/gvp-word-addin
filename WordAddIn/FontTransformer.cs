@@ -24,29 +24,7 @@ namespace VedicEditor
                 toMap = toMap.ToLookup(x => x.Value, x => x.Key).ToDictionary(x => x.Key, x => x.First());
         }
 
-        private IEnumerable<StringDictionary> GetMapsFor(String fontName)
-        {
-            if (fontName != toFontName)
-            {
-                var fromMap = GetMap(fontName);
-                if (fromMap != null)
-                    yield return fromMap;
-
-                if (LatinFonts.Contains(fontName))
-                    yield return Lat2Cyr;
-            }
-
-            if (toMap != null)
-                yield return toMap;
-        }
-
         private static readonly StringDictionary Lat2Cyr = ReadMap("Lat2Cyr");
-
-        public static readonly string[] LatinFonts = { "Rama Garamond Plus", "Balaram", "Amita Times", "DVRoman-TTSurekh"
-                                                         , "GVPalatino"
-                                                         , "ScaBenguit", "ScaCheltenham", "ScaFelixTitling", "ScaFrizQuadrata", "ScaGoudy", "ScaHelvetica", "ScaKorinna", "ScaOptima", "ScaPalatino", "ScaSabon", "ScaTimes"
-                                                     };
-        public static readonly string[] CyrillicFonts = { "Amita Times Cyr", "ThamesM" };
 
         private Word.Application Application
         {
@@ -97,7 +75,7 @@ namespace VedicEditor
                 if (fromMap != null)
                     transformedText = Transform(transformedText, fromMap);
 
-                if (CyrillicFonts.Contains(toFontName) && transformedText.First().IsBasicLatin())
+                if (transformedText.First().IsBasicLatin())
                 {
                     transformedText = Transform(transformedText, Lat2Cyr);
 

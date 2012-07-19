@@ -153,15 +153,6 @@ namespace VedicEditor.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Конечный шрифт.
-        /// </summary>
-        internal static string EndFont {
-            get {
-                return ResourceManager.GetString("EndFont", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;map&gt;
         ///  &lt;entry from=&quot;&amp;#x00C4;&quot; to=&quot;Ā&quot; /&gt;
@@ -181,15 +172,6 @@ namespace VedicEditor.Properties {
         internal static string GVPalatino {
             get {
                 return ResourceManager.GetString("GVPalatino", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Исходный шрифт.
-        /// </summary>
-        internal static string InitialFont {
-            get {
-                return ResourceManager.GetString("InitialFont", resourceCulture);
             }
         }
         
