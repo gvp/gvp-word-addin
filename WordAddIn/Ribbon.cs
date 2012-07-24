@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Office.Tools.Ribbon;
+﻿using Microsoft.Office.Tools.Ribbon;
 
 namespace VedicEditor
 {
@@ -14,8 +10,11 @@ namespace VedicEditor
 
         private void buttonConvertToThamesM_Click(object sender, RibbonControlEventArgs e)
         {
-            var transformer = new FontTransformer("ThamesM");
-            transformer.Transform();
+            Globals.ThisAddIn.TransformText(
+                new ToUnicodeTransform(),
+                new Lat2CyrTransform(),
+                new FromUnicodeTransform("ThamesM")
+                );
         }
     }
 }

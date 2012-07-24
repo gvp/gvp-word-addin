@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using System.Diagnostics;
 
 namespace VedicEditor
 {
@@ -10,6 +10,33 @@ namespace VedicEditor
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
+        }
+
+        public void TransformText(params ITextTransform[] transforms)
+        {
+            TransformText(new CombiningTransform(transforms));
+        }
+
+        public void TransformText(ITextTransform transform)
+        {
+            Application.UndoRecord.StartCustomRecord("Преобразование текста");
+            Application.ScreenUpdating = false;
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+            try
+            {
+                var range = Application.Selection.Range;
+                if (range.Characters.Count == 0)
+                    return;
+                transform.Apply(range);
+                range.Select();
+            }
+            finally
+            {
+                Trace.WriteLine(stopwatch.Elapsed);
+                Application.ScreenUpdating = true;
+                Application.UndoRecord.EndCustomRecord();
+            }
         }
 
         #region VSTO generated code

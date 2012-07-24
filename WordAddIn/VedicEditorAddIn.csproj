@@ -205,11 +205,17 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="CombiningTransform.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="FontTransformer.cs" />
+    <Compile Include="FromUnicodeTransform.cs" />
+    <Compile Include="IterativeTextTransform.cs" />
+    <Compile Include="ITextTransform.cs" />
+    <Compile Include="Lat2CyrTransform.cs" />
+    <Compile Include="MapManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ToUnicodeTransform.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
