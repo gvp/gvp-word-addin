@@ -11,5 +11,15 @@ namespace VedicEditor
         {
             return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
         }
+
+        public static string PUAToASCII(this string source)
+        {
+            return new string(
+                (
+                from c in source
+                select '\xF000' <= c && c <= '\xF0FF' ? (char)(c - '\xF000') : c
+                ).ToArray()
+                );
+        }
     }
 }

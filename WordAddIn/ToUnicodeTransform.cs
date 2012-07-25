@@ -19,7 +19,7 @@ namespace VedicEditor
             if (map == null)
                 return;
 
-            character.Text = MapManager.Map(character.Text, map).Normalize(NormalizationForm.FormC);
+            character.Text = MapManager.Map(character.Text.PUAToASCII(), map).Normalize(NormalizationForm.FormC);
         }
     }
 }
