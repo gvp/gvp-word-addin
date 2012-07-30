@@ -37,6 +37,7 @@
             this.tabVedicEditor = this.Factory.CreateRibbonTab();
             this.groupDiacrytics = this.Factory.CreateRibbonGroup();
             this.buttonConvertToThamesM = this.Factory.CreateRibbonButton();
+            this.buttonConvertToUnicode = this.Factory.CreateRibbonButton();
             this.tabVedicEditor.SuspendLayout();
             this.groupDiacrytics.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             // groupDiacrytics
             // 
             this.groupDiacrytics.Items.Add(this.buttonConvertToThamesM);
+            this.groupDiacrytics.Items.Add(this.buttonConvertToUnicode);
             this.groupDiacrytics.Label = "Диакритические знаки";
             this.groupDiacrytics.Name = "groupDiacrytics";
             // 
@@ -63,6 +65,18 @@
             this.buttonConvertToThamesM.SuperTip = "Преобразование выделенного текста так, чтобы все символы с диакритическими знакам" +
     "и корректно отображались в шрифте ThamesM";
             this.buttonConvertToThamesM.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonConvertToThamesM_Click);
+            // 
+            // buttonConvertToUnicode
+            // 
+            this.buttonConvertToUnicode.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.buttonConvertToUnicode.Label = "Привести к Юникод";
+            this.buttonConvertToUnicode.Name = "buttonConvertToUnicode";
+            this.buttonConvertToUnicode.OfficeImageId = "ReplaceDialog";
+            this.buttonConvertToUnicode.ScreenTip = "Привести к стандартному шрифту, в кодировке Юникод";
+            this.buttonConvertToUnicode.ShowImage = true;
+            this.buttonConvertToUnicode.SuperTip = "Преобразование выделенного текста так, чтобы все символы были представлены в стан" +
+    "дарте Юникод";
+            this.buttonConvertToUnicode.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonConvertToUnicode_Click);
             // 
             // Ribbon
             // 
@@ -82,6 +96,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tabVedicEditor;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupDiacrytics;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonConvertToThamesM;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonConvertToUnicode;
     }
 
     partial class ThisRibbonCollection

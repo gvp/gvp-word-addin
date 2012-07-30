@@ -16,5 +16,10 @@ namespace VedicEditor
                 new FromUnicodeTransform("ThamesM")
                 );
         }
+
+        private void buttonConvertToUnicode_Click(object sender, RibbonControlEventArgs e)
+        {
+            Globals.ThisAddIn.TransformText(new ToUnicodeTransform());
+        }
     }
 }
