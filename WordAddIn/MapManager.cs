@@ -3,41 +3,63 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-using StringDictionary = System.Collections.Generic.IDictionary<System.String, System.String>;
+using Map = System.Collections.Generic.IDictionary<System.String, VedicEditor.MapEntry>;
 
 namespace VedicEditor
 {
+    public enum MapDirection
+    {
+        Forward,
+        Backward,
+    }
+
     static class MapManager
     {
-        public static String Map(String character, StringDictionary map)
+        private static readonly IDictionary<String, Map> maps = new Dictionary<String, Map>(4);
+
+        public static Map Lat2Cyr
         {
-            string result;
-            if (map.TryGetValue(character.Normalize(NormalizationForm.FormD), out result))
-                return result;
-            return character;
+            get
+            {
+                return GetMap("Lat2Cyr", MapDirection.Forward);
+            }
         }
 
-        private static readonly IDictionary<String, StringDictionary> maps = new Dictionary<String, StringDictionary>(4);
-
-        public static StringDictionary GetMap(String name)
+        public static Map GetMap(String name, MapDirection direction)
         {
-            StringDictionary map;
-            if (maps.TryGetValue(name, out map))
+            var key = name + direction.ToString();
+            Map map;
+            if (maps.TryGetValue(key, out map))
                 return map;
-            map = ReadMap(name);
-            maps.Add(name, map);
+            map = ReadMap(name, direction);
+            maps.Add(key, map);
             return map;
         }
 
-        private static StringDictionary ReadMap(string fontName)
+        private static Map ReadMap(string fontName, MapDirection direction)
         {
             var resourceName = fontName.StartsWith("Sca") ? "ScaSeries" : fontName;
             var resource = Properties.Resources.ResourceManager.GetString(resourceName);
             if (resource == null)
                 return null;
-            return XElement.Parse(resource)
-                .Elements("entry").Where(x => !x.Attributes("obsolete").Any())
-                .ToDictionary(e => e.Attribute("from").Value.Normalize(NormalizationForm.FormD), e => e.Attribute("to").Value.Normalize(NormalizationForm.FormD));
+            return (
+                from element in XElement.Parse(resource).Elements("entry")
+                let entryDirection = element.AttributeValue("direction", element.Elements().Any() ? "forward" : null)
+                where entryDirection == null || entryDirection == direction.ToString().ToLower()
+                let reverse = entryDirection == null && direction == MapDirection.Backward
+                select new 
+                {
+                    Key = element.Attribute(reverse ? "to" : "from").Value.Normalize(NormalizationForm.FormD),
+                    Entry = new MapEntry
+                    {
+                        ReplaceText = element.AttributeValue(reverse ? "from" : "to"),
+                        ReplaceTextForFirstLetter = element.ElementValue("firstLetter"),
+                        InsertBefore = element.ElementValue("insertBefore"),
+                        InsertAfter = element.ElementValue("insertAfter"),
+                        AppendAfter = element.ElementValue("appendAfter"),
+                        Replaces = element.Elements("replace").ToDictionary(r => r.AttributeValue("from"), r => r.AttributeValue("to")),
+                    },
+                }).ToDictionary(e => e.Key, e => e.Entry);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Linq;
 
 namespace VedicEditor
 {
@@ -20,6 +21,27 @@ namespace VedicEditor
                 select '\xF000' <= c && c <= '\xF0FF' ? (char)(c - '\xF000') : c
                 ).ToArray()
                 );
+        }
+
+        public static String AttributeValue(this XElement element, XName name)
+        {
+            return element.AttributeValue(name, null);
+        }
+
+        public static String AttributeValue(this XElement element, XName name, String defaultValue)
+        {
+            var attribute = element.Attribute(name);
+            if (attribute == null)
+                return defaultValue;
+            return attribute.Value;
+        }
+
+        public static String ElementValue(this XElement element, XName name)
+        {
+            var subElement = element.Element(name);
+            if (subElement == null)
+                return null;
+            return subElement.Value;
         }
     }
 }

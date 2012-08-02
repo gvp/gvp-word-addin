@@ -12,7 +12,7 @@ namespace VedicEditor
         {
             Globals.ThisAddIn.TransformText(
                 new ToUnicodeTransform(),
-                new Lat2CyrTransform(),
+                new MapBasedTextTransform(MapManager.Lat2Cyr),
                 new FromUnicodeTransform("ThamesM")
                 );
         }

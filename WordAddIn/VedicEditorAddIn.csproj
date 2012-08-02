@@ -210,8 +210,9 @@
     <Compile Include="FromUnicodeTransform.cs" />
     <Compile Include="IterativeTextTransform.cs" />
     <Compile Include="ITextTransform.cs" />
-    <Compile Include="Lat2CyrTransform.cs" />
+    <Compile Include="MapBasedTextTransform.cs" />
     <Compile Include="MapManager.cs" />
+    <Compile Include="MapEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -268,6 +269,7 @@
     <Content Include="Resources\DVRoman-TTSurekh.xml" />
     <Content Include="Resources\GVPalatino.xml" />
     <Content Include="Resources\ThamesSanskrit.xml" />
+    <Resource Include="Resources\AARitu.xml" />
   </ItemGroup>
   <ItemGroup />
   <!-- Include the build rules for a C# project. -->

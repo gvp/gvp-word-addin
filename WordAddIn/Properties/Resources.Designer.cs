@@ -62,6 +62,29 @@ namespace VedicEditor.Properties {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;map fontName=&quot;AARitu&quot;&gt;
+        ///  &lt;entry from=&quot;&amp;#x0021;&quot; to=&quot;!&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x0022;&quot; to=&quot;ष्&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x0023;&quot; to=&quot;रु&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x0024;&quot; to=&quot;+&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x0025;&quot; to=&quot;ः&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x0026;&quot; to=&quot;–&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x0027;&quot; to=&quot;श्&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x0028;&quot; to=&quot;(&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x0029;&quot; to=&quot;)&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x002A;&quot; to=&quot;’&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x002B;&quot; to=&quot;द̣&quot; /&gt;
+        ///  &lt;entry from=&quot;&amp;#x002C;&quot; to=&quot;ए&quot; /&gt;
+        ///  &lt;entry f [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string AARitu {
+            get {
+                return ResourceManager.GetString("AARitu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;map&gt;
         ///  &lt;entry from=&quot;&amp;#x00C4;&quot; to=&quot;Ā&quot; /&gt;
         ///  &lt;entry from=&quot;&amp;#x00E4;&quot; to=&quot;ā&quot; /&gt;

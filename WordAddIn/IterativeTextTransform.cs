@@ -6,25 +6,30 @@ namespace VedicEditor
     {
         public virtual void Apply(Word.Range range)
         {
-            var character = range.Characters.First;
-            var last = range.Characters.Last.Duplicate;
-
-            while (character != null && character.End <= last.End)
+            var end = range.End;
+            CurrentCharacter = range.Characters.First;
+            while (CurrentCharacter != null && CurrentCharacter.End <= end)
             {
-                TransformCharacter(character);
+                var passed = CurrentCharacter.End - range.Start;
 
-                /// Range.Next jumps over the next unit if positioned right before it.
-                /// So, handling collapsed ranges especially.
-                if (character.Start == character.End)
-                    character.MoveEnd(1);
-                else
-                    character = character.Next();
+                TransformCharacter();
+
+                /// Range.Next() jumps over the next unit if positioned right before it.
+                CurrentCharacter.EndOf(Word.WdUnits.wdCharacter, Word.WdMovementType.wdMove);
+
+                /// Correct end position.
+                end += (CurrentCharacter.End - range.Start) - passed;
+
+                /// Span the next character
+                CurrentCharacter.EndOf(Word.WdUnits.wdCharacter, Word.WdMovementType.wdExtend);
             }
 
             /// Address an inappropriate behaviour when changing the last character makes range exclude it.
-            range.End = character.Start;
+            range.End = end;
         }
 
-        protected abstract void TransformCharacter(Word.Range character);
+        protected Word.Range CurrentCharacter { get; private set; }
+
+        protected abstract void TransformCharacter();
     }
 }

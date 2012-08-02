@@ -1,25 +1,18 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using StringDictionary = System.Collections.Generic.IDictionary<System.String, System.String>;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace VedicEditor
 {
-    class FromUnicodeTransform : IterativeTextTransform
+    class FromUnicodeTransform : MapBasedTextTransform
     {
         private readonly String fontName;
-        private readonly StringDictionary map;
 
         public FromUnicodeTransform(String fontName)
+            : base(MapManager.GetMap(fontName, MapDirection.Backward))
         {
             if (fontName == null)
                 throw new ArgumentNullException("toFontName");
             this.fontName = fontName;
-
-            map = MapManager.GetMap(fontName);
-            if (map != null)
-                map = map.ToLookup(x => x.Value, x => x.Key).ToDictionary(x => x.Key, x => x.First());
         }
 
         public override void Apply(Word.Range range)
@@ -28,11 +21,12 @@ namespace VedicEditor
             range.Font.Name = fontName;
         }
 
-        protected override void TransformCharacter(Word.Range character)
+        protected override void TransformCharacter()
         {
-            if (character.Font.Name == fontName)
+            if (CurrentCharacter.Font.Name == fontName)
                 return;
-            character.Text = MapManager.Map(character.Text, map).Normalize(NormalizationForm.FormC);
+
+            base.TransformCharacter();
         }
     }
 }

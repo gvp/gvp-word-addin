@@ -1,9 +1,8 @@
-﻿using System.Text;
-using Word = Microsoft.Office.Interop.Word;
+﻿using Word = Microsoft.Office.Interop.Word;
 
 namespace VedicEditor
 {
-    class ToUnicodeTransform : IterativeTextTransform
+    class ToUnicodeTransform : MapBasedTextTransform
     {
         public const string UnicodeFontName = "Arial Unicode MS";
 
@@ -13,13 +12,21 @@ namespace VedicEditor
             range.Font.Name = UnicodeFontName;
         }
 
-        protected override void TransformCharacter(Word.Range character)
+        private string currentFontName;
+        protected override void TransformCharacter()
         {
-            var map = MapManager.GetMap(character.Font.Name);
-            if (map == null)
+            if (CurrentCharacter.Font.Name != currentFontName)
+            {
+                ApplySavedText();
+
+                currentFontName = CurrentCharacter.Font.Name;
+                CurrentMap = MapManager.GetMap(currentFontName, MapDirection.Forward);
+            }
+
+            if (CurrentMap == null)
                 return;
 
-            character.Text = MapManager.Map(character.Text.PUAToASCII(), map).Normalize(NormalizationForm.FormC);
+            base.TransformCharacter();
         }
     }
 }
