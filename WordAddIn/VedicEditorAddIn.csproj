@@ -216,6 +216,7 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DevanagariTransliterationTransform.cs" />
     <Compile Include="ToUnicodeTransform.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -269,6 +270,7 @@
     <Content Include="Resources\DVRoman-TTSurekh.xml" />
     <Content Include="Resources\GVPalatino.xml" />
     <Content Include="Resources\ThamesSanskrit.xml" />
+    <Content Include="Resources\Dev2Lat.xml" />
     <Resource Include="Resources\AARitu.xml" />
   </ItemGroup>
   <ItemGroup />

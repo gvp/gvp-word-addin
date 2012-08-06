@@ -63,19 +63,18 @@ namespace VedicEditor.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;map fontName=&quot;AARitu&quot;&gt;
-        ///  &lt;entry from=&quot;&amp;#x0021;&quot; to=&quot;!&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x0022;&quot; to=&quot;ष्&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x0023;&quot; to=&quot;रु&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x0024;&quot; to=&quot;+&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x0025;&quot; to=&quot;ः&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x0026;&quot; to=&quot;–&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x0027;&quot; to=&quot;श्&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x0028;&quot; to=&quot;(&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x0029;&quot; to=&quot;)&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x002A;&quot; to=&quot;’&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x002B;&quot; to=&quot;द̣&quot; /&gt;
-        ///  &lt;entry from=&quot;&amp;#x002C;&quot; to=&quot;ए&quot; /&gt;
-        ///  &lt;entry f [остаток строки не уместился]&quot;;.
+        ///  &lt;entry from=&quot;&amp;#x0021;&quot; to=&quot;!&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;&amp;#x0022;&quot; to=&quot;ष्&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;&amp;#x0023;&quot; to=&quot;रु&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;&amp;#x0024;&quot; to=&quot;+&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;&amp;#x0025;&quot; to=&quot;&quot;&gt;
+        ///    &lt;appendAfter&gt;ः&lt;/appendAfter&gt;
+        ///  &lt;/entry&gt;
+        ///  &lt;entry from=&quot;&amp;#x0026;&quot; to=&quot;–&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;&amp;#x0027;&quot; to=&quot;श्&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;&amp;#x0028;&quot; to=&quot;(&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;&amp;#x0029;&quot; to=&quot;)&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;&amp;#x002A;&quot; to= [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string AARitu {
             get {
@@ -155,6 +154,30 @@ namespace VedicEditor.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;map&gt;
+        ///  &lt;entry from=&quot;अ&quot; to=&quot;a&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;आ&quot; to=&quot;ā&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;इ&quot; to=&quot;i&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ई&quot; to=&quot;ī&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;उ&quot; to=&quot;u&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ऊ&quot; to=&quot;ū&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ऋ&quot; to=&quot;ṛ&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ॠ&quot; to=&quot;ṝ&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ऌ&quot; to=&quot;ḷ&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ॡ&quot; to=&quot;ḹ&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ए&quot; to=&quot;e&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ऐ&quot; to=&quot;ai&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ओ&quot; to=&quot;o&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string Dev2Lat {
+            get {
+                return ResourceManager.GetString("Dev2Lat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;map&gt;
         ///  &lt;entry from=&quot;&amp;#x00A1;&quot; to=&quot;ā&quot; /&gt;
         ///  &lt;entry from=&quot;&amp;#x00A2;&quot; to=&quot;ī&quot; /&gt;
         ///  &lt;entry from=&quot;&amp;#x00A3;&quot; to=&quot;ū&quot; /&gt;
@@ -201,22 +224,19 @@ namespace VedicEditor.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;map&gt;
-        ///  &lt;entry from=&quot;a&quot; to=&quot;а&quot; /&gt;
-        ///  &lt;entry from=&quot;A&quot; to=&quot;А&quot; /&gt;
-        ///  &lt;entry from=&quot;ā&quot; to=&quot;а̄&quot; /&gt;
-        ///  &lt;entry from=&quot;Ā&quot; to=&quot;А̄&quot; /&gt;
-        ///  &lt;entry from=&quot;ã&quot; to=&quot;а̃&quot; /&gt;
-        ///  &lt;entry from=&quot;Ã&quot; to=&quot;А̃&quot; /&gt;
-        ///  &lt;entry from=&quot;ā̃&quot; to=&quot;а̄̃&quot; /&gt;
-        ///  &lt;entry from=&quot;Ā̃&quot; to=&quot;А̄̃&quot; /&gt;
-        ///  &lt;entry from=&quot;b&quot; to=&quot;б&quot; /&gt;
-        ///  &lt;entry from=&quot;B&quot; to=&quot;Б&quot; /&gt;
-        ///  &lt;entry from=&quot;c&quot; to=&quot;ч&quot; /&gt;
-        ///  &lt;entry from=&quot;C&quot; to=&quot;Ч&quot; /&gt;
-        ///  &lt;entry from=&quot;d&quot; to=&quot;д&quot; /&gt;
-        ///  &lt;entry from=&quot;D&quot; to=&quot;Д&quot; /&gt;
-        ///  &lt;entry from=&quot;ḍ&quot; to=&quot;д̣&quot; /&gt;
-        ///  &lt;entry from=&quot;Ḍ&quot;  [остаток строки не уместился]&quot;;.
+        ///  &lt;entry from=&quot;a&quot; to=&quot;а&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;A&quot; to=&quot;А&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ā&quot; to=&quot;а̄&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;Ā&quot; to=&quot;А̄&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ã&quot; to=&quot;а̃&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;Ã&quot; to=&quot;А̃&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;ā̃&quot; to=&quot;а̄̃&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;Ā̃&quot; to=&quot;А̄̃&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;b&quot; to=&quot;б&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;B&quot; to=&quot;Б&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;c&quot; to=&quot;ч&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;C&quot; to=&quot;Ч&quot;&gt;&lt;/entry&gt;
+        ///  &lt;entry from=&quot;d&quot; to=&quot;д&quot;&gt;&lt;/ent [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string Lat2Cyr {
             get {

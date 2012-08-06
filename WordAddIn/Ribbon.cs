@@ -21,5 +21,10 @@ namespace VedicEditor
         {
             Globals.ThisAddIn.TransformText(new ToUnicodeTransform());
         }
+
+        private void buttonConvertToLatin_Click(object sender, RibbonControlEventArgs e)
+        {
+            Globals.ThisAddIn.TransformText(new DevanagariTransliterationTransform());
+        }
     }
 }

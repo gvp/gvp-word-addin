@@ -25,6 +25,14 @@ namespace VedicEditor
             }
         }
 
+        public static Map Dev2Lat
+        {
+            get
+            {
+                return GetMap("Dev2Lat", MapDirection.Forward);
+            }
+        }
+
         public static Map GetMap(String name, MapDirection direction)
         {
             var key = name + direction.ToString();

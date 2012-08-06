@@ -38,6 +38,7 @@
             this.groupDiacrytics = this.Factory.CreateRibbonGroup();
             this.buttonConvertToThamesM = this.Factory.CreateRibbonButton();
             this.buttonConvertToUnicode = this.Factory.CreateRibbonButton();
+            this.buttonConvertToLatin = this.Factory.CreateRibbonButton();
             this.tabVedicEditor.SuspendLayout();
             this.groupDiacrytics.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // 
             this.groupDiacrytics.Items.Add(this.buttonConvertToThamesM);
             this.groupDiacrytics.Items.Add(this.buttonConvertToUnicode);
+            this.groupDiacrytics.Items.Add(this.buttonConvertToLatin);
             this.groupDiacrytics.Label = "Диакритические знаки";
             this.groupDiacrytics.Name = "groupDiacrytics";
             // 
@@ -78,6 +80,17 @@
     "дарте Юникод";
             this.buttonConvertToUnicode.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonConvertToUnicode_Click);
             // 
+            // buttonConvertToLatin
+            // 
+            this.buttonConvertToLatin.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.buttonConvertToLatin.Label = "Транслитерация в латиницу";
+            this.buttonConvertToLatin.Name = "buttonConvertToLatin";
+            this.buttonConvertToLatin.OfficeImageId = "ReplaceDialog";
+            this.buttonConvertToLatin.ScreenTip = "Транслитерировать Деванагари в латиницу";
+            this.buttonConvertToLatin.ShowImage = true;
+            this.buttonConvertToLatin.SuperTip = "Транслитерация выделенного текста из Деванагари в латиницу";
+            this.buttonConvertToLatin.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonConvertToLatin_Click);
+            // 
             // Ribbon
             // 
             this.Name = "Ribbon";
@@ -97,6 +110,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupDiacrytics;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonConvertToThamesM;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonConvertToUnicode;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonConvertToLatin;
     }
 
     partial class ThisRibbonCollection
