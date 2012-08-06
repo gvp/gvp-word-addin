@@ -143,10 +143,11 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>VedicFontConverter_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>78C5F1ABEEEB6D681CAD6AFFADB21C49B3011267</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>578CF9CE66A77896DACE6E59271B4B9A9D9E94C8</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!--
     This section specifies references for the project.
@@ -255,7 +256,6 @@
       <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
-    <None Include="VedicFontConverter_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Amita Times Cyr.xml" />
