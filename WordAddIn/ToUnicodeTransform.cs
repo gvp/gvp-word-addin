@@ -4,12 +4,14 @@ namespace VedicEditor
 {
     class ToUnicodeTransform : MapBasedTextTransform
     {
-        public const string UnicodeFontName = "Arial Unicode MS";
-
         public override void Apply(Word.Range range)
         {
             base.Apply(range);
-            range.Font.Name = UnicodeFontName;
+            var normalFont = range.Document.Styles[Word.WdBuiltinStyle.wdStyleNormal].Font;
+            range.Font.Name = normalFont.Name;
+            range.Font.NameBi = normalFont.NameBi;
+            range.Font.NameAscii = normalFont.NameAscii;
+            range.Font.NameOther = normalFont.NameOther;
         }
 
         private string currentFontName;
