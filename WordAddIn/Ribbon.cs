@@ -1,4 +1,6 @@
-﻿using Microsoft.Office.Tools.Ribbon;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Office.Tools.Ribbon;
 
 namespace VedicEditor
 {
@@ -8,23 +10,23 @@ namespace VedicEditor
         {
         }
 
-        private void buttonConvertToThamesM_Click(object sender, RibbonControlEventArgs e)
+        private void Process(object sender, RibbonControlEventArgs e)
         {
-            Globals.ThisAddIn.TransformText(
-                new ToUnicodeTransform(),
-                new MapBasedTextTransform(MapManager.Lat2Cyr),
-                new FromUnicodeTransform("ThamesM")
-                );
+            Globals.ThisAddIn.TransformText(GetTransforms().ToArray());
         }
 
-        private void buttonConvertToUnicode_Click(object sender, RibbonControlEventArgs e)
+        private IEnumerable<ITextTransform> GetTransforms()
         {
-            Globals.ThisAddIn.TransformText(new ToUnicodeTransform());
-        }
+            yield return new ToUnicodeTransform();
 
-        private void buttonConvertToLatin_Click(object sender, RibbonControlEventArgs e)
-        {
-            Globals.ThisAddIn.TransformText(new DevanagariTransliterationTransform());
+            if (checkBoxDevanagari.Checked)
+                yield return new DevanagariTransliterationTransform();
+
+            if (checkBoxRoman.Checked)
+                yield return new MapBasedTextTransform(MapManager.Lat2Cyr);
+
+            if (dropDownFont.SelectedItemIndex > 0)
+                yield return new FromUnicodeTransform(dropDownFont.SelectedItem.Label);
         }
     }
 }

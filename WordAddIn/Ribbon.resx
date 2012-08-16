@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="buttonProcess.SuperTip" xml:space="preserve">
+    <value>Преобразование выделенного текста в соответствии с выбранными настройками. Если выбран особый шрифт, то символы будут преобразованы так, чтобы они корректно отображались в этом шрифте. Первоначально прозводится преобразование текста из нестандартных кодировок в Юникод.</value>
+  </data>
 </root>

@@ -34,62 +34,69 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl1 = this.Factory.CreateRibbonDropDownItem();
+            Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl2 = this.Factory.CreateRibbonDropDownItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ribbon));
             this.tabVedicEditor = this.Factory.CreateRibbonTab();
-            this.groupDiacrytics = this.Factory.CreateRibbonGroup();
-            this.buttonConvertToThamesM = this.Factory.CreateRibbonButton();
-            this.buttonConvertToUnicode = this.Factory.CreateRibbonButton();
-            this.buttonConvertToLatin = this.Factory.CreateRibbonButton();
+            this.groupTransliteration = this.Factory.CreateRibbonGroup();
+            this.dropDownFont = this.Factory.CreateRibbonDropDown();
+            this.checkBoxDevanagari = this.Factory.CreateRibbonCheckBox();
+            this.checkBoxRoman = this.Factory.CreateRibbonCheckBox();
+            this.separator1 = this.Factory.CreateRibbonSeparator();
+            this.buttonProcess = this.Factory.CreateRibbonButton();
             this.tabVedicEditor.SuspendLayout();
-            this.groupDiacrytics.SuspendLayout();
+            this.groupTransliteration.SuspendLayout();
             // 
             // tabVedicEditor
             // 
-            this.tabVedicEditor.Groups.Add(this.groupDiacrytics);
+            this.tabVedicEditor.Groups.Add(this.groupTransliteration);
             this.tabVedicEditor.Label = "Ведический редактор";
             this.tabVedicEditor.Name = "tabVedicEditor";
             // 
-            // groupDiacrytics
+            // groupTransliteration
             // 
-            this.groupDiacrytics.Items.Add(this.buttonConvertToThamesM);
-            this.groupDiacrytics.Items.Add(this.buttonConvertToUnicode);
-            this.groupDiacrytics.Items.Add(this.buttonConvertToLatin);
-            this.groupDiacrytics.Label = "Диакритические знаки";
-            this.groupDiacrytics.Name = "groupDiacrytics";
+            this.groupTransliteration.Items.Add(this.dropDownFont);
+            this.groupTransliteration.Items.Add(this.checkBoxDevanagari);
+            this.groupTransliteration.Items.Add(this.checkBoxRoman);
+            this.groupTransliteration.Items.Add(this.separator1);
+            this.groupTransliteration.Items.Add(this.buttonProcess);
+            this.groupTransliteration.Label = "Транслитерация";
+            this.groupTransliteration.Name = "groupTransliteration";
             // 
-            // buttonConvertToThamesM
+            // dropDownFont
             // 
-            this.buttonConvertToThamesM.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.buttonConvertToThamesM.Label = "Привести к ThamesM";
-            this.buttonConvertToThamesM.Name = "buttonConvertToThamesM";
-            this.buttonConvertToThamesM.OfficeImageId = "ReplaceDialog";
-            this.buttonConvertToThamesM.ScreenTip = "Привести к шрифту ThamesM";
-            this.buttonConvertToThamesM.ShowImage = true;
-            this.buttonConvertToThamesM.SuperTip = "Преобразование выделенного текста так, чтобы все символы с диакритическими знакам" +
-    "и корректно отображались в шрифте ThamesM";
-            this.buttonConvertToThamesM.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonConvertToThamesM_Click);
+            ribbonDropDownItemImpl1.Label = "Обычный";
+            ribbonDropDownItemImpl2.Label = "ThamesM";
+            this.dropDownFont.Items.Add(ribbonDropDownItemImpl1);
+            this.dropDownFont.Items.Add(ribbonDropDownItemImpl2);
+            this.dropDownFont.Label = "Шрифт";
+            this.dropDownFont.Name = "dropDownFont";
             // 
-            // buttonConvertToUnicode
+            // checkBoxDevanagari
             // 
-            this.buttonConvertToUnicode.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.buttonConvertToUnicode.Label = "Привести к Юникод";
-            this.buttonConvertToUnicode.Name = "buttonConvertToUnicode";
-            this.buttonConvertToUnicode.OfficeImageId = "ReplaceDialog";
-            this.buttonConvertToUnicode.ScreenTip = "Привести к стандартному шрифту, в кодировке Юникод";
-            this.buttonConvertToUnicode.ShowImage = true;
-            this.buttonConvertToUnicode.SuperTip = "Преобразование выделенного текста так, чтобы все символы были представлены в стан" +
-    "дарте Юникод";
-            this.buttonConvertToUnicode.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonConvertToUnicode_Click);
+            this.checkBoxDevanagari.Label = "Из Деванагари в Латиницу";
+            this.checkBoxDevanagari.Name = "checkBoxDevanagari";
             // 
-            // buttonConvertToLatin
+            // checkBoxRoman
             // 
-            this.buttonConvertToLatin.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.buttonConvertToLatin.Label = "Транслитерация в латиницу";
-            this.buttonConvertToLatin.Name = "buttonConvertToLatin";
-            this.buttonConvertToLatin.OfficeImageId = "ReplaceDialog";
-            this.buttonConvertToLatin.ScreenTip = "Транслитерировать Деванагари в латиницу";
-            this.buttonConvertToLatin.ShowImage = true;
-            this.buttonConvertToLatin.SuperTip = "Транслитерация выделенного текста из Деванагари в латиницу";
-            this.buttonConvertToLatin.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonConvertToLatin_Click);
+            this.checkBoxRoman.Label = "Из Латиницы в Кириллицу";
+            this.checkBoxRoman.Name = "checkBoxRoman";
+            // 
+            // separator1
+            // 
+            this.separator1.Name = "separator1";
+            // 
+            // buttonProcess
+            // 
+            this.buttonProcess.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.buttonProcess.Label = "Преобразовать";
+            this.buttonProcess.Name = "buttonProcess";
+            this.buttonProcess.OfficeImageId = "ReplaceDialog";
+            this.buttonProcess.ScreenTip = "Выполнить отмеченные преобразования";
+            this.buttonProcess.ShowImage = true;
+            this.buttonProcess.SuperTip = resources.GetString("buttonProcess.SuperTip");
+            this.buttonProcess.Tag = "";
+            this.buttonProcess.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Process);
             // 
             // Ribbon
             // 
@@ -99,18 +106,20 @@
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.Ribbon_Load);
             this.tabVedicEditor.ResumeLayout(false);
             this.tabVedicEditor.PerformLayout();
-            this.groupDiacrytics.ResumeLayout(false);
-            this.groupDiacrytics.PerformLayout();
+            this.groupTransliteration.ResumeLayout(false);
+            this.groupTransliteration.PerformLayout();
 
         }
 
         #endregion
 
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tabVedicEditor;
-        internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupDiacrytics;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonConvertToThamesM;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonConvertToUnicode;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonConvertToLatin;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupTransliteration;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonProcess;
+        internal Microsoft.Office.Tools.Ribbon.RibbonCheckBox checkBoxDevanagari;
+        internal Microsoft.Office.Tools.Ribbon.RibbonCheckBox checkBoxRoman;
+        internal Microsoft.Office.Tools.Ribbon.RibbonSeparator separator1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonDropDown dropDownFont;
     }
 
     partial class ThisRibbonCollection
