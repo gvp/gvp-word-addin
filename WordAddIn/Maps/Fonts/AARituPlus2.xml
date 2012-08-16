@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<map fontName="AARitu">
+  <entry from="&#x0021;" to="!"></entry>
+  <entry from="&#x0022;" to="ष्"></entry>
+  <entry from="&#x0023;" to="रु"></entry>
+  <entry from="&#x0024;" to="+"></entry>
+  <entry from="&#x0025;" to="">
+    <appendAfter>ः</appendAfter>
+  </entry>
+  <entry from="&#x0026;" to="–"></entry>
+  <entry from="&#x0027;" to="श्"></entry>
+  <entry from="&#x0028;" to="("></entry>
+  <entry from="&#x0029;" to=")"></entry>
+  <entry from="&#x002A;" to="’"></entry>
+  <entry from="&#x002B;" to="&#0323;"></entry>
+  <entry from="&#x002C;" to="ए"></entry>
+  <entry from="&#x002D;" to="."></entry>
+  <entry from="&#x002E;" to="ण्"></entry>
+  <entry from="&#x002F;" to="ध्"></entry>
+  <entry from="&#x0030;" to="0"></entry>
+  <entry from="&#x0031;" to="1"></entry>
+  <entry from="&#x0032;" to="2"></entry>
+  <entry from="&#x0033;" to="3"></entry>
+  <entry from="&#x0034;" to="4"></entry>
+  <entry from="&#x0035;" to="5"></entry>
+  <entry from="&#x0036;" to="6"></entry>
+  <entry from="&#x0037;" to="7"></entry>
+  <entry from="&#x0038;" to="8"></entry>
+  <entry from="&#x0039;" to="9"></entry>
+  <entry from="&#x003A;" to="रू"></entry>
+  <entry from="&#x003B;" to="य"></entry>
+  <entry from="&#x003C;" to="ढ"></entry>
+  <entry from="&#x003D;" to="त्र"></entry>
+  <entry from="&#x003E;" to="झ"></entry>
+  <entry from="&#x003F;" to="घ्"></entry>
+  <entry from="&#x0040;" to="/"></entry>
+  <entry from="&#x0041;" to="।">
+    <replace from="।।" to="॥" />
+  </entry>
+  <entry from="&#x0042;" to="ठ"></entry>
+  <entry from="&#x0043;" to="ब्"></entry>
+  <entry from="&#x0044;" to="क्"></entry>
+  <entry from="&#x0045;" to="म्"></entry>
+  <entry from="&#x0046;" to="थ्"></entry>
+  <entry from="&#x0047;" to="?"></entry>
+  <entry from="&#x0048;" to="भ्"></entry>
+  <entry from="&#x0049;" to="प्"></entry>
+  <entry from="&#x004A;" to="श्र"></entry>
+  <entry from="&#x004B;" to="ज्ञ"></entry>
+  <entry from="&#x004C;" to="स्"></entry>
+  <entry from="&#x004D;" to="ड"></entry>
+  <entry from="&#x004E;" to="छ"></entry>
+  <entry from="&#x004F;" to="व्"></entry>
+  <entry from="&#x0050;" to="च्"></entry>
+  <entry from="&#x0051;" to="फ"></entry>
+  <entry from="&#x0052;" to="त्"></entry>
+  <entry from="&#x0053;" to="ै">
+    <replace from="ाै" to="ौ" />
+  </entry>
+  <entry from="&#x0054;" to="ज्"></entry>
+  <entry from="&#x0055;" to="न्"></entry>
+  <entry from="&#x0056;" to="ट"></entry>
+  <entry from="&#x0057;" to="ॅ"></entry>
+  <entry from="&#x0058;" to="ग्"></entry>
+  <entry from="&#x0059;" to="ल्"></entry>
+  <entry from="&#x005A;" to="">
+    <insertBefore>र्</insertBefore>
+  </entry>
+  <entry from="&#x005B;" to="ख्"></entry>
+  <entry from="&#x005C;" to="?"></entry>
+  <entry from="&#x005D;" to=","></entry>
+  <entry from="&#x005E;" to="‘"></entry>
+  <entry from="&#x005F;" to=";"></entry>
+  <entry from="&#x0060;" to="ृ"></entry>
+  <entry from="&#x0061;" to="">
+    <appendAfter>ं</appendAfter>
+  </entry>
+  <entry from="&#x0062;" to="इ"></entry>
+  <entry from="&#x0063;" to="ब"></entry>
+  <entry from="&#x0064;" to="क"></entry>
+  <entry from="&#x0065;" to="म"></entry>
+  <entry from="&#x0066;" to="">
+    <insertAfter>ि</insertAfter>
+  </entry>
+  <entry from="&#x0067;" to="ह"></entry>
+  <entry from="&#x0068;" to="ी"></entry>
+  <entry from="&#x0069;" to="प"></entry>
+  <entry from="&#x006A;" to="र"></entry>
+  <entry from="&#x006B;" to="ा">
+    <replace from="्ा" to="" />
+    <replace from="अा" to="आ" />
+  </entry>
+  <entry from="&#x006C;" to="स"></entry>
+  <entry from="&#x006D;" to="उ"></entry>
+  <entry from="&#x006E;" to="द"></entry>
+  <entry from="&#x006F;" to="व"></entry>
+  <entry from="&#x0070;" to="च"></entry>
+  <entry from="&#x0071;" to="ु"></entry>
+  <entry from="&#x0072;" to="त"></entry>
+  <entry from="&#x0073;" to="े">
+    <replace from="ाे" to="ो" />
+  </entry>
+  <entry from="&#x0074;" to="ज"></entry>
+  <entry from="&#x0075;" to="न"></entry>
+  <entry from="&#x0076;" to="अ"></entry>
+  <entry from="&#x0077;" to="ू"></entry>
+  <entry from="&#x0078;" to="ग"></entry>
+  <entry from="&#x0079;" to="ल"></entry>
+  <entry from="&#x007A;" to="्र">
+    <replace from="््" to="्" />
+  </entry>
+  <entry from="&#x007B;" to="क्ष्"></entry>
+  <entry from="&#x007C;" to="द्य"></entry>
+  <entry from="&#x007D;" to="द्व"></entry>
+  <entry from="&#x007E;" to="्"></entry>
+  <entry from="&#x0082;" to="श्व"></entry>
+  <entry from="&#x0083;" to="१"></entry>
+  <entry from="&#x0084;" to="२"></entry>
+  <entry from="&#x0085;" to="३"></entry>
+  <entry from="&#x0086;" to="४"></entry>
+  <entry from="&#x0087;" to="५"></entry>
+  <entry from="&#x0088;" to="६"></entry>
+  <entry from="&#x0089;" to="७"></entry>
+  <entry from="&#x008A;" to="८"></entry>
+  <entry from="&#x008B;" to="९"></entry>
+  <entry from="&#x008C;" to="०"></entry>
+  <entry from="&#x0091;" to="ञ्ज"></entry>
+  <entry from="&#x009F;" to=">"></entry>
+  <entry from="&#x00A1;" to="ँ"></entry>
+  <entry from="&#x00A3;" to="र्">
+    <insertAfter>ि</insertAfter>
+  </entry>
+  <entry from="&#x00A4;" to="ॄ"></entry>
+  <entry from="&#x00A5;" to="">
+    <insertAfter>िं</insertAfter>
+  </entry>
+  <entry from="&#x00A7;" to="ठ्ठ"></entry>
+  <entry from="&#x00A8;" to="ु"></entry>
+  <entry from="&#x00A9;" to="ू"></entry>
+  <entry from="&#x00AA;" to="्र">
+    <replace from="््" to="्" />
+  </entry>
+  <entry from="&#x00AB;" to="त्र्"></entry>
+  <entry from="&#x00AC;" to="ॐ"></entry>
+  <entry from="&#x00AE;" to="ैं">
+    <replace from="ाै" to="ौ" />
+  </entry>
+  <entry from="&#x00B0;" to="ीं"></entry>
+  <entry from="&#x00B1;" to="ं">
+    <insertBefore>र्</insertBefore>
+  </entry>
+  <entry from="&#x00B2;" to="र्">
+    <insertAfter>िं</insertAfter>
+  </entry>
+  <entry from="&#x00B3;" to="ङ"></entry>
+  <entry from="&#x00B4;" to="ञ्"></entry>
+  <entry from="&#x00B5;" to="—"></entry>
+  <entry from="&#x00B6;" to="फ्"></entry>
+  <entry from="&#x00B7;" to="ऽ"></entry>
+  <entry from="&#x00B8;" to="य्"></entry>
+  <entry from="&#x00B9;" to="✕"></entry>
+  <entry from="&#x00BA;" to="ह्"></entry>
+  <entry from="&#x00BB;" to="÷"></entry>
+  <entry from="&#x00BC;" to="द्घ"></entry>
+  <entry from="&#x00BD;" to="ऋ"></entry>
+  <entry from="&#x00BE;" to="="></entry>
+  <entry from="&#x00BF;" to="ॠ"></entry>
+  <entry from="&#x00C0;" to="ङ्क्ष"></entry>
+  <entry from="&#x00C1;" to="ङ्क"></entry>
+  <entry from="&#x00C2;" to="ङ्ग"></entry>
+  <entry from="&#x00C5;" to="ऊ"></entry>
+  <entry from="&#x00C6;" to="ॢ"></entry>
+  <entry from="&#x00C8;" to="ऌ"></entry>
+  <entry from="&#x00C9;" to="ङ्क्त"></entry>
+  <entry from="&#x00CA;" to="ह्न"></entry>
+  <entry from="&#x00CC;" to="ङ्ख"></entry>
+  <entry from="&#x00CD;" to="ह्ल"></entry>
+  <entry from="&#x00CE;" to="ह्र"></entry>
+  <entry from="&#x00CF;" to="कृ"></entry>
+  <entry from="&#x00D0;" to="ङ्घ"></entry>
+  <entry from="&#x00D2;" to="ख्र"></entry>
+  <entry from="&#x00D3;" to="श्"></entry>
+  <entry from="&#x00D4;" to="ष्ट"></entry>
+  <entry from="&#x00D6;" to="झ्"></entry>
+  <entry from="&#x00D7;" to="ष्ठ"></entry>
+  <entry from="&#x00D8;" to="क्र"></entry>
+  <entry from="&#x00D9;" to="त्त्"></entry>
+  <entry from="&#x00DA;" to="द्भ"></entry>
+  <entry from="&#x00DB;" to="़"></entry>
+  <entry from="&#x00DC;" to="श्"></entry>
+  <entry from="&#x00DD;" to="फ्र"></entry>
+  <entry from="&#x00DE;" to="́”"></entry>
+  <entry from="&#x00DF;" to="“"></entry>
+  <entry from="&#x00E0;" to="ह्व"></entry>
+  <entry from="&#x00E1;" to="ह्य"></entry>
+  <entry from="&#x00E2;" to="हृ"></entry>
+  <entry from="&#x00E3;" to="ह्म"></entry>
+  <entry from="&#x00E4;" to="क्त"></entry>
+  <entry from="&#x00E5;" to="द्ग"></entry>
+  <entry from="&#x00E6;" to="द्र"></entry>
+  <entry from="&#x00E7;" to="प्र"></entry>
+  <entry from="&#x00E8;" to="ध्"></entry>
+  <entry from="&#x00E9;" to="न्न्"></entry>
+  <entry from="&#x00EA;" to="ट्ट"></entry>
+  <entry from="&#x00EB;" to="ट्ठ"></entry>
+  <entry from="&#x00EC;" to="ड्ड"></entry>
+  <entry from="&#x00ED;" to="द्द"></entry>
+  <entry from="&#x00EE;" to="्य">
+    <replace from="््" to="्" />
+  </entry>
+  <entry from="&#x00EF;" to="ड्ढ"></entry>
+  <entry from="&#x00F1;" to="॰"></entry>
+  <entry from="&#x00F2;" to="स्र"></entry>
+  <entry from="&#x00F3;" to="स्त्र"></entry>
+  <entry from="&#x00F4;" to="क्क"></entry>
+  <entry from="&#x00F5;" to="?"></entry>
+  <entry from="&#x00F6;" to="?"></entry>
+  <entry from="&#x00F7;" to="ह्ण"></entry>
+  <entry from="&#x00F9;" to="ड्म"></entry>
+  <entry from="&#x00FA;" to="॑"></entry>
+  <entry from="&#x00FB;" to="॥"></entry>
+  <entry from="&#x00FC;" to="ें">
+    <replace from="ाे" to="ो" />
+  </entry>
+  <entry from="&#x00FD;" to="["></entry>
+  <entry from="&#x00FE;" to="]"></entry>
+  <entry from="&#x00FF;" to="ळ"></entry>
+</map>

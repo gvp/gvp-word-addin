@@ -252,8 +252,6 @@
     <EmbeddedResource Include="Maps\Fonts\Rama Garamond Plus.xml" />
     <EmbeddedResource Include="Maps\Translit\Lat2Cyr.xml" />
     <EmbeddedResource Include="Maps\Fonts\ThamesM.xml" />
-
-
     <EmbeddedResource Include="Maps\Fonts\Amita Times.xml" />
     <EmbeddedResource Include="Maps\Fonts\Balaram.xml" />
     <EmbeddedResource Include="Maps\Fonts\ScaSeries.xml" />
@@ -262,8 +260,9 @@
     <EmbeddedResource Include="Maps\Fonts\ThamesSanskrit.xml" />
     <EmbeddedResource Include="Maps\Translit\Dev2Lat.xml" />
     <EmbeddedResource Include="Maps\Fonts\AARitu.xml" />
+    <EmbeddedResource Include="Maps\Fonts\SD1-TTSurekh.xml" />
+    <EmbeddedResource Include="Maps\Fonts\AARituPlus2.xml" />
   </ItemGroup>
-  <ItemGroup />
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Include additional build rules for an Office application add-in. -->
