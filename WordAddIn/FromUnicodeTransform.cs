@@ -8,7 +8,7 @@ namespace VedicEditor
         private readonly String fontName;
 
         public FromUnicodeTransform(String fontName)
-            : base(MapManager.GetMap(fontName, MapDirection.Backward))
+            : base(MapManager.GetFontMap(fontName, MapDirection.Backward))
         {
             if (fontName == null)
                 throw new ArgumentNullException("toFontName");

@@ -22,7 +22,7 @@ namespace VedicEditor
                 ApplySavedText();
 
                 currentFontName = CurrentCharacter.Font.Name;
-                CurrentMap = MapManager.GetMap(currentFontName, MapDirection.Forward);
+                CurrentMap = MapManager.GetFontMap(currentFontName, MapDirection.Forward);
             }
 
             if (CurrentMap == null)

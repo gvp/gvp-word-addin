@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
 using Map = System.Collections.Generic.IDictionary<System.String, VedicEditor.MapEntry>;
@@ -21,7 +23,7 @@ namespace VedicEditor
         {
             get
             {
-                return GetMap("Lat2Cyr", MapDirection.Forward);
+                return GetMap("Translit.Lat2Cyr", MapDirection.Forward);
             }
         }
 
@@ -29,11 +31,16 @@ namespace VedicEditor
         {
             get
             {
-                return GetMap("Dev2Lat", MapDirection.Forward);
+                return GetMap("Translit.Dev2Lat", MapDirection.Forward);
             }
         }
 
-        public static Map GetMap(String name, MapDirection direction)
+        public static Map GetFontMap(String name, MapDirection direction)
+        {
+            return GetMap("Fonts." + name, direction);
+        }
+
+        private static Map GetMap(String name, MapDirection direction)
         {
             var key = name + direction.ToString();
             Map map;
@@ -44,18 +51,29 @@ namespace VedicEditor
             return map;
         }
 
-        private static Map ReadMap(string fontName, MapDirection direction)
+        private static Map ReadMap(string name, MapDirection direction)
         {
-            var resourceName = fontName.StartsWith("Sca") ? "ScaSeries" : fontName;
-            var resource = Properties.Resources.ResourceManager.GetString(resourceName);
-            if (resource == null)
-                return null;
+            if (name.StartsWith("Sca"))
+                name = "ScaSeries";
+
+            var resourceName = String.Format("Maps.{0}.xml", name);
+            var assembly = Assembly.GetExecutingAssembly();
+            using (var resource = assembly.GetManifestResourceStream(typeof(MapManager), resourceName))
+            {
+                if (resource == null)
+                    return null;
+                return ReadMap(resource, direction);
+            }
+        }
+
+        private static Map ReadMap(Stream resource, MapDirection direction)
+        {
             return (
-                from element in XElement.Parse(resource).Elements("entry")
+                from element in XElement.Load(resource).Elements("entry")
                 let entryDirection = element.AttributeValue("direction", element.Elements().Any() ? "forward" : null)
                 where entryDirection == null || entryDirection == direction.ToString().ToLower()
                 let reverse = entryDirection == null && direction == MapDirection.Backward
-                select new 
+                select new
                 {
                     Key = element.Attribute(reverse ? "to" : "from").Value.Normalize(NormalizationForm.FormD),
                     Entry = new MapEntry
