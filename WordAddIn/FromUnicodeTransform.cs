@@ -19,6 +19,11 @@ namespace VedicEditor
         {
             base.Apply(range);
             range.Font.Name = fontName;
+            if (fontName == "ThamesM")
+            {
+                range.Font.Italic = 1;
+                range.Font.Bold = 0;
+            }
         }
 
         protected override void TransformCharacter()
