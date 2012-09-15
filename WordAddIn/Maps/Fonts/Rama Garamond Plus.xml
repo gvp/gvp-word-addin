@@ -14,10 +14,10 @@
   <entry from="&#x00F9;" to="ḥ" />
   <entry from="&#x00C9;" to="Ī" />
   <entry from="&#x00E9;" to="ī" />
-  <entry from="&#x00F8;" to="ī" />
+  <entry from="&#x00F8;" to="ī" direction="forward" />
   <entry from="&#x00ED;" to="ĩ" />
   <entry from="&#x00CD;" to="ī̃" />
-  <entry from="&#x00D8;" to="ī̃" />
+  <entry from="&#x00D8;" to="ī̃" direction="forward" />
   <entry from="&#x00FE;" to="l̐" />
   <entry from="&#x00DE;" to="Ḷ" />
   <entry from="&#x00FF;" to="ḷ" />
