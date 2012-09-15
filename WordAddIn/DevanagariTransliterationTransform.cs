@@ -16,7 +16,9 @@ namespace VedicEditor
             foreach (var c in text)
             {
                 MapEntry entry;
-                map.TryGetValue(c.ToString(), out entry);
+                if (!map.TryGetValue(c.ToString(), out entry))
+                    entry.ReplaceText = c.ToString();
+
                 switch (GetAlphabetCategory(c))
                 {
                     case AlphabetCategory.Consonant:
