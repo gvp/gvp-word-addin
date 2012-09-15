@@ -35,14 +35,16 @@ namespace VedicEditor
             }
         }
 
-        public static Map GetFontMap(String name, MapDirection direction)
+        public static Map GetFontMap(String fontName, MapDirection direction)
         {
-            return GetMap("Fonts." + name, direction);
+            if (fontName.StartsWith("Sca"))
+                fontName = "ScaSeries";
+            return GetMap("Fonts." + fontName, direction);
         }
 
         private static Map GetMap(String name, MapDirection direction)
         {
-            var key = name + direction.ToString();
+            var key = String.Format("{0}.{1}", name, direction);
             Map map;
             if (maps.TryGetValue(key, out map))
                 return map;
@@ -53,9 +55,6 @@ namespace VedicEditor
 
         private static Map ReadMap(string name, MapDirection direction)
         {
-            if (name.StartsWith("Sca"))
-                name = "ScaSeries";
-
             var resourceName = String.Format("Maps.{0}.xml", name);
             var assembly = Assembly.GetExecutingAssembly();
             using (var resource = assembly.GetManifestResourceStream(typeof(MapManager), resourceName))
