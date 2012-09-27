@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2006/01/customui" xmlns:gvp="http://gvprussia.ru/schemas/editor/1.0">
+  <ribbon>
+    <tabs>
+      <tab idQ="gvp:tabVedicEditor" label="Редактор GVP">
+        <group idMso="GroupFont" />
+        <group id="groupTransliteration" label="Транслитерация">
+          <dropDown id="dropDownFont"
+                    label="Шрифт"
+                    screentip="Нестандартный шрифт для кодирования текста"
+                    supertip="В конце преобразования текст кодируется так, чтобы отображаться корректно в выбранном нестандартном шрифте."
+                    showImage="false"
+                    sizeString="This is a sample font name"
+                    onAction="SetSelectedFont"
+                    getItemCount="GetFontsCount" getItemLabel="GetFontItemName" getSelectedItemIndex="GetSelectedFontIndex"
+                    />
+          <checkBox id="checkBoxDevanagari"
+                    label="Из Деванагари в Латиницу"
+                    screentip="Транслитерация Деванагари"
+                    supertip="Выполнять транслитерацию деванагари в латиницу."
+                    onAction="SetDevanagari2Roman" />
+          <checkBox id="checkBoxRoman"
+                    label="Из Латиницы в Кириллицу"
+                    screentip="Транслитерация Латиницы"
+                    supertip="Выполнять транслитерацию Латиницы в Кириллицу."
+                    onAction="SetRoman2Cyrillic"
+                    getVisible="GetRussianOptionsState"
+                    />
+          <separator id="separator1" />
+          <button id="buttonProcess" imageMso="ReplaceDialog" onAction="Process" screentip="Выполнить отмеченные преобразования" supertip="Преобразование выделенного текста в соответствии с выбранными настройками. Если выбран особый шрифт, то символы будут преобразованы так, чтобы они корректно отображались в этом шрифте. Первоначально прозводится преобразование текста из нестандартных кодировок в Юникод." label="Преобразовать" size="large"/>
+          <separator id="separator2" />
+          <menu id="menuSettings" label="Настройки">
+            <toggleButton id="toggleRussian" label="Русские опции" getPressed="GetRussianOptionsState" onAction="SetRussianOptionsState"/>
+          </menu>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

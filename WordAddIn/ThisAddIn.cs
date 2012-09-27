@@ -1,4 +1,8 @@
 ﻿using System.Diagnostics;
+using System.Globalization;
+using System.Threading;
+using Microsoft.Office.Core;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace VedicEditor
 {
@@ -6,10 +10,23 @@ namespace VedicEditor
     {
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
+            SetUICulture(Application);
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
+        }
+
+        protected override IRibbonExtensibility CreateRibbonExtensibilityObject()
+        {
+            SetUICulture(GetHostItem<Word.Application>(typeof(Word.Application), "Application"));
+            return new VedicRibbon();
+        }
+
+        private static void SetUICulture(Word.Application app)
+        {
+            int lcid = app.LanguageSettings.get_LanguageID(Microsoft.Office.Core.MsoAppLanguageID.msoLanguageIDUI);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lcid);
         }
 
         public void TransformText(params ITextTransform[] transforms)
