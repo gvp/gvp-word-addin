@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VedicEditor.Properties {
+namespace GaudiaVedantaPublications.Properties {
     using System;
     
     

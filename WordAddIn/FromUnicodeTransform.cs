@@ -1,7 +1,7 @@
 ﻿using System;
 using Word = Microsoft.Office.Interop.Word;
 
-namespace VedicEditor
+namespace GaudiaVedantaPublications
 {
     class FromUnicodeTransform : MapBasedTextTransform
     {

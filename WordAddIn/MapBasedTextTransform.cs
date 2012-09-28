@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using System.Text;
-using Map = System.Collections.Generic.IDictionary<System.String, VedicEditor.MapEntry>;
+using Map = System.Collections.Generic.IDictionary<System.String, GaudiaVedantaPublications.MapEntry>;
 using Word = Microsoft.Office.Interop.Word;
 
-namespace VedicEditor
+namespace GaudiaVedantaPublications
 {
     class MapBasedTextTransform : IterativeTextTransform
     {

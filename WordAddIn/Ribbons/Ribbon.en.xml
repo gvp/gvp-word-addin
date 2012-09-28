@@ -2,7 +2,7 @@
 <customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2006/01/customui" xmlns:gvp="http://gvprussia.ru/schemas/editor/1.0">
   <ribbon>
     <tabs>
-      <tab idQ="gvp:tabVedicEditor" label="GVP Editor">
+      <tab idQ="gvp:tabVedicEditor" label="GVP">
         <group idMso="GroupFont" />
         <group id="groupTransliteration" label="Transliteration">
           <dropDown id="dropDownFont"

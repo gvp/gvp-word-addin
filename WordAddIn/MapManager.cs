@@ -5,9 +5,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
-using Map = System.Collections.Generic.IDictionary<System.String, VedicEditor.MapEntry>;
+using Map = System.Collections.Generic.IDictionary<System.String, GaudiaVedantaPublications.MapEntry>;
 
-namespace VedicEditor
+namespace GaudiaVedantaPublications
 {
     public enum MapDirection
     {

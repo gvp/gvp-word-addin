@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VedicEditorAddIn", "WordAddIn\VedicEditorAddIn.csproj", "{4F7604D0-10EC-46FA-B2EC-F0C1E9271ABB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GVPAddIn", "WordAddIn\GVPAddIn.csproj", "{4F7604D0-10EC-46FA-B2EC-F0C1E9271ABB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

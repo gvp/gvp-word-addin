@@ -9,10 +9,10 @@ using Office = Microsoft.Office.Core;
 using Microsoft.Office.Core;
 using Word = Microsoft.Office.Interop.Word;
 
-namespace VedicEditor
+namespace GaudiaVedantaPublications
 {
     [ComVisible(true)]
-    public class VedicRibbon : Office.IRibbonExtensibility
+    public class Ribbon : Office.IRibbonExtensibility
     {
         private Office.IRibbonUI ribbon;
         private int selectedFontIndex;
@@ -51,7 +51,7 @@ namespace VedicEditor
 
         #endregion
 
-        public VedicRibbon()
+        public Ribbon()
         {
         }
 

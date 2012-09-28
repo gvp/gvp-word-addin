@@ -7,11 +7,11 @@ using System.Resources;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Отредактируйте эти значения атрибутов, чтобы изменить сведения,
 // сопоставленные со сборкой.
-[assembly: AssemblyTitle("Ведический редактор")]
+[assembly: AssemblyTitle("GVP Word Add-In")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Gaudia Vedanta Publications")]
-[assembly: AssemblyProduct("VedicEditor")]
+[assembly: AssemblyProduct("GVP Word Add-In")]
 [assembly: AssemblyCopyright("Copyright ©GVP,  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

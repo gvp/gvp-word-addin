@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace VedicEditor
+namespace GaudiaVedantaPublications
 {
     struct MapEntry
     {

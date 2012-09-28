@@ -1,6 +1,6 @@
 ﻿using Word = Microsoft.Office.Interop.Word;
 
-namespace VedicEditor
+namespace GaudiaVedantaPublications
 {
     abstract class IterativeTextTransform : ITextTransform
     {

@@ -4,7 +4,7 @@ using System.Threading;
 using Microsoft.Office.Core;
 using Word = Microsoft.Office.Interop.Word;
 
-namespace VedicEditor
+namespace GaudiaVedantaPublications
 {
     public partial class ThisAddIn
     {
@@ -20,7 +20,7 @@ namespace VedicEditor
         protected override IRibbonExtensibility CreateRibbonExtensibilityObject()
         {
             SetUICulture(GetHostItem<Word.Application>(typeof(Word.Application), "Application"));
-            return new VedicRibbon();
+            return new Ribbon();
         }
 
         private static void SetUICulture(Word.Application app)

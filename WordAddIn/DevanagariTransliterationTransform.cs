@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Map = System.Collections.Generic.IDictionary<System.String, VedicEditor.MapEntry>;
+using Map = System.Collections.Generic.IDictionary<System.String, GaudiaVedantaPublications.MapEntry>;
 
-namespace VedicEditor
+namespace GaudiaVedantaPublications
 {
     class DevanagariTransliterationTransform : IterativeTextTransform
     {

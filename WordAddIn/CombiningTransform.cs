@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Word = Microsoft.Office.Interop.Word;
 
-namespace VedicEditor
+namespace GaudiaVedantaPublications
 {
     class CombiningTransform : ITextTransform
     {
