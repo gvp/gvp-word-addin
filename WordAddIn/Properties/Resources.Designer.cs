@@ -39,7 +39,7 @@ namespace GaudiaVedantaPublications.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("VedicEditor.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GaudiaVedantaPublications.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,27 +61,155 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Обычный.
+        ///   Looks up a localized string similar to Преобразовать.
         /// </summary>
-        internal static string PlainFontName {
+        internal static string ButtonProcess_Label {
             get {
-                return ResourceManager.GetString("PlainFontName", resourceCulture);
+                return ResourceManager.GetString("ButtonProcess_Label", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-        ///&lt;customUI onLoad=&quot;Ribbon_Load&quot; xmlns=&quot;http://schemas.microsoft.com/office/2006/01/customui&quot;&gt;
-        ///  &lt;ribbon&gt;
-        ///    &lt;tabs&gt;
-        ///      &lt;tab id=&quot;tabVedicEditor&quot; label=&quot;Ведический редактор&quot;&gt;
-        ///        &lt;group id=&quot;groupTransliteration&quot; label=&quot;Транслитерация&quot;&gt;
-        ///          &lt;dropDown id=&quot;dropDownFont&quot; label=&quot;Шрифт&quot; showImage=&quot;false&quot; onAction=&quot;SetSelectedFont&quot; getItemCount=&quot;GetFontsCount&quot; getItemLabel=&quot;GetFontItemName&quot; getSelectedItemIndex=&quot;GetSelectedFontIndex&quot;&gt;
-        ///            &lt;!--&lt;item id [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Выполнить отмеченные преобразования.
         /// </summary>
-        internal static string Ribbon {
+        internal static string ButtonProcess_Screentip {
             get {
-                return ResourceManager.GetString("Ribbon", resourceCulture);
+                return ResourceManager.GetString("ButtonProcess_Screentip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Преобразование выделенного текста в соответствии с выбранными настройками. Если выбран особый шрифт, то символы будут преобразованы так, чтобы они корректно отображались в этом шрифте. Первоначально прозводится преобразование текста из нестандартных кодировок в Юникод..
+        /// </summary>
+        internal static string ButtonProcess_Supertip {
+            get {
+                return ResourceManager.GetString("ButtonProcess_Supertip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Из Деванагари в Латиницу.
+        /// </summary>
+        internal static string CheckBoxDevanagari_Label {
+            get {
+                return ResourceManager.GetString("CheckBoxDevanagari_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Транслитерация Деванагари.
+        /// </summary>
+        internal static string CheckBoxDevanagari_Screentip {
+            get {
+                return ResourceManager.GetString("CheckBoxDevanagari_Screentip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выполнять транслитерацию деванагари в латиницу..
+        /// </summary>
+        internal static string CheckBoxDevanagari_Supertip {
+            get {
+                return ResourceManager.GetString("CheckBoxDevanagari_Supertip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Из Латиницы в Кириллицу.
+        /// </summary>
+        internal static string CheckBoxRoman_Label {
+            get {
+                return ResourceManager.GetString("CheckBoxRoman_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Транслитерация Латиницы.
+        /// </summary>
+        internal static string CheckBoxRoman_Screentip {
+            get {
+                return ResourceManager.GetString("CheckBoxRoman_Screentip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выполнять транслитерацию Латиницы в Кириллицу..
+        /// </summary>
+        internal static string CheckBoxRoman_Supertip {
+            get {
+                return ResourceManager.GetString("CheckBoxRoman_Supertip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Шрифт.
+        /// </summary>
+        internal static string DropDownFont_Label {
+            get {
+                return ResourceManager.GetString("DropDownFont_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Нестандартный шрифт для кодирования текста.
+        /// </summary>
+        internal static string DropDownFont_Screentip {
+            get {
+                return ResourceManager.GetString("DropDownFont_Screentip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В конце преобразования текст кодируется так, чтобы отображаться корректно в выбранном нестандартном шрифте..
+        /// </summary>
+        internal static string DropDownFont_Supertip {
+            get {
+                return ResourceManager.GetString("DropDownFont_Supertip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Транслитерация.
+        /// </summary>
+        internal static string GroupTransliteration_Label {
+            get {
+                return ResourceManager.GetString("GroupTransliteration_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Настройки.
+        /// </summary>
+        internal static string MenuSettings_Label {
+            get {
+                return ResourceManager.GetString("MenuSettings_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обычный.
+        /// </summary>
+        internal static string NormalFontName {
+            get {
+                return ResourceManager.GetString("NormalFontName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GVP.
+        /// </summary>
+        internal static string TabGVP_Label {
+            get {
+                return ResourceManager.GetString("TabGVP_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Русские опции.
+        /// </summary>
+        internal static string ToggleRussian_Label {
+            get {
+                return ResourceManager.GetString("ToggleRussian_Label", resourceCulture);
             }
         }
     }

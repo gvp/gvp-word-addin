@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2006/01/customui" xmlns:gvp="GVP.WordAddIn">
+  <ribbon>
+    <tabs>
+      <tab idQ="gvp:TabGVP" getLabel="GetLabel">
+        <group idMso="GroupFont" />
+        <group idQ="gvp:GroupTransliteration" getLabel="GetLabel">
+          <box id="BoxTransliterationSettings" boxStyle="vertical">
+            <dropDown id="DropDownFont"
+                      showImage="false"
+                      sizeString="Sample font name"
+                      onAction="SetSelectedFont"
+                      getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                      getItemCount="GetFontsCount" getItemLabel="GetFontItemName" getSelectedItemIndex="GetSelectedFontIndex"
+                    />
+            <checkBox id="CheckBoxDevanagari"
+                    onAction="SetDevanagari2Roman"
+                    getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                    />
+            <checkBox id="CheckBoxRoman"
+                          onAction="SetRoman2Cyrillic"
+                          getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                          getVisible="GetRussianOptionsState"
+                    />
+            <!--<menu id="MenuTransliteration"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  description="Description"
+                >
+              <toggleButton id="CheckBoxDevanagari"
+                      onAction="SetDevanagari2Roman"
+                      getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                    />
+              <toggleButton id="CheckBoxRoman"
+                            onAction="SetRoman2Cyrillic"
+                            getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                            getVisible="GetRussianOptionsState"
+                    />
+            </menu>-->
+          </box>
+          <button id="ButtonProcess"
+                  imageMso="ReplaceDialog"
+                  size="large"
+                  onAction="Process"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  />
+          <separator id="separator2" />
+          <menu id="MenuSettings"
+                getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                description="Description"
+                >
+            <toggleButton id="ToggleRussian"
+                          onAction="SetRussianOptionsState"
+                          getPressed="GetRussianOptionsState"
+                          getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                          />
+          </menu>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

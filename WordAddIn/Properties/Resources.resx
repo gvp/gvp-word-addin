@@ -117,11 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PlainFontName" xml:space="preserve">
+  <data name="ButtonProcess_Label" xml:space="preserve">
+    <value>Преобразовать</value>
+  </data>
+  <data name="ButtonProcess_Screentip" xml:space="preserve">
+    <value>Выполнить отмеченные преобразования</value>
+  </data>
+  <data name="ButtonProcess_Supertip" xml:space="preserve">
+    <value>Преобразование выделенного текста в соответствии с выбранными настройками. Если выбран особый шрифт, то символы будут преобразованы так, чтобы они корректно отображались в этом шрифте. Первоначально прозводится преобразование текста из нестандартных кодировок в Юникод.</value>
+  </data>
+  <data name="CheckBoxDevanagari_Label" xml:space="preserve">
+    <value>Из Деванагари в Латиницу</value>
+  </data>
+  <data name="CheckBoxDevanagari_Screentip" xml:space="preserve">
+    <value>Транслитерация Деванагари</value>
+  </data>
+  <data name="CheckBoxDevanagari_Supertip" xml:space="preserve">
+    <value>Выполнять транслитерацию деванагари в латиницу.</value>
+  </data>
+  <data name="CheckBoxRoman_Label" xml:space="preserve">
+    <value>Из Латиницы в Кириллицу</value>
+  </data>
+  <data name="CheckBoxRoman_Screentip" xml:space="preserve">
+    <value>Транслитерация Латиницы</value>
+  </data>
+  <data name="CheckBoxRoman_Supertip" xml:space="preserve">
+    <value>Выполнять транслитерацию Латиницы в Кириллицу.</value>
+  </data>
+  <data name="DropDownFont_Label" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="DropDownFont_Screentip" xml:space="preserve">
+    <value>Нестандартный шрифт для кодирования текста</value>
+  </data>
+  <data name="DropDownFont_Supertip" xml:space="preserve">
+    <value>В конце преобразования текст кодируется так, чтобы отображаться корректно в выбранном нестандартном шрифте.</value>
+  </data>
+  <data name="GroupTransliteration_Label" xml:space="preserve">
+    <value>Транслитерация</value>
+  </data>
+  <data name="MenuSettings_Label" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="NormalFontName" xml:space="preserve">
     <value>Обычный</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Ribbon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ribbons\ribbon.ru.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="TabGVP_Label" xml:space="preserve">
+    <value>GVP</value>
+  </data>
+  <data name="ToggleRussian_Label" xml:space="preserve">
+    <value>Русские опции</value>
   </data>
 </root>

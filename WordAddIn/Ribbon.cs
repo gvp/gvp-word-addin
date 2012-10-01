@@ -30,7 +30,7 @@ namespace GaudiaVedantaPublications
         {
             get
             {
-                yield return Properties.Resources.PlainFontName;
+                yield return Properties.Resources.NormalFontName;
 
                 if (RussianOptions)
                     yield return "ThamesM";
@@ -59,7 +59,7 @@ namespace GaudiaVedantaPublications
 
         public string GetCustomUI(string ribbonID)
         {
-            return Properties.Resources.Ribbon;
+            return GetResource("Ribbon.xml");
         }
 
         #endregion
@@ -71,6 +71,26 @@ namespace GaudiaVedantaPublications
         public void Ribbon_Load(Office.IRibbonUI ribbonUI)
         {
             this.ribbon = ribbonUI;
+        }
+
+        public string GetLabel(IRibbonControl control)
+        {
+            return GetResourceString(control.Id, "Label");
+        }
+
+        public string GetScreentip(IRibbonControl control)
+        {
+            return GetResourceString(control.Id, "Screentip");
+        }
+
+        public string GetSupertip(IRibbonControl control)
+        {
+            return GetResourceString(control.Id, "Supertip");
+        }
+
+        private static string GetResourceString(string id, string attribute)
+        {
+            return Properties.Resources.ResourceManager.GetString(String.Format("{0}_{1}", id, attribute));
         }
 
         // *** Fonts ********************************************
@@ -154,6 +174,18 @@ namespace GaudiaVedantaPublications
             {
                 Properties.Settings.Default.RussianOptions = value;
                 Properties.Settings.Default.Save();
+            }
+        }
+
+        private static String GetResource(String resourceName)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            using (var resource = assembly.GetManifestResourceStream(typeof(Ribbon), resourceName))
+            {
+                if (resource == null)
+                    return null;
+                using (var reader = new StreamReader(resource))
+                    return reader.ReadToEnd();
             }
         }
         #endregion

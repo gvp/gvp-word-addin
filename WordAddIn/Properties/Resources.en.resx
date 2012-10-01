@@ -117,11 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PlainFontName" xml:space="preserve">
-    <value>Plain</value>
+  <data name="ButtonProcess_Label" xml:space="preserve">
+    <value>Transform</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Ribbon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ribbons\ribbon.en.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="ButtonProcess_Screentip" xml:space="preserve">
+    <value>Perform transformation</value>
+  </data>
+  <data name="ButtonProcess_Supertip" xml:space="preserve">
+    <value>Transformation of the selected text according to the chosen settings. Once some specific font is selected, all the symbols will be mapped in order to be displayed correctly in that font. First, text is transformed from non-standard encodings to Unicode.</value>
+  </data>
+  <data name="CheckBoxDevanagari_Label" xml:space="preserve">
+    <value>Devanagari transliteration</value>
+  </data>
+  <data name="CheckBoxDevanagari_Screentip" xml:space="preserve">
+    <value>Devanagari to Roman transliteration</value>
+  </data>
+  <data name="CheckBoxDevanagari_Supertip" xml:space="preserve">
+    <value>Transliterate Devanagari script into Roman script.</value>
+  </data>
+  <data name="CheckBoxRoman_Label" xml:space="preserve">
+    <value>Roman transliteration</value>
+  </data>
+  <data name="CheckBoxRoman_Screentip" xml:space="preserve">
+    <value>Roman to Cyrillic transliteration</value>
+  </data>
+  <data name="CheckBoxRoman_Supertip" xml:space="preserve">
+    <value>Transliterate Roman script into Cyrillic script.</value>
+  </data>
+  <data name="DropDownFont_Label" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="DropDownFont_Screentip" xml:space="preserve">
+    <value>The font to encode the text</value>
+  </data>
+  <data name="DropDownFont_Supertip" xml:space="preserve">
+    <value>In the end of the transformation text is encoded so that it would be displayed correctly in this non-standard font.</value>
+  </data>
+  <data name="GroupTransliteration_Label" xml:space="preserve">
+    <value>Transliteration</value>
+  </data>
+  <data name="MenuSettings_Label" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MenuTransliteration_Label" xml:space="preserve">
+    <value>Transliteration</value>
+  </data>
+  <data name="NormalFontName" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="TabGVP_Label" xml:space="preserve">
+    <value>GVP</value>
+  </data>
+  <data name="ToggleRussian_Label" xml:space="preserve">
+    <value>Russian options</value>
   </data>
 </root>
