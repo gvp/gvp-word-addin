@@ -26,12 +26,24 @@ namespace GaudiaVedantaPublications.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool RussianOptions {
+        public bool CyrillicOptions {
             get {
-                return ((bool)(this["RussianOptions"]));
+                return ((bool)(this["CyrillicOptions"]));
             }
             set {
-                this["RussianOptions"] = value;
+                this["CyrillicOptions"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string OperationalFontName {
+            get {
+                return ((string)(this["OperationalFontName"]));
+            }
+            set {
+                this["OperationalFontName"] = value;
             }
         }
     }

@@ -2,65 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
-using Office = Microsoft.Office.Core;
 using Microsoft.Office.Core;
-using Word = Microsoft.Office.Interop.Word;
+using Office = Microsoft.Office.Core;
 
 namespace GaudiaVedantaPublications
 {
     [ComVisible(true)]
     public class Ribbon : Office.IRibbonExtensibility
     {
+        private static readonly string[] CyrillicFontNames = { "ThamesM" };
+        private static readonly string[] RomanFontNames = { "ScaTimes", "Rama Garamond Plus", "GVPalatino" };
+
         private Office.IRibbonUI ribbon;
-        private int selectedFontIndex;
-        private bool devanagari2roman;
-        private bool roman2cyrillic;
-
-        private static IDictionary<string, string> FontMap = new Dictionary<string, string>
-        {
-            { "fontItemGVPalatino", "GVPalatino" }
-        };
-
-        #region FontNames
-
-        private static IEnumerable<string> FontNames
-        {
-            get
-            {
-                yield return Properties.Resources.NormalFontName;
-
-                if (RussianOptions)
-                    yield return "ThamesM";
-
-                yield return "Rama Garamond Plus";
-                yield return "GVPalatino";
-                yield return "ScaTimes";
-            }
-        }
-
-        private string SelectedFontName
-        {
-            get
-            {
-                return FontNames.ElementAt(selectedFontIndex);
-            }
-        }
-
-        #endregion
 
         public Ribbon()
         {
         }
 
-        #region IRibbonExtensibility Members
-
         public string GetCustomUI(string ribbonID)
         {
             return EmbeddedResourceManager.GetEmbeddedStringResource("Ribbon.xml");
         }
-
-        #endregion
-
 
         #region Ribbon Callbacks
         //Create callback methods here. For more information about adding callback methods, select the Ribbon XML item in Solution Explorer and then press F1
@@ -70,9 +32,25 @@ namespace GaudiaVedantaPublications
             this.ribbon = ribbonUI;
         }
 
+        public string GetFontConversionLabel(IRibbonControl control)
+        {
+            var fontName = String.IsNullOrWhiteSpace(control.Tag) ? OperationalFontName : control.Tag;
+            return String.Format(Properties.Resources.ConvertToFont_Label, fontName);
+        }
+
         public string GetLabel(IRibbonControl control)
         {
             return GetResourceString(control.Id, "Label");
+        }
+
+        public string GetTitle(IRibbonControl control)
+        {
+            return GetResourceString(control.Id, "Title");
+        }
+
+        public string GetDescription(IRibbonControl control)
+        {
+            return GetResourceString(control.Id, "Description");
         }
 
         public string GetScreentip(IRibbonControl control)
@@ -90,86 +68,96 @@ namespace GaudiaVedantaPublications
             return Properties.Resources.ResourceManager.GetString(String.Format("{0}_{1}", id, attribute));
         }
 
-        // *** Fonts ********************************************
-        public int GetFontsCount(IRibbonControl control)
+        // *** Cyrillic options ********************************************
+
+        public bool GetCyrillicOptionsState(IRibbonControl control)
         {
-            return FontNames.Count();
+            return CyrillicOptions;
         }
 
-        public string GetFontItemName(IRibbonControl control, int index)
+        public void SetCyrillicOptionsState(IRibbonControl control, bool pressed)
         {
-            return FontNames.ElementAt(index);
-        }
-
-        public int GetSelectedFontIndex(IRibbonControl control)
-        {
-            return selectedFontIndex;
-        }
-
-        public void SetSelectedFont(IRibbonControl control, string selectedId, int selectedIndex)
-        {
-            selectedFontIndex = selectedIndex;
-        }
-
-        // *** Checkboxes ********************************************
-
-        public void SetDevanagari2Roman(IRibbonControl control, bool @checked)
-        {
-            devanagari2roman = @checked;
-        }
-
-        public void SetRoman2Cyrillic(IRibbonControl control, bool @checked)
-        {
-            roman2cyrillic = @checked;
-        }
-
-        // *** Russian options ********************************************
-
-        public bool GetRussianOptionsState(IRibbonControl control)
-        {
-            return RussianOptions;
-        }
-
-        public void SetRussianOptionsState(IRibbonControl control, bool pressed)
-        {
-            var savedFontName = SelectedFontName;
-            RussianOptions = pressed;
-            roman2cyrillic = false;
-            selectedFontIndex = Math.Max(0, FontNames.ToList().IndexOf(savedFontName));
+            CyrillicOptions = pressed;
             ribbon.Invalidate();
         }
 
         public void Process(IRibbonControl control)
         {
-            Globals.ThisAddIn.TransformText(GetTransforms().ToArray());
+            Transform(control.Id);
+        }
+
+        public void ConvertFont(IRibbonControl control)
+        {
+            if (!String.IsNullOrWhiteSpace(control.Tag))
+            {
+                OperationalFontName = control.Tag;
+                ribbon.InvalidateControl("ConvertToOperationalFont");
+            }
+            Transform("ConvertToOperationalFont");
+        }
+
+        private void Transform(String mode)
+        {
+            Globals.ThisAddIn.TransformText(GetTransforms(mode).ToArray());
+        }
+
+        private IEnumerable<ITextTransform> GetTransforms(String mode)
+        {
+            yield return new ToUnicodeTransform();
+
+            switch (mode)
+            {
+                case "ConvertToOperationalFont":
+                    yield return new FromUnicodeTransform(OperationalFontName);
+                    break;
+
+                case "TransliterateDevanagari":
+                    yield return new DevanagariTransliterationTransform();
+                    if (RomanFontNames.Contains(OperationalFontName))
+                        yield return new FromUnicodeTransform(OperationalFontName);
+                    break;
+
+                case "TransliterateRoman":
+                    yield return new MapBasedTextTransform(MapManager.Lat2Cyr);
+                    yield return new FromUnicodeTransform(CyrillicFontNames.First());
+                    break;
+            }
         }
 
         #endregion
 
-        #region Helpers
 
-        private IEnumerable<ITextTransform> GetTransforms()
-        {
-            yield return new ToUnicodeTransform();
-            if (devanagari2roman)
-                yield return new DevanagariTransliterationTransform();
+        #region *************** Settings *****************
 
-            if (roman2cyrillic)
-                yield return new MapBasedTextTransform(MapManager.Lat2Cyr);
-
-            if (selectedFontIndex > 0)
-                yield return new FromUnicodeTransform(FontNames.ElementAt(selectedFontIndex));
-        }
-
-        private static bool RussianOptions
+        private static bool CyrillicOptions
         {
             get
             {
-                return Properties.Settings.Default.RussianOptions;
+                return Properties.Settings.Default.CyrillicOptions;
             }
             set
             {
-                Properties.Settings.Default.RussianOptions = value;
+                Properties.Settings.Default.CyrillicOptions = value;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private static string OperationalFontName
+        {
+            get
+            {
+                var fontName = Properties.Settings.Default.OperationalFontName;
+                if (String.IsNullOrWhiteSpace(fontName))
+                    fontName = CyrillicFontNames.FirstOrDefault();
+
+                if (CyrillicFontNames.Contains(fontName) && !CyrillicOptions)
+                    fontName = RomanFontNames.FirstOrDefault();
+
+                return fontName;
+            }
+            set
+            {
+                Properties.Settings.Default.OperationalFontName = value;
                 Properties.Settings.Default.Save();
             }
         }

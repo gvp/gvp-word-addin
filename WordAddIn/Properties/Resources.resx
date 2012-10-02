@@ -117,55 +117,64 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonProcess_Label" xml:space="preserve">
-    <value>Преобразовать</value>
+  <data name="ConvertToFont_Label" xml:space="preserve">
+    <value>Преобразовать к шрифту {0}</value>
   </data>
-  <data name="ButtonProcess_Screentip" xml:space="preserve">
-    <value>Выполнить отмеченные преобразования</value>
+  <data name="ConvertToNormalFont_Label" xml:space="preserve">
+    <value>Преобразовать к обычному шрифту</value>
   </data>
-  <data name="ButtonProcess_Supertip" xml:space="preserve">
-    <value>Преобразование выделенного текста в соответствии с выбранными настройками. Если выбран особый шрифт, то символы будут преобразованы так, чтобы они корректно отображались в этом шрифте. Первоначально прозводится преобразование текста из нестандартных кодировок в Юникод.</value>
+  <data name="ConvertToNormalFont_Screentip" xml:space="preserve">
+    <value>Преобразовать к обычному шрифту</value>
   </data>
-  <data name="CheckBoxDevanagari_Label" xml:space="preserve">
-    <value>Из Деванагари в Латиницу</value>
+  <data name="ConvertToNormalFont_Supertip" xml:space="preserve">
+    <value>Привести текст к Юникоду, чтобы он корректно отображался во всех стандартных шрифтах.</value>
   </data>
-  <data name="CheckBoxDevanagari_Screentip" xml:space="preserve">
-    <value>Транслитерация Деванагари</value>
+  <data name="ConvertToOperationalFont_Screentip" xml:space="preserve">
+    <value>Привести к рабочему шрифту</value>
   </data>
-  <data name="CheckBoxDevanagari_Supertip" xml:space="preserve">
-    <value>Выполнять транслитерацию деванагари в латиницу.</value>
+  <data name="ConvertToOperationalFont_Supertip" xml:space="preserve">
+    <value>Преобразовать текст так, чтобы он корректно отображался в текущем рабочем шрифте.</value>
   </data>
-  <data name="CheckBoxRoman_Label" xml:space="preserve">
-    <value>Из Латиницы в Кириллицу</value>
+  <data name="CyrillicFontsSeparator_Title" xml:space="preserve">
+    <value>Кириллические шрифты</value>
   </data>
-  <data name="CheckBoxRoman_Screentip" xml:space="preserve">
-    <value>Транслитерация Латиницы</value>
+  <data name="CyrillicOptionsToggleButton_Label" xml:space="preserve">
+    <value>Кириллические опции</value>
   </data>
-  <data name="CheckBoxRoman_Supertip" xml:space="preserve">
-    <value>Выполнять транслитерацию Латиницы в Кириллицу.</value>
+  <data name="FontConversionGroup_Label" xml:space="preserve">
+    <value>Преобразование шрифтов</value>
   </data>
-  <data name="DropDownFont_Label" xml:space="preserve">
-    <value>Шрифт</value>
+  <data name="RomanFontsSeparator_Title" xml:space="preserve">
+    <value>Латинские шрифты</value>
   </data>
-  <data name="DropDownFont_Screentip" xml:space="preserve">
-    <value>Нестандартный шрифт для кодирования текста</value>
-  </data>
-  <data name="DropDownFont_Supertip" xml:space="preserve">
-    <value>В конце преобразования текст кодируется так, чтобы отображаться корректно в выбранном нестандартном шрифте.</value>
-  </data>
-  <data name="GroupTransliteration_Label" xml:space="preserve">
-    <value>Транслитерация</value>
-  </data>
-  <data name="MenuSettings_Label" xml:space="preserve">
+  <data name="SettingsGroup_Label" xml:space="preserve">
     <value>Настройки</value>
   </data>
-  <data name="NormalFontName" xml:space="preserve">
-    <value>Обычный</value>
+  <data name="SettingsMenu_Label" xml:space="preserve">
+    <value>Настройки</value>
   </data>
   <data name="TabGVP_Label" xml:space="preserve">
     <value>GVP</value>
   </data>
-  <data name="ToggleRussian_Label" xml:space="preserve">
-    <value>Русские опции</value>
+  <data name="TransliterateDevanagari_Label" xml:space="preserve">
+    <value>देवनागरी → Devanāgarī</value>
+  </data>
+  <data name="TransliterateDevanagari_Screentip" xml:space="preserve">
+    <value>Транслитерация из Деванагари в Латиницу</value>
+  </data>
+  <data name="TransliterateDevanagari_Supertip" xml:space="preserve">
+    <value>Транслитерировать Деванагари в Латиницу.</value>
+  </data>
+  <data name="TransliterateRoman_Label" xml:space="preserve">
+    <value>Devanāgarī → Девана́гари</value>
+  </data>
+  <data name="TransliterateRoman_Screentip" xml:space="preserve">
+    <value>Транслитерация Латиницы в Кириллицу.</value>
+  </data>
+  <data name="TransliterateRoman_Supertip" xml:space="preserve">
+    <value>Транслитерировать Латиницу в Кириллицу.</value>
+  </data>
+  <data name="TransliterationGroup_Label" xml:space="preserve">
+    <value>Транслитерация</value>
   </data>
 </root>

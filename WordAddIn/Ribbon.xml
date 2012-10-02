@@ -4,53 +4,64 @@
     <tabs>
       <tab idQ="gvp:TabGVP" getLabel="GetLabel">
         <group idMso="GroupFont" />
-        <group idQ="gvp:GroupTransliteration" getLabel="GetLabel">
-          <box id="BoxTransliterationSettings" boxStyle="vertical">
-            <dropDown id="DropDownFont"
-                      showImage="false"
-                      sizeString="Sample font name"
-                      onAction="SetSelectedFont"
-                      getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                      getItemCount="GetFontsCount" getItemLabel="GetFontItemName" getSelectedItemIndex="GetSelectedFontIndex"
+        <group idQ="gvp:FontConversionGroup" getLabel="GetLabel">
+          <splitButton id="FontConversionMenu">
+            <button id="ConvertToOperationalFont"
+                    imageMso="ReplaceDialog"
+                    onAction="ConvertFont"
+                    getLabel="GetFontConversionLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                     />
-            <checkBox id="CheckBoxDevanagari"
-                    onAction="SetDevanagari2Roman"
-                    getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                    />
-            <checkBox id="CheckBoxRoman"
-                          onAction="SetRoman2Cyrillic"
-                          getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                          getVisible="GetRussianOptionsState"
-                    />
-            <!--<menu id="MenuTransliteration"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                  description="Description"
-                >
-              <toggleButton id="CheckBoxDevanagari"
-                      onAction="SetDevanagari2Roman"
-                      getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                    />
-              <toggleButton id="CheckBoxRoman"
-                            onAction="SetRoman2Cyrillic"
-                            getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                            getVisible="GetRussianOptionsState"
-                    />
-            </menu>-->
-          </box>
-          <button id="ButtonProcess"
+            <menu>
+              <menuSeparator idQ="gvp:CyrillicFontsSeparator" getTitle="GetTitle" />
+              <button id="ConvertToThamesM"
+                      onAction="ConvertFont"
+                      tag="ThamesM"
+                      getLabel="GetFontConversionLabel"
+                      getVisible="GetCyrillicOptionsState"
+                      />
+              <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
+              <button id="ConvertToScaTimes"
+                      onAction="ConvertFont"
+                      tag="ScaTimes"
+                      getLabel="GetFontConversionLabel"
+                      />
+              <button id="ConvertToRamaGaramondPlus"
+                      onAction="ConvertFont"
+                      tag="Rama Garamond Plus"
+                      getLabel="GetFontConversionLabel"
+                      />
+              <button id="ConvertToGVPalatino"
+                      onAction="ConvertFont"
+                      tag="GVPalatino"
+                      getLabel="GetFontConversionLabel"
+                      />
+            </menu>
+          </splitButton>
+          <button id="ConvertToNormalFont"
                   imageMso="ReplaceDialog"
-                  size="large"
                   onAction="Process"
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   />
-          <separator id="separator2" />
-          <menu id="MenuSettings"
+
+        </group>
+        <group idQ="gvp:TransliterationGroup" getLabel="GetLabel">
+          <button id="TransliterateDevanagari"
+                  onAction="Process"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"
+                  />
+          <button id="TransliterateRoman"
+                  onAction="Process"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"
+                  getVisible="GetCyrillicOptionsState"
+                  />
+        </group>
+        <group idQ="gvp:SettingsGroup" getLabel="GetLabel">
+          <menu id="SettingsMenu"
                 getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                description="Description"
                 >
-            <toggleButton id="ToggleRussian"
-                          onAction="SetRussianOptionsState"
-                          getPressed="GetRussianOptionsState"
+            <toggleButton id="CyrillicOptionsToggleButton"
+                          onAction="SetCyrillicOptionsState"
+                          getPressed="GetCyrillicOptionsState"
                           getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                           />
           </menu>
