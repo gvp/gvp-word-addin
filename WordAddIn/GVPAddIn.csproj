@@ -228,6 +228,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="EmbeddedResourceManager.cs" />
     <Compile Include="Ribbon.cs">
       <XmlRibbon>true</XmlRibbon>
     </Compile>

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
 using Map = System.Collections.Generic.IDictionary<System.String, GaudiaVedantaPublications.MapEntry>;
@@ -56,8 +55,7 @@ namespace GaudiaVedantaPublications
         private static Map ReadMap(string name, MapDirection direction)
         {
             var resourceName = String.Format("Maps.{0}.xml", name);
-            var assembly = Assembly.GetExecutingAssembly();
-            using (var resource = assembly.GetManifestResourceStream(typeof(MapManager), resourceName))
+            using (var resource = EmbeddedResourceManager.GetEmbeddedResource(resourceName))
             {
                 if (resource == null)
                     return null;

@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Core;
 using Word = Microsoft.Office.Interop.Word;
@@ -59,7 +56,7 @@ namespace GaudiaVedantaPublications
 
         public string GetCustomUI(string ribbonID)
         {
-            return GetResource("Ribbon.xml");
+            return EmbeddedResourceManager.GetEmbeddedStringResource("Ribbon.xml");
         }
 
         #endregion
@@ -177,17 +174,6 @@ namespace GaudiaVedantaPublications
             }
         }
 
-        private static String GetResource(String resourceName)
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-            using (var resource = assembly.GetManifestResourceStream(typeof(Ribbon), resourceName))
-            {
-                if (resource == null)
-                    return null;
-                using (var reader = new StreamReader(resource))
-                    return reader.ReadToEnd();
-            }
-        }
         #endregion
     }
 }
