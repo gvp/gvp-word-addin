@@ -141,9 +141,6 @@
   <data name="CyrillicOptionsToggleButton_Label" xml:space="preserve">
     <value>Кириллические опции</value>
   </data>
-  <data name="FontConversionGroup_Label" xml:space="preserve">
-    <value>Преобразование шрифтов</value>
-  </data>
   <data name="RomanFontsSeparator_Title" xml:space="preserve">
     <value>Латинские шрифты</value>
   </data>
@@ -166,7 +163,7 @@
     <value>Транслитерировать Деванагари в Латиницу.</value>
   </data>
   <data name="TransliterateRoman_Label" xml:space="preserve">
-    <value>Devanāgarī → Девана́гари</value>
+    <value>Devanāgarī → Девана̄гарӣ</value>
   </data>
   <data name="TransliterateRoman_Screentip" xml:space="preserve">
     <value>Транслитерация Латиницы в Кириллицу.</value>

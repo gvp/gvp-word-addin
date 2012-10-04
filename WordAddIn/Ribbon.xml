@@ -4,7 +4,7 @@
     <tabs>
       <tab idQ="gvp:TabGVP" getLabel="GetLabel">
         <group idMso="GroupFont" />
-        <group idQ="gvp:FontConversionGroup" getLabel="GetLabel">
+        <group idQ="gvp:TransliterationGroup" getLabel="GetLabel">
           <splitButton id="FontConversionMenu">
             <button id="ConvertToOperationalFont"
                     imageMso="ReplaceDialog"
@@ -12,6 +12,10 @@
                     getLabel="GetFontConversionLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                     />
             <menu>
+              <button id="ConvertToNormalFont"
+                      onAction="Process"
+                      getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  />
               <menuSeparator idQ="gvp:CyrillicFontsSeparator" getTitle="GetTitle" />
               <button id="ConvertToThamesM"
                       onAction="ConvertFont"
@@ -37,14 +41,6 @@
                       />
             </menu>
           </splitButton>
-          <button id="ConvertToNormalFont"
-                  imageMso="ReplaceDialog"
-                  onAction="Process"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                  />
-
-        </group>
-        <group idQ="gvp:TransliterationGroup" getLabel="GetLabel">
           <button id="TransliterateDevanagari"
                   onAction="Process"
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"

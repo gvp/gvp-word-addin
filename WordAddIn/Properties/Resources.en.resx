@@ -141,9 +141,6 @@
   <data name="CyrillicOptionsToggleButton_Label" xml:space="preserve">
     <value>Cyrillic options</value>
   </data>
-  <data name="FontConversionGroup_Label" xml:space="preserve">
-    <value>Font conversion</value>
-  </data>
   <data name="RomanFontsSeparator_Title" xml:space="preserve">
     <value>Roman fonts</value>
   </data>
@@ -156,17 +153,11 @@
   <data name="TabGVP_Label" xml:space="preserve">
     <value>GVP</value>
   </data>
-  <data name="TransliterateDevanagari_Label" xml:space="preserve">
-    <value>देवनागरी → Devanāgarī</value>
-  </data>
   <data name="TransliterateDevanagari_Screentip" xml:space="preserve">
     <value>Devanagari to Roman transliteration</value>
   </data>
   <data name="TransliterateDevanagari_Supertip" xml:space="preserve">
     <value>Transliterate Devanagari script into Roman script.</value>
-  </data>
-  <data name="TransliterateRoman_Label" xml:space="preserve">
-    <value>Devanāgarī → Девана́гари</value>
   </data>
   <data name="TransliterateRoman_Screentip" xml:space="preserve">
     <value>Roman to Cyrillic transliteration</value>

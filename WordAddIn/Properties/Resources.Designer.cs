@@ -133,15 +133,6 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразование шрифтов.
-        /// </summary>
-        internal static string FontConversionGroup_Label {
-            get {
-                return ResourceManager.GetString("FontConversionGroup_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Латинские шрифты.
         /// </summary>
         internal static string RomanFontsSeparator_Title {
@@ -205,7 +196,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Devanāgarī → Девана́гари.
+        ///   Looks up a localized string similar to Devanāgarī → Девана̄гарӣ.
         /// </summary>
         internal static string TransliterateRoman_Label {
             get {
