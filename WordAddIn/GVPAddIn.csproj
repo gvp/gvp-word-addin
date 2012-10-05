@@ -214,6 +214,7 @@
     <Compile Include="MapBasedTextTransform.cs" />
     <Compile Include="MapManager.cs" />
     <Compile Include="MapEntry.cs" />
+    <Compile Include="PictureDispConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -246,6 +247,7 @@
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Ribbon.Diacrytics.cs" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>
@@ -255,6 +257,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Images\AcuteAccent.png" />
+    <EmbeddedResource Include="Images\Candrabindu.png" />
+    <EmbeddedResource Include="Images\DotAbove.png" />
+    <EmbeddedResource Include="Images\DotBelow.png" />
+    <EmbeddedResource Include="Images\Macron.png" />
+    <EmbeddedResource Include="Images\MacronBelow.png" />
+    <EmbeddedResource Include="Images\Tilde.png" />
     <EmbeddedResource Include="Maps\Fonts\Amita Times Cyr.xml" />
     <EmbeddedResource Include="Maps\Fonts\Rama Garamond Plus.xml" />
     <EmbeddedResource Include="Maps\Translit\Lat2Cyr.xml" />

@@ -61,6 +61,24 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Акут ударение.
+        /// </summary>
+        internal static string AcuteAccentButton_Label {
+            get {
+                return ResourceManager.GetString("AcuteAccentButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чандрабинду.
+        /// </summary>
+        internal static string CandrabinduButton_Label {
+            get {
+                return ResourceManager.GetString("CandrabinduButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Преобразовать к шрифту {0}.
         /// </summary>
         internal static string ConvertToFont_Label {
@@ -133,6 +151,60 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Вставить диакритику.
+        /// </summary>
+        internal static string DiacryticsGallery_Label {
+            get {
+                return ResourceManager.GetString("DiacryticsGallery_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Точка сверху.
+        /// </summary>
+        internal static string DotAboveButton_Label {
+            get {
+                return ResourceManager.GetString("DotAboveButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Точка снизу.
+        /// </summary>
+        internal static string DotBelowButton_Label {
+            get {
+                return ResourceManager.GetString("DotBelowButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Диакритика.
+        /// </summary>
+        internal static string GroupDiacrytics_Label {
+            get {
+                return ResourceManager.GetString("GroupDiacrytics_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Макрон снизу.
+        /// </summary>
+        internal static string MacronBelowButton_Label {
+            get {
+                return ResourceManager.GetString("MacronBelowButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Макрон.
+        /// </summary>
+        internal static string MacronButton_Label {
+            get {
+                return ResourceManager.GetString("MacronButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Латинские шрифты.
         /// </summary>
         internal static string RomanFontsSeparator_Title {
@@ -165,6 +237,15 @@ namespace GaudiaVedantaPublications.Properties {
         internal static string TabGVP_Label {
             get {
                 return ResourceManager.GetString("TabGVP_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тильда.
+        /// </summary>
+        internal static string TildeButton_Label {
+            get {
+                return ResourceManager.GetString("TildeButton_Label", resourceCulture);
             }
         }
         

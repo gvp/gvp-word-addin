@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AcuteAccentButton_Label" xml:space="preserve">
+    <value>Акут ударение</value>
+  </data>
+  <data name="CandrabinduButton_Label" xml:space="preserve">
+    <value>Чандрабинду</value>
+  </data>
   <data name="ConvertToFont_Label" xml:space="preserve">
     <value>Преобразовать к шрифту {0}</value>
   </data>
@@ -141,6 +147,24 @@
   <data name="CyrillicOptionsToggleButton_Label" xml:space="preserve">
     <value>Кириллические опции</value>
   </data>
+  <data name="DiacryticsGallery_Label" xml:space="preserve">
+    <value>Вставить диакритику</value>
+  </data>
+  <data name="DotAboveButton_Label" xml:space="preserve">
+    <value>Точка сверху</value>
+  </data>
+  <data name="DotBelowButton_Label" xml:space="preserve">
+    <value>Точка снизу</value>
+  </data>
+  <data name="GroupDiacrytics_Label" xml:space="preserve">
+    <value>Диакритика</value>
+  </data>
+  <data name="MacronBelowButton_Label" xml:space="preserve">
+    <value>Макрон снизу</value>
+  </data>
+  <data name="MacronButton_Label" xml:space="preserve">
+    <value>Макрон</value>
+  </data>
   <data name="RomanFontsSeparator_Title" xml:space="preserve">
     <value>Латинские шрифты</value>
   </data>
@@ -152,6 +176,9 @@
   </data>
   <data name="TabGVP_Label" xml:space="preserve">
     <value>GVP</value>
+  </data>
+  <data name="TildeButton_Label" xml:space="preserve">
+    <value>Тильда</value>
   </data>
   <data name="TransliterateDevanagari_Label" xml:space="preserve">
     <value>देवनागरी → Devanāgarī</value>

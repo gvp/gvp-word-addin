@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.Office.Core;
+using stdole;
 using Office = Microsoft.Office.Core;
 
 namespace GaudiaVedantaPublications
 {
     [ComVisible(true)]
-    public class Ribbon : Office.IRibbonExtensibility
+    public partial class Ribbon : Office.IRibbonExtensibility
     {
         private static readonly string[] CyrillicFontNames = { "ThamesM" };
         private static readonly string[] RomanFontNames = { "ScaTimes", "Rama Garamond Plus", "GVPalatino" };
@@ -30,6 +31,14 @@ namespace GaudiaVedantaPublications
         public void Ribbon_Load(Office.IRibbonUI ribbonUI)
         {
             this.ribbon = ribbonUI;
+        }
+
+        public IPictureDisp LoadImage(string imageId)
+        {
+            var image = EmbeddedResourceManager.GetEmbeddedImageResource(String.Format("Images.{0}", imageId));
+            if (image == null)
+                return null;
+            return PictureDispConverter.ToIPictureDisp(image);
         }
 
         public string GetFontConversionLabel(IRibbonControl control)

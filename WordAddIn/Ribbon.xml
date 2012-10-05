@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2006/01/customui" xmlns:gvp="GVP.WordAddIn">
+<customUI onLoad="Ribbon_Load" loadImage="LoadImage"
+          xmlns="http://schemas.microsoft.com/office/2006/01/customui" xmlns:gvp="GVP.WordAddIn">
   <ribbon>
     <tabs>
       <tab idQ="gvp:TabGVP" getLabel="GetLabel">
@@ -50,6 +51,65 @@
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"
                   getVisible="GetCyrillicOptionsState"
                   />
+        </group>
+        <group idQ="gvp:GroupDiacrytics" getLabel="GetLabel">
+          <button idQ="gvp:MacronButton"
+                  tag="&#x0304;"
+                  image="Macron.png"
+                  size="large"
+                  onAction="InsertDiacrytics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  />
+          <button idQ="gvp:MacronBelowButton"
+                  tag="&#x0331;"
+                  image="MacronBelow.png"
+                  size="large"
+                  onAction="InsertDiacrytics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  />
+          <button idQ="gvp:DotAboveButton"
+                  tag="&#x0307;"
+                  image="DotAbove.png"
+                  size="large"
+                  onAction="InsertDiacrytics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  />
+          <button idQ="gvp:DotBelowButton"
+                  tag="&#x0323;"
+                  image="DotBelow.png"
+                  size="large"
+                  onAction="InsertDiacrytics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  />
+          <button idQ="gvp:TildeButton"
+                  tag="&#x0303;"
+                  image="Tilde.png"
+                  size="large"
+                  onAction="InsertDiacrytics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  />
+          <button idQ="gvp:AcuteAccentButton"
+                  tag="&#x0301;"
+                  image="AcuteAccent.png"
+                  size="large"
+                  onAction="InsertDiacrytics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  />
+          <button idQ="gvp:CandrabinduButton"
+                  tag="&#x0310;"
+                  image="Candrabindu.png"
+                  size="large"
+                  onAction="InsertDiacrytics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  />
+          <gallery idQ="gvp:DiacryticsGallery"
+                   showItemLabel="false"
+                   visible="false"
+                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                   getItemCount="GetDiacryticsCount" getItemImage="GetDiacryticsImage" getItemID="GetDiacryticsId"
+                   onAction="InsertDiacryticsItem"
+                   >
+          </gallery>
         </group>
         <group idQ="gvp:SettingsGroup" getLabel="GetLabel">
           <menu id="SettingsMenu"
