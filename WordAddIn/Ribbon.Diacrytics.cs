@@ -55,10 +55,15 @@ namespace GaudiaVedantaPublications
             InsertCombiningMark(combiningMarks[selectedIndex].Mark);
         }
 
-        private static void InsertCombiningMark(string mark)
+        private void InsertCombiningMark(string mark)
         {
-            Globals.ThisAddIn.Application.Selection.Range.InsertAfter(mark);
-            Globals.ThisAddIn.Application.Selection.EndOf(WdUnits.wdCharacter);
+            var selection = Globals.ThisAddIn.Application.Selection;
+            selection.StartOf(WdUnits.wdCharacter, WdMovementType.wdExtend);
+            var fontName = selection.Font.Name;
+            selection.InsertAfter(mark);
+            if (CyrillicFontNames.Contains(fontName) || RomanFontNames.Contains(fontName))
+                Transform(fontName);
+            selection.EndOf(WdUnits.wdCharacter);
         }
     }
 }

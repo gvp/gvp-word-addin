@@ -120,6 +120,9 @@ namespace GaudiaVedantaPublications
                     yield return new FromUnicodeTransform(OperationalFontName);
                     break;
 
+                case "ConvertToNormalFont":
+                    yield break;
+
                 case "TransliterateDevanagari":
                     yield return new DevanagariTransliterationTransform();
                     if (RomanFontNames.Contains(OperationalFontName))
@@ -130,6 +133,10 @@ namespace GaudiaVedantaPublications
                     yield return new MapBasedTextTransform(MapManager.Lat2Cyr);
                     yield return new FromUnicodeTransform(CyrillicFontNames.First());
                     break;
+
+                default:
+                    yield return new FromUnicodeTransform(mode);
+                    yield break;
             }
         }
 
