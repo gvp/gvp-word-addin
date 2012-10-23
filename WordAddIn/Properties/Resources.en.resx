@@ -147,8 +147,11 @@
   <data name="CyrillicOptionsToggleButton_Label" xml:space="preserve">
     <value>Cyrillic options</value>
   </data>
+  <data name="DiacryticsButtons_Supertip" xml:space="preserve">
+    <value>Append this diacrytical mark to the previous symbol.</value>
+  </data>
   <data name="DiacryticsGallery_Label" xml:space="preserve">
-    <value>Insert diacrytics</value>
+    <value>Insert diacrytical mark</value>
   </data>
   <data name="DotAboveButton_Label" xml:space="preserve">
     <value>Dot above</value>
@@ -157,7 +160,7 @@
     <value>Dot below</value>
   </data>
   <data name="GroupDiacrytics_Label" xml:space="preserve">
-    <value>Diacrytics</value>
+    <value>Diacrytical marks</value>
   </data>
   <data name="MacronBelowButton_Label" xml:space="preserve">
     <value>Macron below</value>

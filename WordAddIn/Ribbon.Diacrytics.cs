@@ -40,6 +40,11 @@ namespace GaudiaVedantaPublications
             return LoadImage(String.Format("{0}.png", combiningMarks[index].Id));
         }
 
+        public string GetDiacryticsSupertip(IRibbonControl control)
+        {
+            return Properties.Resources.DiacryticsButtons_Supertip;
+        }
+
         public void InsertDiacrytics(IRibbonControl control)
         {
             InsertCombiningMark(control.Tag);

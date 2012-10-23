@@ -151,6 +151,15 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Добавить этот диакритический знак к предыдущему символу..
+        /// </summary>
+        internal static string DiacryticsButtons_Supertip {
+            get {
+                return ResourceManager.GetString("DiacryticsButtons_Supertip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Вставить диакритику.
         /// </summary>
         internal static string DiacryticsGallery_Label {
@@ -178,7 +187,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Диакритика.
+        ///   Looks up a localized string similar to Диакритические знаки.
         /// </summary>
         internal static string GroupDiacrytics_Label {
             get {

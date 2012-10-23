@@ -147,6 +147,9 @@
   <data name="CyrillicOptionsToggleButton_Label" xml:space="preserve">
     <value>Кириллические опции</value>
   </data>
+  <data name="DiacryticsButtons_Supertip" xml:space="preserve">
+    <value>Добавить этот диакритический знак к предыдущему символу.</value>
+  </data>
   <data name="DiacryticsGallery_Label" xml:space="preserve">
     <value>Вставить диакритику</value>
   </data>
@@ -157,7 +160,7 @@
     <value>Точка снизу</value>
   </data>
   <data name="GroupDiacrytics_Label" xml:space="preserve">
-    <value>Диакритика</value>
+    <value>Диакритические знаки</value>
   </data>
   <data name="MacronBelowButton_Label" xml:space="preserve">
     <value>Макрон снизу</value>
