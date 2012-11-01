@@ -173,6 +173,7 @@
   <entry from="&#x00C8;" to="ऌ"></entry>
   <entry from="&#x00C9;" to="ङ्क्त"></entry>
   <entry from="&#x00CA;" to="ह्न"></entry>
+  <entry from="&#x00CB;" to="ल्ल"></entry>
   <entry from="&#x00CC;" to="ङ्ख"></entry>
   <entry from="&#x00CD;" to="ह्ल"></entry>
   <entry from="&#x00CE;" to="ह्र"></entry>
@@ -225,4 +226,14 @@
   <entry from="&#x00FD;" to="["></entry>
   <entry from="&#x00FE;" to="]"></entry>
   <entry from="&#x00FF;" to="ळ"></entry>
+  <entry from="&#x0152;" to="०" direction="forward"></entry>
+  <entry from="&#x0192;" to="१" direction="forward"></entry>
+  <entry from="&#x201E;" to="२" direction="forward"></entry>
+  <entry from="&#x2026;" to="३" direction="forward"></entry>
+  <entry from="&#x2020;" to="४" direction="forward"></entry>
+  <entry from="&#x2021;" to="५" direction="forward"></entry>
+  <entry from="&#x02C6;" to="६" direction="forward"></entry>
+  <entry from="&#x2030;" to="७" direction="forward"></entry>
+  <entry from="&#x0160;" to="८" direction="forward"></entry>
+  <entry from="&#x2039;" to="९" direction="forward"></entry>
 </map>
