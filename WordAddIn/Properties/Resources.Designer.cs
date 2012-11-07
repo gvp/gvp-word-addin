@@ -88,33 +88,6 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать к обычному шрифту.
-        /// </summary>
-        internal static string ConvertToNormalFont_Label {
-            get {
-                return ResourceManager.GetString("ConvertToNormalFont_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Преобразовать к обычному шрифту.
-        /// </summary>
-        internal static string ConvertToNormalFont_Screentip {
-            get {
-                return ResourceManager.GetString("ConvertToNormalFont_Screentip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Привести текст к Юникоду, чтобы он корректно отображался во всех стандартных шрифтах..
-        /// </summary>
-        internal static string ConvertToNormalFont_Supertip {
-            get {
-                return ResourceManager.GetString("ConvertToNormalFont_Supertip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Привести к рабочему шрифту.
         /// </summary>
         internal static string ConvertToOperationalFont_Screentip {
@@ -129,6 +102,33 @@ namespace GaudiaVedantaPublications.Properties {
         internal static string ConvertToOperationalFont_Supertip {
             get {
                 return ResourceManager.GetString("ConvertToOperationalFont_Supertip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Преобразовать в Юникод.
+        /// </summary>
+        internal static string ConvertToUnicode_Label {
+            get {
+                return ResourceManager.GetString("ConvertToUnicode_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Преобразовать в Юникод.
+        /// </summary>
+        internal static string ConvertToUnicode_Screentip {
+            get {
+                return ResourceManager.GetString("ConvertToUnicode_Screentip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Привести текст к Юникоду, чтобы он корректно отображался во всех стандартных шрифтах..
+        /// </summary>
+        internal static string ConvertToUnicode_Supertip {
+            get {
+                return ResourceManager.GetString("ConvertToUnicode_Supertip", resourceCulture);
             }
         }
         

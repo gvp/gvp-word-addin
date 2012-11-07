@@ -207,6 +207,8 @@
   -->
   <ItemGroup>
     <Compile Include="CombiningTransform.cs" />
+    <Compile Include="Ribbon.Transliteration.cs" />
+    <Compile Include="Ribbon.Conversion.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FromUnicodeTransform.cs" />
     <Compile Include="IterativeTextTransform.cs" />

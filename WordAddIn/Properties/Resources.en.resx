@@ -126,20 +126,20 @@
   <data name="ConvertToFont_Label" xml:space="preserve">
     <value>Convert  to {0}</value>
   </data>
-  <data name="ConvertToNormalFont_Label" xml:space="preserve">
-    <value>Convert to normal font</value>
-  </data>
-  <data name="ConvertToNormalFont_Screentip" xml:space="preserve">
-    <value>Convert to normal font</value>
-  </data>
-  <data name="ConvertToNormalFont_Supertip" xml:space="preserve">
-    <value>Convert the text to Unicode so that it would be displayed correctly in all standard fonts.</value>
-  </data>
   <data name="ConvertToOperationalFont_Screentip" xml:space="preserve">
     <value>Convert to operational font</value>
   </data>
   <data name="ConvertToOperationalFont_Supertip" xml:space="preserve">
     <value>Convert the text so that it would be displayed correctly in current operational font.</value>
+  </data>
+  <data name="ConvertToUnicode_Label" xml:space="preserve">
+    <value>Convert to Unicode</value>
+  </data>
+  <data name="ConvertToUnicode_Screentip" xml:space="preserve">
+    <value>Convert to Unicode</value>
+  </data>
+  <data name="ConvertToUnicode_Supertip" xml:space="preserve">
+    <value>Convert the text to Unicode so that it would be displayed correctly in all standard fonts.</value>
   </data>
   <data name="CyrillicFontsSeparator_Title" xml:space="preserve">
     <value>Cyrillic fonts</value>
@@ -161,6 +161,9 @@
   </data>
   <data name="GroupDiacrytics_Label" xml:space="preserve">
     <value>Diacrytical marks</value>
+  </data>
+  <data name="GroupFontConversion_Label" xml:space="preserve">
+    <value>Font conversion</value>
   </data>
   <data name="MacronBelowButton_Label" xml:space="preserve">
     <value>Macron below</value>

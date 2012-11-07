@@ -6,6 +6,17 @@
       <tab idQ="gvp:TabGVP" getLabel="GetLabel">
         <group idMso="GroupFont" />
         <group idQ="gvp:TransliterationGroup" getLabel="GetLabel">
+          <button id="TransliterateDevanagari"
+                  onAction="Transliterate"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"
+                  />
+          <button id="TransliterateRoman"
+                  onAction="Transliterate"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"
+                  getVisible="GetCyrillicOptionsState"
+                  />
+        </group>
+        <group idQ="gvp:GroupFontConversion" getLabel="GetLabel">
           <splitButton id="FontConversionMenu">
             <button id="ConvertToOperationalFont"
                     imageMso="ReplaceDialog"
@@ -13,8 +24,8 @@
                     getLabel="GetFontConversionLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                     />
             <menu>
-              <button id="ConvertToNormalFont"
-                      onAction="Process"
+              <button id="ConvertToUnicode"
+                      onAction="ConvertToUnicode"
                       getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   />
               <menuSeparator idQ="gvp:CyrillicFontsSeparator" getTitle="GetTitle" />
@@ -42,15 +53,6 @@
                       />
             </menu>
           </splitButton>
-          <button id="TransliterateDevanagari"
-                  onAction="Process"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"
-                  />
-          <button id="TransliterateRoman"
-                  onAction="Process"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"
-                  getVisible="GetCyrillicOptionsState"
-                  />
         </group>
         <group idQ="gvp:GroupDiacrytics" getLabel="GetLabel">
           <button idQ="gvp:MacronButton"

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.Office.Core;
 using stdole;
@@ -11,9 +9,6 @@ namespace GaudiaVedantaPublications
     [ComVisible(true)]
     public partial class Ribbon : Office.IRibbonExtensibility
     {
-        private static readonly string[] CyrillicFontNames = { "ThamesM" };
-        private static readonly string[] RomanFontNames = { "ScaTimes", "Rama Garamond Plus", "GVPalatino" };
-
         private Office.IRibbonUI ribbon;
 
         public Ribbon()
@@ -39,12 +34,6 @@ namespace GaudiaVedantaPublications
             if (image == null)
                 return null;
             return PictureDispConverter.ToIPictureDisp(image);
-        }
-
-        public string GetFontConversionLabel(IRibbonControl control)
-        {
-            var fontName = String.IsNullOrWhiteSpace(control.Tag) ? OperationalFontName : control.Tag;
-            return String.Format(Properties.Resources.ConvertToFont_Label, fontName);
         }
 
         public string GetLabel(IRibbonControl control)
@@ -90,55 +79,7 @@ namespace GaudiaVedantaPublications
             ribbon.Invalidate();
         }
 
-        public void Process(IRibbonControl control)
-        {
-            Transform(control.Id);
-        }
 
-        public void ConvertFont(IRibbonControl control)
-        {
-            if (!String.IsNullOrWhiteSpace(control.Tag))
-            {
-                OperationalFontName = control.Tag;
-                ribbon.InvalidateControl("ConvertToOperationalFont");
-            }
-            Transform("ConvertToOperationalFont");
-        }
-
-        private void Transform(String mode)
-        {
-            Globals.ThisAddIn.TransformText(GetTransforms(mode).ToArray());
-        }
-
-        private IEnumerable<ITextTransform> GetTransforms(String mode)
-        {
-            yield return new ToUnicodeTransform();
-
-            switch (mode)
-            {
-                case "ConvertToOperationalFont":
-                    yield return new FromUnicodeTransform(OperationalFontName);
-                    break;
-
-                case "ConvertToNormalFont":
-                    yield break;
-
-                case "TransliterateDevanagari":
-                    yield return new DevanagariTransliterationTransform();
-                    if (RomanFontNames.Contains(OperationalFontName))
-                        yield return new FromUnicodeTransform(OperationalFontName);
-                    break;
-
-                case "TransliterateRoman":
-                    yield return new MapBasedTextTransform(MapManager.Lat2Cyr);
-                    yield return new FromUnicodeTransform(CyrillicFontNames.First());
-                    break;
-
-                default:
-                    yield return new FromUnicodeTransform(mode);
-                    yield break;
-            }
-        }
 
         #endregion
 
@@ -154,26 +95,6 @@ namespace GaudiaVedantaPublications
             set
             {
                 Properties.Settings.Default.CyrillicOptions = value;
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private static string OperationalFontName
-        {
-            get
-            {
-                var fontName = Properties.Settings.Default.OperationalFontName;
-                if (String.IsNullOrWhiteSpace(fontName))
-                    fontName = CyrillicFontNames.FirstOrDefault();
-
-                if (CyrillicFontNames.Contains(fontName) && !CyrillicOptions)
-                    fontName = RomanFontNames.FirstOrDefault();
-
-                return fontName;
-            }
-            set
-            {
-                Properties.Settings.Default.OperationalFontName = value;
                 Properties.Settings.Default.Save();
             }
         }
