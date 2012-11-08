@@ -223,6 +223,15 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Преобразовать к Sca-шрифтам.
+        /// </summary>
+        internal static string ScaSeriesMenu_Label {
+            get {
+                return ResourceManager.GetString("ScaSeriesMenu_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Настройки.
         /// </summary>
         internal static string SettingsGroup_Label {

@@ -36,11 +36,63 @@
                       getVisible="GetCyrillicOptionsState"
                       />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
-              <button id="ConvertToScaTimes"
-                      onAction="ConvertFont"
-                      tag="ScaTimes"
-                      getLabel="GetFontConversionLabel"
-                      />
+              <menu idQ="gvp:ScaSeriesMenu" getLabel="GetLabel" >
+                <button id="ConvertToScaTimes"
+                        onAction="ConvertFont"
+                        tag="ScaTimes"
+                        getLabel="GetFontConversionLabel"
+                        />
+                <button id="ConvertToScaBenguit"
+                        onAction="ConvertFont"
+                        tag="ScaBenguit"
+                        getLabel="GetFontConversionLabel"
+                        />
+                <button id="ConvertToScaCheltenham"
+                        onAction="ConvertFont"
+                        tag="ScaCheltenham"
+                        getLabel="GetFontConversionLabel"
+                        />
+                <button id="ConvertToScaFelixTitling"
+                        onAction="ConvertFont"
+                        tag="ScaFelixTitling"
+                        getLabel="GetFontConversionLabel"
+                        />
+                <button id="ConvertToScaFrizQuadrata"
+                        onAction="ConvertFont"
+                        tag="ScaFrizQuadrata"
+                        getLabel="GetFontConversionLabel"
+                        />
+                <button id="ConvertToScaGoudy"
+                        onAction="ConvertFont"
+                        tag="ScaGoudy"
+                        getLabel="GetFontConversionLabel"
+                        />
+                <button id="ConvertToScaHelvetica"
+                        onAction="ConvertFont"
+                        tag="ScaHelvetica"
+                        getLabel="GetFontConversionLabel"
+                        />
+                <button id="ConvertToScaKorinna"
+                        onAction="ConvertFont"
+                        tag="ScaKorinna"
+                        getLabel="GetFontConversionLabel"
+                        />
+                <button id="ConvertToScaOptima"
+                        onAction="ConvertFont"
+                        tag="ScaOptima"
+                        getLabel="GetFontConversionLabel"
+                        />
+                <button id="ConvertToScaPalatino"
+                        onAction="ConvertFont"
+                        tag="ScaPalatino"
+                        getLabel="GetFontConversionLabel"
+                        />
+                <button id="ConvertToScaSabon"
+                        onAction="ConvertFont"
+                        tag="ScaSabon"
+                        getLabel="GetFontConversionLabel"
+                        />
+              </menu>
               <button id="ConvertToRamaGaramondPlus"
                       onAction="ConvertFont"
                       tag="Rama Garamond Plus"

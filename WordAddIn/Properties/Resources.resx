@@ -171,6 +171,9 @@
   <data name="RomanFontsSeparator_Title" xml:space="preserve">
     <value>Латинские шрифты</value>
   </data>
+  <data name="ScaSeriesMenu_Label" xml:space="preserve">
+    <value>Преобразовать к Sca-шрифтам</value>
+  </data>
   <data name="SettingsGroup_Label" xml:space="preserve">
     <value>Настройки</value>
   </data>
