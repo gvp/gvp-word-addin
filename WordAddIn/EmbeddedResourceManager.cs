@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace GaudiaVedantaPublications
@@ -27,10 +28,13 @@ namespace GaudiaVedantaPublications
             }
         }
 
-        public static Stream GetEmbeddedResource(String resourceName)
+        public static Stream GetEmbeddedResource(String name)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            return assembly.GetManifestResourceStream(typeof(EmbeddedResourceManager), resourceName);
+            var resourceName = assembly.GetManifestResourceNames().FirstOrDefault(x => x.EndsWith(name));
+            if (resourceName == null)
+                return null;
+            return assembly.GetManifestResourceStream(resourceName);
         }
 
         public static String GetEmbeddedStringResource(String resourceName)

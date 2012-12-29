@@ -22,7 +22,7 @@ namespace GaudiaVedantaPublications
         {
             get
             {
-                return GetMap("Translit.Lat2Cyr", MapDirection.Forward);
+                return GetMap("Lat2Cyr", MapDirection.Forward);
             }
         }
 
@@ -30,7 +30,7 @@ namespace GaudiaVedantaPublications
         {
             get
             {
-                return GetMap("Translit.Dev2Lat", MapDirection.Forward);
+                return GetMap("Dev2Lat", MapDirection.Forward);
             }
         }
 
@@ -38,7 +38,7 @@ namespace GaudiaVedantaPublications
         {
             if (fontName.StartsWith("Sca"))
                 fontName = "ScaSeries";
-            return GetMap("Fonts." + fontName, direction);
+            return GetMap(fontName, direction);
         }
 
         private static Map GetMap(String name, MapDirection direction)
@@ -54,8 +54,7 @@ namespace GaudiaVedantaPublications
 
         private static Map ReadMap(string name, MapDirection direction)
         {
-            var resourceName = String.Format("Maps.{0}.xml", name);
-            using (var resource = EmbeddedResourceManager.GetEmbeddedResource(resourceName))
+            using (var resource = EmbeddedResourceManager.GetEmbeddedResource(name + ".xml"))
             {
                 if (resource == null)
                     return null;
