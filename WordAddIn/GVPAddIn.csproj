@@ -34,7 +34,7 @@
     <PublishUrl>publish\</PublishUrl>
     <InstallUrl>http://gvp.blob.core.windows.net/gvp-word-addin/</InstallUrl>
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.6.0.0</ApplicationVersion>
+    <ApplicationVersion>1.7.0.0</ApplicationVersion>
     <AutoIncrementApplicationRevision>false</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -44,7 +44,7 @@
     <SupportUrl />
     <FriendlyName>GVP Add-In</FriendlyName>
     <OfficeApplicationDescription>This Add-In facilitates editing texts with Indic scripts.</OfficeApplicationDescription>
-    <LoadBehavior>3</LoadBehavior>
+    <LoadBehavior>16</LoadBehavior>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
