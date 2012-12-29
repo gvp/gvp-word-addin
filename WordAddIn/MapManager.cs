@@ -36,9 +36,17 @@ namespace GaudiaVedantaPublications
 
         public static Map GetFontMap(String fontName, MapDirection direction)
         {
+            return GetMap(GetMapName(fontName), direction);
+        }
+
+        private static string GetMapName(string fontName)
+        {
             if (fontName.StartsWith("Sca"))
-                fontName = "ScaSeries";
-            return GetMap(fontName, direction);
+                return "ScaSeries";
+            if (fontName.StartsWith("SDW-"))
+                return "SDW";
+
+            return fontName;
         }
 
         private static Map GetMap(String name, MapDirection direction)
