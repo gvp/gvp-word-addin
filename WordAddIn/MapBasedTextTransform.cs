@@ -36,7 +36,7 @@ namespace GaudiaVedantaPublications
             MapEntry entry;
             if (CurrentMap.TryGetValue(text.Normalize(NormalizationForm.FormD), out entry))
                 ApplyEntry(entry);
-            else
+            else if (text != CurrentCharacter.Text)
                 CurrentCharacter.Text = text;
 
             if (savedText == null)
