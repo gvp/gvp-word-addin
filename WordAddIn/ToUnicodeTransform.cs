@@ -4,14 +4,15 @@ namespace GaudiaVedantaPublications
 {
     class ToUnicodeTransform : MapBasedTextTransform
     {
+        public const string UnicodeFontName = "Calibri";
+        
         public override void Apply(Word.Range range)
         {
             base.Apply(range);
-            var normalFont = range.Document.Styles[Word.WdBuiltinStyle.wdStyleNormal].Font;
-            range.Font.Name = normalFont.Name;
-            range.Font.NameBi = normalFont.NameBi;
-            range.Font.NameAscii = normalFont.NameAscii;
-            range.Font.NameOther = normalFont.NameOther;
+            range.Font.Name = UnicodeFontName;
+            range.Font.NameBi = UnicodeFontName;
+            range.Font.NameAscii = UnicodeFontName;
+            range.Font.NameOther = UnicodeFontName;
         }
 
         private string currentFontName;
