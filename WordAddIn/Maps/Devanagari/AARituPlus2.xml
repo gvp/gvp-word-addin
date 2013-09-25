@@ -56,6 +56,7 @@
   <entry from="&#x0052;" to="त्"></entry>
   <entry from="&#x0053;" to="ै">
     <replace from="ाै" to="ौ" />
+    <replace from="आै" to="औ" />
   </entry>
   <entry from="&#x0054;" to="ज्"></entry>
   <entry from="&#x0055;" to="न्"></entry>
@@ -99,6 +100,8 @@
   <entry from="&#x0072;" to="त"></entry>
   <entry from="&#x0073;" to="े">
     <replace from="ाे" to="ो" />
+    <replace from="आे" to="ओ" />
+    <replace from="एे" to="ऐ" />
   </entry>
   <entry from="&#x0074;" to="ज"></entry>
   <entry from="&#x0075;" to="न"></entry>
@@ -110,7 +113,7 @@
     <replace from="््" to="्" />
   </entry>
   <entry from="&#x007B;" to="क्ष्"></entry>
-  <entry from="&#x007C;" to="द्य"></entry>
+  <entry from="&#x007C;" to="ड्य"></entry>
   <entry from="&#x007D;" to="द्व"></entry>
   <entry from="&#x007E;" to="्"></entry>
   <entry from="&#x0082;" to="श्व"></entry>
@@ -144,6 +147,7 @@
   <entry from="&#x00AC;" to="ॐ"></entry>
   <entry from="&#x00AE;" to="ैं">
     <replace from="ाै" to="ौ" />
+    <replace from="आै" to="औ" />
   </entry>
   <entry from="&#x00B0;" to="ीं"></entry>
   <entry from="&#x00B1;" to="ं">
@@ -161,7 +165,7 @@
   <entry from="&#x00B9;" to="✕"></entry>
   <entry from="&#x00BA;" to="ह्"></entry>
   <entry from="&#x00BB;" to="÷"></entry>
-  <entry from="&#x00BC;" to="द्घ"></entry>
+  <entry from="&#x00BC;" to="द्ध"></entry>
   <entry from="&#x00BD;" to="ऋ"></entry>
   <entry from="&#x00BE;" to="="></entry>
   <entry from="&#x00BF;" to="ॠ"></entry>
@@ -222,18 +226,20 @@
   <entry from="&#x00FB;" to="॥"></entry>
   <entry from="&#x00FC;" to="ें">
     <replace from="ाे" to="ो" />
+    <replace from="आे" to="ओ" />
+    <replace from="एे" to="ऐ" />
   </entry>
   <entry from="&#x00FD;" to="["></entry>
   <entry from="&#x00FE;" to="]"></entry>
   <entry from="&#x00FF;" to="ळ"></entry>
   <entry from="&#x0152;" to="०" direction="forward"></entry>
+  <entry from="&#x0160;" to="८" direction="forward"></entry>
   <entry from="&#x0192;" to="१" direction="forward"></entry>
+  <entry from="&#x02C6;" to="६" direction="forward"></entry>
   <entry from="&#x201E;" to="२" direction="forward"></entry>
-  <entry from="&#x2026;" to="३" direction="forward"></entry>
   <entry from="&#x2020;" to="४" direction="forward"></entry>
   <entry from="&#x2021;" to="५" direction="forward"></entry>
-  <entry from="&#x02C6;" to="६" direction="forward"></entry>
+  <entry from="&#x2026;" to="३" direction="forward"></entry>
   <entry from="&#x2030;" to="७" direction="forward"></entry>
-  <entry from="&#x0160;" to="८" direction="forward"></entry>
   <entry from="&#x2039;" to="९" direction="forward"></entry>
 </map>
