@@ -45,6 +45,8 @@ namespace GaudiaVedantaPublications
                 return "ScaSeries";
             if (fontName.StartsWith("SDW-"))
                 return "SDW";
+            if (fontName.StartsWith("KALAKAR"))
+                return "KALAKAR";
 
             return fontName;
         }
