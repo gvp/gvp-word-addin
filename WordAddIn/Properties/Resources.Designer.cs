@@ -187,6 +187,15 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Преобразование шрифта.
+        /// </summary>
+        internal static string GroupFontConversion_Label {
+            get {
+                return ResourceManager.GetString("GroupFontConversion_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Макрон снизу.
         /// </summary>
         internal static string MacronBelowButton_Label {

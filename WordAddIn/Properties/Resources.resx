@@ -159,6 +159,9 @@
   <data name="GroupDiacritics_Label" xml:space="preserve">
     <value>Диакритические знаки</value>
   </data>
+  <data name="GroupFontConversion_Label" xml:space="preserve">
+    <value>Преобразование шрифта</value>
+  </data>
   <data name="MacronBelowButton_Label" xml:space="preserve">
     <value>Макрон снизу</value>
   </data>
