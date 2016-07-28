@@ -9,8 +9,7 @@
 //------------------------------------------------------------------------------
 
 #pragma warning disable 414
-namespace GaudiaVedantaPublications
-{
+namespace GaudiaVedantaPublications {
     
     
     /// 
