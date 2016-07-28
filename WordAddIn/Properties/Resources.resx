@@ -144,10 +144,10 @@
   <data name="CyrillicFontsSeparator_Title" xml:space="preserve">
     <value>Кириллические шрифты</value>
   </data>
-  <data name="DiacryticsButtons_Supertip" xml:space="preserve">
+  <data name="DiacriticsButtons_Supertip" xml:space="preserve">
     <value>Добавить этот диакритический знак к предыдущему символу.</value>
   </data>
-  <data name="DiacryticsGallery_Label" xml:space="preserve">
+  <data name="DiacriticsGallery_Label" xml:space="preserve">
     <value>Вставить диакритику</value>
   </data>
   <data name="DotAboveButton_Label" xml:space="preserve">
@@ -156,7 +156,7 @@
   <data name="DotBelowButton_Label" xml:space="preserve">
     <value>Точка снизу</value>
   </data>
-  <data name="GroupDiacrytics_Label" xml:space="preserve">
+  <data name="GroupDiacritics_Label" xml:space="preserve">
     <value>Диакритические знаки</value>
   </data>
   <data name="MacronBelowButton_Label" xml:space="preserve">

@@ -144,18 +144,18 @@ namespace GaudiaVedantaPublications.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Добавить этот диакритический знак к предыдущему символу..
         /// </summary>
-        internal static string DiacryticsButtons_Supertip {
+        internal static string DiacriticsButtons_Supertip {
             get {
-                return ResourceManager.GetString("DiacryticsButtons_Supertip", resourceCulture);
+                return ResourceManager.GetString("DiacriticsButtons_Supertip", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Вставить диакритику.
         /// </summary>
-        internal static string DiacryticsGallery_Label {
+        internal static string DiacriticsGallery_Label {
             get {
-                return ResourceManager.GetString("DiacryticsGallery_Label", resourceCulture);
+                return ResourceManager.GetString("DiacriticsGallery_Label", resourceCulture);
             }
         }
         
@@ -180,9 +180,9 @@ namespace GaudiaVedantaPublications.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Диакритические знаки.
         /// </summary>
-        internal static string GroupDiacrytics_Label {
+        internal static string GroupDiacritics_Label {
             get {
-                return ResourceManager.GetString("GroupDiacrytics_Label", resourceCulture);
+                return ResourceManager.GetString("GroupDiacritics_Label", resourceCulture);
             }
         }
         

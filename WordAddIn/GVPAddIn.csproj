@@ -261,7 +261,7 @@
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Ribbon.Diacrytics.cs" />
+    <Compile Include="Ribbon.Diacritics.cs" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>

@@ -104,62 +104,62 @@
             </menu>
           </splitButton>
         </group>
-        <group idQ="gvp:GroupDiacrytics" getLabel="GetLabel">
+        <group idQ="gvp:GroupDiacritics" getLabel="GetLabel">
           <button idQ="gvp:MacronButton"
                   tag="&#x0304;"
                   image="Macron.png"
                   size="large"
-                  onAction="InsertDiacrytics"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacryticsSupertip"
+                  onAction="InsertDiacritics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacriticsSupertip"
                   />
           <button idQ="gvp:MacronBelowButton"
                   tag="&#x0331;"
                   image="MacronBelow.png"
                   size="large"
-                  onAction="InsertDiacrytics"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacryticsSupertip"
+                  onAction="InsertDiacritics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacriticsSupertip"
                   />
           <button idQ="gvp:DotAboveButton"
                   tag="&#x0307;"
                   image="DotAbove.png"
                   size="large"
-                  onAction="InsertDiacrytics"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacryticsSupertip"
+                  onAction="InsertDiacritics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacriticsSupertip"
                   />
           <button idQ="gvp:DotBelowButton"
                   tag="&#x0323;"
                   image="DotBelow.png"
                   size="large"
-                  onAction="InsertDiacrytics"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacryticsSupertip"
+                  onAction="InsertDiacritics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacriticsSupertip"
                   />
           <button idQ="gvp:TildeButton"
                   tag="&#x0303;"
                   image="Tilde.png"
                   size="large"
-                  onAction="InsertDiacrytics"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacryticsSupertip"
+                  onAction="InsertDiacritics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacriticsSupertip"
                   />
           <button idQ="gvp:AcuteAccentButton"
                   tag="&#x0301;"
                   image="AcuteAccent.png"
                   size="large"
-                  onAction="InsertDiacrytics"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacryticsSupertip"
+                  onAction="InsertDiacritics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacriticsSupertip"
                   />
           <button idQ="gvp:CandrabinduButton"
                   tag="&#x0310;"
                   image="Candrabindu.png"
                   size="large"
-                  onAction="InsertDiacrytics"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacryticsSupertip"
+                  onAction="InsertDiacritics"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetDiacriticsSupertip"
                   />
-          <gallery idQ="gvp:DiacryticsGallery"
+          <gallery idQ="gvp:DiacriticsGallery"
                    showItemLabel="false"
                    visible="false"
                    getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                   getItemCount="GetDiacryticsCount" getItemImage="GetDiacryticsImage" getItemID="GetDiacryticsId"
-                   onAction="InsertDiacryticsItem"
+                   getItemCount="GetDiacriticsCount" getItemImage="GetDiacriticsImage" getItemID="GetDiacriticsId"
+                   onAction="InsertDiacriticsItem"
                    >
           </gallery>
         </group>

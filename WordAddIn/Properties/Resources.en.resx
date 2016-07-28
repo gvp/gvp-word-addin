@@ -144,11 +144,11 @@
   <data name="CyrillicFontsSeparator_Title" xml:space="preserve">
     <value>Cyrillic fonts</value>
   </data>
-  <data name="DiacryticsButtons_Supertip" xml:space="preserve">
-    <value>Append this diacrytical mark to the previous symbol.</value>
+  <data name="DiacriticsButtons_Supertip" xml:space="preserve">
+    <value>Append this diacritical mark to the previous symbol.</value>
   </data>
-  <data name="DiacryticsGallery_Label" xml:space="preserve">
-    <value>Insert diacrytical mark</value>
+  <data name="DiacriticsGallery_Label" xml:space="preserve">
+    <value>Insert diacritical mark</value>
   </data>
   <data name="DotAboveButton_Label" xml:space="preserve">
     <value>Dot above</value>
@@ -156,8 +156,8 @@
   <data name="DotBelowButton_Label" xml:space="preserve">
     <value>Dot below</value>
   </data>
-  <data name="GroupDiacrytics_Label" xml:space="preserve">
-    <value>Diacrytical marks</value>
+  <data name="GroupDiacritics_Label" xml:space="preserve">
+    <value>Diacritical marks</value>
   </data>
   <data name="GroupFontConversion_Label" xml:space="preserve">
     <value>Font conversion</value>
