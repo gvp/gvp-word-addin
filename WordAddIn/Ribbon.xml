@@ -8,11 +8,11 @@
         <group idQ="gvp:TransliterationGroup" getLabel="GetLabel">
           <button id="TransliterateDevanagari"
                   onAction="Transliterate"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   />
           <button id="TransliterateRoman"
                   onAction="Transliterate"
-                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   />
         </group>
         <group idQ="gvp:GroupFontConversion" getLabel="GetLabel">

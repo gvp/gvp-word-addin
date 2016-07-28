@@ -46,11 +46,6 @@ namespace GaudiaVedantaPublications
             return GetResourceString(control.Id, "Title");
         }
 
-        public string GetDescription(IRibbonControl control)
-        {
-            return GetResourceString(control.Id, "Description");
-        }
-
         public string GetScreentip(IRibbonControl control)
         {
             return GetResourceString(control.Id, "Screentip");
