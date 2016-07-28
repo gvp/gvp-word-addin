@@ -123,26 +123,76 @@
   <data name="CandrabinduButton_Label" xml:space="preserve">
     <value>Чандрабинду</value>
   </data>
+  <data name="ClearOperationalFont_Label" xml:space="preserve">
+    <value>Отменить выбор шрифта</value>
+  </data>
+  <data name="ClearOperationalFont_Screentip" xml:space="preserve">
+    <value>Отменить выбор ранее использованного шрифта</value>
+  </data>
+  <data name="ClearOperationalFont_Supertip" xml:space="preserve">
+    <value>Эта команда сбрасывает выбор ранее использованного нестандартного шрифта.</value>
+  </data>
   <data name="ConvertToFont_Label" xml:space="preserve">
     <value>Преобразовать к шрифту {0}</value>
   </data>
+  <data name="ConvertToOperationalFont_Label" xml:space="preserve">
+    <value>Преобразовать к шрифту</value>
+  </data>
   <data name="ConvertToOperationalFont_Screentip" xml:space="preserve">
-    <value>Привести к рабочему шрифту</value>
+    <value>Преобразовать к нестандартному шрифту с диакритикой</value>
   </data>
   <data name="ConvertToOperationalFont_Supertip" xml:space="preserve">
-    <value>Преобразовать текст так, чтобы он корректно отображался в текущем рабочем шрифте.</value>
+    <value>Преобразовать текст так, чтобы он корректно отображался в выбранном нестандартном шрифте с диакритикой.
+
+Пребразование возможно к следующим нестандартным шрифтам.
+
+Деванагари:
+Пока не поддерживается, функция в разработке.
+
+Латинские:
+Sca-серия
+Rama Garamond Plus
+GVPalatino
+
+Кириллические:
+ThamesM</value>
   </data>
   <data name="ConvertToUnicode_Label" xml:space="preserve">
-    <value>Преобразовать в Юникод</value>
+    <value>Преобразовать к Юникод</value>
   </data>
   <data name="ConvertToUnicode_Screentip" xml:space="preserve">
-    <value>Преобразовать в Юникод</value>
+    <value>Преобразовать к Юникод</value>
   </data>
   <data name="ConvertToUnicode_Supertip" xml:space="preserve">
-    <value>Привести текст к Юникоду, чтобы он корректно отображался во всех стандартных шрифтах.</value>
+    <value>Преобразовать текст так, чтобы он корректно отображался во всех стандартных шрифтах Юникод.
+
+Преобразование возможно из следующих нестандартных шрифтов.
+
+Деванагари:
+AARitu
+AARituPlus2
+Kalakar
+SDW-серия
+
+Латинские:
+Amita Times
+Balaram
+DVRoman-TTSurekh
+GVPalatino
+Rama Garamond Plus
+Sca-серия
+SD1-TTSurekh
+
+Кириллические:
+Amita Times Cyr
+ThamesM
+ThamesSanskrit</value>
   </data>
   <data name="CyrillicFontsSeparator_Title" xml:space="preserve">
     <value>Кириллические шрифты</value>
+  </data>
+  <data name="DevanagariFontsSeparator_Title" xml:space="preserve">
+    <value>Шрифты Деванагари</value>
   </data>
   <data name="DiacriticsButtons_Supertip" xml:space="preserve">
     <value>Добавить этот диакритический знак к предыдущему символу.</value>
@@ -167,6 +217,9 @@
   </data>
   <data name="MacronButton_Label" xml:space="preserve">
     <value>Макрон</value>
+  </data>
+  <data name="OperationalFontSeparator_Title" xml:space="preserve">
+    <value>Выбранный шрифт</value>
   </data>
   <data name="RomanFontsSeparator_Title" xml:space="preserve">
     <value>Латинские шрифты</value>

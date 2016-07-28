@@ -16,17 +16,24 @@
                   />
         </group>
         <group idQ="gvp:GroupFontConversion" getLabel="GetLabel">
-          <splitButton id="FontConversionMenu">
+          <button id="ConvertToUnicode"
+                  size="large"
+                  imageMso="SelectionToTextConvert"
+                  onAction="ConvertToUnicode"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  />
+          <splitButton id="FontConversionMenu"
+                       size="large"
+                       >
             <button id="ConvertToOperationalFont"
                     imageMso="ReplaceDialog"
                     onAction="ConvertFont"
+                    getEnabled="GetOperationalFontIsSet"
                     getLabel="GetFontConversionLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                     />
-            <menu>
-          <button id="ConvertToUnicode"
-                  onAction="ConvertToUnicode"
-                      getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                  />
+            <menu idQ="gvp:FontsMenu"
+                  getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
+                  >
               <menuSeparator idQ="gvp:CyrillicFontsSeparator" getTitle="GetTitle" />
               <button id="ConvertToThamesM"
                       onAction="ConvertFont"
@@ -100,6 +107,12 @@
                       onAction="ConvertFont"
                       tag="GVPalatino"
                       getLabel="GetFontConversionLabel"
+                      />
+              <menuSeparator idQ="gvp:OperationalFontSeparator" getTitle="GetTitle" />
+              <button idQ="gvp:ClearOperationalFont"
+                      onAction="ClearOperationalFont"
+                      getEnabled="GetDebuggerIsAttached"
+                      getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                       />
             </menu>
           </splitButton>

@@ -79,6 +79,33 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Отменить выбор шрифта.
+        /// </summary>
+        internal static string ClearOperationalFont_Label {
+            get {
+                return ResourceManager.GetString("ClearOperationalFont_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Отменить выбор ранее использованного шрифта.
+        /// </summary>
+        internal static string ClearOperationalFont_Screentip {
+            get {
+                return ResourceManager.GetString("ClearOperationalFont_Screentip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Эта команда сбрасывает выбор ранее использованного нестандартного шрифта..
+        /// </summary>
+        internal static string ClearOperationalFont_Supertip {
+            get {
+                return ResourceManager.GetString("ClearOperationalFont_Supertip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Преобразовать к шрифту {0}.
         /// </summary>
         internal static string ConvertToFont_Label {
@@ -88,7 +115,16 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Привести к рабочему шрифту.
+        ///   Looks up a localized string similar to Преобразовать к шрифту.
+        /// </summary>
+        internal static string ConvertToOperationalFont_Label {
+            get {
+                return ResourceManager.GetString("ConvertToOperationalFont_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Преобразовать к нестандартному шрифту с диакритикой.
         /// </summary>
         internal static string ConvertToOperationalFont_Screentip {
             get {
@@ -97,7 +133,20 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать текст так, чтобы он корректно отображался в текущем рабочем шрифте..
+        ///   Looks up a localized string similar to Преобразовать текст так, чтобы он корректно отображался в выбранном нестандартном шрифте с диакритикой.
+        ///
+        ///Пребразование возможно к следующим нестандартным шрифтам.
+        ///
+        ///Деванагари:
+        ///Пока не поддерживается, функция в разработке.
+        ///
+        ///Латинские:
+        ///Sca-серия
+        ///Rama Garamond Plus
+        ///GVPalatino
+        ///
+        ///Кириллические:
+        ///ThamesM.
         /// </summary>
         internal static string ConvertToOperationalFont_Supertip {
             get {
@@ -106,7 +155,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать в Юникод.
+        ///   Looks up a localized string similar to Преобразовать к Юникод.
         /// </summary>
         internal static string ConvertToUnicode_Label {
             get {
@@ -115,7 +164,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать в Юникод.
+        ///   Looks up a localized string similar to Преобразовать к Юникод.
         /// </summary>
         internal static string ConvertToUnicode_Screentip {
             get {
@@ -124,7 +173,29 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Привести текст к Юникоду, чтобы он корректно отображался во всех стандартных шрифтах..
+        ///   Looks up a localized string similar to Преобразовать текст так, чтобы он корректно отображался во всех стандартных шрифтах Юникод.
+        ///
+        ///Преобразование возможно из следующих нестандартных шрифтов.
+        ///
+        ///Деванагари:
+        ///AARitu
+        ///AARituPlus2
+        ///Kalakar
+        ///SDW-серия
+        ///
+        ///Латинские:
+        ///Amita Times
+        ///Balaram
+        ///DVRoman-TTSurekh
+        ///GVPalatino
+        ///Rama Garamond Plus
+        ///Sca-серия
+        ///SD1-TTSurekh
+        ///
+        ///Кириллические:
+        ///Amita Times Cyr
+        ///ThamesM
+        ///ThamesSanskrit.
         /// </summary>
         internal static string ConvertToUnicode_Supertip {
             get {
@@ -138,6 +209,15 @@ namespace GaudiaVedantaPublications.Properties {
         internal static string CyrillicFontsSeparator_Title {
             get {
                 return ResourceManager.GetString("CyrillicFontsSeparator_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Шрифты Деванагари.
+        /// </summary>
+        internal static string DevanagariFontsSeparator_Title {
+            get {
+                return ResourceManager.GetString("DevanagariFontsSeparator_Title", resourceCulture);
             }
         }
         
@@ -210,6 +290,15 @@ namespace GaudiaVedantaPublications.Properties {
         internal static string MacronButton_Label {
             get {
                 return ResourceManager.GetString("MacronButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выбранный шрифт.
+        /// </summary>
+        internal static string OperationalFontSeparator_Title {
+            get {
+                return ResourceManager.GetString("OperationalFontSeparator_Title", resourceCulture);
             }
         }
         

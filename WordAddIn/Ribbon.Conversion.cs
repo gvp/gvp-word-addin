@@ -12,13 +12,26 @@ namespace GaudiaVedantaPublications
 
         public string GetFontConversionLabel(IRibbonControl control)
         {
+            /// For specific font we extract the font name from the tag.
             if (!String.IsNullOrWhiteSpace(control.Tag))
                 return GetFontConversionLabel(control.Tag);
 
+            /// For default button we extract the font name from OperationalFontName setting.
             if (!String.IsNullOrWhiteSpace(OperationalFontName))
                 return GetFontConversionLabel(OperationalFontName);
 
-            return Properties.Resources.ConvertToUnicode_Label;
+            /// If operational font is not yet set, we show general title.
+            return GetLabel(control);
+        }
+
+        public bool GetOperationalFontIsSet(IRibbonControl control)
+        {
+            return !String.IsNullOrWhiteSpace(OperationalFontName);
+        }
+
+        public void ClearOperationalFont(IRibbonControl control)
+        {
+            OperationalFontName = null;
         }
 
         private string GetFontConversionLabel(String fontName)
@@ -28,8 +41,7 @@ namespace GaudiaVedantaPublications
 
         public void ConvertToUnicode(IRibbonControl conrtol)
         {
-            OperationalFontName = null;
-            ConvertFont(OperationalFontName);
+            Globals.ThisAddIn.TransformText(new ToUnicodeTransform());
         }
 
         public void ConvertFont(IRibbonControl control)
@@ -41,14 +53,7 @@ namespace GaudiaVedantaPublications
 
         private static void ConvertFont(String fontName)
         {
-            Globals.ThisAddIn.TransformText(GetTransformsForFont(fontName).ToArray());
-        }
-
-        private static IEnumerable<ITextTransform> GetTransformsForFont(String fontName)
-        {
-            yield return new ToUnicodeTransform();
-            if (!String.IsNullOrWhiteSpace(fontName))
-                yield return new FromUnicodeTransform(fontName);
+            Globals.ThisAddIn.TransformText(new ToUnicodeTransform(), new FromUnicodeTransform(fontName));
         }
 
         private string OperationalFontName
