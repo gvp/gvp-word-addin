@@ -142,15 +142,6 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Кириллические опции.
-        /// </summary>
-        internal static string CyrillicOptionsToggleButton_Label {
-            get {
-                return ResourceManager.GetString("CyrillicOptionsToggleButton_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Добавить этот диакритический знак к предыдущему символу..
         /// </summary>
         internal static string DiacryticsButtons_Supertip {
@@ -228,24 +219,6 @@ namespace GaudiaVedantaPublications.Properties {
         internal static string ScaSeriesMenu_Label {
             get {
                 return ResourceManager.GetString("ScaSeriesMenu_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Настройки.
-        /// </summary>
-        internal static string SettingsGroup_Label {
-            get {
-                return ResourceManager.GetString("SettingsGroup_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Настройки.
-        /// </summary>
-        internal static string SettingsMenu_Label {
-            get {
-                return ResourceManager.GetString("SettingsMenu_Label", resourceCulture);
             }
         }
         

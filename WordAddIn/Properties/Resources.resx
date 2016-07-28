@@ -144,9 +144,6 @@
   <data name="CyrillicFontsSeparator_Title" xml:space="preserve">
     <value>Кириллические шрифты</value>
   </data>
-  <data name="CyrillicOptionsToggleButton_Label" xml:space="preserve">
-    <value>Кириллические опции</value>
-  </data>
   <data name="DiacryticsButtons_Supertip" xml:space="preserve">
     <value>Добавить этот диакритический знак к предыдущему символу.</value>
   </data>
@@ -173,12 +170,6 @@
   </data>
   <data name="ScaSeriesMenu_Label" xml:space="preserve">
     <value>Преобразовать к Sca-шрифтам</value>
-  </data>
-  <data name="SettingsGroup_Label" xml:space="preserve">
-    <value>Настройки</value>
-  </data>
-  <data name="SettingsMenu_Label" xml:space="preserve">
-    <value>Настройки</value>
   </data>
   <data name="TabGVP_Label" xml:space="preserve">
     <value>GVP</value>

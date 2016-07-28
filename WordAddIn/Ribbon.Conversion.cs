@@ -56,9 +56,6 @@ namespace GaudiaVedantaPublications
             get
             {
                 var fontName = Properties.Settings.Default.OperationalFontName;
-                if (CyrillicFontNames.Contains(fontName) && !CyrillicOptions)
-                    fontName = RomanFontNames.FirstOrDefault();
-
                 return fontName;
             }
             set

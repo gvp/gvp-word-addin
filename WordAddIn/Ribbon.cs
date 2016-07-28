@@ -66,39 +66,6 @@ namespace GaudiaVedantaPublications
             return Properties.Resources.ResourceManager.GetString(String.Format("{0}_{1}", id, attribute));
         }
 
-        // *** Cyrillic options ********************************************
-
-        public bool GetCyrillicOptionsState(IRibbonControl control)
-        {
-            return CyrillicOptions;
-        }
-
-        public void SetCyrillicOptionsState(IRibbonControl control, bool pressed)
-        {
-            CyrillicOptions = pressed;
-            ribbon.Invalidate();
-        }
-
-
-
-        #endregion
-
-
-        #region *************** Settings *****************
-
-        private static bool CyrillicOptions
-        {
-            get
-            {
-                return Properties.Settings.Default.CyrillicOptions;
-            }
-            set
-            {
-                Properties.Settings.Default.CyrillicOptions = value;
-                Properties.Settings.Default.Save();
-            }
-        }
-
         #endregion
     }
 }

@@ -25,18 +25,6 @@ namespace GaudiaVedantaPublications.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool CyrillicOptions {
-            get {
-                return ((bool)(this["CyrillicOptions"]));
-            }
-            set {
-                this["CyrillicOptions"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string OperationalFontName {
             get {

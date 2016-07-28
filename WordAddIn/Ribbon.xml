@@ -13,7 +13,6 @@
           <button id="TransliterateRoman"
                   onAction="Transliterate"
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip" getDescription="GetDescription"
-                  getVisible="GetCyrillicOptionsState"
                   />
         </group>
         <group idQ="gvp:GroupFontConversion" getLabel="GetLabel">
@@ -24,8 +23,8 @@
                     getLabel="GetFontConversionLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                     />
             <menu>
-              <button id="ConvertToUnicode"
-                      onAction="ConvertToUnicode"
+          <button id="ConvertToUnicode"
+                  onAction="ConvertToUnicode"
                       getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   />
               <menuSeparator idQ="gvp:CyrillicFontsSeparator" getTitle="GetTitle" />
@@ -33,7 +32,6 @@
                       onAction="ConvertFont"
                       tag="ThamesM"
                       getLabel="GetFontConversionLabel"
-                      getVisible="GetCyrillicOptionsState"
                       />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
               <menu idQ="gvp:ScaSeriesMenu" getLabel="GetLabel" >
@@ -164,17 +162,6 @@
                    onAction="InsertDiacryticsItem"
                    >
           </gallery>
-        </group>
-        <group idQ="gvp:SettingsGroup" getLabel="GetLabel">
-          <menu id="SettingsMenu"
-                getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                >
-            <toggleButton id="CyrillicOptionsToggleButton"
-                          onAction="SetCyrillicOptionsState"
-                          getPressed="GetCyrillicOptionsState"
-                          getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
-                          />
-          </menu>
         </group>
       </tab>
     </tabs>

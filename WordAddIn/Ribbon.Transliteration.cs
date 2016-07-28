@@ -18,8 +18,6 @@ namespace GaudiaVedantaPublications
             {
                 case "TransliterateDevanagari":
                     yield return new DevanagariTransliterationTransform();
-                    if (RomanFontNames.Contains(OperationalFontName))
-                        yield return new FromUnicodeTransform(OperationalFontName);
                     break;
 
                 case "TransliterateRoman":
