@@ -4,15 +4,15 @@ namespace GaudiaVedantaPublications
 {
     class ToUnicodeTransform : MapBasedTextTransform
     {
-        public const string UnicodeFontName = "Calibri";
+        /// <summary>
+        /// Only this font supports most unicode blocks. And it is required to render Devanagari correctly.
+        /// </summary>
+        public const string UnicodeFontName = "Arial Unicode MS";
         
         public override void Apply(Word.Range range)
         {
             base.Apply(range);
             range.Font.Name = UnicodeFontName;
-            range.Font.NameBi = UnicodeFontName;
-            range.Font.NameAscii = UnicodeFontName;
-            range.Font.NameOther = UnicodeFontName;
         }
 
         private string currentFontName;
