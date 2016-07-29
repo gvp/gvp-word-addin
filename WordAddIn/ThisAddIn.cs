@@ -36,7 +36,7 @@ namespace GaudiaVedantaPublications
 
         public void TransformText(ITextTransform transform)
         {
-            Application.UndoRecord.StartCustomRecord("Преобразование текста");
+            Application.UndoRecord.StartCustomRecord(Properties.Resources.FontTransformationUndoRecord);
             Application.ScreenUpdating = false;
             var stopwatch = new Stopwatch();
             stopwatch.Start();

@@ -206,6 +206,9 @@ ThamesSanskrit</value>
   <data name="DotBelowButton_Label" xml:space="preserve">
     <value>Dot below</value>
   </data>
+  <data name="FontTransformationUndoRecord" xml:space="preserve">
+    <value>Font transformation</value>
+  </data>
   <data name="GroupDiacritics_Label" xml:space="preserve">
     <value>Diacritical marks</value>
   </data>

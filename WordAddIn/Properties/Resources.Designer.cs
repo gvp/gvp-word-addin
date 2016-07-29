@@ -258,6 +258,15 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Преобразование шрифта.
+        /// </summary>
+        internal static string FontTransformationUndoRecord {
+            get {
+                return ResourceManager.GetString("FontTransformationUndoRecord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Диакритические знаки.
         /// </summary>
         internal static string GroupDiacritics_Label {
