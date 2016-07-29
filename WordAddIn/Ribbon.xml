@@ -111,7 +111,7 @@
               <menuSeparator idQ="gvp:OperationalFontSeparator" getTitle="GetTitle" />
               <button idQ="gvp:ClearOperationalFont"
                       onAction="ClearOperationalFont"
-                      getEnabled="GetDebuggerIsAttached"
+                      getVisible="GetDebugMode"
                       getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                       />
             </menu>

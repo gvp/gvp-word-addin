@@ -61,9 +61,13 @@ namespace GaudiaVedantaPublications
             return Properties.Resources.ResourceManager.GetString(String.Format("{0}_{1}", id, attribute));
         }
 
-        public bool GetDebuggerIsAttached(IRibbonControl control)
+        public bool GetDebugMode(IRibbonControl control)
         {
-            return System.Diagnostics.Debugger.IsAttached;
+#if DEBUG
+            return true;
+#else
+            return false;
+#endif
         }
 
         #endregion
