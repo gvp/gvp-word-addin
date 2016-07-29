@@ -42,7 +42,7 @@
     <PublishUrl>publish\</PublishUrl>
     <InstallUrl>http://gvp.blob.core.windows.net/gvp-word-addin/</InstallUrl>
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.11.0.0</ApplicationVersion>
+    <ApplicationVersion>1.12.0.0</ApplicationVersion>
     <AutoIncrementApplicationRevision>false</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -340,4 +340,8 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <!-- The following makes sure we don't try to publish a configuration that defines the DEBUG constant -->
+  <Target Name="BeforePublish">
+    <Error Condition="'$(DebugSymbols)'=='true'" Text="You attempted to publish a configuration that defines the DEBUG constant!" />
+  </Target>
 </Project>
