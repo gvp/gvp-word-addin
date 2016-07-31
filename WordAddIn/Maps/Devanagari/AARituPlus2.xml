@@ -12,11 +12,11 @@
   <entry from="&#x0028;" to="("></entry>
   <entry from="&#x0029;" to=")"></entry>
   <entry from="&#x002A;" to="’"></entry>
-  <entry from="&#x002B;" to="&#0323;"></entry>
+  <entry from="&#x002B;" to="़"></entry>
   <entry from="&#x002C;" to="ए"></entry>
   <entry from="&#x002D;" to="."></entry>
   <entry from="&#x002E;" to="ण्"></entry>
-  <entry from="&#x002F;" to="ध्"></entry>
+  <entry from="&#x002F;" to="ध्" direction="forward"></entry>
   <entry from="&#x0030;" to="0"></entry>
   <entry from="&#x0031;" to="1"></entry>
   <entry from="&#x0032;" to="2"></entry>
@@ -113,22 +113,22 @@
     <replace from="््" to="्" />
   </entry>
   <entry from="&#x007B;" to="क्ष्"></entry>
-  <entry from="&#x007C;" to="ड्य"></entry>
+  <entry from="&#x007C;" to="द्य"></entry>
   <entry from="&#x007D;" to="द्व"></entry>
   <entry from="&#x007E;" to="्"></entry>
-  <entry from="&#x0082;" to="श्व"></entry>
-  <entry from="&#x0083;" to="१"></entry>
-  <entry from="&#x0084;" to="२"></entry>
-  <entry from="&#x0085;" to="३"></entry>
-  <entry from="&#x0086;" to="४"></entry>
-  <entry from="&#x0087;" to="५"></entry>
-  <entry from="&#x0088;" to="६"></entry>
-  <entry from="&#x0089;" to="७"></entry>
-  <entry from="&#x008A;" to="८"></entry>
-  <entry from="&#x008B;" to="९"></entry>
-  <entry from="&#x008C;" to="०"></entry>
-  <entry from="&#x0091;" to="ञ्ज"></entry>
-  <entry from="&#x009F;" to=">"></entry>
+  <entry from="&#x201A;" to="श्व"></entry>
+  <entry from="&#x0192;" to="१"></entry>
+  <entry from="&#x201E;" to="२"></entry>
+  <entry from="&#x2026;" to="३"></entry>
+  <entry from="&#x2020;" to="४"></entry>
+  <entry from="&#x2021;" to="५"></entry>
+  <entry from="&#x02C6;" to="६"></entry>
+  <entry from="&#x2030;" to="७"></entry>
+  <entry from="&#x0160;" to="८"></entry>
+  <entry from="&#x2039;" to="९"></entry>
+  <entry from="&#x0152;" to="०"></entry>
+  <entry from="&#x2018;" to="ञ्ज"></entry>
+  <entry from="&#x0178;" to=">"></entry>
   <entry from="&#x00A1;" to="ँ"></entry>
   <entry from="&#x00A3;" to="र्">
     <insertAfter>ि</insertAfter>
@@ -138,8 +138,8 @@
     <insertAfter>िं</insertAfter>
   </entry>
   <entry from="&#x00A7;" to="ठ्ठ"></entry>
-  <entry from="&#x00A8;" to="ु"></entry>
-  <entry from="&#x00A9;" to="ू"></entry>
+  <entry from="&#x00A8;" to="ु" direction="forward"></entry>
+  <entry from="&#x00A9;" to="ू" direction="forward"></entry>
   <entry from="&#x00AA;" to="्र">
     <replace from="््" to="्" />
   </entry>
@@ -172,6 +172,7 @@
   <entry from="&#x00C0;" to="ङ्क्ष"></entry>
   <entry from="&#x00C1;" to="ङ्क"></entry>
   <entry from="&#x00C2;" to="ङ्ग"></entry>
+  <entry from="&#x00C4;" to="्न"></entry>
   <entry from="&#x00C5;" to="ऊ"></entry>
   <entry from="&#x00C6;" to="ॢ"></entry>
   <entry from="&#x00C8;" to="ऌ"></entry>
@@ -184,7 +185,7 @@
   <entry from="&#x00CF;" to="कृ"></entry>
   <entry from="&#x00D0;" to="ङ्घ"></entry>
   <entry from="&#x00D2;" to="ख्र"></entry>
-  <entry from="&#x00D3;" to="श्"></entry>
+  <entry from="&#x00D3;" to="श्" direction="forward"></entry>
   <entry from="&#x00D4;" to="ष्ट"></entry>
   <entry from="&#x00D6;" to="झ्"></entry>
   <entry from="&#x00D7;" to="ष्ठ"></entry>
@@ -194,7 +195,7 @@
   <entry from="&#x00DB;" to="़"></entry>
   <entry from="&#x00DC;" to="श्"></entry>
   <entry from="&#x00DD;" to="फ्र"></entry>
-  <entry from="&#x00DE;" to="́”"></entry>
+  <entry from="&#x00DE;" to="”"></entry>
   <entry from="&#x00DF;" to="“"></entry>
   <entry from="&#x00E0;" to="ह्व"></entry>
   <entry from="&#x00E1;" to="ह्य"></entry>
@@ -221,8 +222,9 @@
   <entry from="&#x00F5;" to="?"></entry>
   <entry from="&#x00F6;" to="?"></entry>
   <entry from="&#x00F7;" to="ह्ण"></entry>
-  <entry from="&#x00F9;" to="ड्म"></entry>
-  <entry from="&#x00FA;" to="॑"></entry>
+  <entry from="&#x00F8;" to="?"></entry>
+  <entry from="&#x00F9;" to="द्म"></entry>
+  <entry from="&#x00FA;" to="&#x0951;"></entry>
   <entry from="&#x00FB;" to="॥"></entry>
   <entry from="&#x00FC;" to="ें">
     <replace from="ाे" to="ो" />
@@ -232,14 +234,5 @@
   <entry from="&#x00FD;" to="["></entry>
   <entry from="&#x00FE;" to="]"></entry>
   <entry from="&#x00FF;" to="ळ"></entry>
-  <entry from="&#x0152;" to="०" direction="forward"></entry>
-  <entry from="&#x0160;" to="८" direction="forward"></entry>
-  <entry from="&#x0192;" to="१" direction="forward"></entry>
-  <entry from="&#x02C6;" to="६" direction="forward"></entry>
-  <entry from="&#x201E;" to="२" direction="forward"></entry>
-  <entry from="&#x2020;" to="४" direction="forward"></entry>
-  <entry from="&#x2021;" to="५" direction="forward"></entry>
-  <entry from="&#x2026;" to="३" direction="forward"></entry>
-  <entry from="&#x2030;" to="७" direction="forward"></entry>
-  <entry from="&#x2039;" to="९" direction="forward"></entry>
+  <entry from="&#x03BC;" to="—" direction="forward"></entry>
 </map>
