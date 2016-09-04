@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Xml.Linq;
-using Map = System.Collections.Generic.IDictionary<System.String, GaudiaVedantaPublications.MapEntry>;
+using Map = System.Linq.IOrderedEnumerable<GaudiaVedantaPublications.MapEntry>;
 
 namespace GaudiaVedantaPublications
 {
@@ -14,7 +12,7 @@ namespace GaudiaVedantaPublications
         Backward,
     }
 
-    static class MapManager
+    public static class MapManager
     {
         private static readonly IDictionary<String, Map> maps = new Dictionary<String, Map>(4);
 
@@ -51,47 +49,44 @@ namespace GaudiaVedantaPublications
             return fontName;
         }
 
+        private static readonly string[] devanagariMaps = { "AARitu", "AARituPlus2", "KALAKAR", "SDW" };
+
         private static Map GetMap(String name, MapDirection direction)
         {
             var key = String.Format("{0}.{1}", name, direction);
             Map map;
             if (maps.TryGetValue(key, out map))
                 return map;
-            map = ReadMap(name, direction);
+
+            var entries = ReadMap(name);
+            if (entries == null)
+                return null;
+
+            /// For devanagari fonts there is a common section
+            if (devanagariMaps.Contains(name))
+                entries = entries.Concat(ReadMap("Devanagari2Unicode")); //TODO: take direction into account
+
+            map = entries.OrderBy(e => e.Order);
             maps.Add(key, map);
             return map;
         }
 
-        private static Map ReadMap(string name, MapDirection direction)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns>null means that there is no map for this font</returns>
+        private static IEnumerable<MapEntry> ReadMap(string name)
         {
             using (var resource = EmbeddedResourceManager.GetEmbeddedResource(name + ".xml"))
             {
                 if (resource == null)
                     return null;
-                return ReadMap(resource, direction);
-            }
-        }
 
-        private static Map ReadMap(Stream resource, MapDirection direction)
-        {
-            return (
-                from element in XElement.Load(resource).Elements("entry")
-                let entryDirection = element.AttributeValue("direction", element.Elements().Any() ? "forward" : null)
-                where entryDirection == null || entryDirection == direction.ToString().ToLower()
-                let reverse = entryDirection == null && direction == MapDirection.Backward
-                select new
-                {
-                    Key = element.Attribute(reverse ? "to" : "from").Value.Normalize(NormalizationForm.FormD),
-                    Entry = new MapEntry
-                    {
-                        ReplaceText = element.AttributeValue(reverse ? "from" : "to"),
-                        ReplaceTextForFirstLetter = element.ElementValue("firstLetter"),
-                        InsertBefore = element.ElementValue("insertBefore"),
-                        InsertAfter = element.ElementValue("insertAfter"),
-                        AppendAfter = element.ElementValue("appendAfter"),
-                        Replaces = element.Elements("replace").ToDictionary(r => r.AttributeValue("from"), r => r.AttributeValue("to")),
-                    },
-                }).ToDictionary(e => e.Key, e => e.Entry);
+                return
+                    from element in XElement.Load(resource).Elements("entry")
+                    select new MapEntry(element);
+            }
         }
     }
 }

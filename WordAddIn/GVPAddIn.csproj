@@ -219,6 +219,8 @@
   -->
   <ItemGroup>
     <Compile Include="CombiningTransform.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="FontExtensions.cs" />
     <Compile Include="Ribbon.Transliteration.cs" />
     <Compile Include="Ribbon.Conversion.cs" />
     <Compile Include="Extensions.cs" />
@@ -314,6 +316,9 @@
     <EmbeddedResource Include="Maps\Devanagari\KALAKAR.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\Devanagari\Devanagari2Unicode.xml" />
   </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <PropertyGroup>
