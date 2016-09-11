@@ -1,31 +1,72 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text;
-using Map = System.Collections.Generic.IEnumerable<GaudiaVedantaPublications.MapEntry>;
+using Map = System.Linq.IOrderedEnumerable<GaudiaVedantaPublications.MapEntry>;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications
 {
-    class MapBasedTextTransform : ITextTransform
+    public class MapBasedTextTransform : ITextTransform
     {
-        public MapBasedTextTransform()
+        /// <summary>
+        /// This contructor is used with descendant classes where GetMapForRange is overriden.
+        /// </summary>
+        protected MapBasedTextTransform()
         {
         }
 
+        /// <summary>
+        /// This constructor is used for external instantiating the transform with a single map.
+        /// </summary>
+        /// <param name="map">A map that is used for all transformations.</param>
         public MapBasedTextTransform(Map map)
         {
-            CurrentMap = map;
+            this.map = map;
         }
 
-        protected Map CurrentMap { get; set; }
+        private readonly Map map;
+
+        protected virtual Map GetMapForRange(Word.Range chunk)
+        {
+            if (map == null)
+                throw new InvalidOperationException("Map is not set");
+
+            return map;
+        }
 
         public virtual void Apply(Word.Range range)
         {
-            var text = range.Text.PUAToASCII();
+            if (range == null || range.End == range.Start)
+                return;
 
-            foreach (var entry in CurrentMap.OrderBy(e => e.Order))
-                text = entry.Apply(text);
+            var chunk = range.Characters.First;
+            while (chunk.End <= range.End)
+            {
+                var nextCharacter = chunk.Next(Word.WdUnits.wdCharacter);
 
-            range.Text = text;
+                /// Skipping end-of-paragraph characters.
+                if (chunk.Text == "\r")
+                {
+                    chunk = nextCharacter;
+                    continue;
+                }
+
+                if (chunk.End >= range.End || nextCharacter.Text == "\r" || !nextCharacter.Font.IsSame(chunk.Characters.First.Font))
+                {
+                    var map = GetMapForRange(chunk);
+                    if (map != null && map.Any())
+                        chunk.Text = map.Apply(chunk.Text);
+
+                    /// nextCharacter range could grasp current chunk due to its text replacement.
+                    chunk = chunk.Next(Word.WdUnits.wdCharacter);
+                }
+                else
+                    chunk.MoveEnd(Word.WdUnits.wdCharacter);
+            }
+
+            /// After changing the text of the last chunk original range could collapse.
+            /// Restoring its End.
+            range.End = Math.Max(range.End, chunk.Start);
         }
     }
 }

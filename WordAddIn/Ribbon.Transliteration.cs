@@ -17,7 +17,7 @@ namespace GaudiaVedantaPublications
             switch (control.Id)
             {
                 case "TransliterateDevanagari":
-                    yield return new DevanagariTransliterationTransform();
+                    yield return new MapBasedTextTransform(MapManager.Dev2Lat);
                     break;
 
                 case "TransliterateRoman":
