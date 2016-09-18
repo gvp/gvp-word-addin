@@ -28,8 +28,8 @@ namespace GaudiaVedantaPublications
 
         public MapEntry(XElement element)
         {
-            From = element.AttributeValue("from");
-            To = element.AttributeValue("to");
+            From = element.AttributeValue("from").Normalize(System.Text.NormalizationForm.FormC);
+            To = element.AttributeValue("to").Normalize(System.Text.NormalizationForm.FormC);
             if (element.AttributeValue("type") == "regex")
                 Regex = new Regex(From, RegexOptions.Compiled);
 
@@ -38,6 +38,8 @@ namespace GaudiaVedantaPublications
 
         public string Apply(string text)
         {
+            System.Diagnostics.Debug.Assert(text.IsNormalized(System.Text.NormalizationForm.FormC), "Input text is not normalized");
+
             if (Regex != null)
                 return Regex.Replace(text, To);
             else
@@ -49,6 +51,7 @@ namespace GaudiaVedantaPublications
     {
         public static string Apply(this IOrderedEnumerable<MapEntry> map, string text)
         {
+            text = text.Normalize(System.Text.NormalizationForm.FormC);
             foreach (var entry in map)
             {
 #if TRACE_TEXT_TRANSFORMATION

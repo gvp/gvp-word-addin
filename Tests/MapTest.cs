@@ -7,7 +7,7 @@ using Xunit;
 
 namespace GaudiaVedantaPublications.Tests
 {
-    public class FontConversionTest
+    public class MapTest
     {
         private static readonly IDictionary<string, IDictionary<string, string>> testData = new Dictionary<string, IDictionary<string, string>>
         {
@@ -58,6 +58,21 @@ namespace GaudiaVedantaPublications.Tests
         {
             var map = MapManager.GetFontMap(fontName, MapDirection.Forward);
             Assert.Equal(unicode, map.Apply(ascii));
+        }
+
+        [Theory]
+        [InlineData("वैष्णव–सिद्धान्त–माला", "vaiṣṇava–siddhānta–mālā")]
+        [InlineData("ॐ", "oṁ")]
+        [InlineData("क्ष", "kṣa")]
+        [InlineData("त्र", "tra")]
+        [InlineData("ज्ञ", "jña")]
+        [InlineData("श्र", "śra")]
+        [InlineData("ड़", "ṛa")]
+        [InlineData("श्रीगौड़ीयाचार्य", "śrīgauṛīyācārya")]
+        [InlineData("पाँच", "pām̐ca")]
+        public void Dev2Lat(string dev, string lat)
+        {
+            Assert.Equal(lat.Normalize(NormalizationForm.FormC), MapManager.Dev2Lat.Apply(dev));
         }
     }
 }
