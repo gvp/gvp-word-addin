@@ -22,7 +22,6 @@ namespace GaudiaVedantaPublications
 
                 case "TransliterateRoman":
                     yield return new MapBasedTextTransform(MapManager.Lat2Cyr);
-                    yield return new FromUnicodeTransform(CyrillicFontNames.First());
                     break;
             }
         }
