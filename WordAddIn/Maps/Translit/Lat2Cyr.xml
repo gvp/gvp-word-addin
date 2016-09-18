@@ -1,123 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <map>
-  <entry from="a" to="а"></entry>
-  <entry from="A" to="А"></entry>
-  <entry from="ā" to="а̄"></entry>
-  <entry from="Ā" to="А̄"></entry>
-  <entry from="ã" to="а̃"></entry>
-  <entry from="Ã" to="А̃"></entry>
-  <entry from="ā̃" to="а̄̃"></entry>
-  <entry from="Ā̃" to="А̄̃"></entry>
-  <entry from="b" to="б"></entry>
-  <entry from="B" to="Б"></entry>
-  <entry from="c" to="ч"></entry>
-  <entry from="C" to="Ч"></entry>
-  <entry from="d" to="д"></entry>
-  <entry from="D" to="Д"></entry>
-  <entry from="ḍ" to="д̣"></entry>
-  <entry from="Ḍ" to="Д̣"></entry>
-  <entry from="e" to="е">
-    <firstLetter>э</firstLetter>
-  </entry>
-  <entry from="E" to="Е">
-    <firstLetter>Э</firstLetter>
-  </entry>
-  <entry from="ē" to="е̄">
-    <firstLetter>э̄</firstLetter>
-  </entry>
-  <entry from="Ē" to="Е̄">
-    <firstLetter>Э̄</firstLetter>
-  </entry>
-  <entry from="ẽ" to="е̃">
-    <firstLetter>э̃</firstLetter>
-  </entry>
-  <entry from="Ẽ" to="Е̃">
-    <firstLetter>Э̃</firstLetter>
-  </entry>
-  <entry from="ē̃" to="е̄̃">
-    <firstLetter>э̄̃</firstLetter>
-  </entry>
-  <entry from="Ē̃" to="Е̄̃">
-    <firstLetter>Э̄̃</firstLetter>
-  </entry>
-  <entry from="g" to="г"></entry>
-  <entry from="G" to="Г"></entry>
-  <entry from="h" to="х"></entry>
-  <entry from="H" to="Х"></entry>
-  <entry from="ḥ" to="х̣"></entry>
-  <entry from="Ḥ" to="Х̣"></entry>
-  <entry from="i" to="и"></entry>
-  <entry from="I" to="И"></entry>
-  <entry from="ī" to="ӣ"></entry>
-  <entry from="Ī" to="Ӣ"></entry>
-  <entry from="ĩ" to="и̃"></entry>
-  <entry from="Ĩ" to="И̃"></entry>
-  <entry from="ī̃" to="ӣ̃"></entry>
-  <entry from="Ī̃" to="Ӣ̃"></entry>
-  <entry from="j" to="дж"></entry>
-  <entry from="J" to="Дж"></entry>
-  <entry from="k" to="к"></entry>
-  <entry from="K" to="К"></entry>
-  <entry from="l" to="л"></entry>
-  <entry from="L" to="Л"></entry>
-  <entry from="l̐" to="л̐"></entry>
-  <entry from="L̐" to="Л̐"></entry>
-  <entry from="ḷ" to="л̣"></entry>
-  <entry from="Ḷ" to="Л̣"></entry>
-  <entry from="ḹ" to="л̣̄"></entry>
-  <entry from="Ḹ" to="Л̣̄"></entry>
-  <entry from="m" to="м"></entry>
-  <entry from="M" to="М"></entry>
-  <entry from="ṁ" to="м̇"></entry>
-  <entry from="Ṁ" to="М̇"></entry>
-  <entry from="m̐" to="м̐"></entry>
-  <entry from="M̐" to="М̐"></entry>
-  <entry from="n" to="н"></entry>
-  <entry from="N" to="Н"></entry>
-  <entry from="ṅ" to="н̇"></entry>
-  <entry from="Ṅ" to="Н̇"></entry>
-  <entry from="ñ" to="н̃"></entry>
-  <entry from="Ñ" to="Н̇"></entry>
-  <entry from="ṇ" to="н̣"></entry>
-  <entry from="Ṇ" to="Н̣"></entry>
-  <entry from="o" to="о"></entry>
-  <entry from="O" to="О"></entry>
-  <entry from="ō" to="о̄"></entry>
-  <entry from="Ō" to="О̄"></entry>
-  <entry from="õ" to="о̃"></entry>
-  <entry from="Õ" to="О̃"></entry>
-  <entry from="ō̃" to="о̄̃"></entry>
-  <entry from="Ō̃" to="О̄̃"></entry>
-  <entry from="p" to="п"></entry>
-  <entry from="P" to="П"></entry>
-  <entry from="r" to="р"></entry>
-  <entry from="R" to="Р"></entry>
-  <entry from="ṙ" to="р̇"></entry>
-  <entry from="Ṙ" to="Р̇"></entry>
-  <entry from="ṛ" to="р̣"></entry>
-  <entry from="Ṛ" to="Р̇"></entry>
-  <entry from="ṝ" to="р̣̄"></entry>
-  <entry from="Ṝ" to="Р̣̄"></entry>
-  <entry from="s" to="с"></entry>
-  <entry from="S" to="С"></entry>
-  <entry from="ś" to="ш́"></entry>
-  <entry from="Ś" to="Ш́"></entry>
-  <entry from="ṣ" to="ш̣"></entry>
-  <entry from="Ṣ" to="Ш̣"></entry>
-  <entry from="t" to="т"></entry>
-  <entry from="T" to="Т"></entry>
-  <entry from="ṭ" to="т̣"></entry>
-  <entry from="Ṭ" to="Т̣"></entry>
-  <entry from="u" to="у"></entry>
-  <entry from="U" to="У"></entry>
-  <entry from="ū" to="ӯ"></entry>
-  <entry from="Ū" to="Ӯ"></entry>
-  <entry from="ũ" to="у̃"></entry>
-  <entry from="Ũ" to="У̃"></entry>
-  <entry from="ū̃" to="ӯ̃"></entry>
-  <entry from="Ū̃" to="Ӯ̃"></entry>
-  <entry from="v" to="в"></entry>
-  <entry from="V" to="В"></entry>
-  <entry from="y" to="й"></entry>
-  <entry from="Y" to="Й"></entry>
+  <entry from='a' to='а' />
+  <entry from='ã' to='а̃' />
+  <entry from='ā' to='а̄' />
+  <entry from='ā̃' to='а̄̃' />
+  <entry from='b' to='б' />
+  <entry from='v' to='в' />
+  <entry from='g' to='г' />
+  <entry from='d' to='д' />
+  <entry from='ḍ' to='д̣' />
+  <entry from='j' to='дж' />
+  <entry from='e' to='е' />
+  <entry from='ẽ' to='е̃' />
+  <entry from='ē' to='е̄' />
+  <entry from='ē̃' to='е̄̃' />
+  <entry from='i' to='и' />
+  <entry from='ĩ' to='и̃' />
+  <entry from='ī' to='ӣ' />
+  <entry from='ī̃' to='ӣ̃' />
+  <entry from='y' to='й' />
+  <entry from='k' to='к' />
+  <entry from='l' to='л' />
+  <entry from='l̐' to='л̐' />
+  <entry from='ḷ' to='л̣' />
+  <entry from='ḹ' to='л̣̄' />
+  <entry from='m' to='м' />
+  <entry from='ṁ' to='м̇' />
+  <entry from='m̐' to='м̐' />
+  <entry from='n' to='н' />
+  <entry from='ñ' to='н̃' />
+  <entry from='ṅ' to='н̇' />
+  <entry from='ṇ' to='н̣' />
+  <entry from='o' to='о' />
+  <entry from='õ' to='о̃' />
+  <entry from='ō' to='о̄' />
+  <entry from='ō̃' to='о̄̃' />
+  <entry from='p' to='п' />
+  <entry from='r' to='р' />
+  <entry from='ṙ' to='р̇' />
+  <entry from='ṛ' to='р̣' />
+  <entry from='ṝ' to='р̣̄' />
+  <entry from='s' to='с' />
+  <entry from='t' to='т' />
+  <entry from='ṭ' to='т̣' />
+  <entry from='u' to='у' />
+  <entry from='ũ' to='у̃' />
+  <entry from='ū' to='ӯ' />
+  <entry from='ū̃' to='ӯ̃' />
+  <entry from='h' to='х' />
+  <entry from='ḥ' to='х̣' />
+  <entry from='c' to='ч' />
+  <entry from='ś' to='ш́' />
+  <entry from='ṣ' to='ш̣' />
+  <entry from='A' to='А' />
+  <entry from='Ã' to='А̃' />
+  <entry from='Ā' to='А̄' />
+  <entry from='Ā̃' to='А̄̃' />
+  <entry from='B' to='Б' />
+  <entry from='V' to='В' />
+  <entry from='G' to='Г' />
+  <entry from='D' to='Д' />
+  <entry from='Ḍ' to='Д̣' />
+  <entry from='J' to='Дж' />
+  <entry from='E' to='Е' />
+  <entry from='Ẽ' to='Е̃' />
+  <entry from='Ē' to='Е̄' />
+  <entry from='Ē̃' to='Е̄̃' />
+  <entry from='I' to='И' />
+  <entry from='Ĩ' to='И̃' />
+  <entry from='Ī' to='Ӣ' />
+  <entry from='Ī̃' to='Ӣ̃' />
+  <entry from='Y' to='Й' />
+  <entry from='K' to='К' />
+  <entry from='L' to='Л' />
+  <entry from='L̐' to='Л̐' />
+  <entry from='Ḷ' to='Л̣' />
+  <entry from='Ḹ' to='Л̣̄' />
+  <entry from='M' to='М' />
+  <entry from='Ṁ' to='М̇' />
+  <entry from='M̐' to='М̐' />
+  <entry from='N' to='Н' />
+  <entry from='Ñ' to='Н̇' />
+  <entry from='Ṅ' to='Н̇' />
+  <entry from='Ṇ' to='Н̣' />
+  <entry from='O' to='О' />
+  <entry from='Õ' to='О̃' />
+  <entry from='Ō' to='О̄' />
+  <entry from='Ō̃' to='О̄̃' />
+  <entry from='P' to='П' />
+  <entry from='R' to='Р' />
+  <entry from='Ṙ' to='Р̇' />
+  <entry from='Ṛ' to='Р̇' />
+  <entry from='Ṝ' to='Р̣̄' />
+  <entry from='S' to='С' />
+  <entry from='T' to='Т' />
+  <entry from='Ṭ' to='Т̣' />
+  <entry from='U' to='У' />
+  <entry from='Ũ' to='У̃' />
+  <entry from='Ū' to='Ӯ' />
+  <entry from='Ū̃' to='Ӯ̃' />
+  <entry from='H' to='Х' />
+  <entry from='Ḥ' to='Х̣' />
+  <entry from='C' to='Ч' />
+  <entry from='Ś' to='Ш́' />
+  <entry from='Ṣ' to='Ш̣' />
+  <entry from='\be' to='э' order='-1' type='regex' />
+  <entry from='\bE' to='Э' order='-1' type='regex' />
 </map>

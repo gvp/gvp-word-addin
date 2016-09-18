@@ -74,5 +74,16 @@ namespace GaudiaVedantaPublications.Tests
         {
             Assert.Equal(lat.Normalize(NormalizationForm.FormC), MapManager.Dev2Lat.Apply(dev));
         }
+
+        [Theory]
+        [InlineData("vaiṣṇava–siddhānta–mālā", "ваиш̣н̣ава–сиддха̄нта–ма̄ла̄")]
+        [InlineData("oṁ", "ом̇")]
+        [InlineData("evam", "эвам")]
+        [InlineData("sevonmukhe", "севонмукхе")]
+        [InlineData("bhaktiprajñāna", "бхактипраджн̃а̄на")]
+        public void Lat2Cyr(string lat, string cyr)
+        {
+            Assert.Equal(cyr.Normalize(NormalizationForm.FormC), MapManager.Lat2Cyr.Apply(lat));
+        }
     }
 }
