@@ -6,11 +6,11 @@
       <tab idQ="gvp:TabGVP" getLabel="GetLabel">
         <group idMso="GroupFont" />
         <group idQ="gvp:TransliterationGroup" getLabel="GetLabel">
-          <button id="TransliterateDevanagari"
+          <button id="Devanagari2Latin"
                   onAction="Transliterate"
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   />
-          <button id="TransliterateRoman"
+          <button id="Latin2Cyrillic"
                   onAction="Transliterate"
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   />
