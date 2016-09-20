@@ -225,7 +225,6 @@
     <Compile Include="Ribbon.Conversion.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FromUnicodeTransform.cs" />
-    <Compile Include="IterativeTextTransform.cs" />
     <Compile Include="ITextTransform.cs" />
     <Compile Include="MapBasedTextTransform.cs" />
     <Compile Include="MapManager.cs" />
