@@ -39,6 +39,14 @@ namespace GaudiaVedantaPublications.Tests
                     {"O;fä;ksaesaaa", "व्यक्तियोंमें" }, /// Three ं
                 }
             },
+            { "ThamesM", new Dictionary<string, string>
+                {
+                    {"iрb-iука{ увfча", "ш́рӣ-ш́уках̣ ува̄ча" },
+                    {"iрb iрb гуру-гаурfyга джаята{", "ш́рӣ ш́рӣ гуру-гаура̄н̇га джаятах̣" },
+                    {"виджufйа", "виджн̃а̄йа" },
+                    {"сарва-бхeта-хhдайаv", "сарва-бхӯта-хр̣дайам̇" },
+                }
+            },
         };
 
         public static IEnumerable<object[]> ToUnicodeTestData
@@ -57,7 +65,7 @@ namespace GaudiaVedantaPublications.Tests
         public void ToUnicode(string unicode, string ascii, string fontName)
         {
             var map = MapManager.GetFontMap(fontName, MapDirection.Forward);
-            Assert.Equal(unicode, map.Apply(ascii));
+            Assert.Equal(unicode.Normalize(NormalizationForm.FormC), map.Apply(ascii));
         }
 
         [Theory]
