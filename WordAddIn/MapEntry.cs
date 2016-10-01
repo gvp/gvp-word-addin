@@ -13,15 +13,6 @@ namespace GaudiaVedantaPublications
         public string To { get; set; }
         public int Order { get; set; }
 
-        public string ReplaceText { get; set; }
-        public string ReplaceTextForFirstLetter { get; set; }
-
-        public string InsertBefore { get; set; }
-        public string InsertAfter { get; set; }
-        public string AppendAfter { get; set; }
-
-        public IDictionary<String, String> Replaces { get; set; }
-
         public MapEntry()
         {
         }
@@ -44,6 +35,21 @@ namespace GaudiaVedantaPublications
                 return Regex.Replace(text, To);
             else
                 return text.Replace(From, To);
+        }
+
+        public MapEntry Inverted
+        {
+            get
+            {
+                if (Regex != null)
+                    throw new InvalidOperationException("Cannot invert regex-based map entry");
+                return new MapEntry
+                {
+                    From = To,
+                    To = From,
+                    Order = -Order,
+                };
+            }
         }
     }
 
