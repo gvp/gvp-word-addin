@@ -280,7 +280,7 @@
     <EmbeddedResource Include="Images\Tilde.png" />
     <EmbeddedResource Include="Maps\Cyrillic\Amita Times Cyr.xml" />
     <EmbeddedResource Include="Maps\Roman\Rama Garamond Plus.xml" />
-    <EmbeddedResource Include="Maps\Translit\Lat2Cyr.xml" />
+    <EmbeddedResource Include="Maps\Translit\Latin→Cyrillic.xml" />
     <EmbeddedResource Include="Maps\Cyrillic\ThamesM.xml" />
     <EmbeddedResource Include="Maps\Roman\Amita Times.xml" />
     <EmbeddedResource Include="Maps\Roman\Balaram.xml" />
@@ -288,7 +288,7 @@
     <EmbeddedResource Include="Maps\Roman\DVRoman-TTSurekh.xml" />
     <EmbeddedResource Include="Maps\Roman\GVPalatino.xml" />
     <EmbeddedResource Include="Maps\Cyrillic\ThamesSanskrit.xml" />
-    <EmbeddedResource Include="Maps\Translit\Dev2Lat.xml" />
+    <EmbeddedResource Include="Maps\Translit\Devanagari→Latin.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARitu.xml" />
     <EmbeddedResource Include="Maps\Roman\SD1-TTSurekh.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARituPlus2.xml" />
@@ -316,7 +316,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Maps\Devanagari\Devanagari2Unicode.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\Devanagari→Unicode.xml" />
   </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <PropertyGroup>

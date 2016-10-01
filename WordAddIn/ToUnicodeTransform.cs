@@ -23,7 +23,7 @@ namespace GaudiaVedantaPublications
             if (string.IsNullOrEmpty(font.Name))
                 throw new InvalidOperationException("Range contains several fonts");
 
-            return MapManager.GetFontMap(font.Name, MapDirection.Forward);
+            return MapManager.GetFontToUnicodeMap(font.Name);
         }
     }
 }

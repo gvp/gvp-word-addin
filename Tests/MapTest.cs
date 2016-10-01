@@ -65,7 +65,7 @@ namespace GaudiaVedantaPublications.Tests
         [MemberData("ToUnicodeTestData")]
         public void ToUnicode(string unicode, string ascii, string fontName)
         {
-            var map = MapManager.GetFontMap(fontName, MapDirection.Forward);
+            var map = MapManager.GetFontToUnicodeMap(fontName);
             Assert.Equal(unicode.Normalize(NormalizationForm.FormC), map.Apply(ascii));
         }
 
