@@ -52,7 +52,7 @@ namespace GaudiaVedantaPublications
             return fontName;
         }
 
-        private static readonly string[] devanagariMaps = { "AARitu", "AARituPlus2", "KALAKAR", "SDW" };
+        private static readonly string[] devanagariFonts = { "AARitu", "AARituPlus2", "KALAKAR", "SDW" };
 
         public static Map GetMap(string source, string destination)
         {
@@ -66,9 +66,9 @@ namespace GaudiaVedantaPublications
                 return null;
 
             /// For devanagari fonts there is a common section
-            if (devanagariMaps.Contains(source))
+            if (devanagariFonts.Contains(source))
                 entries = entries.Concat(ReadMap(Devanagari, Unicode));
-            else if (devanagariMaps.Contains(destination))
+            else if (devanagariFonts.Contains(destination))
                 entries = entries.Concat(ReadMap(Unicode, Devanagari));
 
             map = entries.OrderBy(e => e.Order);
