@@ -78,9 +78,9 @@ namespace GaudiaVedantaPublications.Tests
         [InlineData("ड़", "ṛa")]
         [InlineData("श्रीगौड़ीयाचार्य", "śrīgauṛīyācārya")]
         [InlineData("पाँच", "pām̐ca")]
-        public void Dev2Lat(string dev, string lat)
+        public void DevanagariToLatin(string devanagari, string latin)
         {
-            Assert.Equal(lat.Normalize(NormalizationForm.FormC), MapManager.Dev2Lat.Apply(dev));
+            Assert.Equal(latin.Normalize(NormalizationForm.FormC), MapManager.DevanagariToLatin.Apply(devanagari));
         }
 
         [Theory]
@@ -89,9 +89,9 @@ namespace GaudiaVedantaPublications.Tests
         [InlineData("evam", "эвам")]
         [InlineData("sevonmukhe", "севонмукхе")]
         [InlineData("bhaktiprajñāna", "бхактипраджн̃а̄на")]
-        public void Lat2Cyr(string lat, string cyr)
+        public void LatinToCyrillic(string latin, string cyrillic)
         {
-            Assert.Equal(cyr.Normalize(NormalizationForm.FormC), MapManager.Lat2Cyr.Apply(lat));
+            Assert.Equal(cyrillic.Normalize(NormalizationForm.FormC), MapManager.LatinToCyrillic.Apply(latin));
         }
     }
 }
