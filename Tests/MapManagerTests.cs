@@ -30,19 +30,17 @@ namespace GaudiaVedantaPublications.Tests
         }
 
         [Theory]
-        [InlineData("AARituPlus2", "Unicode")]
-        [InlineData("ThamesM", "Unicode")]
-        public void ShouldReturnOrderedEnumerable(string source, string destination)
-        {
-            Assert.IsAssignableFrom<IOrderedEnumerable<MapEntry>>(MapManager.GetMap(source, destination));
-        }
-
-        [Theory]
+        [InlineData("AARituPlus2", "Unicode", 197 + 30)]
         [InlineData("ThamesM", "Unicode", 46)]
-        public void MapShouldContainExactNumberOfEntries(string source, string destination, int count)
+        [InlineData("Unicode", "ThamesM", 46)]
+        [InlineData("Devanagari", "Latin", 92)]
+        [InlineData("Latin", "Cyrillic", 106)]
+        public void ShouldReturnMap(string source, string destination, int count)
         {
-            Assert.Equal(count, MapManager.GetMap(source, destination).Count());
+            var map = MapManager.GetMap(source, destination);
+            Assert.NotNull(map);
+            Assert.IsAssignableFrom<IOrderedEnumerable<MapEntry>>(map);
+            Assert.Equal(count, map.Count());
         }
-
     }
 }
