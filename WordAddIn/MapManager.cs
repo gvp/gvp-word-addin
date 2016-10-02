@@ -14,7 +14,7 @@ namespace GaudiaVedantaPublications
         private const string Cyrillic = "Cyrillic";
         private const string Latin = "Latin";
 
-        public static Map Lat2Cyr
+        public static Map LatinToCyrillic
         {
             get
             {
@@ -22,7 +22,7 @@ namespace GaudiaVedantaPublications
             }
         }
 
-        public static Map Dev2Lat
+        public static Map DevanagariToLatin
         {
             get
             {

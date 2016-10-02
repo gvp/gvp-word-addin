@@ -17,11 +17,11 @@ namespace GaudiaVedantaPublications
             switch (control.Id)
             {
                 case "Devanagari2Latin":
-                    yield return new MapBasedTextTransform(MapManager.Dev2Lat);
+                    yield return new MapBasedTextTransform(MapManager.DevanagariToLatin);
                     break;
 
                 case "Latin2Cyrillic":
-                    yield return new MapBasedTextTransform(MapManager.Lat2Cyr);
+                    yield return new MapBasedTextTransform(MapManager.LatinToCyrillic);
                     break;
             }
         }
