@@ -13,7 +13,7 @@ namespace GaudiaVedantaPublications
         {
             return other.Name == font.Name
                 && other.Size == font.Size
-                && other.TextColor.RGB == font.TextColor.RGB
+                && other.Color == font.Color
                 && other.Bold == font.Bold
                 && other.Italic == font.Italic
                 && other.Underline == font.Underline
