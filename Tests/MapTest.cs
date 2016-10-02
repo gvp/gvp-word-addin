@@ -9,7 +9,7 @@ namespace GaudiaVedantaPublications.Tests
 {
     public class MapTest
     {
-        private static readonly IDictionary<string, IDictionary<string, string>> testData = new Dictionary<string, IDictionary<string, string>>
+        private static readonly IDictionary<string, IDictionary<string, string>> fontTestData = new Dictionary<string, IDictionary<string, string>>
         {
             { "AARituPlus2", new Dictionary<string, string>
                 {
@@ -49,23 +49,44 @@ namespace GaudiaVedantaPublications.Tests
             },
         };
 
-        public static IEnumerable<object[]> ToUnicodeTestData
+        private static IEnumerable<object[]> GetFontTestData(params string[] fontNames)
+        {
+            return
+                from fontName in fontNames
+                from entry in fontTestData[fontName]
+                select new object[] { entry.Value, entry.Key, fontName };
+        }
+
+        public static IEnumerable<object[]> FontToUnicodeTestData
         {
             get
             {
-                return
-                    from fontName in testData.Keys
-                    from entry in testData[fontName]
-                    select new object[] { entry.Value, entry.Key, fontName };
+                return GetFontTestData(fontTestData.Keys.ToArray());
             }
         }
 
         [Theory]
-        [MemberData("ToUnicodeTestData")]
+        [MemberData("FontToUnicodeTestData")]
         public void ToUnicode(string unicode, string ascii, string fontName)
         {
             var map = MapManager.GetFontToUnicodeMap(fontName);
             Assert.Equal(unicode.Normalize(NormalizationForm.FormC), map.Apply(ascii));
+        }
+
+        public static IEnumerable<object[]> UnicodeToFontTestData
+        {
+            get
+            {
+                return GetFontTestData("ThamesM");
+            }
+        }
+
+        [Theory]
+        [MemberData("UnicodeToFontTestData")]
+        public void FromUnicode(string unicode, string ascii, string fontName)
+        {
+            var map = MapManager.GetUnicodeToFontMap(fontName);
+            Assert.Equal(ascii.Normalize(NormalizationForm.FormC), map.Apply(unicode));
         }
 
         [Theory]

@@ -16,7 +16,7 @@
   <entry from='k' to='л̣' />
   <entry from='V' to='М̇' />
   <entry from='v' to='м̇' />
-  <entry from='S' to='н̃' />
+  <entry from='S' to='н̃' order='-1' />
   <entry from='U' to='Н̃' />
   <entry from='u' to='н̃' />
   <entry from='Y' to='Н̇' />
@@ -30,11 +30,11 @@
   <entry from='H' to='Р̣' />
   <entry from='h' to='р̣' />
   <entry from='G' to='Р̣̄' />
-  <entry from='R' to='р̣̄' />
+  <entry from='R' to='р̣̄' order='-1' />
   <entry from='g' to='р̣̄' />
   <entry from='N' to='Т̣' />
   <entry from='n' to='т̣' />
-  <entry from='W' to='у̃' />
+  <entry from='W' to='у̃' order='-1' />
   <entry from='z' to='у̃' />
   <entry from='E' to='Ӯ' />
   <entry from='e' to='ӯ' />
