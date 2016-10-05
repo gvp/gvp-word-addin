@@ -74,10 +74,10 @@ namespace GaudiaVedantaPublications.Tests
 
         [Theory]
         [MemberData("FontToUnicodeTestData")]
-        public void ToUnicode(string unicode, string ascii, string fontName)
+        public void ToUnicode(string unicode, string from, string fontName)
         {
             var map = MapManager.GetFontToUnicodeMap(fontName);
-            Assert.Equal(unicode.Normalize(NormalizationForm.FormC), map.Apply(ascii));
+            Assert.Equal(unicode.Normalize(NormalizationForm.FormC), map.Apply(from));
         }
 
         public static IEnumerable<object[]> UnicodeToFontTestData
@@ -90,10 +90,10 @@ namespace GaudiaVedantaPublications.Tests
 
         [Theory]
         [MemberData("UnicodeToFontTestData")]
-        public void FromUnicode(string unicode, string ascii, string fontName)
+        public void FromUnicode(string unicode, string to, string fontName)
         {
             var map = MapManager.GetUnicodeToFontMap(fontName);
-            Assert.Equal(ascii.Normalize(NormalizationForm.FormC), map.Apply(unicode));
+            Assert.Equal(to.Normalize(NormalizationForm.FormC), map.Apply(unicode));
         }
 
         [Theory]
