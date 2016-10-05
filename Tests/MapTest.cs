@@ -39,6 +39,15 @@ namespace GaudiaVedantaPublications.Tests
                     {"O;fä;ksaesaaa", "व्यक्तियोंमें" }, /// Three ं
                 }
             },
+            { "Amita Times Cyr", new Dictionary<string, string> {
+                { "к¦п…м¦т…бдхе±", "кр̣па̄мр̣та̄бдхеш́" },
+                { "ѕ", "[lotus]" },
+                { "\x00AD", "ӯ" },
+                { "\x00B7", "Т̣" },
+                { "\x0088", "л̣" },
+                { "\x0098", "м̇" },
+                { "\x0457", "\x0301" },
+            }},
             { "ThamesM", new Dictionary<string, string> {
                 {"iрb-iука{ увfча", "ш́рӣ-ш́уках̣ ува̄ча" },
                 {"iрb iрb гуру-гаурfyга джаята{", "ш́рӣ ш́рӣ гуру-гаура̄н̇га джаятах̣" },
@@ -84,7 +93,7 @@ namespace GaudiaVedantaPublications.Tests
         {
             get
             {
-                return GetFontTestData("ThamesM", "ThamesSanskrit");
+                return GetFontTestData("ThamesM", "ThamesSanskrit", "Amita Times Cyr");
             }
         }
 
