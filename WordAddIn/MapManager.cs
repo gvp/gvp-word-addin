@@ -71,7 +71,7 @@ namespace GaudiaVedantaPublications
             else if (devanagariFonts.Contains(destination))
                 entries = entries.Concat(ReadMap(Unicode, Devanagari));
 
-            map = entries.OrderBy(e => e.Order);
+            map = entries.OrderBy(e => e.Order).ThenByDescending(e=>e.From.Length);
             maps.Add(key, map);
             return map;
         }
