@@ -40,6 +40,11 @@
                       tag="ThamesM"
                       getLabel="GetFontConversionLabel"
                       />
+              <button id="ConvertToThamesSanskrit"
+                      onAction="ConvertFont"
+                      tag="ThamesSanskrit"
+                      getLabel="GetFontConversionLabel"
+                      />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
               <menu idQ="gvp:ScaSeriesMenu" getLabel="GetLabel" >
                 <button id="ConvertToScaTimes"
