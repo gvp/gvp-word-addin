@@ -51,7 +51,10 @@ namespace GaudiaVedantaPublications.Tests
                 { "äæufíàv òå ’õàv ñà-âèäæufíàì, èäàv âàêøéfìé àiåøàòà{", "джн̃а̄нам̇ те ’хам̇ са-виджн̃а̄нам, идам̇ вакшйа̄мй аш́ешатах̣" },
                 { "éàäæ äæufòâf íåõà áõeéî ’íéàäæ, äæufòàâéàì àâàièøéàòå", "йадж джн̃а̄тва̄ неха бхӯйо ’нйадж, джн̃а̄тавйам аваш́ишйате" },
                 { "uf", "н̃а̄" }
-            }}
+            }},
+            { "Amita Times Cyr", new Dictionary<string, string> {
+                { "к¦п…м¦т…бдхе±", "кр̣па̄мр̣та̄бдхеш́" },
+            }},
         };
 
         private static IEnumerable<object[]> GetFontTestData(params string[] fontNames)
@@ -82,7 +85,7 @@ namespace GaudiaVedantaPublications.Tests
         {
             get
             {
-                return GetFontTestData("ThamesM", "ThamesSanskrit");
+                return GetFontTestData("ThamesM", "ThamesSanskrit", "Amita Times Cyr");
             }
         }
 

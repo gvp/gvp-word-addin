@@ -1,40 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <map>
-  <entry from="&#x0406;" to="А̄" />
-  <entry from="&#x2026;" to="а̄" />
-  <entry from="&#x0402;" to="а̃" />
-  <entry from="&#x0403;" to="а̄̃" />
-  <entry from="&#x0456;" to="Д̣" />
-  <entry from="&#x2020;" to="д̣" />
-  <entry from="&#x0407;" to="е̃" />
-  <entry from="&#x03BC;" to="Ӣ" />
-  <entry from="&#x2021;" to="ӣ" />
-  <entry from="&#x045C;" to="и̃" />
-  <entry from="&#x045B;" to="ӣ̃" />
-  <entry from="&#x2030;" to="л̐" />
-  <entry from="&#x0088;" to="л̣" />
-  <entry from="&#x20AC;" to="л̣" />
-  <entry from="&#x0098;" to="м̇" />
-  <entry from="&#x2122;" to="н̇" />
-  <entry from="&#x00A4;" to="н̃" />
-  <entry from="&#x0408;" to="н̣" />
-  <entry from="&#x040B;" to="о̄" />
-  <entry from="&#x040C;" to="о̃" />
-  <entry from="&#x040F;" to="о̄̃" />
-  <entry from="&#x0490;" to="р̇" />
-  <entry from="&#x00A6;" to="р̣" />
-  <entry from="&#x00B6;" to="Р̣" />
-  <entry from="&#x00A7;" to="р̣̄" />
-  <entry from="&#x00AC;" to="т̣" />
-  <entry from="&#x00B7;" to="Т̣" />
-  <entry from="&#x2219;" to="Т̣" obsolete="true" />
-  <entry from="&#x00AD;" to="ӯ" />
-  <entry from="&#x0458;" to="Ӯ" />
-  <entry from="&#x2212;" to="ӯ" obsolete="true" />
-  <entry from="&#x040E;" to="у̃" />
-  <entry from="&#x045E;" to="ӯ̃" />
-  <entry from="&#x00AE;" to="х̣" />
-  <entry from="&#x00B1;" to="ш́" />
-  <entry from="&#x0405;" to="Ш́" />
-  <entry from="&#x0452;" to="э̃" />
+  <entry from='&#x0458;' to='&#x0301;' />
+  <entry from='&#x045F;' to='&#x0301;' />
+  <entry from='&#x040A;' to='◡' />
+  <entry from='&#x0402;' to='а̃' />
+  <entry from='&#x0406;' to='А̄' />
+  <entry from='&#x2026;' to='а̄' />
+  <entry from='&#x0403;' to='а̄̃' />
+  <entry from='&#x0456;' to='Д̣' />
+  <entry from='&#x2020;' to='д̣' />
+  <entry from='&#x0407;' to='е̃' />
+  <entry from='&#x045C;' to='и̃' />
+  <entry from='&#x03BC;' to='Ӣ' />
+  <entry from='&#x2021;' to='ӣ' />
+  <entry from='&#x045B;' to='ӣ̃' />
+  <entry from='&#x2030;' to='л̐' />
+  <entry from='&#x0088;' to='л̣' />
+  <entry from='&#x20AC;' to='л̣' />
+  <entry from='&#x0098;' to='м̇' />
+  <entry from='&#x00A4;' to='н̃' />
+  <entry from='&#x2123;' to='н̇' />
+  <entry from='&#x0408;' to='н̣' />
+  <entry from='&#x040C;' to='о̃' />
+  <entry from='&#x040B;' to='о̄' />
+  <entry from='&#x040F;' to='о̄̃' />
+  <entry from='&#x0490;' to='р̇' />
+  <entry from='&#x00A6;' to='р̣' />
+  <entry from='&#x00B6;' to='Р̣' />
+  <entry from='&#x00A7;' to='р̣̄' />
+  <entry from='&#x00AC;' to='т̣' />
+  <entry from='&#x00B7;' to='Т̣' />
+  <entry from='&#x2219;' to='Т̣' order='-1' />
+  <entry from='&#x040E;' to='у̃' />
+  <entry from='&#x00AD;' to='ӯ' />
+  <entry from='&#x0458;' to='Ӯ' />
+  <entry from='&#x2212;' to='ӯ' order='-1' />
+  <entry from='&#x045E;' to='ӯ̃' />
+  <entry from='&#x00AE;' to='х̣' />
+  <entry from='&#x00B1;' to='ш́' />
+  <entry from='&#x0405;' to='Ш́' />
+  <entry from='&#x0452;' to='э̃' />
+  <entry from='&#x00B6;' to='�' />
+  <entry from='&#x0384;' to='�' />
+  <entry from='&#x0455;' to='�' />
 </map>

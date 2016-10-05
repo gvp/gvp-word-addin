@@ -35,6 +35,8 @@ namespace GaudiaVedantaPublications.Tests
         [InlineData("Unicode", "ThamesM", 46)]
         [InlineData("ThamesSanskrit", "Unicode", 127)]
         [InlineData("Unicode", "ThamesSanskrit", 127)]
+        [InlineData("Amita Times Cyr", "Unicode", 43)]
+        [InlineData("Unicode", "Amita Times Cyr", 43)]
         [InlineData("Devanagari", "Latin", 92)]
         [InlineData("Latin", "Cyrillic", 106)]
         public void ShouldReturnMap(string source, string destination, int count)

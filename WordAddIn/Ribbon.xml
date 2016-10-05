@@ -45,6 +45,11 @@
                       tag="ThamesSanskrit"
                       getLabel="GetFontConversionLabel"
                       />
+              <button id="ConvertToAmitaTimesCyr"
+                      onAction="ConvertFont"
+                      tag="Amita Times Cyr"
+                      getLabel="GetFontConversionLabel"
+                      />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
               <menu idQ="gvp:ScaSeriesMenu" getLabel="GetLabel" >
                 <button id="ConvertToScaTimes"
