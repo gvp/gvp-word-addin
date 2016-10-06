@@ -16,6 +16,7 @@ namespace GaudiaVedantaPublications.Tests
         [InlineData("KALAKAR", "KALAKAR1")]
         [InlineData("AARituPlus2", "AARituPlus2")]
         [InlineData("ThamesM", "ThamesM")]
+        [InlineData("Amita Times Cyr", "Krishna Times Plus")]
         public void ShouldReturnSameMap(string name1, string name2)
         {
             Assert.Same(MapManager.GetFontToUnicodeMap(name1), MapManager.GetFontToUnicodeMap(name2));

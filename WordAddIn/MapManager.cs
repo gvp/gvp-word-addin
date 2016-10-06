@@ -40,16 +40,20 @@ namespace GaudiaVedantaPublications
             return GetMap(Unicode, GetMapName(fontName));
         }
 
+        private static readonly IDictionary<string, string> FontEquivalence = new Dictionary<string, string>
+        {
+            { "Sca", "ScaSeries" },
+            { "SDW-", "SDW" },
+            { "KALAKAR", "KALAKAR" },
+            { "Krishna Times Plus", "Amita Times Cyr" },
+        };
         private static string GetMapName(string fontName)
         {
-            if (fontName.StartsWith("Sca"))
-                return "ScaSeries";
-            if (fontName.StartsWith("SDW-"))
-                return "SDW";
-            if (fontName.StartsWith("KALAKAR"))
-                return "KALAKAR";
-
-            return fontName;
+            return (
+                from entry in FontEquivalence
+                where fontName.StartsWith(entry.Key)
+                select entry.Value
+                ).DefaultIfEmpty(fontName).First();
         }
 
         private static readonly string[] devanagariFonts = { "AARitu", "AARituPlus2", "KALAKAR", "SDW" };
