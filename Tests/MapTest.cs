@@ -55,12 +55,15 @@ namespace GaudiaVedantaPublications.Tests
             { "Amita Times Cyr", new Dictionary<string, string> {
                 { "к¦п…м¦т…бдхе±", "кр̣па̄мр̣та̄бдхеш́" },
             }},
+            { "DVRoman-TTSurekh", new Dictionary<string, string> {
+                { "¿rî¿rîguru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" }
+            }},
         };
 
-        private static IEnumerable<object[]> GetFontTestData(params string[] fontNames)
+        private static IEnumerable<object[]> GetFontTestData(params string[] excludeFontNames)
         {
             return
-                from fontName in fontNames
+                from fontName in fontTestData.Keys.Except(excludeFontNames)
                 from entry in fontTestData[fontName]
                 select new object[] { entry.Value, entry.Key, fontName };
         }
@@ -69,7 +72,7 @@ namespace GaudiaVedantaPublications.Tests
         {
             get
             {
-                return GetFontTestData(fontTestData.Keys.ToArray());
+                return GetFontTestData();
             }
         }
 
@@ -85,7 +88,7 @@ namespace GaudiaVedantaPublications.Tests
         {
             get
             {
-                return GetFontTestData("ThamesM", "ThamesSanskrit", "Amita Times Cyr");
+                return GetFontTestData(excludeFontNames: "AARituPlus2");
             }
         }
 
