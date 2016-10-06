@@ -123,6 +123,11 @@
                       tag="GVPalatino"
                       getLabel="GetFontConversionLabel"
                       />
+              <button id="ConvertToSD1TTSurekh"
+                      onAction="ConvertFont"
+                      tag="SD1-TTSurekh"
+                      getLabel="GetFontConversionLabel"
+                      />
               <menuSeparator idQ="gvp:OperationalFontSeparator" getTitle="GetTitle" />
               <button idQ="gvp:ClearOperationalFont"
                       onAction="ClearOperationalFont"

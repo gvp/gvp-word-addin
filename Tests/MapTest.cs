@@ -58,6 +58,9 @@ namespace GaudiaVedantaPublications.Tests
             { "DVRoman-TTSurekh", new Dictionary<string, string> {
                 { "¿rî¿rîguru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" }
             }},
+            { "SD1-TTSurekh", new Dictionary<string, string> {
+                { "¿r¢¿r¢guru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" }
+            }},
         };
 
         private static IEnumerable<object[]> GetFontTestData(params string[] excludeFontNames)
