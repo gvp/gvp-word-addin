@@ -34,7 +34,7 @@
   <entry from='&#x00CE;' to='Ṛ' />
   <entry from='&#x00CF;' to='Ṝ' />
   <entry from='&#x00D0;' to='Ṙ' />
-  <entry from='&#x00D1;' to='Ḻ' />
+  <entry from='&#x00D1;' to='Ḻ' order='-1' />
   <entry from='&#x00D2;' to='Ḻ̄' />
   <entry from='&#x00D3;' to='Ē' />
   <entry from='&#x00D5;' to='Ō' />
