@@ -51,6 +51,11 @@
                       getLabel="GetFontConversionLabel"
                       />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
+              <button id="ConvertToBalaram"
+                      onAction="ConvertFont"
+                      tag="Balaram"
+                      getLabel="GetFontConversionLabel"
+                      />
               <button id="ConvertToDVRomanTTSurekh"
                       onAction="ConvertFont"
                       tag="DVRoman-TTSurekh"

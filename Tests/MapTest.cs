@@ -55,6 +55,11 @@ namespace GaudiaVedantaPublications.Tests
                 { "éàäæ äæufòâf íåõà áõeéî ’íéàäæ, äæufòàâéàì àâàièøéàòå", "йадж джн̃а̄тва̄ неха бхӯйо ’нйадж, джн̃а̄тавйам аваш́ишйате" },
                 { "uf", "н̃а̄" },
             }},
+            { "Balaram", new Dictionary<string, string> {
+                { "mäträ-sparçäs tu kaunteya çétoñëa-sukha-duùkha-däù", "mātrā-sparśās tu kaunteya śītoṣṇa-sukha-duḥkha-dāḥ" },
+                { "Ï", "Ñ" },
+                { "ß", "Ḷ" },
+            }},
             { "DVRoman-TTSurekh", new Dictionary<string, string> {
                 { "¿rî¿rîguru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" },
                 { "Ø", "Ñ" },
