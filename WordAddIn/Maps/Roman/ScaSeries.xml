@@ -1,35 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <map>
-  <entry from="&#x00C4;" to="Ā" />
-  <entry from="&#x00E4;" to="ā" />
-  <entry from="&#x00E3;" to="ã" />
-  <entry from="&#x00D2;" to="Ḍ" />
-  <entry from="&#x00F2;" to="ḍ" />
-  <entry from="&#x00D9;" to="Ḥ" />
-  <entry from="&#x00F9;" to="ḥ" />
-  <entry from="&#x00C9;" to="Ī" />
-  <entry from="&#x00E9;" to="ī" />
-  <entry from="&#x00FB;" to="l̐" />
-  <entry from="&#x00FF;" to="ḷ" />
-  <entry from="&#x00C0;" to="Ṁ" />
-  <entry from="&#x00E0;" to="ṁ" />
-  <entry from="&#x25CA;" to="m̐" />
-  <entry from="&#x00CC;" to="Ṅ" />
-  <entry from="&#x00EC;" to="ṅ" />
-  <entry from="&#x00CF;" to="Ñ" />
-  <entry from="&#x00EF;" to="ñ" />
-  <entry from="&#x00CB;" to="Ṇ" />
-  <entry from="&#x00EB;" to="ṇ" />
-  <entry from="&#x00D5;" to="Õ" />
-  <entry from="&#x00C5;" to="Ṛ" />
-  <entry from="&#x00E5;" to="ṛ" />
-  <entry from="&#x00E8;" to="ṝ" />
-  <entry from="&#x00C7;" to="Ś" />
-  <entry from="&#x00E7;" to="ś" />
-  <entry from="&#x00D1;" to="Ṣ" />
-  <entry from="&#x00F1;" to="ṣ" />
-  <entry from="&#x00D6;" to="Ṭ" />
-  <entry from="&#x00F6;" to="ṭ" />
-  <entry from="&#x00DC;" to="Ū" />
-  <entry from="&#x00FC;" to="ū" />
+  <entry from='&#x00A0;' to='Ö' />
+  <entry from='&#x00A1;' to='ï' />
+  <entry from='&#x00A4;' to='ß' />
+  <entry from='&#x00AA;' to='à' />
+  <entry from='&#x00AC;' to='ì' />
+  <entry from='&#x00BA;' to='ù' />
+  <entry from='&#x00C0;' to='Ṁ' order='-1' />
+  <entry from='&#x00C3;' to='Ä' />
+  <entry from='&#x00C4;' to='Ā' order='-1' />
+  <entry from='&#x00C5;' to='Ṛ' />
+  <entry from='&#x00C7;' to='Ś' />
+  <entry from='&#x00C8;' to='ü' order='-1' />
+  <entry from='&#x00C9;' to='Ī' order='-1' />
+  <entry from='&#x00CA;' to='è' />
+  <entry from='&#x00CB;' to='Ṇ' order='-1' />
+  <entry from='&#x00CC;' to='Ṅ' order='-1' />
+  <entry from='&#x00CE;' to='ö' />
+  <entry from='&#x00CF;' to='Ñ' order='-1' />
+  <entry from='&#x00D1;' to='Ṣ' order='-2' />
+  <entry from='&#x00D2;' to='Ḍ' order='-1' />
+  <entry from='&#x00D4;' to='ä' />
+  <entry from='&#x00D6;' to='Ṭ' order='-1' />
+  <entry from='&#x00D9;' to='Ḥ' order='-1' />
+  <entry from='&#x00DC;' to='Ū' order='-2' />
+  <entry from='&#x00DF;' to='Ḷ' order='-1' />
+  <entry from='&#x00E0;' to='ṁ' order='-1' />
+  <entry from='&#x00E4;' to='ā' order='-1' />
+  <entry from='&#x00E5;' to='ṛ' />
+  <entry from='&#x00E7;' to='ś' />
+  <entry from='&#x00E8;' to='ṝ' order='-1' />
+  <entry from='&#x00E9;' to='ī' order='-1' />
+  <entry from='&#x00EB;' to='ṇ' order='-1' />
+  <entry from='&#x00EC;' to='ṅ' order='-1' />
+  <entry from='&#x00EF;' to='ñ' order='-1' />
+  <entry from='&#x00F1;' to='ṣ' order='-2' />
+  <entry from='&#x00F2;' to='ḍ' order='-1' />
+  <entry from='&#x00F6;' to='ṭ' order='-1' />
+  <entry from='&#x00F9;' to='ḥ' order='-1' />
+  <entry from='&#x00FB;' to='l̐' />
+  <entry from='&#x00FC;' to='ū' order='-2' />
+  <entry from='&#x00FF;' to='ḷ' />
+  <entry from='&#x0178;' to='⅓' />
+  <entry from='&#x0394;' to='Ü' />
+  <entry from='&#x03A9;' to='ë' />
+  <entry from='&#x03C0;' to='é' />
+  <entry from='&#x2126;' to='ë' order='-1' />
+  <entry from='&#x2206;' to='Ü' order='-1' />
+  <entry from='&#x220F;' to='É' />
+  <entry from='&#x2211;' to='Ë' />
+  <entry from='&#x221A;' to='⅔' />
+  <entry from='&#x222B;' to='ò' />
+  <entry from='&#x2248;' to='È' />
+  <entry from='&#x22F2;' to='È' order='-1' />
+  <entry from='&#x25CA;' to='m̐' />
+  <entry from='&#xF000;' to='¯' />
 </map>
