@@ -63,6 +63,11 @@ namespace GaudiaVedantaPublications.Tests
                 { "¿r¢¿r¢guru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" },
                 { "Ø", "Ñ" },
             }},
+            { "GVPalatino", new Dictionary<string, string> {
+                { "çréçréguru-gauräìgau jayataù", "śrīśrīguru-gaurāṅgau jayataḥ" },
+                { "ï", "ñ" },
+                { "ñ", "ṣ" },
+            }},
         };
 
         private static IEnumerable<object[]> GetFontTestData(params string[] excludeFontNames)
