@@ -56,7 +56,8 @@ namespace GaudiaVedantaPublications.Tests
                 { "uf", "н̃а̄" },
             }},
             { "DVRoman-TTSurekh", new Dictionary<string, string> {
-                { "¿rî¿rîguru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" }
+                { "¿rî¿rîguru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" },
+                { "Ø", "Ñ" },
             }},
             { "SD1-TTSurekh", new Dictionary<string, string> {
                 { "¿r¢¿r¢guru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" }
