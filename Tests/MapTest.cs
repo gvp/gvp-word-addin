@@ -55,6 +55,15 @@ namespace GaudiaVedantaPublications.Tests
                 { "éàäæ äæufòâf íåõà áõeéî ’íéàäæ, äæufòàâéàì àâàièøéàòå", "йадж джн̃а̄тва̄ неха бхӯйо ’нйадж, джн̃а̄тавйам аваш́ишйате" },
                 { "uf", "н̃а̄" },
             }},
+            { "Amita Times", new Dictionary<string, string> {
+                { "çréçréguru-gauräìgau jayataù", "śrīśrīguru-gaurāṅgau jayataḥ" },
+                { "Ï", "Ñ" },
+                { "Î", "Ã" },
+                { "¾", "[tilak]" },
+                { "·", "[lotus]" },
+                { "Í", "ī̃" },
+                { "é", "ī" },
+            }},
             { "Balaram", new Dictionary<string, string> {
                 { "mäträ-sparçäs tu kaunteya çétoñëa-sukha-duùkha-däù", "mātrā-sparśās tu kaunteya śītoṣṇa-sukha-duḥkha-dāḥ" },
                 { "Ï", "Ñ" },

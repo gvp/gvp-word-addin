@@ -51,6 +51,11 @@
                       getLabel="GetFontConversionLabel"
                       />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
+              <button id="ConvertToAmitaTimes"
+                      onAction="ConvertFont"
+                      tag="Amita Times"
+                      getLabel="GetFontConversionLabel"
+                      />
               <button id="ConvertToBalaram"
                       onAction="ConvertFont"
                       tag="Balaram"
