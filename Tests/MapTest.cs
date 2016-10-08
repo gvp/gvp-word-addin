@@ -64,6 +64,15 @@ namespace GaudiaVedantaPublications.Tests
                 { "¿rî¿rîguru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" },
                 { "Ø", "Ñ" },
             }},
+            { "Rama Garamond Plus", new Dictionary<string, string> {
+                { "çréçréguru-gauräìgau jayataù", "śrīśrīguru-gaurāṅgau jayataḥ" },
+                { "Ï", "Ñ" },
+                { "Î", "Ã" },
+                { "¾", "[tilak]" },
+                { "·", "[lotus]" },
+                { "Í", "ī̃" },
+                { "é", "ī" },
+            }},
             { "SD1-TTSurekh", new Dictionary<string, string> {
                 { "¿r¢¿r¢guru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" },
                 { "Ø", "Ñ" },

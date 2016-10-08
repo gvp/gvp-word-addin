@@ -66,6 +66,11 @@
                       tag="GVPalatino"
                       getLabel="GetFontConversionLabel"
                       />
+              <button id="ConvertToRamaGaramondPlus"
+                      onAction="ConvertFont"
+                      tag="Rama Garamond Plus"
+                      getLabel="GetFontConversionLabel"
+                      />
               <menu idQ="gvp:ScaSeriesMenu" getLabel="GetLabel" >
                 <button id="ConvertToScaTimes"
                         onAction="ConvertFont"
@@ -123,11 +128,6 @@
                         getLabel="GetFontConversionLabel"
                         />
               </menu>
-              <button id="ConvertToRamaGaramondPlus"
-                      onAction="ConvertFont"
-                      tag="Rama Garamond Plus"
-                      getLabel="GetFontConversionLabel"
-                      />
               <button id="ConvertToSD1TTSurekh"
                       onAction="ConvertFont"
                       tag="SD1-TTSurekh"
