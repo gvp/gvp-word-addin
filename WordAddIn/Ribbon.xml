@@ -35,6 +35,11 @@
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   >
               <menuSeparator idQ="gvp:CyrillicFontsSeparator" getTitle="GetTitle" />
+              <button id="ConvertToAmitaTimesCyr"
+                      onAction="ConvertFont"
+                      tag="Amita Times Cyr"
+                      getLabel="GetFontConversionLabel"
+                      />
               <button id="ConvertToThamesM"
                       onAction="ConvertFont"
                       tag="ThamesM"
@@ -43,11 +48,6 @@
               <button id="ConvertToThamesSanskrit"
                       onAction="ConvertFont"
                       tag="ThamesSanskrit"
-                      getLabel="GetFontConversionLabel"
-                      />
-              <button id="ConvertToAmitaTimesCyr"
-                      onAction="ConvertFont"
-                      tag="Amita Times Cyr"
                       getLabel="GetFontConversionLabel"
                       />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
