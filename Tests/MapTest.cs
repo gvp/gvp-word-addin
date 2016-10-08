@@ -82,6 +82,14 @@ namespace GaudiaVedantaPublications.Tests
                 { "Í", "ī̃" },
                 { "é", "ī" },
             }},
+            { "Sca", new Dictionary<string, string> {
+                { "çréçréguru-gauräìgau jayataù", "śrīśrīguru-gaurāṅgau jayataḥ" },
+                { "ï", "ñ" },
+                { "ñ", "ṣ" },
+                { "Ω", "ë" },
+                { "Δ", "Ü" },
+                { "≈", "È" },
+            }},
             { "SD1-TTSurekh", new Dictionary<string, string> {
                 { "¿r¢¿r¢guru-gaur¡´gau jayataÅ", "śrīśrīguru-gaurāṅgau jayataḥ" },
                 { "Ø", "Ñ" },
