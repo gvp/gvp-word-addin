@@ -41,6 +41,12 @@ namespace GaudiaVedantaPublications.Tests
             },
             { "Amita Times Cyr", new Dictionary<string, string> {
                 { "к¦п…м¦т…бдхе±", "кр̣па̄мр̣та̄бдхеш́" },
+                { "ѕ", "[lotus]" },
+                { "\x00AD", "ӯ" },
+                { "\x00B7", "Т̣" },
+                { "\x0088", "л̣" },
+                { "\x0098", "м̇" },
+                { "\x0457", "\x0301" },
             }},
             { "ThamesM", new Dictionary<string, string>
                 {
