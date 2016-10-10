@@ -48,6 +48,12 @@ namespace GaudiaVedantaPublications.Tests
                 { "u", "н̃" },
                 { "z", "у̃" },
             }},
+            { "ThamesSanskrit", new Dictionary<string, string> {
+                { "äæufíàv òå ’õàv ñà-âèäæufíàì, èäàv âàêøéfìé àiåøàòà{", "джн̃а̄нам̇ те ’хам̇ са-виджн̃а̄нам, идам̇ вакшйа̄мй аш́ешатах̣" },
+                { "éàäæ äæufòâf íåõà áõeéî ’íéàäæ, äæufòàâéàì àâàièøéàòå", "йадж джн̃а̄тва̄ неха бхӯйо ’нйадж, джн̃а̄тавйам аваш́ишйате" },
+                { "uf", "н̃а̄" },
+                { "Ÿ", "[и-с-тильдой-снизу]" },
+            }},
         };
 
         private static IEnumerable<object[]> GetFontTestData(params string[] fontNames)
@@ -78,7 +84,7 @@ namespace GaudiaVedantaPublications.Tests
         {
             get
             {
-                return GetFontTestData("ThamesM");
+                return GetFontTestData("ThamesM", "ThamesSanskrit");
             }
         }
 
