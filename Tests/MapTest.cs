@@ -39,6 +39,15 @@ namespace GaudiaVedantaPublications.Tests
                     {"O;fä;ksaesaaa", "व्यक्तियोंमें" }, /// Three ं
                 }
             },
+            { "ThamesM", new Dictionary<string, string> {
+                {"iрb-iука{ увfча", "ш́рӣ-ш́уках̣ ува̄ча" },
+                {"iрb iрb гуру-гаурfyга джаята{", "ш́рӣ ш́рӣ гуру-гаура̄н̇га джаятах̣" },
+                {"виджufйа", "виджн̃а̄йа" },
+                {"сарва-бхeта-хhдайаv", "сарва-бхӯта-хр̣дайам̇" },
+                { "g", "р̣̄" },
+                { "u", "н̃" },
+                { "z", "у̃" },
+            }},
         };
 
         public static IEnumerable<object[]> ToUnicodeTestData
