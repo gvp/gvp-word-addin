@@ -30,6 +30,8 @@ namespace GaudiaVedantaPublications.Tests
                 {"tM+cfq¼ls", "जड़बुद्धिसे" }, /// Wrong order of ु and ि
                 {"D;kas", "क्यों" }, /// Wrong order of ो and ं
                 {"gaS", "हैं" }, /// Wrong order of ै and ं
+                { "nq;kZsèkuk|k%", "दुर्योधनाद्याः" }, /// Wrong order of र् and े
+                { "dÙk±q", "कर्त्तुं" }, /// Wrong order of ु and ं
                 {"Hksndks", "भेदको" }, /// 
                 {"ughsa", "नहीं" }, /// Extra े
                 {"vkSj", "और" }, /// 
@@ -41,6 +43,8 @@ namespace GaudiaVedantaPublications.Tests
                 {"oS\".koèkeZesaa", "वैष्णवधर्ममें" }, /// Extra ं
                 {"voLFkkessa", "अवस्थामें" }, /// Extra े
                 {"O;fä;ksaesaaa", "व्यक्तियोंमें" }, /// Three ं
+                {"Hkxoku~dk", "भगवान्\u200Cका" }, /// Explicit halant, see http://unicode.org/faq/indic.html#2
+                {"Hkxoku~ gh", "भगवान् ही" }, /// Explicit halant in the end of the word
             }},
             { "AARitu", new Dictionary<string, string> {
                 { ",", "ए" },

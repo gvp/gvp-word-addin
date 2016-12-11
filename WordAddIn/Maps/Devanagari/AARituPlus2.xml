@@ -82,7 +82,7 @@
   <entry from='&#x007B;' to='क्ष्' />
   <entry from='&#x007C;' to='द्य' />
   <entry from='&#x007D;' to='द्व' />
-  <entry from='&#x007E;' to='्' />
+  <entry from='&#x007E;' to='्&#x200C;' />
   <entry from='&#x201A;' to='श्व' />
   <entry from='&#x0192;' to='१' />
   <entry from='&#x201E;' to='२' />
@@ -184,4 +184,7 @@
   <entry from='&#x00FF;' to='ळ' />
   <entry from='&#x03BC;' to='—' />
   <entry from='fq' to='qf' order='-100' />
+  <entry from='Zs' to='sZ' order='-100' />
+  <entry from='±q' to='q±' order='-100' />
+  <entry from='&#x200C;\b' to='' order='202' type='regex' />
 </map>
