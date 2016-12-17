@@ -64,7 +64,7 @@ namespace GaudiaVedantaPublications
                 text = entry.Apply(text);
 #if TRACE_TEXT_TRANSFORMATION
                 if (oldText != text)
-                    System.Diagnostics.Trace.TraceInformation("{0} → {1}\twith {3}:{2} → {4} ", oldText, text, entry.From, entry.Order, entry.To);
+                    System.Diagnostics.Trace.TraceInformation("'{0}' → '{1}'\twith {3}: '{2}' → '{4}'", oldText, text, entry.From, entry.Order, entry.To);
 #endif
 
             }
