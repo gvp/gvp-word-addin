@@ -29,8 +29,6 @@ namespace GaudiaVedantaPublications
 
         public string Apply(string text)
         {
-            System.Diagnostics.Debug.Assert(text.IsNormalized(System.Text.NormalizationForm.FormC), "Input text is not normalized");
-
             if (Regex != null)
                 return Regex.Replace(text, To);
             else
@@ -70,7 +68,7 @@ namespace GaudiaVedantaPublications
 #endif
 
             }
-            return text;
+            return text.Normalize(System.Text.NormalizationForm.FormC);
         }
     }
 }

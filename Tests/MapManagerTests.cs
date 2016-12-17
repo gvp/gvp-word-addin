@@ -31,7 +31,7 @@ namespace GaudiaVedantaPublications.Tests
         }
 
         [Theory]
-        [InlineData("AARituPlus2", "Unicode", 187 + 30)]
+        [InlineData("AARituPlus2", "Unicode", 196 + 30)]
         [InlineData("AARitu", "Unicode", 172 + 30)]
         [InlineData("Amita Times Cyr", "Unicode", 43)]
         [InlineData("ThamesM", "Unicode", 46)]

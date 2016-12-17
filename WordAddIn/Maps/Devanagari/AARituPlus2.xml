@@ -183,8 +183,17 @@
   <entry from='&#x00FE;' to=']' />
   <entry from='&#x00FF;' to='ळ' />
   <entry from='&#x03BC;' to='—' />
-  <entry from='fq' to='qf' order='-100' />
-  <entry from='Zs' to='sZ' order='-100' />
-  <entry from='±q' to='q±' order='-100' />
-  <entry from='&#x200C;\b' to='' order='202' type='regex' />
+  <entry from='fq' to='qf' order='-110' comment='Wrong order of ु and ि' />
+  <entry from='~+' to='+~' order='-110' comment='Wrong order of Virama and Nukta' />
+  <entry from='·a' to='a·' order='-110' comment='Wrong order of Anusvar and Avagraha' />
+  <entry from='*~' to='~*' order='-110' comment='Wrong order of Virama and Apostrophe' />
+  <entry type='regex' from='([Z±])+([`sq])+' to='$2$1' order='-110' comment='R-before should be before E-matra, Ri, U-sign'/>
+  <entry type='regex' from='~(?=[î])' to='' order='-110' comment='Mistaken Virama in the middle of the conjunct' />
+  <entry type='regex' from='([Zqs])k' to='k$1' order='-110' comment='Wrong order of A-sign and [R-before, U-sign]' />
+  <entry type='regex' from='(?&lt;=h)k+' to='' order='-101' comment='a-sign is not allowed after i-sign' />
+  <entry type='regex' from='(?&lt;=[prtliecK=&lt;;ux|])(k){2,}' to='$1' order='-101' comment='Extra A-sign after consonants with vertical line' />
+  <entry type='regex' from='([ZzSs~])\1+' to='$1' order='-101' comment='Duplicate symbol' />
+  <entry type='regex' from='±Z|Z±' to='±' order='-100' comment='r+cons+m eats r+cons' />
+  <entry type='regex' from='sS|Ss' to='S' order='-100' comment='AI-matra eats E-matra' />
+  <entry type='regex' from='&#x200C;\b' to='' order='109' comment='Remove ZWNJ in the end of the word' />
 </map>
