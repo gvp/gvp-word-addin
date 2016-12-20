@@ -183,6 +183,7 @@
   <entry from='&#x00FE;' to=']' />
   <entry from='&#x00FF;' to='ळ' />
   <entry from='&#x03BC;' to='—' />
+  <entry from='&#xE096;' to=' ' />
   <entry from='fq' to='qf' order='-110' comment='Wrong order of ु and ि' />
   <entry from='~+' to='+~' order='-110' comment='Wrong order of Virama and Nukta' />
   <entry from='·a' to='a·' order='-110' comment='Wrong order of Anusvar and Avagraha' />
