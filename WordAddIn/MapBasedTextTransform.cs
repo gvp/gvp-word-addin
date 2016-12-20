@@ -39,6 +39,8 @@ namespace GaudiaVedantaPublications
             if (range == null || range.End == range.Start)
                 return;
 
+            /// Building chunks of the same-font characters.
+            /// WdUnits.wdCharacterFormatting does not work well.
             var chunk = range.Characters.First;
             while (chunk.End <= range.End)
             {
@@ -51,7 +53,7 @@ namespace GaudiaVedantaPublications
                     continue;
                 }
 
-                if (chunk.End >= range.End || nextCharacter.Text == "\r" || !nextCharacter.Font.IsSame(chunk.Characters.First.Font))
+                if (chunk.End >= range.End || nextCharacter.Text == "\r" || ShouldSplit(chunk, nextCharacter))
                 {
                     var map = GetMapForRange(chunk);
                     if (map != null && map.Any())
@@ -67,6 +69,11 @@ namespace GaudiaVedantaPublications
             /// After changing the text of the last chunk original range could collapse.
             /// Restoring its End.
             range.End = Math.Max(range.End, chunk.Start);
+        }
+
+        protected virtual bool ShouldSplit(Word.Range first, Word.Range second)
+        {
+            return !second.Font.IsSame(first.Characters.First.Font);
         }
     }
 }

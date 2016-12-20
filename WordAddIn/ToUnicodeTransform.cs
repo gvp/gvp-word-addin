@@ -25,5 +25,20 @@ namespace GaudiaVedantaPublications
 
             return MapManager.GetFontToUnicodeMap(font.Name);
         }
+
+        protected override bool ShouldSplit(Word.Range first, Word.Range second)
+        {
+            /// If font is exactly the same, then no split.
+            if (!base.ShouldSplit(first, second))
+                return false;
+
+            /// We should not split if second range is in the same word
+            /// and the font is of the same name.
+            if (second.Text[0] != ' ' && second.Font.Name == first.Font.Name)
+                return false;
+
+            /// Font name is different
+            return true;
+        }
     }
 }
