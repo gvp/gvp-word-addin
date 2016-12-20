@@ -49,6 +49,8 @@ namespace GaudiaVedantaPublications
                 /// Skipping end-of-paragraph characters.
                 if (chunk.Text == "\r")
                 {
+                    if (nextCharacter == null)
+                        break;
                     chunk = nextCharacter;
                     continue;
                 }
