@@ -34,6 +34,10 @@ namespace GaudiaVedantaPublications
             return map;
         }
 
+        protected virtual void PostProcess(Word.Range range)
+        {
+        }
+
         public virtual void Apply(Word.Range range)
         {
             if (range == null || range.End == range.Start)
@@ -59,7 +63,17 @@ namespace GaudiaVedantaPublications
                 {
                     var map = GetMapForRange(chunk);
                     if (map != null && map.Any())
-                        chunk.Text = map.Apply(chunk.Text);
+                    {
+                        var text = map.Apply(chunk.Text);
+#if TRANSFORMATION_COMPARISON
+                        chunk.Collapse(Word.WdCollapseDirection.wdCollapseEnd);
+#endif
+                        chunk.Text = text;
+                        PostProcess(chunk);
+#if TRANSFORMATION_COMPARISON
+                        chunk.Font.Color = Word.WdColor.wdColorRed;
+#endif
+                    }
 
                     /// nextCharacter range could grasp current chunk due to its text replacement.
                     chunk = chunk.Next(Word.WdUnits.wdCharacter);

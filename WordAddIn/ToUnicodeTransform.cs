@@ -14,7 +14,6 @@ namespace GaudiaVedantaPublications
         public override void Apply(Word.Range range)
         {
             base.Apply(range);
-            range.Font.Name = UnicodeFontName;
         }
 
         protected override IOrderedEnumerable<MapEntry> GetMapForRange(Word.Range range)
@@ -39,6 +38,11 @@ namespace GaudiaVedantaPublications
 
             /// Font name is different
             return true;
+        }
+
+        protected override void PostProcess(Word.Range range)
+        {
+            range.Font.Name = UnicodeFontName;
         }
     }
 }
