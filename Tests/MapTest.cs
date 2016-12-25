@@ -73,6 +73,7 @@ namespace GaudiaVedantaPublications.Tests
                 { "la{skis.k", "संक्षेपेण" }, /// BG page 143 ॥१६॥
                 { "oÙZkrs", "वर्त्तते" }, /// BG page 155 ॥२६॥
                 { "\xE096", "\x0020" }, /// PUA character
+                { "\xE097", "\x0020" }, /// PUA character
             }},
             { "AARitu", new Dictionary<string, string> {
                 { ",", "ए" },

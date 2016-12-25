@@ -183,7 +183,6 @@
   <entry from='&#x00FE;' to=']' />
   <entry from='&#x00FF;' to='ळ' />
   <entry from='&#x03BC;' to='—' />
-  <entry from='&#xE096;' to=' ' />
   <entry from='fq' to='qf' order='-110' comment='Wrong order of ु and ि' />
   <entry from='~+' to='+~' order='-110' comment='Wrong order of Virama and Nukta' />
   <entry from='·a' to='a·' order='-110' comment='Wrong order of Anusvar and Avagraha' />
@@ -196,5 +195,6 @@
   <entry type='regex' from='([ZzSs~])\1+' to='$1' order='-101' comment='Duplicate symbol' />
   <entry type='regex' from='±Z|Z±' to='±' order='-100' comment='r+cons+m eats r+cons' />
   <entry type='regex' from='sS|Ss' to='S' order='-100' comment='AI-matra eats E-matra' />
+  <entry type='regex' from='\p{IsPrivateUseArea}' to=' ' />
   <entry type='regex' from='&#x200C;\b' to='' order='109' comment='Remove ZWNJ in the end of the word' />
 </map>
