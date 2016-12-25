@@ -10,7 +10,7 @@
   <entry from='्ो' to='े' order='110' />
   <entry from='्ौ' to='ै' order='110' />
   <entry from='(\p{Mn})\1+' to='$1' order='110' type='regex' />
-  <entry from='अा' to='आ' order='200' />
+  <entry from='अा' to='आ' order='110' />
   <entry from='अ&#x093B;' to='&#x0974;' order='200' />
   <entry from='अ&#x094F;' to='&#x0975;' order='200' />
   <entry from='अॉ' to='ऑ' order='200' />

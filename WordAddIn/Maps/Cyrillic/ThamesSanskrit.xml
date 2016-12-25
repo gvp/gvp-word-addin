@@ -122,7 +122,7 @@
   <entry from='&#x0153;' to='њ' />
   <entry from='&#x0160;' to='Љ' />
   <entry from='&#x0161;' to='љ' />
-  <entry from='&#x0178;' to='[и-с-тильдой-снизу]' />
+  <entry from='&#x0178;' to='[и-с-тильдой-снизу]' order='10'/>
   <entry from='&#x0192;' to='ѓ' />
   <entry from='&#x2219;' to='·' />
   <entry from='&#xF0A3;' to='Ј' />
