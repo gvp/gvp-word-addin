@@ -75,7 +75,8 @@ namespace GaudiaVedantaPublications
             else if (DevanagariFonts.Contains(destination))
                 entries = entries.Concat(ReadMap(Unicode, Devanagari));
 
-            map = entries.OrderBy(e => e.Order).ThenByDescending(e=>e.From.Length);
+            map = entries
+                .OrderBy(e => e.Order);
             maps.Add(key, map);
             return map;
         }
@@ -117,7 +118,7 @@ namespace GaudiaVedantaPublications
 
                 return
                     from element in XElement.Load(resource).Elements("entry")
-                    select new MapEntry(element);
+                    select MapEntry.Create(element);
             }
         }
     }
