@@ -56,7 +56,7 @@ namespace GaudiaVedantaPublications
                 ).DefaultIfEmpty(fontName).First();
         }
 
-        public static readonly string[] DevanagariFonts = { "AARitu", "AARituPlus2", "AARituPlus2-Numbers", "KALAKAR", "SDW" };
+        public static readonly string[] DevanagariFonts = { "AARitu", "AARituPlus2", "AARituPlus2-Numbers", "AAVishal", "KALAKAR", "SDW" };
 
         public static Map GetMap(string source, string destination)
         {

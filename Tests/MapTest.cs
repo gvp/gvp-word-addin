@@ -175,6 +175,38 @@ namespace GaudiaVedantaPublications.Tests
                 {"voLFkkessa", "अवस्थामें" }, /// Extra े
                 {"O;fä;ksaesaaa", "व्यक्तियोंमें" }, /// Three ं
             }},
+            { "AAVishal", new Dictionary<string, string> {
+                { "\x203A\x0153\x00B9\x00F5\x00F8\x007F", "‹›★\x0FD5%✕" },
+                { "\x00D5", "ञ्ज्" },
+                { ",", "ए" },
+                { "[", "ख्" },
+                { "ý", "[" },
+                { "»", "÷" },
+                { "JhJhxq#&xkSjkÂkS t;r%", "श्रीश्रीगुरु–गौराङ्गौ जयतः" },
+                { "bZn`'kks", "ईदृशो" },
+                { "izsenkukorh.kksZ", "प्रेमदानावतीर्णो" },
+                { "bR;FkZ%", "इत्यर्थः" },
+                { "ijenqyZHkRokr~", "परमदुर्लभत्वात्" },
+                { "uhZpSjfi", "र्नीचैरपि" },
+                { "loSZxksZihfo\"k;da", "सर्वैर्गोपीविषयकं" },
+                { "iq#\"kkFkks±dh", "पुरुषार्थोंकी" },
+                { "^", "‘" },
+                { "fu£o'ks\"kcqf¼", "निर्विशेषबुद्धि" },
+                {"tM+cfq¼ls", "जड़बुद्धिसे" }, /// Wrong order of ु and ि
+                {"D;kas", "क्यों" }, /// Wrong order of ो and ं
+                {"gaS", "हैं" }, /// Wrong order of ै and ं
+                {"Hksndks", "भेदको" }, /// 
+                {"ughsa", "नहीं" }, /// Extra े
+                {"vkSj", "और" }, /// 
+                {"Ük`Âkjjfr", "शृङ्गाररति" }, /// 
+                {"¥glk", "हिंसा" }, /// 
+                {"nksuksa", "दोनों" }, /// 
+                {"lkefxz;ksasds", "सामग्रियोंके" }, /// Extra े
+                {"tM+cqf¼okyss", "जड़बुद्धिवाले" }, /// Extra े
+                {"oS\".koèkeZesaa", "वैष्णवधर्ममें" }, /// Extra ं
+                {"voLFkkessa", "अवस्थामें" }, /// Extra े
+                {"O;fä;ksaesaaa", "व्यक्तियोंमें" }, /// Three ं
+            }},
             { "Amita Times Cyr", new Dictionary<string, string> {
                 { "к¦п…м¦т…бдхе±", "кр̣па̄мр̣та̄бдхеш́" },
                 { "ѕ", "[lotus]" },
