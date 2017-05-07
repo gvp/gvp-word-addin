@@ -6,11 +6,11 @@
       <tab idQ="gvp:TabGVP" getLabel="GetLabel">
         <group idMso="GroupFont" />
         <group idQ="gvp:TransliterationGroup" getLabel="GetLabel">
-          <button id="TransliterateDevanagari"
+          <button id="Devanagari2Latin"
                   onAction="Transliterate"
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   />
-          <button id="TransliterateRoman"
+          <button id="Latin2Cyrillic"
                   onAction="Transliterate"
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   />
@@ -35,12 +35,47 @@
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   >
               <menuSeparator idQ="gvp:CyrillicFontsSeparator" getTitle="GetTitle" />
+              <button id="ConvertToAmitaTimesCyr"
+                      onAction="ConvertFont"
+                      tag="Amita Times Cyr"
+                      getLabel="GetFontConversionLabel"
+                      />
               <button id="ConvertToThamesM"
                       onAction="ConvertFont"
                       tag="ThamesM"
                       getLabel="GetFontConversionLabel"
                       />
+              <button id="ConvertToThamesSanskrit"
+                      onAction="ConvertFont"
+                      tag="ThamesSanskrit"
+                      getLabel="GetFontConversionLabel"
+                      />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
+              <button id="ConvertToAmitaTimes"
+                      onAction="ConvertFont"
+                      tag="Amita Times"
+                      getLabel="GetFontConversionLabel"
+                      />
+              <button id="ConvertToBalaram"
+                      onAction="ConvertFont"
+                      tag="Balaram"
+                      getLabel="GetFontConversionLabel"
+                      />
+              <button id="ConvertToDVRomanTTSurekh"
+                      onAction="ConvertFont"
+                      tag="DVRoman-TTSurekh"
+                      getLabel="GetFontConversionLabel"
+                      />
+              <button id="ConvertToGVPalatino"
+                      onAction="ConvertFont"
+                      tag="GVPalatino"
+                      getLabel="GetFontConversionLabel"
+                      />
+              <button id="ConvertToRamaGaramondPlus"
+                      onAction="ConvertFont"
+                      tag="Rama Garamond Plus"
+                      getLabel="GetFontConversionLabel"
+                      />
               <menu idQ="gvp:ScaSeriesMenu" getLabel="GetLabel" >
                 <button id="ConvertToScaTimes"
                         onAction="ConvertFont"
@@ -98,14 +133,9 @@
                         getLabel="GetFontConversionLabel"
                         />
               </menu>
-              <button id="ConvertToRamaGaramondPlus"
+              <button id="ConvertToSD1TTSurekh"
                       onAction="ConvertFont"
-                      tag="Rama Garamond Plus"
-                      getLabel="GetFontConversionLabel"
-                      />
-              <button id="ConvertToGVPalatino"
-                      onAction="ConvertFont"
-                      tag="GVPalatino"
+                      tag="SD1-TTSurekh"
                       getLabel="GetFontConversionLabel"
                       />
               <menuSeparator idQ="gvp:OperationalFontSeparator" getTitle="GetTitle" />

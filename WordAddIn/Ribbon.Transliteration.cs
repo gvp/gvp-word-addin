@@ -16,13 +16,12 @@ namespace GaudiaVedantaPublications
             yield return new ToUnicodeTransform();
             switch (control.Id)
             {
-                case "TransliterateDevanagari":
-                    yield return new DevanagariTransliterationTransform();
+                case "Devanagari2Latin":
+                    yield return new MapBasedTextTransform(MapManager.DevanagariToLatin);
                     break;
 
-                case "TransliterateRoman":
-                    yield return new MapBasedTextTransform(MapManager.Lat2Cyr);
-                    yield return new FromUnicodeTransform(CyrillicFontNames.First());
+                case "Latin2Cyrillic":
+                    yield return new MapBasedTextTransform(MapManager.LatinToCyrillic);
                     break;
             }
         }

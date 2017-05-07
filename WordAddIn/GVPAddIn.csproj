@@ -219,11 +219,12 @@
   -->
   <ItemGroup>
     <Compile Include="CombiningTransform.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="FontExtensions.cs" />
     <Compile Include="Ribbon.Transliteration.cs" />
     <Compile Include="Ribbon.Conversion.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FromUnicodeTransform.cs" />
-    <Compile Include="IterativeTextTransform.cs" />
     <Compile Include="ITextTransform.cs" />
     <Compile Include="MapBasedTextTransform.cs" />
     <Compile Include="MapManager.cs" />
@@ -232,7 +233,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DevanagariTransliterationTransform.cs" />
     <Compile Include="Properties\Resources.en.Designer.cs">
       <DependentUpon>Resources.en.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -280,7 +280,7 @@
     <EmbeddedResource Include="Images\Tilde.png" />
     <EmbeddedResource Include="Maps\Cyrillic\Amita Times Cyr.xml" />
     <EmbeddedResource Include="Maps\Roman\Rama Garamond Plus.xml" />
-    <EmbeddedResource Include="Maps\Translit\Lat2Cyr.xml" />
+    <EmbeddedResource Include="Maps\Translit\Latin→Cyrillic.xml" />
     <EmbeddedResource Include="Maps\Cyrillic\ThamesM.xml" />
     <EmbeddedResource Include="Maps\Roman\Amita Times.xml" />
     <EmbeddedResource Include="Maps\Roman\Balaram.xml" />
@@ -288,7 +288,7 @@
     <EmbeddedResource Include="Maps\Roman\DVRoman-TTSurekh.xml" />
     <EmbeddedResource Include="Maps\Roman\GVPalatino.xml" />
     <EmbeddedResource Include="Maps\Cyrillic\ThamesSanskrit.xml" />
-    <EmbeddedResource Include="Maps\Translit\Dev2Lat.xml" />
+    <EmbeddedResource Include="Maps\Translit\Devanagari→Latin.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARitu.xml" />
     <EmbeddedResource Include="Maps\Roman\SD1-TTSurekh.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARituPlus2.xml" />
@@ -315,6 +315,14 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\Devanagari\Devanagari→Unicode.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\Devanagari\AARituPlus2-Numbers.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -325,6 +333,14 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Tracing|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Tracing\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VSTO40 TRACE_TEXT_TRANSFORMATION</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Include additional build rules for an Office application add-in. -->

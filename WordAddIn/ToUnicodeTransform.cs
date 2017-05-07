@@ -1,35 +1,48 @@
-﻿using Word = Microsoft.Office.Interop.Word;
+﻿using System;
+using System.Linq;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications
 {
-    class ToUnicodeTransform : MapBasedTextTransform
+    public class ToUnicodeTransform : MapBasedTextTransform
     {
         /// <summary>
         /// Only this font supports most unicode blocks. And it is required to render Devanagari correctly.
         /// </summary>
         public const string UnicodeFontName = "Arial Unicode MS";
-        
+
         public override void Apply(Word.Range range)
         {
             base.Apply(range);
-            range.Font.Name = UnicodeFontName;
         }
 
-        private string currentFontName;
-        protected override void TransformCharacter()
+        protected override IOrderedEnumerable<MapEntry> GetMapForRange(Word.Range range)
         {
-            if (CurrentCharacter.Font.Name != currentFontName)
-            {
-                ApplySavedText();
+            var font = range.Characters.First.Font;
+            if (string.IsNullOrEmpty(font.Name))
+                throw new InvalidOperationException("Range contains several fonts");
 
-                currentFontName = CurrentCharacter.Font.Name;
-                CurrentMap = MapManager.GetFontMap(currentFontName, MapDirection.Forward);
-            }
+            return MapManager.GetFontToUnicodeMap(font.Name);
+        }
 
-            if (CurrentMap == null)
-                return;
+        protected override bool ShouldSplit(Word.Range first, Word.Range second)
+        {
+            /// If font is exactly the same, then no split.
+            if (!base.ShouldSplit(first, second))
+                return false;
 
-            base.TransformCharacter();
+            /// We should not split if second range is in the same word
+            /// and the font is of the same name.
+            if (second.Text[0] != ' ' && second.Font.Name == first.Font.Name)
+                return false;
+
+            /// Font name is different
+            return true;
+        }
+
+        protected override void PostProcess(Word.Range range)
+        {
+            range.Font.Name = UnicodeFontName;
         }
     }
 }

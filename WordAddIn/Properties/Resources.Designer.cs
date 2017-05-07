@@ -213,6 +213,33 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to देवनागरी → Devanāgarī.
+        /// </summary>
+        internal static string Devanagari2Latin_Label {
+            get {
+                return ResourceManager.GetString("Devanagari2Latin_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Транслитерация Деванагари в Латиницу.
+        /// </summary>
+        internal static string Devanagari2Latin_Screentip {
+            get {
+                return ResourceManager.GetString("Devanagari2Latin_Screentip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Транслитерировать Деванагари в Латиницу..
+        /// </summary>
+        internal static string Devanagari2Latin_Supertip {
+            get {
+                return ResourceManager.GetString("Devanagari2Latin_Supertip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Шрифты Деванагари.
         /// </summary>
         internal static string DevanagariFontsSeparator_Title {
@@ -285,6 +312,33 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Devanāgarī → Девана̄гарӣ.
+        /// </summary>
+        internal static string Latin2Cyrillic_Label {
+            get {
+                return ResourceManager.GetString("Latin2Cyrillic_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Транслитерация Латиницы в Кириллицу..
+        /// </summary>
+        internal static string Latin2Cyrillic_Screentip {
+            get {
+                return ResourceManager.GetString("Latin2Cyrillic_Screentip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Транслитерировать Латиницу в Кириллицу..
+        /// </summary>
+        internal static string Latin2Cyrillic_Supertip {
+            get {
+                return ResourceManager.GetString("Latin2Cyrillic_Supertip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Макрон снизу.
         /// </summary>
         internal static string MacronBelowButton_Label {
@@ -344,60 +398,6 @@ namespace GaudiaVedantaPublications.Properties {
         internal static string TildeButton_Label {
             get {
                 return ResourceManager.GetString("TildeButton_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to देवनागरी → Devanāgarī.
-        /// </summary>
-        internal static string TransliterateDevanagari_Label {
-            get {
-                return ResourceManager.GetString("TransliterateDevanagari_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Транслитерация из Деванагари в Латиницу.
-        /// </summary>
-        internal static string TransliterateDevanagari_Screentip {
-            get {
-                return ResourceManager.GetString("TransliterateDevanagari_Screentip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Транслитерировать Деванагари в Латиницу..
-        /// </summary>
-        internal static string TransliterateDevanagari_Supertip {
-            get {
-                return ResourceManager.GetString("TransliterateDevanagari_Supertip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Devanāgarī → Девана̄гарӣ.
-        /// </summary>
-        internal static string TransliterateRoman_Label {
-            get {
-                return ResourceManager.GetString("TransliterateRoman_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Транслитерация Латиницы в Кириллицу..
-        /// </summary>
-        internal static string TransliterateRoman_Screentip {
-            get {
-                return ResourceManager.GetString("TransliterateRoman_Screentip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Транслитерировать Латиницу в Кириллицу..
-        /// </summary>
-        internal static string TransliterateRoman_Supertip {
-            get {
-                return ResourceManager.GetString("TransliterateRoman_Supertip", resourceCulture);
             }
         }
         

@@ -191,6 +191,15 @@ ThamesSanskrit</value>
   <data name="CyrillicFontsSeparator_Title" xml:space="preserve">
     <value>Кириллические шрифты</value>
   </data>
+  <data name="Devanagari2Latin_Label" xml:space="preserve">
+    <value>देवनागरी → Devanāgarī</value>
+  </data>
+  <data name="Devanagari2Latin_Screentip" xml:space="preserve">
+    <value>Транслитерация Деванагари в Латиницу</value>
+  </data>
+  <data name="Devanagari2Latin_Supertip" xml:space="preserve">
+    <value>Транслитерировать Деванагари в Латиницу.</value>
+  </data>
   <data name="DevanagariFontsSeparator_Title" xml:space="preserve">
     <value>Шрифты Деванагари</value>
   </data>
@@ -215,6 +224,15 @@ ThamesSanskrit</value>
   <data name="GroupFontConversion_Label" xml:space="preserve">
     <value>Преобразование шрифта</value>
   </data>
+  <data name="Latin2Cyrillic_Label" xml:space="preserve">
+    <value>Devanāgarī → Девана̄гарӣ</value>
+  </data>
+  <data name="Latin2Cyrillic_Screentip" xml:space="preserve">
+    <value>Транслитерация Латиницы в Кириллицу.</value>
+  </data>
+  <data name="Latin2Cyrillic_Supertip" xml:space="preserve">
+    <value>Транслитерировать Латиницу в Кириллицу.</value>
+  </data>
   <data name="MacronBelowButton_Label" xml:space="preserve">
     <value>Макрон снизу</value>
   </data>
@@ -235,24 +253,6 @@ ThamesSanskrit</value>
   </data>
   <data name="TildeButton_Label" xml:space="preserve">
     <value>Тильда</value>
-  </data>
-  <data name="TransliterateDevanagari_Label" xml:space="preserve">
-    <value>देवनागरी → Devanāgarī</value>
-  </data>
-  <data name="TransliterateDevanagari_Screentip" xml:space="preserve">
-    <value>Транслитерация из Деванагари в Латиницу</value>
-  </data>
-  <data name="TransliterateDevanagari_Supertip" xml:space="preserve">
-    <value>Транслитерировать Деванагари в Латиницу.</value>
-  </data>
-  <data name="TransliterateRoman_Label" xml:space="preserve">
-    <value>Devanāgarī → Девана̄гарӣ</value>
-  </data>
-  <data name="TransliterateRoman_Screentip" xml:space="preserve">
-    <value>Транслитерация Латиницы в Кириллицу.</value>
-  </data>
-  <data name="TransliterateRoman_Supertip" xml:space="preserve">
-    <value>Транслитерировать Латиницу в Кириллицу.</value>
   </data>
   <data name="TransliterationGroup_Label" xml:space="preserve">
     <value>Транслитерация</value>

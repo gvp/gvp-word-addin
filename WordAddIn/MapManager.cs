@@ -1,97 +1,125 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Xml.Linq;
-using Map = System.Collections.Generic.IDictionary<System.String, GaudiaVedantaPublications.MapEntry>;
+using Map = System.Linq.IOrderedEnumerable<GaudiaVedantaPublications.MapEntry>;
 
 namespace GaudiaVedantaPublications
 {
-    public enum MapDirection
-    {
-        Forward,
-        Backward,
-    }
-
-    static class MapManager
+    public static class MapManager
     {
         private static readonly IDictionary<String, Map> maps = new Dictionary<String, Map>(4);
+        private const string Unicode = "Unicode";
+        private const string Devanagari = "Devanagari";
+        private const string Cyrillic = "Cyrillic";
+        private const string Latin = "Latin";
 
-        public static Map Lat2Cyr
+        public static Map LatinToCyrillic
         {
             get
             {
-                return GetMap("Lat2Cyr", MapDirection.Forward);
+                return GetMap(Latin, Cyrillic);
             }
         }
 
-        public static Map Dev2Lat
+        public static Map DevanagariToLatin
         {
             get
             {
-                return GetMap("Dev2Lat", MapDirection.Forward);
+                return GetMap(Devanagari, Latin);
             }
         }
 
-        public static Map GetFontMap(String fontName, MapDirection direction)
+        public static Map GetFontToUnicodeMap(String fontName)
         {
-            return GetMap(GetMapName(fontName), direction);
+            return GetMap(GetMapName(fontName), Unicode);
         }
 
+        public static Map GetUnicodeToFontMap(String fontName)
+        {
+            return GetMap(Unicode, GetMapName(fontName));
+        }
+
+        private static readonly IDictionary<string, string> FontEquivalence = new Dictionary<string, string>
+        {
+            { "Sca", "ScaSeries" },
+            { "SDW-", "SDW" },
+            { "KALAKAR", "KALAKAR" },
+            { "Krishna Times Plus", "Amita Times Cyr" },
+        };
         private static string GetMapName(string fontName)
         {
-            if (fontName.StartsWith("Sca"))
-                return "ScaSeries";
-            if (fontName.StartsWith("SDW-"))
-                return "SDW";
-            if (fontName.StartsWith("KALAKAR"))
-                return "KALAKAR";
-
-            return fontName;
+            return (
+                from entry in FontEquivalence
+                where fontName.StartsWith(entry.Key)
+                select entry.Value
+                ).DefaultIfEmpty(fontName).First();
         }
 
-        private static Map GetMap(String name, MapDirection direction)
+        public static readonly string[] DevanagariFonts = { "AARitu", "AARituPlus2", "AARituPlus2-Numbers", "KALAKAR", "SDW" };
+
+        public static Map GetMap(string source, string destination)
         {
-            var key = String.Format("{0}.{1}", name, direction);
+            var key = String.Format("{0}→{1}", source, destination);
             Map map;
             if (maps.TryGetValue(key, out map))
                 return map;
-            map = ReadMap(name, direction);
+
+            var entries = ReadMap(source, destination);
+            if (entries == null)
+                return null;
+
+            /// For devanagari fonts there is a common section
+            if (DevanagariFonts.Contains(source))
+                entries = entries.Concat(ReadMap(Devanagari, Unicode));
+            else if (DevanagariFonts.Contains(destination))
+                entries = entries.Concat(ReadMap(Unicode, Devanagari));
+
+            map = entries
+                .OrderBy(e => e.Order);
             maps.Add(key, map);
             return map;
         }
 
-        private static Map ReadMap(string name, MapDirection direction)
+        /// <summary>
+        /// Attempts to read the map in different ways: bidirectional or uni-directional.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="destination"></param>
+        /// <returns>null means that there is no resource for this combination</returns>
+        private static IEnumerable<MapEntry> ReadMap(string source, string destination)
+        {
+            /// First, looking for "source→destination.xml"
+            var result = ReadMap(String.Format("{0}→{1}", source, destination));
+            if (result != null)
+                return result;
+
+            /// Falling back to bidirectional maps for Unicode transformations.
+            if (destination == Unicode)
+                return ReadMap(source);
+
+            if (source == Unicode)
+                return ReadMap(destination).Select(e => e.Inverted);
+
+            return null;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns>null means that there is no resource of this name</returns>
+        private static IEnumerable<MapEntry> ReadMap(string name)
         {
             using (var resource = EmbeddedResourceManager.GetEmbeddedResource(name + ".xml"))
             {
                 if (resource == null)
                     return null;
-                return ReadMap(resource, direction);
-            }
-        }
 
-        private static Map ReadMap(Stream resource, MapDirection direction)
-        {
-            return (
-                from element in XElement.Load(resource).Elements("entry")
-                let entryDirection = element.AttributeValue("direction", element.Elements().Any() ? "forward" : null)
-                where entryDirection == null || entryDirection == direction.ToString().ToLower()
-                let reverse = entryDirection == null && direction == MapDirection.Backward
-                select new
-                {
-                    Key = element.Attribute(reverse ? "to" : "from").Value.Normalize(NormalizationForm.FormD),
-                    Entry = new MapEntry
-                    {
-                        ReplaceText = element.AttributeValue(reverse ? "from" : "to"),
-                        ReplaceTextForFirstLetter = element.ElementValue("firstLetter"),
-                        InsertBefore = element.ElementValue("insertBefore"),
-                        InsertAfter = element.ElementValue("insertAfter"),
-                        AppendAfter = element.ElementValue("appendAfter"),
-                        Replaces = element.Elements("replace").ToDictionary(r => r.AttributeValue("from"), r => r.AttributeValue("to")),
-                    },
-                }).ToDictionary(e => e.Key, e => e.Entry);
+                return
+                    from element in XElement.Load(resource).Elements("entry")
+                    select MapEntry.Create(element);
+            }
         }
     }
 }

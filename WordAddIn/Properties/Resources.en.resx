@@ -191,6 +191,15 @@ ThamesSanskrit</value>
   <data name="CyrillicFontsSeparator_Title" xml:space="preserve">
     <value>Cyrillic fonts</value>
   </data>
+  <data name="Devanagari2Latin_Label" xml:space="preserve">
+    <value>देवनागरी → Devanāgarī</value>
+  </data>
+  <data name="Devanagari2Latin_Screentip" xml:space="preserve">
+    <value>Devanagari into Roman transliteration</value>
+  </data>
+  <data name="Devanagari2Latin_Supertip" xml:space="preserve">
+    <value>Transliterate Devanagari script into Roman script.</value>
+  </data>
   <data name="DevanagariFontsSeparator_Title" xml:space="preserve">
     <value>Devanagari fonts</value>
   </data>
@@ -215,6 +224,15 @@ ThamesSanskrit</value>
   <data name="GroupFontConversion_Label" xml:space="preserve">
     <value>Font conversion</value>
   </data>
+  <data name="Latin2Cyrillic_Label" xml:space="preserve">
+    <value>Devanāgarī → Девана̄гарӣ</value>
+  </data>
+  <data name="Latin2Cyrillic_Screentip" xml:space="preserve">
+    <value>Roman into Cyrillic transliteration</value>
+  </data>
+  <data name="Latin2Cyrillic_Supertip" xml:space="preserve">
+    <value>Transliterate Roman script into Cyrillic script.</value>
+  </data>
   <data name="MacronBelowButton_Label" xml:space="preserve">
     <value>Macron below</value>
   </data>
@@ -235,24 +253,6 @@ ThamesSanskrit</value>
   </data>
   <data name="TildeButton_Label" xml:space="preserve">
     <value>Tilde</value>
-  </data>
-  <data name="TransliterateDevanagari_Label" xml:space="preserve">
-    <value>देवनागरी → Devanāgarī</value>
-  </data>
-  <data name="TransliterateDevanagari_Screentip" xml:space="preserve">
-    <value>Devanagari to Roman transliteration</value>
-  </data>
-  <data name="TransliterateDevanagari_Supertip" xml:space="preserve">
-    <value>Transliterate Devanagari script into Roman script.</value>
-  </data>
-  <data name="TransliterateRoman_Label" xml:space="preserve">
-    <value>Devanāgarī → Девана̄гарӣ</value>
-  </data>
-  <data name="TransliterateRoman_Screentip" xml:space="preserve">
-    <value>Roman to Cyrillic transliteration</value>
-  </data>
-  <data name="TransliterateRoman_Supertip" xml:space="preserve">
-    <value>Transliterate Roman script into Cyrillic script.</value>
   </data>
   <data name="TransliterationGroup_Label" xml:space="preserve">
     <value>Transliteration</value>

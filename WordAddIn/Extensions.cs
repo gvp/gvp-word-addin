@@ -13,6 +13,15 @@ namespace GaudiaVedantaPublications
             return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
         }
 
+        /// <summary>
+        /// For Fonts without Unicode ranges, Word uses Private Use Area for symbols
+        /// to avoid collision with other fonts.
+        /// http://officeopenxml.com/WPtextSpecialContent-symbol.php
+        /// http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=PUACharsInMSSotware
+        /// http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=UTTUsingUnicodeMacros
+        /// http://www.personal.psu.edu/ejp10/blogs/gotunicode/2008/03/micrsoft-word-logic-inserting.html
+        /// https://www.microsoft.com/typography/otspec160/recom.htm
+        /// </summary>
         public static string PUAToASCII(this string source)
         {
             return new string(

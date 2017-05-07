@@ -8,7 +8,7 @@ namespace GaudiaVedantaPublications
         private readonly String fontName;
 
         public FromUnicodeTransform(String fontName)
-            : base(MapManager.GetFontMap(fontName, MapDirection.Backward))
+            : base(MapManager.GetUnicodeToFontMap(fontName))
         {
             if (fontName == null)
                 throw new ArgumentNullException("toFontName");
@@ -26,12 +26,5 @@ namespace GaudiaVedantaPublications
             }
         }
 
-        protected override void TransformCharacter()
-        {
-            if (CurrentCharacter.Font.Name == fontName)
-                return;
-
-            base.TransformCharacter();
-        }
     }
 }

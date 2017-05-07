@@ -1,124 +1,95 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text;
-using Map = System.Collections.Generic.IDictionary<System.String, GaudiaVedantaPublications.MapEntry>;
+using Map = System.Linq.IOrderedEnumerable<GaudiaVedantaPublications.MapEntry>;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications
 {
-    class MapBasedTextTransform : IterativeTextTransform
+    public class MapBasedTextTransform : ITextTransform
     {
-        public MapBasedTextTransform()
+        /// <summary>
+        /// This contructor is used with descendant classes where GetMapForRange is overriden.
+        /// </summary>
+        protected MapBasedTextTransform()
         {
         }
 
+        /// <summary>
+        /// This constructor is used for external instantiating the transform with a single map.
+        /// </summary>
+        /// <param name="map">A map that is used for all transformations.</param>
         public MapBasedTextTransform(Map map)
         {
-            CurrentMap = map;
+            this.map = map;
         }
 
-        protected Map CurrentMap { get; set; }
+        private readonly Map map;
 
-        public override void Apply(Word.Range range)
+        protected virtual Map GetMapForRange(Word.Range chunk)
         {
-            base.Apply(range);
+            if (map == null)
+                throw new InvalidOperationException("Map is not set");
 
-            if (savedText != null)
-            {
-                ApplySavedText();
-                range.Expand(Word.WdUnits.wdCharacter);
-            }
+            return map;
         }
 
-        protected override void TransformCharacter()
+        protected virtual void PostProcess(Word.Range range)
         {
-            var text = CurrentCharacter.Text.PUAToASCII();
+        }
 
-            MapEntry entry;
-            if (CurrentMap.TryGetValue(text.Normalize(NormalizationForm.FormD), out entry))
-                ApplyEntry(entry);
-            else if (text != CurrentCharacter.Text)
-                CurrentCharacter.Text = text;
-
-            if (savedText == null)
+        public virtual void Apply(Word.Range range)
+        {
+            if (range == null || range.End == range.Start)
                 return;
 
-            savedText.Range.Expand(Word.WdUnits.wdCharacter);
-
-            if (savedText.Range.End <= CurrentCharacter.Start)
-                ApplySavedText();
-        }
-
-        private void ApplyEntry(MapEntry entry)
-        {
-            if (entry.ReplaceText != null)
-                CurrentCharacter.Text = entry.ReplaceText;
-
-            if (entry.ReplaceTextForFirstLetter != null)
+            /// Building chunks of the same-font characters.
+            /// WdUnits.wdCharacterFormatting does not work well.
+            var chunk = range.Characters.First;
+            while (chunk.End <= range.End)
             {
-                var word = CurrentCharacter.Duplicate;
-                word.StartOf(Word.WdUnits.wdWord, Word.WdMovementType.wdExtend);
-                if (word.Start == CurrentCharacter.Start)
-                    CurrentCharacter.Text = entry.ReplaceTextForFirstLetter;
-            }
+                var nextCharacter = chunk.Next(Word.WdUnits.wdCharacter);
 
-            if (entry.InsertBefore != null)
-            {
-                var previous = CurrentCharacter.Previous();
-                previous.InsertBefore(entry.InsertBefore);
-            }
+                /// Skipping end-of-paragraph characters.
+                if (chunk.Text == "\r")
+                {
+                    if (nextCharacter == null)
+                        break;
+                    chunk = nextCharacter;
+                    continue;
+                }
 
-            if (entry.InsertAfter != null)
-                SaveText(entry.InsertAfter);
+                if (chunk.End >= range.End || nextCharacter.Text == "\r" || ShouldSplit(chunk, nextCharacter))
+                {
+                    var map = GetMapForRange(chunk);
+                    if (map != null && map.Any())
+                    {
+                        var text = map.Apply(chunk.Text.PUAToASCII());
+#if TRANSFORMATION_COMPARISON
+                        chunk.Collapse(Word.WdCollapseDirection.wdCollapseEnd);
+#endif
+                        chunk.Text = text;
+                        PostProcess(chunk);
+#if TRANSFORMATION_COMPARISON
+                        chunk.Font.Color = Word.WdColor.wdColorRed;
+#endif
+                    }
 
-            if (entry.AppendAfter != null)
-                if (savedText != null)
-                    savedText.Text += entry.AppendAfter;
+                    /// nextCharacter range could grasp current chunk due to its text replacement.
+                    chunk = chunk.Next(Word.WdUnits.wdCharacter);
+                }
                 else
-                    CurrentCharacter.Text = entry.AppendAfter;
-
-            if (entry.Replaces.Any())
-            {
-                CurrentCharacter.MoveStart(Count: -1);
-                var text = CurrentCharacter.Text;
-                foreach (var replace in entry.Replaces)
-                    text = text.Replace(replace.Key, replace.Value);
-                CurrentCharacter.Text = text;
+                    chunk.MoveEnd(Word.WdUnits.wdCharacter);
             }
+
+            /// After changing the text of the last chunk original range could collapse.
+            /// Restoring its End.
+            range.End = Math.Max(range.End, chunk.Start);
         }
 
-        private class SavedText
+        protected virtual bool ShouldSplit(Word.Range first, Word.Range second)
         {
-            public string Text { get; set; }
-            public Word.Range Range { get; set; }
-
-            public void Apply()
-            {
-                Range.Expand(Word.WdUnits.wdCharacter);
-                Range.InsertAfter(Text);
-            }
-        }
-
-        private SavedText savedText;
-
-        protected void SaveText(string text)
-        {
-            if (savedText != null)
-                savedText.Apply();
-
-            savedText = new SavedText
-            {
-                Text = text,
-                Range = CurrentCharacter.Duplicate,
-            };
-        }
-
-        protected void ApplySavedText()
-        {
-            if (savedText == null)
-                return;
-
-            savedText.Apply();
-            savedText = null;
+            return !second.Font.IsSame(first.Characters.First.Font);
         }
     }
 }
