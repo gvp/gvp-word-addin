@@ -318,6 +318,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Maps\Devanagari\Devanagari→Unicode.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\Devanagari\AARituPlus2-Numbers.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
