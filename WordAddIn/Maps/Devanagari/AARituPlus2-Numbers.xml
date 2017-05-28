@@ -25,7 +25,7 @@
   <entry from='&#x0044;' to='क्' />
   <entry from='&#x0045;' to='म्' />
   <entry from='&#x0046;' to='थ्' />
-  <entry from='&#x0047;' to='[0047]' order='100' />
+  <entry from='mG' to='ऊ' order='-10' />
   <entry from='&#x0048;' to='भ्' />
   <entry from='&#x0049;' to='प्' />
   <entry from='&#x004A;' to='श्र' />
