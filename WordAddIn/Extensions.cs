@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Globalization;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
 namespace GaudiaVedantaPublications
 {
     public static class CharacterExtensions
     {
-        public static bool IsBasicLatin(this char c)
-        {
-            return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
-        }
-
         /// <summary>
         /// For Fonts without Unicode ranges, Word uses Private Use Area for symbols
         /// to avoid collision with other fonts.
@@ -22,14 +17,23 @@ namespace GaudiaVedantaPublications
         /// http://www.personal.psu.edu/ejp10/blogs/gotunicode/2008/03/micrsoft-word-logic-inserting.html
         /// https://www.microsoft.com/typography/otspec160/recom.htm
         /// </summary>
-        public static string PUAToASCII(this string source)
+        public static char PrivateUseAreaToAnsi(this char c)
         {
-            return new string(
-                (
-                from c in source
-                select '\xF000' <= c && c <= '\xF0FF' ? (char)(c - '\xF000') : c
-                ).ToArray()
-                );
+            /// If the char is in PUA (0xE000-0xF8FF), then we're taking only least significant byte.
+            return Char.GetUnicodeCategory(c) == UnicodeCategory.PrivateUse ? (char)((byte)c) : c;
+        }
+
+        public static string PrivateUseAreaToAnsi(this string source)
+        {
+            /// If no PUA characters, then retrun original string.
+            if (!Regex.IsMatch(source, @"\p{IsPrivateUseArea}", RegexOptions.Compiled))
+                return source;
+
+            var builder = new StringBuilder(source.Length);
+            foreach (var c in source)
+                builder.Append(c.PrivateUseAreaToAnsi());
+
+            return builder.ToString();
         }
 
         public static String AttributeValue(this XElement element, XName name)

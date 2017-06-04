@@ -64,7 +64,7 @@ namespace GaudiaVedantaPublications
                     var map = GetMapForRange(chunk);
                     if (map != null && map.Any())
                     {
-                        var text = map.Apply(chunk.Text.PUAToASCII());
+                        var text = map.Apply(chunk.Text.PrivateUseAreaToAnsi());
 #if TRANSFORMATION_COMPARISON
                         chunk.Collapse(Word.WdCollapseDirection.wdCollapseEnd);
 #endif
