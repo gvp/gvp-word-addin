@@ -149,7 +149,7 @@ namespace GaudiaVedantaPublications
     {
         public static string Apply(this IOrderedEnumerable<MapEntry> map, string text)
         {
-            text = text.Normalize(System.Text.NormalizationForm.FormC);
+            text = text.Normalize(System.Text.NormalizationForm.FormC).PrivateUseAreaToAnsi();
             foreach (var entry in map)
             {
 #if TRACE_TEXT_TRANSFORMATION

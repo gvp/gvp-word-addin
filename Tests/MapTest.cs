@@ -75,8 +75,10 @@ namespace GaudiaVedantaPublications.Tests
                 { "xHkZ±", "गर्भं" }, /// BG page 133 ॥३॥
                 { "la{skis.k", "संक्षेपेण" }, /// BG page 143 ॥१६॥
                 { "oÙZkrs", "वर्त्तते" }, /// BG page 155 ॥२६॥
-                { "\xE096", "\x0020" }, /// PUA character
-                { "\xE097", "\x0020" }, /// PUA character
+                { "d\xE096", "र्क" }, /// PUA character
+                { "d\xE097", "र्कं" }, /// PUA character
+                { "\uF076\uF06B\uF052\uF065\uF06B\uF064\uE094\uF020\uF06A\uF067\uF04C\uF03B", "आत्माके रहस्य" }, /// ANSI in PUA
+                { "d\xE094", "के" }, /// E094 is in PUA, but should map to 0094, then to 201D and then finally to े
             }},
             { "AARituPlus2-Numbers", new Dictionary<string, string> {
                 { "0123456789", "०१२३४५६७८९" },
@@ -142,8 +144,6 @@ namespace GaudiaVedantaPublications.Tests
                 { "xHkZ±", "गर्भं" }, /// BG page 133 ॥३॥
                 { "la{skis.k", "संक्षेपेण" }, /// BG page 143 ॥१६॥
                 { "oÙZkrs", "वर्त्तते" }, /// BG page 155 ॥२६॥
-                { "\xE096", "\x0020" }, /// PUA character
-                { "\xE097", "\x0020" }, /// PUA character
             }},
             { "AARitu", new Dictionary<string, string> {
                 { ",", "ए" },
