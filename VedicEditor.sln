@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GVPAddIn", "WordAddIn\GVPAd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{9A261BA8-8763-4FAC-A064-0E70597CFDAF}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{BBB4B26D-E5CC-41BD-BFE5-EFD6EC47E14A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9A261BA8-8763-4FAC-A064-0E70597CFDAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A261BA8-8763-4FAC-A064-0E70597CFDAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A261BA8-8763-4FAC-A064-0E70597CFDAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB4B26D-E5CC-41BD-BFE5-EFD6EC47E14A}.Debug|Any CPU.ActiveCfg = Debug
+		{BBB4B26D-E5CC-41BD-BFE5-EFD6EC47E14A}.Debug|Any CPU.Build.0 = Debug
+		{BBB4B26D-E5CC-41BD-BFE5-EFD6EC47E14A}.Release|Any CPU.ActiveCfg = Release
+		{BBB4B26D-E5CC-41BD-BFE5-EFD6EC47E14A}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
