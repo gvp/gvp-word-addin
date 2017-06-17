@@ -221,6 +221,7 @@
     <Compile Include="CombiningTransform.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="FontExtensions.cs" />
+    <Compile Include="RemoveDiacryticsTransform.cs" />
     <Compile Include="Ribbon.Transliteration.cs" />
     <Compile Include="Ribbon.Conversion.cs" />
     <Compile Include="Extensions.cs" />
