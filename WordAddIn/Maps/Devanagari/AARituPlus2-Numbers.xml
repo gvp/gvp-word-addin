@@ -177,6 +177,7 @@
   <entry from='&#x00ED;' to='द्द' />
   <entry from='&#x00EE;' to='्य' />
   <entry from='&#x00EF;' to='ड्ढ' />
+  <entry from='&#x00F0;' to='प्त' />
   <entry from='&#x00F1;' to='॰' />
   <entry from='&#x00F2;' to='स्र' />
   <entry from='&#x00F3;' to='स्त्र' />
@@ -192,7 +193,23 @@
   <entry from='&#x00FD;' to='[' />
   <entry from='&#x00FE;' to=']' />
   <entry from='&#x00FF;' to='ळ' />
+  <entry from='&#x0080;' to='ञ्च' />
+  <entry from='&#x0081;' to='क्च' />
+  <entry from='&#x008D;' to='श्च' />
+  <entry from='&#x008E;' to='&#x1F818;' />
+  <entry from='&#x008F;' to='&#x1F81A;' />
+  <entry from='&#x0092;' to='ु' />
+  <entry from='&#x0093;' to='ू' />
+  <entry from='&#x0094;' to='े' />
+  <entry from='&#x0095;' to='ै' />
+  <entry from='&#x0096;' to='&#x005A;' order='-100' />
+  <entry from='&#x0097;' to='&#x00B1;' order='-100' />
+  <entry from='&#x0098;' to='ें' />
+  <entry from='&#x0099;' to='ैं' />
+  <entry from='&#x009E;' to='&#x003C;' />
   <entry from='&#x03BC;' to='—' />
+
+  <!-- Pre and Post processing -->
   <entry from='fq' to='qf' order='-110' comment='Wrong order of ु and ि' />
   <entry from='~+' to='+~' order='-110' comment='Wrong order of Virama and Nukta' />
   <entry from='·a' to='a·' order='-110' comment='Wrong order of Anusvar and Avagraha' />
@@ -205,6 +222,5 @@
   <entry type='regex' from='([ZzSs~])\1+' to='$1' order='-101' comment='Duplicate symbol' />
   <entry type='regex' from='±Z|Z±' to='±' order='-100' comment='r+cons+m eats r+cons' />
   <entry type='regex' from='sS|Ss' to='S' order='-100' comment='AI-matra eats E-matra' />
-  <entry type='regex' from='\p{IsPrivateUseArea}' to=' ' />
   <entry type='regex' from='&#x200C;\b' to='' order='109' comment='Remove ZWNJ in the end of the word' />
 </map>

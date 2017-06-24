@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace GaudiaVedantaPublications
 {
-    internal static class EmbeddedResourceManager
+    public static class EmbeddedResourceManager
     {
         internal class PictureConverter : System.Windows.Forms.AxHost
         {
@@ -30,7 +30,7 @@ namespace GaudiaVedantaPublications
 
         public static Stream GetEmbeddedResource(String name)
         {
-            var assembly = Assembly.GetExecutingAssembly();
+            var assembly = Assembly.GetCallingAssembly();
             var resourceName = assembly.GetManifestResourceNames().FirstOrDefault(x => x.EndsWith(name));
             if (resourceName == null)
                 return null;
