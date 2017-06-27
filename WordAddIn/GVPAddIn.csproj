@@ -221,6 +221,10 @@
     <Compile Include="CombiningTransform.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="FontExtensions.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="MultiMap.cs" />
+    <Compile Include="RegexMap.cs" />
+    <Compile Include="ReplaceMap.cs" />
     <Compile Include="Ribbon.Transliteration.cs" />
     <Compile Include="Ribbon.Conversion.cs" />
     <Compile Include="Extensions.cs" />

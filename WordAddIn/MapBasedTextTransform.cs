@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-using Map = System.Linq.IOrderedEnumerable<GaudiaVedantaPublications.MapEntry>;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications
@@ -62,7 +61,7 @@ namespace GaudiaVedantaPublications
                 if (chunk.End >= range.End || nextCharacter.Text == "\r" || ShouldSplit(chunk, nextCharacter))
                 {
                     var map = GetMapForRange(chunk);
-                    if (map != null && map.Any())
+                    if (map != null)
                     {
                         var text = map.Apply(chunk.Text);
 #if TRANSFORMATION_COMPARISON

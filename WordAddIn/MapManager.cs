@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using Map = System.Linq.IOrderedEnumerable<GaudiaVedantaPublications.MapEntry>;
 
 namespace GaudiaVedantaPublications
 {
@@ -65,19 +64,17 @@ namespace GaudiaVedantaPublications
             if (maps.TryGetValue(key, out map))
                 return map;
 
-            var entries = ReadMap(source, destination);
-            if (entries == null)
-                return null;
+            map = ReadMap(source, destination);
 
             /// For devanagari fonts there is a common section
-            if (DevanagariFonts.Contains(source))
-                entries = entries.Concat(ReadMap(Devanagari, Unicode));
-            else if (DevanagariFonts.Contains(destination))
-                entries = entries.Concat(ReadMap(Unicode, Devanagari));
+            //if (DevanagariFonts.Contains(source))
+            //    entries = entries.Concat(ReadMap(Devanagari, Unicode));
+            //else if (DevanagariFonts.Contains(destination))
+            //    entries = entries.Concat(ReadMap(Unicode, Devanagari));
 
-            map = entries
-                .OrderBy(e => e.Order);
-            maps.Add(key, map);
+
+            if (map != null)
+                maps.Add(key, map);
             return map;
         }
 
@@ -87,7 +84,7 @@ namespace GaudiaVedantaPublications
         /// <param name="source"></param>
         /// <param name="destination"></param>
         /// <returns>null means that there is no resource for this combination</returns>
-        private static IEnumerable<MapEntry> ReadMap(string source, string destination)
+        private static Map ReadMap(string source, string destination)
         {
             /// First, looking for "source→destination.xml"
             var result = ReadMap(String.Format("{0}→{1}", source, destination));
@@ -99,7 +96,7 @@ namespace GaudiaVedantaPublications
                 return ReadMap(source);
 
             if (source == Unicode)
-                return ReadMap(destination).Select(e => e.Inverted);
+                return ReadMap(destination).Inverted;
 
             return null;
         }
@@ -109,16 +106,17 @@ namespace GaudiaVedantaPublications
         /// </summary>
         /// <param name="name"></param>
         /// <returns>null means that there is no resource of this name</returns>
-        private static IEnumerable<MapEntry> ReadMap(string name)
+        private static Map ReadMap(string name)
         {
             using (var resource = EmbeddedResourceManager.GetEmbeddedResource(name + ".xml"))
             {
                 if (resource == null)
                     return null;
 
-                return
+                return new MultiMap(
                     from element in XElement.Load(resource).Elements("entry")
-                    select MapEntry.Create(element);
+                    select Map.Create(element)
+                    );
             }
         }
     }

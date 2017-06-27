@@ -16,7 +16,7 @@ namespace GaudiaVedantaPublications
             base.Apply(range);
         }
 
-        protected override IOrderedEnumerable<MapEntry> GetMapForRange(Word.Range range)
+        protected override Map GetMapForRange(Word.Range range)
         {
             var font = range.Characters.First.Font;
             if (string.IsNullOrEmpty(font.Name))

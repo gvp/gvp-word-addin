@@ -31,38 +31,36 @@ namespace GaudiaVedantaPublications.Tests
         }
 
         [Theory]
-        [InlineData("AARituPlus2", "Unicode", 211 + 30)]
-        [InlineData("AARituPlus2-Numbers", "Unicode", 221 + 30)]
-        [InlineData("AARitu", "Unicode", 172 + 30)]
-        [InlineData("AAVishal", "Unicode", 196 + 30)]
-        [InlineData("Amita Times Cyr", "Unicode", 43)]
-        [InlineData("ThamesM", "Unicode", 46)]
-        [InlineData("ThamesSanskrit", "Unicode", 126)]
-        [InlineData("Amita Times", "Unicode", 60)]
-        [InlineData("Balaram", "Unicode", 31)]
-        [InlineData("DVRoman-TTSurekh", "Unicode", 59)]
-        [InlineData("GVPalatino", "Unicode", 69)]
-        [InlineData("Rama Garamond Plus", "Unicode", 59)]
-        [InlineData("ScaSeries", "Unicode", 55)]
-        [InlineData("SD1-TTSurekh", "Unicode", 56)]
-        [InlineData("Unicode", "Amita Times Cyr", 43)]
-        [InlineData("Unicode", "ThamesM", 46)]
-        [InlineData("Unicode", "ThamesSanskrit", 126)]
-        [InlineData("Unicode", "Amita Times", 60)]
-        [InlineData("Unicode", "Balaram", 31)]
-        [InlineData("Unicode", "DVRoman-TTSurekh", 59)]
-        [InlineData("Unicode", "GVPalatino", 69)]
-        [InlineData("Unicode", "Rama Garamond Plus", 59)]
-        [InlineData("Unicode", "ScaSeries", 55)]
-        [InlineData("Unicode", "SD1-TTSurekh", 56)]
-        [InlineData("Devanagari", "Latin", 92)]
-        [InlineData("Latin", "Cyrillic", 106)]
+        [InlineData("AARituPlus2", "Unicode")]
+        [InlineData("AARituPlus2-Numbers", "Unicode")]
+        [InlineData("AARitu", "Unicode")]
+        [InlineData("AAVishal", "Unicode")]
+        [InlineData("Amita Times Cyr", "Unicode")]
+        [InlineData("ThamesM", "Unicode")]
+        [InlineData("ThamesSanskrit", "Unicode")]
+        [InlineData("Amita Times", "Unicode")]
+        [InlineData("Balaram", "Unicode")]
+        [InlineData("DVRoman-TTSurekh", "Unicode")]
+        [InlineData("GVPalatino", "Unicode")]
+        [InlineData("Rama Garamond Plus", "Unicode")]
+        [InlineData("ScaSeries", "Unicode")]
+        [InlineData("SD1-TTSurekh", "Unicode")]
+        [InlineData("Unicode", "Amita Times Cyr")]
+        [InlineData("Unicode", "ThamesM")]
+        [InlineData("Unicode", "ThamesSanskrit")]
+        [InlineData("Unicode", "Amita Times")]
+        [InlineData("Unicode", "Balaram")]
+        [InlineData("Unicode", "DVRoman-TTSurekh")]
+        [InlineData("Unicode", "GVPalatino")]
+        [InlineData("Unicode", "Rama Garamond Plus")]
+        [InlineData("Unicode", "ScaSeries")]
+        [InlineData("Unicode", "SD1-TTSurekh")]
+        [InlineData("Devanagari", "Latin")]
+        [InlineData("Latin", "Cyrillic")]
         public void ShouldReturnMap(string source, string destination, int count)
         {
-            var map = MapManager.GetMap(source, destination);
+            Map map = MapManager.GetMap(source, destination);
             Assert.NotNull(map);
-            Assert.IsAssignableFrom<IOrderedEnumerable<MapEntry>>(map);
-            Assert.Equal(count, map.Count());
         }
     }
 }
