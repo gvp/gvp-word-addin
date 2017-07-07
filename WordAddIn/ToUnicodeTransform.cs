@@ -4,7 +4,7 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications
 {
-    public class ToUnicodeTransform : MapBasedTextTransform
+    public class ToUnicodeTransform : MappingTextTransform
     {
         /// <summary>
         /// Only this font supports most unicode blocks. And it is required to render Devanagari correctly.
@@ -16,13 +16,13 @@ namespace GaudiaVedantaPublications
             base.Apply(range);
         }
 
-        protected override Map GetMapForRange(Word.Range range)
+        protected override ITextMapping GetMappingForRange(Word.Range range)
         {
             var font = range.Characters.First.Font;
             if (string.IsNullOrEmpty(font.Name))
                 throw new InvalidOperationException("Range contains several fonts");
 
-            return MapManager.GetFontToUnicodeMap(font.Name);
+            return MappingManager.GetFontToUnicodeMapping(font.Name);
         }
 
         protected override bool ShouldSplit(Word.Range first, Word.Range second)

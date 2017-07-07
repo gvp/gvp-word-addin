@@ -5,12 +5,12 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications
 {
-    public class MapBasedTextTransform : ITextTransform
+    public class MappingTextTransform : ITextTransform
     {
         /// <summary>
-        /// This contructor is used with descendant classes where GetMapForRange is overriden.
+        /// This contructor is used with descendant classes where GetMappingForRange is overriden.
         /// </summary>
-        protected MapBasedTextTransform()
+        protected MappingTextTransform()
         {
         }
 
@@ -18,19 +18,19 @@ namespace GaudiaVedantaPublications
         /// This constructor is used for external instantiating the transform with a single map.
         /// </summary>
         /// <param name="map">A map that is used for all transformations.</param>
-        public MapBasedTextTransform(Map map)
+        public MappingTextTransform(ITextMapping mapping)
         {
-            this.map = map;
+            this.mapping = mapping;
         }
 
-        private readonly Map map;
+        private readonly ITextMapping mapping;
 
-        protected virtual Map GetMapForRange(Word.Range chunk)
+        protected virtual ITextMapping GetMappingForRange(Word.Range chunk)
         {
-            if (map == null)
-                throw new InvalidOperationException("Map is not set");
+            if (mapping == null)
+                throw new InvalidOperationException("Mapping is not set");
 
-            return map;
+            return mapping;
         }
 
         protected virtual void PostProcess(Word.Range range)
@@ -60,10 +60,10 @@ namespace GaudiaVedantaPublications
 
                 if (chunk.End >= range.End || nextCharacter.Text == "\r" || ShouldSplit(chunk, nextCharacter))
                 {
-                    var map = GetMapForRange(chunk);
-                    if (map != null)
+                    var mapping = GetMappingForRange(chunk);
+                    if (mapping != null)
                     {
-                        var text = map.Apply(chunk.Text);
+                        var text = mapping.Apply(chunk.Text);
 #if TRANSFORMATION_COMPARISON
                         chunk.Collapse(Word.WdCollapseDirection.wdCollapseEnd);
 #endif

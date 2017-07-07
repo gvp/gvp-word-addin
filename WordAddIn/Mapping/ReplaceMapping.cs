@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GaudiaVedantaPublications
 {
-    public class ReplaceMap : Map
+    public class ReplaceMapping : ITextMapping
     {
         private readonly string from;
         private readonly string to;
@@ -21,23 +21,31 @@ namespace GaudiaVedantaPublications
             get { return to; }
         }
 
-        public ReplaceMap(string from, string to)
+        public ReplaceMapping(string from, string to)
         {
             this.from = from;
             this.to = to;
         }
 
-        public override Map Inverted
+        public ITextMapping Inverted
         {
             get
             {
-                return new ReplaceMap(to, from);
+                return new ReplaceMapping(to, from);
             }
         }
 
-        public override string Apply(string text)
+        public string Apply(string text)
         {
-            return text.Replace(from, to);
+#if TRACE_TEXT_TRANSFORMATION
+            var oldText = text;
+#endif
+            text = text.Replace(from, to);
+#if TRACE_TEXT_TRANSFORMATION
+            if (oldText != text)
+                System.Diagnostics.Trace.TraceInformation("'{0}' → '{1}'\twith {2}", oldText, text, this);
+#endif
+            return text;
         }
 
         public override string ToString()

@@ -3,12 +3,12 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications
 {
-    class FromUnicodeTransform : MapBasedTextTransform
+    class FromUnicodeTransform : MappingTextTransform
     {
         private readonly String fontName;
 
         public FromUnicodeTransform(String fontName)
-            : base(MapManager.GetUnicodeToFontMap(fontName))
+            : base(MappingManager.GetUnicodeToFontMapping(fontName))
         {
             if (fontName == null)
                 throw new ArgumentNullException("toFontName");

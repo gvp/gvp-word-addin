@@ -164,11 +164,16 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
@@ -221,18 +226,18 @@
     <Compile Include="CombiningTransform.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="FontExtensions.cs" />
-    <Compile Include="Map.cs" />
-    <Compile Include="MultiMap.cs" />
-    <Compile Include="RegexMap.cs" />
-    <Compile Include="ReplaceMap.cs" />
+    <Compile Include="Mapping\ITextMapping.cs" />
+    <Compile Include="Mapping\MultiMapping.cs" />
+    <Compile Include="Mapping\NormalizationMapping.cs" />
+    <Compile Include="Mapping\RegexMapping.cs" />
+    <Compile Include="Mapping\ReplaceMapping.cs" />
     <Compile Include="Ribbon.Transliteration.cs" />
     <Compile Include="Ribbon.Conversion.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FromUnicodeTransform.cs" />
     <Compile Include="ITextTransform.cs" />
-    <Compile Include="MapBasedTextTransform.cs" />
-    <Compile Include="MapManager.cs" />
-    <Compile Include="MapEntry.cs" />
+    <Compile Include="MappingTextTransform.cs" />
+    <Compile Include="Mapping\MappingManager.cs" />
     <Compile Include="PictureDispConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -253,6 +258,9 @@
     </Compile>
     <Compile Include="ToUnicodeTransform.cs" />
     <None Include="app.config" />
+    <EmbeddedResource Include="Mapping\Devanagari\AARituPlus2.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Mistypings.json" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

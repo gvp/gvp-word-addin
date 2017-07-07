@@ -5,13 +5,13 @@ using Xunit;
 
 namespace GaudiaVedantaPublications.Tests
 {
-    [Trait("Category", "Maps")]
-    public class MapTest
+    [Trait("Category", "Mapping")]
+    public class MappingTests
     {
         private static IEnumerable<object[]> GetFontTestData(params string[] excludeFontNames)
         {
             return
-                from set in TestDataLoader.ReadTestData("FontMapTestData.json")["sets"]
+                from set in TestDataLoader.ReadTestData("FontMappingTestData.json")["sets"]
                 /// Either taking fonts array of the set, or resort to the set name.
                 from fontName in set["fonts"] ?? Enumerable.Repeat(set["name"], 1)
                 where !excludeFontNames.Contains((string)fontName)
@@ -28,11 +28,11 @@ namespace GaudiaVedantaPublications.Tests
         }
 
         [Theory]
-        [Trait("MapType", "ToUnicode")]
+        [Trait("Mapping", "ToUnicode")]
         [MemberData("FontToUnicodeTestData")]
         public void ToUnicode(string unicode, string ansi, string fontName)
         {
-            var map = MapManager.GetFontToUnicodeMap(fontName);
+            var map = MappingManager.GetFontToUnicodeMapping(fontName);
             Assert.Equal(unicode.Normalize(NormalizationForm.FormC), map.Apply(ansi));
         }
 
@@ -40,21 +40,21 @@ namespace GaudiaVedantaPublications.Tests
         {
             get
             {
-                return GetFontTestData(excludeFontNames: MapManager.DevanagariFonts);
+                return GetFontTestData(excludeFontNames: MappingManager.DevanagariFonts);
             }
         }
 
         [Theory]
-        [Trait("MapType", "FromUnicode")]
+        [Trait("Mapping", "FromUnicode")]
         [MemberData("UnicodeToFontTestData")]
         public void FromUnicode(string unicode, string ansi, string fontName)
         {
-            var map = MapManager.GetUnicodeToFontMap(fontName);
+            var map = MappingManager.GetUnicodeToFontMapping(fontName);
             Assert.Equal(ansi.Normalize(NormalizationForm.FormC), map.Apply(unicode));
         }
 
         [Theory]
-        [Trait("MapType", "Transliteration")]
+        [Trait("Mapping", "Transliteration")]
         [InlineData("वैष्णव–सिद्धान्त–माला", "vaiṣṇava–siddhānta–mālā")]
         [InlineData("ॐ", "oṁ")]
         [InlineData("क्ष", "kṣa")]
@@ -66,11 +66,11 @@ namespace GaudiaVedantaPublications.Tests
         [InlineData("पाँच", "pām̐ca")]
         public void DevanagariToLatin(string devanagari, string latin)
         {
-            Assert.Equal(latin.Normalize(NormalizationForm.FormC), MapManager.DevanagariToLatin.Apply(devanagari));
+            Assert.Equal(latin.Normalize(NormalizationForm.FormC), MappingManager.DevanagariToLatin.Apply(devanagari));
         }
 
         [Theory]
-        [Trait("MapType", "Transliteration")]
+        [Trait("Mapping", "Transliteration")]
         [InlineData("vaiṣṇava–siddhānta–mālā", "ваиш̣н̣ава–сиддха̄нта–ма̄ла̄")]
         [InlineData("oṁ", "ом̇")]
         [InlineData("evam", "эвам")]
@@ -78,7 +78,7 @@ namespace GaudiaVedantaPublications.Tests
         [InlineData("bhaktiprajñāna", "бхактипраджн̃а̄на")]
         public void LatinToCyrillic(string latin, string cyrillic)
         {
-            Assert.Equal(cyrillic.Normalize(NormalizationForm.FormC), MapManager.LatinToCyrillic.Apply(latin));
+            Assert.Equal(cyrillic.Normalize(NormalizationForm.FormC), MappingManager.LatinToCyrillic.Apply(latin));
         }
     }
 }

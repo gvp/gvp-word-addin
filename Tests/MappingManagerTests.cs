@@ -8,7 +8,8 @@ using Xunit;
 
 namespace GaudiaVedantaPublications.Tests
 {
-    public class MapManagerTests
+    [Trait("Category", "Mapping")]
+    public class MappingManagerTests
     {
         [Theory]
         [InlineData("ScaPalatino", "ScaGauda")]
@@ -17,17 +18,17 @@ namespace GaudiaVedantaPublications.Tests
         [InlineData("AARituPlus2", "AARituPlus2")]
         [InlineData("ThamesM", "ThamesM")]
         [InlineData("Amita Times Cyr", "Krishna Times Plus")]
-        public void ShouldReturnSameMap(string name1, string name2)
+        public void ShouldReturnSameMapping(string name1, string name2)
         {
-            Assert.Same(MapManager.GetFontToUnicodeMap(name1), MapManager.GetFontToUnicodeMap(name2));
+            Assert.Same(MappingManager.GetFontToUnicodeMapping(name1), MappingManager.GetFontToUnicodeMapping(name2));
         }
 
         [Theory]
         [InlineData("Something", "Another")]
         [InlineData("NonExistent", "Unicode")]
-        public void ShouldReturnNullForNonExistent(string source, string destination)
+        public void ShouldThrowExceptionForNonExistent(string source, string destination)
         {
-            Assert.Equal(null, MapManager.GetMap(source, destination));
+            Assert.Throws<NullReferenceException>(() => MappingManager.GetMapping(source, destination));
         }
 
         [Theory]
@@ -57,9 +58,9 @@ namespace GaudiaVedantaPublications.Tests
         [InlineData("Unicode", "SD1-TTSurekh")]
         [InlineData("Devanagari", "Latin")]
         [InlineData("Latin", "Cyrillic")]
-        public void ShouldReturnMap(string source, string destination, int count)
+        public void ShouldReturnMapping(string source, string destination)
         {
-            Map map = MapManager.GetMap(source, destination);
+            ITextMapping map = MappingManager.GetMapping(source, destination);
             Assert.NotNull(map);
         }
     }

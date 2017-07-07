@@ -133,6 +133,16 @@
           "from": "O;fä;ksaesaaa",
           "to": "व्यक्तियोंमें",
           "description": " Three ं"
+        },
+        {
+          "from": "d±ZZZ",
+          "to": "र्कं",
+          "description": "Duplicates should be removed before swallowing."
+        },
+        {
+          "from": "gssSS",
+          "to": "है",
+          "description": "AI wovel sign swallows E nowel sign. With duplicates."
         }
       ]
     },
