@@ -208,9 +208,19 @@
       ]
     },
     {
+      "name": "Candrabindu, Nukta, Anusvara and Visarga are appended to the syllables, order 80",
+      "entries": [
+        { "from": "\u002B", "to": "़", "order": 80, "comment": "Nukta" },
+        { "from": "\u00DB", "to": "़", "order": 80, "comment": "Nukta" },
+        { "from": "\u00A1", "to": "ँ", "order": 80 },
+        { "from": "\u0061", "to": "ं", "order": 80, "comment": "anusvara" },
+        { "from": "\u0025", "to": "ः", "order": 80, "comment": "висарга" }
+      ]
+    },
+    {
       "name": "Fix common devanagari",
       "entries": [
-        { "from": "ं([\u093A\u093B\u093E-\u094C])", "to": "$1ं", "order": 100, "type": "regex", "comment": "Reorder anusvar and matra" },
+        { "from": "\u0902([\u093A\u093B\u093E-\u094C])", "to": "$1\u0902", "order": 100, "type": "regex", "comment": "Reorder anusvar and matra" },
         { "from": "ीे", "to": "ी", "order": 110, "comment": "Extra" },
         { "from": "।।", "to": "॥", "order": 110, "comment": "Combine double danda" },
         { "from": "्ा", "to": "", "order": 110, "comment": "Collapse ् and sign" },
@@ -257,16 +267,6 @@
       ]
     },
     {
-      "name": "Candrabindu, Nukta, Anusvara and Visarga are appended to the syllables, order 80",
-      "entries": [
-        { "from": "\u002B", "to": "़", "order": 80, "comment": "Nukta" },
-        { "from": "\u00DB", "to": "़", "order": 80, "comment": "Nukta" },
-        { "from": "\u00A1", "to": "ँ", "order": 80 },
-        { "from": "\u0061", "to": "ं", "order": 80, "comment": "anusvara" },
-        { "from": "\u0025", "to": "ः", "order": 80, "comment": "висарга" }
-      ]
-    },
-    {
       "name": "Symbols, order 90",
       "comment": "After all punctuation symbols are already mapped we can produce symbols and numbers",
       "entries": [
@@ -297,6 +297,7 @@
         { "from": "\u00FE", "to": "]", "order": 91 }
       ]
     },
+    { "from": "\\u200C\\b", "to": "", "order": 110, "type": "regex", "comment": "Remove ZWNJ in the end of the word" },
     {
       "name": "Unknown",
       "comment": "Unknown in the last, since it contains so many different symbols, order 100",
@@ -304,12 +305,6 @@
         { "from": "\u00F6", "to": "[e with chandrabindu]", "order": 100, "comment": "вирама с чандрабинду" },
         { "from": "\u00F8", "to": "[GVP logo black]", "order": 100, "comment": "GVP logo light" },
         { "from": "\u00F5", "to": "[GVP logo white]", "order": 100, "comment": "GVP logo dark" }
-      ]
-    },
-    {
-      "name": "Fixing",
-      "entries": [
-        { "from": "\u200C\b", "to": "", "order": 110, "type": "regex", "comment": "Remove ZWNJ in the end of the word" }
       ]
     }
   ]
