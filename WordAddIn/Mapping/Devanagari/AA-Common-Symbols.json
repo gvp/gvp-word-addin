@@ -1,0 +1,26 @@
+{
+  "name": "AA-Common-Symbols",
+  "entries": [
+    { "from": "\u0026", "to": "–", "order": 90 },
+    { "from": "\u00B5", "to": "—", "order": 90 },
+    { "from": "\u005D", "to": ",", "order": 90 },
+    { "from": "\u005F", "to": ";", "order": 90 },
+    { "from": "\u005C", "to": "?", "order": 90 },
+    { "from": "\u002D", "to": ".", "order": 90 },
+    { "from": "\u0041", "to": "।", "order": 90, "comment": "danda" },
+    { "from": "\u00FB", "to": "॥", "order": 90, "comment": "double danda" },
+    { "from": "\u005E", "to": "‘", "order": 90 },
+    { "from": "\u002A", "to": "’", "order": 90 },
+    { "from": "\u00DF", "to": "“", "order": 90 },
+    { "from": "\u00DE", "to": "”", "order": 90 },
+    { "from": "\u00FD", "to": "[", "order": 90 },
+    { "from": "\u0040", "to": "/", "order": 90 },
+    { "from": "\u009E", "to": "<", "order": 90 },
+    { "from": "\u00F1", "to": "॰", "order": 90 },
+    { "from": "\u0024", "to": "+", "order": 90 },
+    { "from": "\u00BB", "to": "÷", "order": 90 },
+    { "from": "\u00BE", "to": "=", "order": 90 },
+    { "from": "\u0178", "to": ">", "order": 90 },
+    { "from": "\u00FE", "to": "]", "order": 91 }
+  ]
+}

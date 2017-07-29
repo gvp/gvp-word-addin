@@ -16,10 +16,28 @@
   //Example: _0150 = 0x96
   //InDesign maps them to PUA (\xE000 + code).
 
-  // The following code points exist only in AARituPlus2: 201A|2018|00a4|00c0|00c4|00C6|00c8|00c9|00cb|00cc|00d0|00d4|00d7|00f0|00ff|0081|0080|008d|0092|0093|0094|0095|0099|008e|008f|00f8|03bc
-
   "entries": [
+    { "include": "AA-Common-Mistypings" },
+    { "include": "AA-Common-Combined-Vowels" },
+    { "include": "AA-Common-Normal" },
     { "include": "AA-Common-Numbers" },
-    { "include": "AARituPlus2-Common" }
+    { "include": "AA-Common-Combined-Signs" },
+    { "include": "Devanagari-Common-Fixing" },
+    { "include": "AA-Common-Jumping" },
+    { "include": "AA-Common-Symbols" },
+    {
+      "name": "Symbols",
+      "entries": [
+        { "from": "\u007F", "to": "✕", "order": 90 },
+        { "from": "\u00B9", "to": "★", "order": 90 },
+        { "from": "\u00F5", "to": "\u0FD7", "order": 100 }
+      ]
+    },
+    {
+      "name": "Unknown",
+      "entries": [
+        { "from": "\u00F6", "to": "[e with chandrabindu]", "order": 100, "comment": "вирама с чандрабинду" }
+      ]
+    }
   ]
 }

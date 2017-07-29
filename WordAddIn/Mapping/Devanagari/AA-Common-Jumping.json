@@ -1,0 +1,14 @@
+{
+  "name": "AA-Common-Jumping",
+  "entries": [
+    { "from": "\u0066([\u0915-\u0939](\u094D[\u0915-\u0939])*)", "to": "$1\u093F", "order": 70, "type": "regex", "comment": "consonant+i" },
+    { "from": "\u00A3([\u0915-\u0939](\u094D[\u0915-\u0939])*)", "to": "र्$1\u093F", "order": 70, "type": "regex", "comment": "r+consonant+i" },
+    { "from": "\u00A5([\u0915-\u0939](\u094D[\u0915-\u0939])*)", "to": "$1\u093F\u0902", "order": 70, "type": "regex", "comment": "consonant+im" },
+    { "from": "\u00B2([\u0915-\u0939](\u094D[\u0915-\u0939])*)", "to": "र्$1\u093F\u0902", "order": 70, "type": "regex", "comment": "r+consonant+im" },
+    { "from": "([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\u0096", "to": "र्$1", "order": 70, "type": "regex", "comment": "Same as r+consonant" },
+    { "from": "([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\u005A", "to": "र्$1", "order": 70, "type": "regex", "comment": "r+consonant" },
+    { "from": "([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\u0097", "to": "र्$1ं", "order": 70, "type": "regex", "comment": "Same as r+consonant+m" },
+    { "from": "([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\u00B1", "to": "र्$1ं", "order": 70, "type": "regex", "comment": "r+consonant+m" },
+    { "from": "\u0066", "to": "ि", "order": 71, "comment": "consonant+i" }
+  ]
+}

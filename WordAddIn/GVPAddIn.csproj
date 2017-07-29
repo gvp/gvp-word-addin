@@ -259,7 +259,17 @@
     <Compile Include="ToUnicodeTransform.cs" />
     <None Include="app.config" />
     <EmbeddedResource Include="Mapping\Devanagari\AARituPlus2.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Combined-Vowels.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\Devanagari-Common-Fixing.json" />
     <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Mistypings.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Normal.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\AARitu.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Jumping.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Combined-Signs.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Symbols.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\AARituPlus2-Numbers.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Numbers.json" />
+    <EmbeddedResource Include="Mapping\Devanagari\AARituPlus2-Common.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
