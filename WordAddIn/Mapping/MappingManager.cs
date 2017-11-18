@@ -61,8 +61,11 @@ namespace GaudiaVedantaPublications
 
         public static ITextMapping GetMapping(string source, string destination)
         {
+            var mapping = LoadMapping(source, destination);
+            if (mapping == null)
+                return null;
             var key = String.Format("{0}→{1}", source, destination);
-            return AddOrGetExisting(key, () => new NormalizationMapping(LoadMapping(source, destination)));
+            return AddOrGetExisting(key, () => new NormalizationMapping(mapping));
         }
 
 
