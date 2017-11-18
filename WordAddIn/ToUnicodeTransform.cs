@@ -42,7 +42,27 @@ namespace GaudiaVedantaPublications
 
         protected override void PostProcess(Word.Range range)
         {
-            range.Font.Name = UnicodeFontName;
+            var unicodeFontName = FindUnicodeFontName(range.Characters.First.Font.Name);
+            if (!range.Application.FontNames.OfType<string>().Contains(unicodeFontName))
+                unicodeFontName = UnicodeFontName;
+
+            range.Font.Name = unicodeFontName;
+        }
+
+        private string FindUnicodeFontName(string fontName)
+        {
+            switch (fontName)
+            {
+                case "AARituPlus2":
+                case "AARituPlus2-Numbers":
+                case "AARitu":
+                case "AAVishal":
+                case "Mangal":
+                    return "AARUPA";
+
+                default:
+                    return UnicodeFontName;
+            }
         }
     }
 }
