@@ -11,16 +11,6 @@ namespace GaudiaVedantaPublications
         private readonly string from;
         private readonly string to;
 
-        public string From
-        {
-            get { return from; }
-        }
-
-        public string To
-        {
-            get { return to; }
-        }
-
         public ReplaceMapping(string from, string to)
         {
             this.from = from;
