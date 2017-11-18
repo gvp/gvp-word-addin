@@ -65,12 +65,13 @@ namespace GaudiaVedantaPublications
                     {
                         var text = mapping.Apply(chunk.Text);
 #if TRANSFORMATION_COMPARISON
+                        chunk.InsertAfter("\n");
                         chunk.Collapse(Word.WdCollapseDirection.wdCollapseEnd);
 #endif
                         chunk.Text = text;
                         PostProcess(chunk);
 #if TRANSFORMATION_COMPARISON
-                        chunk.Font.Color = Word.WdColor.wdColorRed;
+                        chunk.HighlightColorIndex = Word.WdColorIndex.wdYellow;
 #endif
                     }
 
