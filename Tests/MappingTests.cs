@@ -8,13 +8,13 @@ namespace GaudiaVedantaPublications.Tests
     [Trait("Category", "Mapping")]
     public class MappingTests
     {
-        private static IEnumerable<object[]> GetFontTestData(params string[] excludeFontNames)
+        private static IEnumerable<object[]> GetFontTestData(params string[] includeFontNames)
         {
             return
                 from set in TestDataLoader.ReadTestData("FontMappingTestData.json")["sets"]
                 /// Either taking fonts array of the set, or resort to the set name.
                 from fontName in set["fonts"] ?? Enumerable.Repeat(set["name"], 1)
-                where !excludeFontNames.Contains((string)fontName)
+                where includeFontNames == null || includeFontNames.Contains((string)fontName)
                 from entry in set["entries"]
                 select new object[] { (string)entry["to"], (string)entry["from"], (string)fontName };
         }
@@ -23,13 +23,13 @@ namespace GaudiaVedantaPublications.Tests
         {
             get
             {
-                return GetFontTestData();
+                return GetFontTestData("AARitu");
             }
         }
 
         [Theory]
         [Trait("Mapping", "ToUnicode")]
-        [MemberData("FontToUnicodeTestData")]
+        [MemberData(nameof(FontToUnicodeTestData))]
         public void ToUnicode(string unicode, string ansi, string fontName)
         {
             var map = MappingManager.GetFontToUnicodeMapping(fontName);
@@ -40,13 +40,14 @@ namespace GaudiaVedantaPublications.Tests
         {
             get
             {
-                return GetFontTestData(excludeFontNames: MappingManager.DevanagariFonts);
+                //return GetFontTestData(excludeFontNames: MappingManager.DevanagariFonts);
+                return GetFontTestData();
             }
         }
 
         [Theory]
         [Trait("Mapping", "FromUnicode")]
-        [MemberData("UnicodeToFontTestData")]
+        [MemberData(nameof(UnicodeToFontTestData))]
         public void FromUnicode(string unicode, string ansi, string fontName)
         {
             var map = MappingManager.GetUnicodeToFontMapping(fontName);

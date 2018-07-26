@@ -2,6 +2,7 @@
   "name": "AA Common Combined Vowels",
   "entries": [
     { "from": "bZ", "to": "ई", "order": -10 },
+    { "from": "b±", "to": "ईं", "order": -10 },
     { "from": "mG", "to": "ऊ", "order": -10, "comment": "Appendix for the long U." }
   ]
 }
