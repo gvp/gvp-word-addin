@@ -153,11 +153,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>codesign.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C433E5D982C187A7BFAD4D9648357EDCA63B2BF7</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>9C7DAB7F82991B19552D02A5B835A25799779315</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!--
     This section specifies references for the project.
@@ -270,6 +269,7 @@
     <EmbeddedResource Include="Mapping\Devanagari\AARituPlus2-Numbers.json" />
     <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Numbers.json" />
     <EmbeddedResource Include="Mapping\Devanagari\AARituPlus2-Common.json" />
+    <None Include="codesign.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
