@@ -33,8 +33,9 @@ namespace GaudiaVedantaPublications
             return mapping;
         }
 
-        protected virtual void PostProcess(Word.Range range)
+        protected virtual string GetNewFont(Word.Range range)
         {
+            return null;
         }
 
         public virtual void Apply(Word.Range range)
@@ -63,13 +64,14 @@ namespace GaudiaVedantaPublications
                     var mapping = GetMappingForRange(chunk);
                     if (mapping != null)
                     {
+                        var newFontName = GetNewFont(chunk);
                         var text = mapping.Apply(chunk.Text);
 #if TRANSFORMATION_COMPARISON
                         chunk.InsertAfter("\n");
                         chunk.Collapse(Word.WdCollapseDirection.wdCollapseEnd);
 #endif
                         chunk.Text = text;
-                        PostProcess(chunk);
+                        chunk.Font.Name = newFontName;
 #if TRANSFORMATION_COMPARISON
                         chunk.HighlightColorIndex = Word.WdColorIndex.wdYellow;
 #endif

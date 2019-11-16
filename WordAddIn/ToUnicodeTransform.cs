@@ -9,12 +9,7 @@ namespace GaudiaVedantaPublications
         /// <summary>
         /// Only this font supports most unicode blocks. And it is required to render Devanagari correctly.
         /// </summary>
-        public const string UnicodeFontName = "Arial Unicode MS";
-
-        public override void Apply(Word.Range range)
-        {
-            base.Apply(range);
-        }
+        public const string DefaultUnicodeFontName = "Arial Unicode MS";
 
         protected override ITextMapping GetMappingForRange(Word.Range range)
         {
@@ -40,13 +35,13 @@ namespace GaudiaVedantaPublications
             return true;
         }
 
-        protected override void PostProcess(Word.Range range)
+        protected override string GetNewFont(Word.Range range)
         {
             var unicodeFontName = FindUnicodeFontName(range.Characters.First.Font.Name);
             if (!range.Application.FontNames.OfType<string>().Contains(unicodeFontName))
-                unicodeFontName = UnicodeFontName;
+                return DefaultUnicodeFontName;
 
-            range.Font.Name = unicodeFontName;
+            return unicodeFontName;
         }
 
         private string FindUnicodeFontName(string fontName)
@@ -61,7 +56,7 @@ namespace GaudiaVedantaPublications
                     return "AARUPA";
 
                 default:
-                    return UnicodeFontName;
+                    return DefaultUnicodeFontName;
             }
         }
     }
