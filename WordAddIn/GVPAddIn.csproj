@@ -40,9 +40,9 @@
     <VSTO_TrustAssembliesLocation>true</VSTO_TrustAssembliesLocation>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <PublishUrl>publish\</PublishUrl>
-    <InstallUrl>http://gvp.blob.core.windows.net/gvp-word-addin/</InstallUrl>
+    <InstallUrl>https://gvp.blob.core.windows.net/gvp-word-addin/</InstallUrl>
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.14.0.0</ApplicationVersion>
+    <ApplicationVersion>1.15.0.0</ApplicationVersion>
     <AutoIncrementApplicationRevision>false</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
