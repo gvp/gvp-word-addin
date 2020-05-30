@@ -223,8 +223,7 @@
   -->
   <ItemGroup>
     <Compile Include="CombiningTransform.cs" />
-    <Compile Include="EnumerableExtensions.cs" />
-    <Compile Include="FontExtensions.cs" />
+    <Compile Include="Extensions.Font.cs" />
     <Compile Include="Mapping\ITextMapping.cs" />
     <Compile Include="Mapping\MultiMapping.cs" />
     <Compile Include="Mapping\NormalizationMapping.cs" />
@@ -232,7 +231,7 @@
     <Compile Include="Mapping\ReplaceMapping.cs" />
     <Compile Include="Ribbon.Transliteration.cs" />
     <Compile Include="Ribbon.Conversion.cs" />
-    <Compile Include="Extensions.cs" />
+    <Compile Include="Extensions.PUA.cs" />
     <Compile Include="FromUnicodeTransform.cs" />
     <Compile Include="ITextTransform.cs" />
     <Compile Include="MappingTextTransform.cs" />
