@@ -8,6 +8,9 @@ using System.Runtime.Caching;
 
 namespace GaudiaVedantaPublications
 {
+    /// <summary>
+    /// Class that loads the mappings from the resources.
+    /// </summary>
     public static class MappingManager
     {
         private const string Unicode = "Unicode";
@@ -93,7 +96,11 @@ namespace GaudiaVedantaPublications
         #endregion
 
         /// <summary>
-        /// Attempts to read the map in different ways: bidirectional or uni-directional.
+        /// Loads mapping suitable for converting from the <paramref name="source"/> representation
+        /// into the <paramref name="destination"/> representation.
+        /// First it looks for the unidirectional mapping <paramref name="source"/>→<paramref name="destination"/>,
+        /// then resorts to loading a bidirectional mapping for either <paramref name="destination"/> (direct)
+        /// or <paramref name="source"/> (inverted).
         /// </summary>
         /// <param name="source"></param>
         /// <param name="destination"></param>
@@ -115,11 +122,21 @@ namespace GaudiaVedantaPublications
             return null;
         }
 
+        /// <summary>
+        /// Loads mapping from the embedded resource with particular name.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         private static ITextMapping LoadMapping(string name)
         {
             return LoadMapping(LoadMappingObject(name));
         }
 
+        /// <summary>
+        /// Loads mapping from <see cref="JToken"/>.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
         private static ITextMapping LoadMapping(JToken root)
         {
             if (root == null)
@@ -167,7 +184,7 @@ namespace GaudiaVedantaPublications
         }
 
         /// <summary>
-        /// 
+        /// Loads embedded JSON resource into a <see cref="JObject"/>.
         /// </summary>
         /// <param name="name"></param>
         /// <returns>null means that there is no resource of this name</returns>

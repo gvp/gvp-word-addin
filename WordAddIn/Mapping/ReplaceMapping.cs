@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GaudiaVedantaPublications
 {
+    /// <summary>
+    /// Mapping that uses <see cref="string.Replace"/> method.
+    /// </summary>
     public class ReplaceMapping : ITextMapping
     {
         private readonly string from;

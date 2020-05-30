@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace GaudiaVedantaPublications
 {
+    /// <summary>
+    /// Combines several mappings and applies them consequently.
+    /// </summary>
     public class MultiMapping : ITextMapping
     {
         private readonly IEnumerable<ITextMapping> maps;
