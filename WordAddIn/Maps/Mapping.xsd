@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="https://www.w3.org/2001/XInclude.xsd"/>
+  <xs:element name="mapping" type="mapping"/>
+  <xs:complexType name="entry">
+    <xs:attribute name="from" type="xs:string" use="required" />
+    <xs:attribute name="to" type="xs:string" use="required" />
+    <xs:attribute name="order" type="xs:int" use="optional" />
+    <xs:attribute name="comment" type="xs:string" use="optional" />
+    <xs:attribute name="type" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="mapping">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="entry" type="entry" />
+      <xs:element name="mapping" type="mapping" />
+      <xs:element ref="xi:include" />
+    </xs:choice>
+    <xs:attribute name="name" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

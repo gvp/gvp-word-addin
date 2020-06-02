@@ -163,9 +163,8 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Mvp.Xml, Version=2.3.0.0, Culture=neutral, PublicKeyToken=6ead800d778c9b9f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mvp.Xml.2.3.0\lib\net20\Mvp.Xml.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -224,6 +223,7 @@
   <ItemGroup>
     <Compile Include="CombiningTransform.cs" />
     <Compile Include="Extensions.Font.cs" />
+    <Compile Include="Mapping\EmbeddedResourcesXmlResolver.cs" />
     <Compile Include="Mapping\ITextMapping.cs" />
     <Compile Include="Mapping\MultiMapping.cs" />
     <Compile Include="Mapping\NormalizationMapping.cs" />
@@ -256,18 +256,6 @@
     </Compile>
     <Compile Include="ToUnicodeTransform.cs" />
     <None Include="app.config" />
-    <EmbeddedResource Include="Mapping\Devanagari\AARituPlus2.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Combined-Vowels.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\Devanagari-Common-Fixing.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Mistypings.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Normal.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\AARitu.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Jumping.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Combined-Signs.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Symbols.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\AARituPlus2-Numbers.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\AA-Common-Numbers.json" />
-    <EmbeddedResource Include="Mapping\Devanagari\AARituPlus2-Common.json" />
     <None Include="codesign.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -291,7 +279,7 @@
     </Compile>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Label="Images">
     <EmbeddedResource Include="Images\AcuteAccent.png" />
     <EmbeddedResource Include="Images\Candrabindu.png" />
     <EmbeddedResource Include="Images\DotAbove.png" />
@@ -299,6 +287,8 @@
     <EmbeddedResource Include="Images\Macron.png" />
     <EmbeddedResource Include="Images\MacronBelow.png" />
     <EmbeddedResource Include="Images\Tilde.png" />
+  </ItemGroup>
+  <ItemGroup Label="Mappings">
     <EmbeddedResource Include="Maps\Cyrillic\Amita Times Cyr.xml" />
     <EmbeddedResource Include="Maps\Roman\Rama Garamond Plus.xml" />
     <EmbeddedResource Include="Maps\Translit\Latin→Cyrillic.xml" />
@@ -310,9 +300,20 @@
     <EmbeddedResource Include="Maps\Roman\GVPalatino.xml" />
     <EmbeddedResource Include="Maps\Cyrillic\ThamesSanskrit.xml" />
     <EmbeddedResource Include="Maps\Translit\Devanagari→Latin.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\AARitu.xml" />
     <EmbeddedResource Include="Maps\Roman\SD1-TTSurekh.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\SDW.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\KALAKAR.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AAVishal.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARituPlus2.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AA.Common.Pre.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AA.Common.Normal.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AARitu.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AA.Common.Post.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AA.Common.Symbols.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AARituPlus2-Numbers.xml" />
+    <EmbeddedResource Include="Maps\Mapping.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.en.resx">
@@ -325,27 +326,6 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Ribbon.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Maps\Devanagari\SDW.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Maps\Devanagari\KALAKAR.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Maps\Devanagari\Devanagari→Unicode.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Maps\Devanagari\AARituPlus2-Numbers.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Maps\Devanagari\AAVishal.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

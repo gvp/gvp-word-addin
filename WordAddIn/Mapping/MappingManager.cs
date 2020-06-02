@@ -1,10 +1,11 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Runtime.Caching;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Schema;
+using Mvp.Xml.XInclude;
 
 namespace GaudiaVedantaPublications
 {
@@ -13,37 +14,23 @@ namespace GaudiaVedantaPublications
     /// </summary>
     public static class MappingManager
     {
-        private const string Unicode = "Unicode";
-        private const string Devanagari = "Devanagari";
-        private const string Cyrillic = "Cyrillic";
-        private const string Latin = "Latin";
+        public static ITextMapping LatinToCyrillic => GetMapping("Latin→Cyrillic");
 
-        public static ITextMapping LatinToCyrillic
+        public static ITextMapping DevanagariToLatin => GetMapping("Devanagari→Latin");
+
+        public static ITextMapping GetFontToUnicodeMapping(string fontName)
         {
-            get
-            {
-                return GetMapping(Latin, Cyrillic);
-            }
+            return GetMapping(GeneralizeFontName(fontName));
         }
 
-        public static ITextMapping DevanagariToLatin
+        public static ITextMapping GetUnicodeToFontMapping(string fontName)
         {
-            get
-            {
-                return GetMapping(Devanagari, Latin);
-            }
+            return GetMapping(GeneralizeFontName(fontName)).Inverted;
         }
 
-        public static ITextMapping GetFontToUnicodeMapping(String fontName)
-        {
-            return GetMapping(GeneralizeFontName(fontName), Unicode);
-        }
-
-        public static ITextMapping GetUnicodeToFontMapping(String fontName)
-        {
-            return GetMapping(Unicode, GeneralizeFontName(fontName));
-        }
-
+        /// <summary>
+        /// Dictionary "Prefix → Generic Font Name"
+        /// </summary>
         private static readonly IDictionary<string, string> FontEquivalence = new Dictionary<string, string>
         {
             { "Sca", "ScaSeries" },
@@ -62,26 +49,18 @@ namespace GaudiaVedantaPublications
 
         public static readonly string[] DevanagariFonts = { "AARitu", "AARituPlus2", "AARituPlus2-Numbers", "AAVishal", "KALAKAR", "SDW" };
 
-        public static ITextMapping GetMapping(string source, string destination)
-        {
-            var mapping = LoadMapping(source, destination);
-            if (mapping == null)
-                return null;
-            var key = String.Format("{0}→{1}", source, destination);
-            return AddOrGetExisting(key, () => new NormalizationMapping(mapping));
-        }
-
-
-        #region Cache
         private static readonly MemoryCache cache = new MemoryCache("Mapping Cache");
 
         /// <summary>
+        /// Gets the mapping from cache or load it from resources.
         /// Implementation taken from https://blog.falafel.com/working-system-runtime-caching-memorycache/
         /// </summary>
-        private static ITextMapping AddOrGetExisting(string key, Func<ITextMapping> factory)
+        /// <param name="name">Mapping name</param>
+        /// <returns>Mapping</returns>
+        private static ITextMapping GetMapping(string name)
         {
-            var newValue = new Lazy<ITextMapping>(factory);
-            var oldValue = cache.AddOrGetExisting(key, newValue, new CacheItemPolicy()) as Lazy<ITextMapping>;
+            var newValue = new Lazy<ITextMapping>(() => new NormalizationMapping(LoadMapping(name)));
+            var oldValue = cache.AddOrGetExisting(name, newValue, new CacheItemPolicy()) as Lazy<ITextMapping>;
             try
             {
                 return (oldValue ?? newValue).Value;
@@ -89,38 +68,12 @@ namespace GaudiaVedantaPublications
             catch
             {
                 // Handle cached lazy exception by evicting from cache. Thanks to Denis Borovnev for pointing this out!
-                cache.Remove(key);
+                cache.Remove(name);
                 throw;
             }
         }
-        #endregion
 
-        /// <summary>
-        /// Loads mapping suitable for converting from the <paramref name="source"/> representation
-        /// into the <paramref name="destination"/> representation.
-        /// First it looks for the unidirectional mapping <paramref name="source"/>→<paramref name="destination"/>,
-        /// then resorts to loading a bidirectional mapping for either <paramref name="destination"/> (direct)
-        /// or <paramref name="source"/> (inverted).
-        /// </summary>
-        /// <param name="source"></param>
-        /// <param name="destination"></param>
-        /// <returns>null means that there is no resource for this combination</returns>
-        private static ITextMapping LoadMapping(string source, string destination)
-        {
-            /// First, looking for "source→destination"
-            var result = LoadMapping(String.Format("{0}→{1}", source, destination));
-            if (result != null)
-                return result;
-
-            /// Falling back to bidirectional maps for Unicode transformations.
-            if (destination == Unicode)
-                return LoadMapping(source);
-
-            if (source == Unicode)
-                return LoadMapping(destination).Inverted;
-
-            return null;
-        }
+        private static readonly XmlResolver xmlResolver = new EmbeddedResourcesXmlResolver();
 
         /// <summary>
         /// Loads mapping from the embedded resource with particular name.
@@ -129,78 +82,54 @@ namespace GaudiaVedantaPublications
         /// <returns></returns>
         private static ITextMapping LoadMapping(string name)
         {
-            return LoadMapping(LoadMappingObject(name));
-        }
-
-        /// <summary>
-        /// Loads mapping from <see cref="JToken"/>.
-        /// </summary>
-        /// <param name="root"></param>
-        /// <returns></returns>
-        private static ITextMapping LoadMapping(JToken root)
-        {
-            if (root == null)
-                return null;
-
-            if (root["include"] != null)
-                return LoadMapping((string)root["include"]);
-
-            if (root["entries"] != null)
-                return LoadMultiMapping(root);
-
-            if (root["from"] != null)
-                return LoadMappingEntry(root);
-
-            return null;
-        }
-
-        private static ITextMapping LoadMappingEntry(JToken root)
-        {
-            switch ((string)root["type"])
+            using (var reader = new XIncludingReader(name + ".xml", xmlResolver))
             {
-                case "regex":
-                    return new RegexMapping(
-                        pattern: (string)root["from"],
-                        replacement: (string)root["to"]
-                        );
-
-                default:
-                    return new ReplaceMapping(
-                        from: (string)root["from"],
-                        to: (string)root["to"]
-                        );
+                /// Setting the resolver here according to http://mvp-xml.sourceforge.net/xinclude/#mozTocId795134
+                /// Passing as a parameter is also required to resolve the original file
+                reader.XmlResolver = xmlResolver;
+                return CreateMapping(XElement.Load(reader));
             }
         }
 
-        private static ITextMapping LoadMultiMapping(JToken root)
-        {
-            return new MultiMapping(
-                from entry in root["entries"]
-                orderby (int)(entry["order"] ?? 0)
-                let map = LoadMapping(entry)
-                where map != null
-                select map
-                );
-        }
-
         /// <summary>
-        /// Loads embedded JSON resource into a <see cref="JObject"/>.
+        /// Creates mapping from <see cref="XElement"/>.
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns>null means that there is no resource of this name</returns>
-        private static JObject LoadMappingObject(string name)
+        /// <param name="element"></param>
+        /// <returns></returns>
+        private static ITextMapping CreateMapping(XElement element)
         {
-            using (var resource = EmbeddedResourceManager.GetEmbeddedResource(name + ".json"))
-            {
-                if (resource == null)
-                    return null;
+            if (element is null)
+                throw new ArgumentNullException(nameof(element));
 
-                using (var reader = new StreamReader(resource))
-                using (var jsonReader = new JsonTextReader(reader))
+            if (element.Name == "mapping")
+                return new MultiMapping(
+                    from entry in element.Elements()
+                    orderby (int?)entry.Attribute("order") ?? 0
+                    let mapping = CreateMapping(entry)
+                    where mapping != null
+                    select mapping
+                    );
+
+            if (element.Name == "entry")
+            {
+                if (element.Attribute("from") is null || element.Attribute("to") is null)
+                    throw new ArgumentException(string.Format("Entry should have `from` and `to` attributes: {0}", element.ToString()));
+
+                var from = element.Attribute("from").Value.Normalize(System.Text.NormalizationForm.FormC);
+                var to = element.Attribute("to").Value.Normalize(System.Text.NormalizationForm.FormC);
+
+                switch (element.Attribute("type")?.Value)
                 {
-                    return JObject.Load(jsonReader);
+                    case "regex":
+                        return new RegexMapping(pattern: from, replacement: to);
+
+                    default:
+                        return new ReplaceMapping(from, to);
                 }
             }
+
+            throw new ArgumentException(string.Format("Unsupported element name '{0}'", element.Name));
         }
+
     }
 }
