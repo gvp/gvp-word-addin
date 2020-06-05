@@ -1,50 +1,43 @@
 ﻿using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
+using NUnit.Framework;
 
 namespace GaudiaVedantaPublications.Tests
 {
-    [Trait("Category", "Mapping")]
+    [TestOf(typeof(MappingManager))]
+    [Category("Mapping Manager")]
     public class MappingManagerTests
     {
-        [Theory]
-        [InlineData("ScaPalatino", "ScaGauda")]
-        [InlineData("SDW", "SDW-Surekh")]
-        [InlineData("KALAKAR", "KALAKAR1")]
-        [InlineData("AARituPlus2", "AARituPlus2")]
-        [InlineData("ThamesM", "ThamesM")]
-        [InlineData("Amita Times Cyr", "Krishna Times Plus")]
+        [TestCase("ScaPalatino", "ScaGauda")]
+        [TestCase("SDW", "SDW-Surekh")]
+        [TestCase("KALAKAR", "KALAKAR1")]
+        [TestCase("AARituPlus2", "AARituPlus2")]
+        [TestCase("ThamesM", "ThamesM")]
+        [TestCase("Amita Times Cyr", "Krishna Times Plus")]
         public void ShouldReturnSameMapping(string name1, string name2)
         {
-            Assert.Same(MappingManager.GetFontToUnicodeMapping(name1), MappingManager.GetFontToUnicodeMapping(name2));
+            Assert.AreSame(MappingManager.GetFontToUnicodeMapping(name1), MappingManager.GetFontToUnicodeMapping(name2));
         }
 
-        [Theory]
-        [InlineData("Another")]
-        [InlineData("NonSupported")]
+        [TestCase("Another")]
+        [TestCase("NonSupported")]
         public void ShouldThrowExceptionForNonSupportedFont(string name)
         {
             Assert.Throws<FileNotFoundException>(() => MappingManager.GetFontToUnicodeMapping(name));
         }
 
-        [Theory]
-        [MemberData(nameof(FontTestDataProvider.FontNamesForConversionToUnicode), MemberType = typeof(FontTestDataProvider))]
+        [TestCaseSource(typeof(FontTestDataProvider), nameof(FontTestDataProvider.FontNamesForConversionToUnicode))]
         public void ShouldReturnFontToUnicodeMapping(string fontName)
         {
             Assert.NotNull(MappingManager.GetFontToUnicodeMapping(fontName));
         }
 
-        [Theory]
-        [MemberData(nameof(FontTestDataProvider.FontNamesForConversionFromUnicode), MemberType = typeof(FontTestDataProvider))]
+        [TestCaseSource(typeof(FontTestDataProvider), nameof(FontTestDataProvider.FontNamesForConversionFromUnicode))]
         public void ShouldReturnUnicodeToFontMapping(string fontName)
         {
             Assert.NotNull(MappingManager.GetUnicodeToFontMapping(fontName));
         }
 
-        [Fact]
+        [Test]
         public void ShouldReturnTranslitMappings()
         {
             Assert.NotNull(MappingManager.DevanagariToLatin);

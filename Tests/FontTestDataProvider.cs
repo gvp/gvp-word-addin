@@ -1,8 +1,11 @@
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using Mvp.Xml.XInclude;
+using NUnit.Framework;
 
 namespace GaudiaVedantaPublications.Tests
 {
@@ -55,14 +58,20 @@ namespace GaudiaVedantaPublications.Tests
             }
         }
 
-        public static IEnumerable<object[]> GetFontTestData(FontConversionDirection direction)
+        public static IEnumerable GetFontTestData(FontConversionDirection direction)
         {
             return
                 from fontName in GetFontNames(direction)
                 let set = LoadTestSet(fontName)
                 from @case in set.Descendants("case")
                 orderby fontName
-                select new object[] { @case.Attribute("unicode")?.Value, @case.Attribute("ansi")?.Value, fontName }
+                let unicode = @case.Attribute("unicode")?.Value.Normalize(NormalizationForm.FormC)
+                let ansi = @case.Attribute("ansi")?.Value.Normalize(NormalizationForm.FormC)
+                let input = direction == FontConversionDirection.FontToUnicode ? ansi : unicode
+                let output = direction == FontConversionDirection.FontToUnicode ? unicode : ansi
+                select new TestCaseData(fontName, input)
+                    .Returns(output)
+                    .SetProperty("Font Name", fontName)
                 ;
         }
 
