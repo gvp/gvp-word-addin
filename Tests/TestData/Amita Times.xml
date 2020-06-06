@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<set>
+  <case ansi="çréçréguru-gauräìgau jayataù" unicode="śrīśrīguru-gaurāṅgau jayataḥ" />
+  <case ansi="Ï" unicode="Ñ" />
+  <case ansi="Î" unicode="Ã" />
+  <case ansi="¾" unicode="[tilak]" />
+  <case ansi="·" unicode="[lotus]" />
+  <case ansi="Í" unicode="ī̃" />
+  <case ansi="é" unicode="ī" />
+</set>

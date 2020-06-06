@@ -31,36 +31,14 @@ namespace GaudiaVedantaPublications.Tests
         }
 
         [Theory]
-        [InlineData("AARituPlus2")]
-        [InlineData("AARituPlus2-Numbers")]
-        [InlineData("AARitu")]
-        [InlineData("AAVishal")]
-        [InlineData("Amita Times Cyr")]
-        [InlineData("ThamesM")]
-        [InlineData("ThamesSanskrit")]
-        [InlineData("Amita Times")]
-        [InlineData("Balaram")]
-        [InlineData("DVRoman-TTSurekh")]
-        [InlineData("GVPalatino")]
-        [InlineData("Rama Garamond Plus")]
-        [InlineData("ScaSeries")]
-        [InlineData("SD1-TTSurekh")]
+        [MemberData(nameof(FontTestDataProvider.FontNamesForConversionToUnicode), MemberType = typeof(FontTestDataProvider))]
         public void ShouldReturnFontToUnicodeMapping(string fontName)
         {
             Assert.NotNull(MappingManager.GetFontToUnicodeMapping(fontName));
         }
 
         [Theory]
-        [InlineData("Amita Times Cyr")]
-        [InlineData("ThamesM")]
-        [InlineData("ThamesSanskrit")]
-        [InlineData("Amita Times")]
-        [InlineData("Balaram")]
-        [InlineData("DVRoman-TTSurekh")]
-        [InlineData("GVPalatino")]
-        [InlineData("Rama Garamond Plus")]
-        [InlineData("ScaSeries")]
-        [InlineData("SD1-TTSurekh")]
+        [MemberData(nameof(FontTestDataProvider.FontNamesForConversionFromUnicode), MemberType = typeof(FontTestDataProvider))]
         public void ShouldReturnUnicodeToFontMapping(string fontName)
         {
             Assert.NotNull(MappingManager.GetUnicodeToFontMapping(fontName));

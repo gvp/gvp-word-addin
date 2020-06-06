@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<set xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="AA.Common.xml" />
+  <xi:include href="AA.Common.Numbers.xml" />
+  <case ansi="›" unicode="&#x2039;" />
+  <case ansi="œ" unicode="&#x203A;" />
+  <case ansi="¹" unicode="&#x2605;" />
+  <case ansi="õ" unicode="&#xFD5;" />
+  <case ansi="ø" unicode="%" />
+  <case ansi='&#x007F;' unicode="&#x2715;" />
+  <case ansi="Õ" unicode="ञ्ज्" />
+</set>

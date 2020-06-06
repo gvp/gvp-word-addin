@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<set>
+  <case ansi="iрb-iука{ увfча" unicode="ш́рӣ-ш́уках̣ ува̄ча" />
+  <case ansi="iрb iрb гуру-гаурfyга джаята{" unicode="ш́рӣ ш́рӣ гуру-гаура̄н̇га джаятах̣" />
+  <case ansi="виджufйа" unicode="виджн̃а̄йа" />
+  <case ansi="сарва-бхeта-хhдайаv" unicode="сарва-бхӯта-хр̣дайам̇" />
+  <case ansi="g" unicode="р̣̄" />
+  <case ansi="u" unicode="н̃" />
+  <case ansi="z" unicode="у̃" />
+</set>

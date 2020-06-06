@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<set>
+  <case ansi="0123456789" unicode="0123456789" />
+  <case ansi="ƒ„…†‡ˆ‰Š‹Œ" unicode="१२३४५६७८९०" />
+</set>

@@ -40,11 +40,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Mvp.Xml, Version=2.3.0.0, Culture=neutral, PublicKeyToken=6ead800d778c9b9f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mvp.Xml.2.3.0\lib\net20\Mvp.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <HintPath>..\packages\xunit.abstractions.2.0.2\lib\net35\xunit.abstractions.dll</HintPath>
       <Private>True</Private>
@@ -75,11 +76,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MappingTests.cs" />
+    <Compile Include="FontConversionTests.cs" />
+    <Compile Include="FontTestDataProvider.cs" />
+    <Compile Include="TransliterationTests.cs" />
     <Compile Include="MappingManagerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrivateUseAreaTests.cs" />
-    <Compile Include="TestDataLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WordAddIn\GVPAddIn.csproj">
@@ -88,11 +90,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FontMappingTestData.json" />
     <None Include="packages.config" />
-    <None Include="xunit.runner.json">
+    <EmbeddedResource Include="TestData\AA.Common.Numbers.xml" />
+    <EmbeddedResource Include="TestData\AA.Common.xml" />
+    <EmbeddedResource Include="TestData\AARitu.xml" />
+    <EmbeddedResource Include="TestData\AARituPlus2-Numbers.xml" />
+    <EmbeddedResource Include="TestData\AARituPlus2.Common.xml" />
+    <EmbeddedResource Include="TestData\AARituPlus2.xml" />
+    <EmbeddedResource Include="TestData\AAVishal.xml" />
+    <EmbeddedResource Include="TestData\Amita Times Cyr.xml" />
+    <EmbeddedResource Include="TestData\Amita Times.xml" />
+    <EmbeddedResource Include="TestData\Balaram.xml" />
+    <EmbeddedResource Include="TestData\DVRoman-TTSurekh.xml" />
+    <EmbeddedResource Include="TestData\GVPalatino.xml" />
+    <EmbeddedResource Include="TestData\Rama Garamond Plus.xml" />
+    <EmbeddedResource Include="TestData\ScaSeries.xml" />
+    <EmbeddedResource Include="TestData\SD1-TTSurekh.xml" />
+    <EmbeddedResource Include="TestData\ThamesM.xml" />
+    <EmbeddedResource Include="TestData\ThamesSanskrit.xml" />
+    <Content Include="xunit.runner.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
