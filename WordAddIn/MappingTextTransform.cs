@@ -5,38 +5,11 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications
 {
-    public class MappingTextTransform : ITextTransform
+    public abstract class MappingTextTransform : ITextTransform
     {
-        /// <summary>
-        /// This contructor is used with descendant classes where GetMappingForRange is overriden.
-        /// </summary>
-        protected MappingTextTransform()
-        {
-        }
+        protected abstract ITextMapping GetMappingForRange(Word.Range chunk);
 
-        /// <summary>
-        /// This constructor is used for external instantiating the transform with a single map.
-        /// </summary>
-        /// <param name="map">A map that is used for all transformations.</param>
-        public MappingTextTransform(ITextMapping mapping)
-        {
-            this.mapping = mapping;
-        }
-
-        private readonly ITextMapping mapping;
-
-        protected virtual ITextMapping GetMappingForRange(Word.Range chunk)
-        {
-            if (mapping == null)
-                throw new InvalidOperationException("Mapping is not set");
-
-            return mapping;
-        }
-
-        protected virtual string GetNewFont(Word.Range range)
-        {
-            return null;
-        }
+        protected virtual string GetNewFont(Word.Range range) => null;
 
         public virtual void Apply(Word.Range range)
         {

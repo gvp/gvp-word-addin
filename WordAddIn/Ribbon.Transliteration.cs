@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using Microsoft.Office.Core;
 
 namespace GaudiaVedantaPublications
@@ -8,21 +7,21 @@ namespace GaudiaVedantaPublications
     {
         public void Transliterate(IRibbonControl control)
         {
-            Globals.ThisAddIn.TransformText(GetTransliterationTransforms(control).ToArray());
+            Globals.ThisAddIn.TransformText(new ToUnicodeTransform(), GetTransliterationTransform(control));
         }
 
-        private IEnumerable<ITextTransform> GetTransliterationTransforms(IRibbonControl control)
+        private ITextTransform GetTransliterationTransform(IRibbonControl control)
         {
-            yield return new ToUnicodeTransform();
             switch (control.Id)
             {
                 case "Devanagari2Latin":
-                    yield return new MappingTextTransform(MappingManager.DevanagariToLatin);
-                    break;
+                    return new FixedMappingTextTransform(MappingManager.DevanagariToLatin);
 
                 case "Latin2Cyrillic":
-                    yield return new MappingTextTransform(MappingManager.LatinToCyrillic);
-                    break;
+                    return new FixedMappingTextTransform(MappingManager.LatinToCyrillic);
+
+                default:
+                    throw new ArgumentException(string.Format("Unsupported transliteration: {0}", control.Id), nameof(control));
             }
         }
     }

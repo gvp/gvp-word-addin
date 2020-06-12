@@ -3,7 +3,10 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications
 {
-    class FromUnicodeTransform : MappingTextTransform
+    /// <summary>
+    /// Converts text from Unicode to the specified non-unicode font
+    /// </summary>
+    internal class FromUnicodeTransform : FixedMappingTextTransform
     {
         private readonly String fontName;
 

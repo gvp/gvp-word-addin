@@ -220,6 +220,7 @@
   <ItemGroup>
     <Compile Include="CombiningTransform.cs" />
     <Compile Include="Extensions.Font.cs" />
+    <Compile Include="FixedMappingTextTransform.cs" />
     <Compile Include="Mapping\EmbeddedResourcesXmlResolver.cs" />
     <Compile Include="Mapping\ITextMapping.cs" />
     <Compile Include="Mapping\MultiMapping.cs" />
