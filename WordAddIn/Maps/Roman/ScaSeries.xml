@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <entry from='&#x00A0;' to='Ö' />
+  <!--<entry from='&#x00A0;' to='Ö' comment='Exists in the font, but Word still shows it as NBSP. Thus this entry is disabled.' />-->
   <entry from='&#x00A1;' to='ï' />
   <entry from='&#x00A4;' to='ß' />
   <entry from='&#x00AA;' to='à' />
