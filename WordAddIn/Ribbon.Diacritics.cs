@@ -61,8 +61,8 @@ namespace GaudiaVedantaPublications
             selection.StartOf(WdUnits.wdCharacter, WdMovementType.wdExtend);
             var fontName = selection.Font.Name;
             selection.InsertAfter(mark);
-            if (CyrillicFontNames.Contains(fontName) || RomanFontNames.Contains(fontName))
-                ConvertFont(fontName);
+            if (MappingManager.SupportsFont(fontName))
+                ConvertFromUnicode(fontName);
             selection.EndOf(WdUnits.wdCharacter);
         }
     }

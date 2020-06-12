@@ -7,9 +7,6 @@ namespace GaudiaVedantaPublications
 {
     partial class Ribbon
     {
-        private static readonly string[] CyrillicFontNames = { "ThamesM" };
-        private static readonly string[] RomanFontNames = { "ScaTimes", "Rama Garamond Plus", "GVPalatino" };
-
         public string GetFontConversionLabel(IRibbonControl control)
         {
             /// For specific font we extract the font name from the tag.

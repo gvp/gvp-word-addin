@@ -4,7 +4,6 @@ using System.Linq;
 using System.Runtime.Caching;
 using System.Xml;
 using System.Xml.Linq;
-using System.Xml.Schema;
 using Mvp.Xml.XInclude;
 
 namespace GaudiaVedantaPublications
@@ -20,7 +19,10 @@ namespace GaudiaVedantaPublications
 
         public static ITextMapping GetFontToUnicodeMapping(string fontName)
         {
-            return GetMapping(GeneralizeFontName(fontName));
+            var generalizedFontName = GeneralizeFontName(fontName);
+            return SupportedFontNames.Contains(generalizedFontName)
+                ? GetMapping(generalizedFontName)
+                : null;
         }
 
         public static ITextMapping GetUnicodeToFontMapping(string fontName)
@@ -47,7 +49,15 @@ namespace GaudiaVedantaPublications
                 ).DefaultIfEmpty(fontName).First();
         }
 
-        public static readonly string[] DevanagariFonts = { "AARitu", "AARituPlus2", "AARituPlus2-Numbers", "AAVishal", "KALAKAR", "SDW" };
+        private static readonly string[] CyrillicFontNames = { "ThamesM", "Amita Times Cyr", "ThamesSanskrit" };
+        private static readonly string[] RomanFontNames = { "ScaSeries", "Rama Garamond Plus", "GVPalatino", "Amita Times", "Balaram", "DVRoman-TTSurekh", "SD1-TTSurekh" };
+        private static readonly string[] DevanagariFonts = { "AARitu", "AARituPlus2", "AARituPlus2-Numbers", "AAVishal", "KALAKAR", "SDW" };
+        private static readonly IEnumerable<string> SupportedFontNames = CyrillicFontNames.Union(RomanFontNames).Union(DevanagariFonts);
+
+        public static bool SupportsFont(string fontName)
+        {
+            return SupportedFontNames.Contains(GeneralizeFontName(fontName));
+        }
 
         private static readonly MemoryCache cache = new MemoryCache("Mapping Cache");
 

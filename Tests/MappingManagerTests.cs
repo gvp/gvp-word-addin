@@ -1,5 +1,4 @@
-﻿using System.IO;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace GaudiaVedantaPublications.Tests
 {
@@ -20,9 +19,10 @@ namespace GaudiaVedantaPublications.Tests
 
         [TestCase("Another")]
         [TestCase("NonSupported")]
-        public void ShouldThrowExceptionForNonSupportedFont(string name)
+        [TestCase("Arial Unicode MS")]
+        public void ShouldReturnNullForNonSupportedFont(string name)
         {
-            Assert.Throws<FileNotFoundException>(() => MappingManager.GetFontToUnicodeMapping(name));
+            Assert.IsNull(MappingManager.GetFontToUnicodeMapping(name));
         }
 
         [TestCaseSource(typeof(FontTestDataProvider), nameof(FontTestDataProvider.FontNamesForConversionToUnicode))]
