@@ -41,14 +41,14 @@ namespace GaudiaVedantaPublications
             Globals.ThisAddIn.TransformText(new ToUnicodeTransform());
         }
 
-        public void ConvertFont(IRibbonControl control)
+        public void ConvertFromUnicode(IRibbonControl control)
         {
             if (!String.IsNullOrWhiteSpace(control.Tag))
                 OperationalFontName = control.Tag;
-            ConvertFont(OperationalFontName);
+            ConvertFromUnicode(OperationalFontName);
         }
 
-        private static void ConvertFont(String fontName)
+        private static void ConvertFromUnicode(String fontName)
         {
             Globals.ThisAddIn.TransformText(new ToUnicodeTransform(), new FromUnicodeTransform(fontName));
         }
