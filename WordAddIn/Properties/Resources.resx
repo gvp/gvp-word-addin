@@ -147,15 +147,21 @@
 Currently the following non-standard fonts are supported to convert to.
 
 Devanagari:
-Not supported yet. Coming soon.
+Not supported.
 
 Roman:
-Sca-series
-Rama Garamond Plus
+Amita Times
+Balaram
+DVRoman-TTSurekh
 GVPalatino
+Rama Garamond Plus
+Sca-series
+SD1-TTSurekh
 
 Cyrillic:
-ThamesM</value>
+Amita Times Cyr
+ThamesM
+ThamesSanskrit</value>
   </data>
   <data name="ConvertToUnicode_Label" xml:space="preserve">
     <value>Convert to Unicode</value>
@@ -170,7 +176,8 @@ Currently the following non-standard fonts are supported to convert from.
 
 Devanagari:
 AARitu
-AARituPlus2
+AARituPlus2 and AARituPlus2-Numbers
+AAVishal
 Kalakar
 SDW-series
 

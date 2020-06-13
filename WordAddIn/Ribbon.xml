@@ -34,22 +34,6 @@
             <menu idQ="gvp:FontsMenu"
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   >
-              <menuSeparator idQ="gvp:CyrillicFontsSeparator" getTitle="GetTitle" />
-              <button id="ConvertToAmitaTimesCyr"
-                      onAction="ConvertFromUnicode"
-                      tag="Amita Times Cyr"
-                      getLabel="GetFontConversionLabel"
-                      />
-              <button id="ConvertToThamesM"
-                      onAction="ConvertFromUnicode"
-                      tag="ThamesM"
-                      getLabel="GetFontConversionLabel"
-                      />
-              <button id="ConvertToThamesSanskrit"
-                      onAction="ConvertFromUnicode"
-                      tag="ThamesSanskrit"
-                      getLabel="GetFontConversionLabel"
-                      />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
               <button id="ConvertToAmitaTimes"
                       onAction="ConvertFromUnicode"
@@ -136,6 +120,22 @@
               <button id="ConvertToSD1TTSurekh"
                       onAction="ConvertFromUnicode"
                       tag="SD1-TTSurekh"
+                      getLabel="GetFontConversionLabel"
+                      />
+              <menuSeparator idQ="gvp:CyrillicFontsSeparator" getTitle="GetTitle" />
+              <button id="ConvertToAmitaTimesCyr"
+                      onAction="ConvertFromUnicode"
+                      tag="Amita Times Cyr"
+                      getLabel="GetFontConversionLabel"
+                      />
+              <button id="ConvertToThamesM"
+                      onAction="ConvertFromUnicode"
+                      tag="ThamesM"
+                      getLabel="GetFontConversionLabel"
+                      />
+              <button id="ConvertToThamesSanskrit"
+                      onAction="ConvertFromUnicode"
+                      tag="ThamesSanskrit"
                       getLabel="GetFontConversionLabel"
                       />
               <menuSeparator idQ="gvp:OperationalFontSeparator" getTitle="GetTitle" />

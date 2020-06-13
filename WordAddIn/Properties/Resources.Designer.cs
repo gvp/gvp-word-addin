@@ -138,15 +138,21 @@ namespace GaudiaVedantaPublications.Properties {
         ///Currently the following non-standard fonts are supported to convert to.
         ///
         ///Devanagari:
-        ///Not supported yet. Coming soon.
+        ///Not supported.
         ///
         ///Roman:
-        ///Sca-series
-        ///Rama Garamond Plus
+        ///Amita Times
+        ///Balaram
+        ///DVRoman-TTSurekh
         ///GVPalatino
+        ///Rama Garamond Plus
+        ///Sca-series
+        ///SD1-TTSurekh
         ///
         ///Cyrillic:
-        ///ThamesM.
+        ///Amita Times Cyr
+        ///ThamesM
+        ///ThamesSanskrit.
         /// </summary>
         internal static string ConvertToOperationalFont_Supertip {
             get {
@@ -179,7 +185,8 @@ namespace GaudiaVedantaPublications.Properties {
         ///
         ///Devanagari:
         ///AARitu
-        ///AARituPlus2
+        ///AARituPlus2 and AARituPlus2-Numbers
+        ///AAVishal
         ///Kalakar
         ///SDW-series
         ///
