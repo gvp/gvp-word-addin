@@ -8,9 +8,9 @@ namespace GaudiaVedantaPublications
     /// </summary>
     internal class FromUnicodeTransform : FixedMappingTextTransform
     {
-        private readonly String fontName;
+        private readonly string fontName;
 
-        public FromUnicodeTransform(String fontName)
+        public FromUnicodeTransform(string fontName)
             : base(MappingManager.GetUnicodeToFontMapping(fontName))
         {
             if (fontName == null)

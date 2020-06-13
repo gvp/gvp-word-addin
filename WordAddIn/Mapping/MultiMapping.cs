@@ -1,6 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Collections.Generic;
 
 namespace GaudiaVedantaPublications
 {
@@ -16,11 +15,7 @@ namespace GaudiaVedantaPublications
             this.mappings = mappings;
         }
 
-        public ITextMapping Inverted
-        {
-            get
-            {
-                return new MultiMapping(
+        public ITextMapping Inverted => new MultiMapping(
                     (
                     from map in mappings
                     let inverted = map.Inverted
@@ -28,8 +23,6 @@ namespace GaudiaVedantaPublications
                     select inverted
                     ).Reverse()
                 );
-            }
-        }
 
         public string Apply(string text)
         {

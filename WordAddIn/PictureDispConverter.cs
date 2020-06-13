@@ -15,7 +15,7 @@ namespace GaudiaVedantaPublications
                 ref Guid iid,
                 [MarshalAs(UnmanagedType.Bool)] bool fOwn);
 
-        static Guid iPictureDispGuid = typeof(stdole.IPictureDisp).GUID;
+        private static Guid iPictureDispGuid = typeof(stdole.IPictureDisp).GUID;
 
         private static class PICTDESC
         {
@@ -39,7 +39,7 @@ namespace GaudiaVedantaPublications
 
                 internal Icon(System.Drawing.Icon icon)
                 {
-                    this.hicon = icon.ToBitmap().GetHicon();
+                    hicon = icon.ToBitmap().GetHicon();
                 }
             }
 
@@ -55,14 +55,14 @@ namespace GaudiaVedantaPublications
 
                 internal Bitmap(System.Drawing.Bitmap bitmap)
                 {
-                    this.hbitmap = bitmap.GetHbitmap();
+                    hbitmap = bitmap.GetHbitmap();
                 }
             }
         }
 
         public static stdole.IPictureDisp ToIPictureDisp(System.Drawing.Icon icon)
         {
-            PICTDESC.Icon pictIcon = new PICTDESC.Icon(icon);
+            var pictIcon = new PICTDESC.Icon(icon);
 
             return OleCreatePictureIndirect(
                 pictIcon, ref iPictureDispGuid, true);
@@ -70,7 +70,7 @@ namespace GaudiaVedantaPublications
 
         public static stdole.IPictureDisp ToIPictureDisp(System.Drawing.Bitmap bmp)
         {
-            PICTDESC.Bitmap pictBmp = new PICTDESC.Bitmap(bmp);
+            var pictBmp = new PICTDESC.Bitmap(bmp);
 
             return OleCreatePictureIndirect(pictBmp, ref iPictureDispGuid, true);
         }

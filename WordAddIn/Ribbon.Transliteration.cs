@@ -3,7 +3,7 @@ using Microsoft.Office.Core;
 
 namespace GaudiaVedantaPublications
 {
-    partial class Ribbon
+    public partial class Ribbon
     {
         public void Transliterate(IRibbonControl control)
         {

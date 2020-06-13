@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -19,7 +18,7 @@ namespace GaudiaVedantaPublications
         public static char PrivateUseAreaToAnsi(this char c)
         {
             /// If the char is in PUA (0xE000-0xF8FF), then we're taking only least significant byte.
-            return Char.GetUnicodeCategory(c) == UnicodeCategory.PrivateUse ? (char)((byte)c) : c;
+            return char.GetUnicodeCategory(c) == UnicodeCategory.PrivateUse ? (char)((byte)c) : c;
         }
 
         public static string PrivateUseAreaToAnsi(this string source)

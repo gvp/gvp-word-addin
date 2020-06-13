@@ -1,12 +1,11 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Microsoft.Office.Core;
 using Microsoft.Office.Interop.Word;
 using stdole;
 
 namespace GaudiaVedantaPublications
 {
-    partial class Ribbon
+    public partial class Ribbon
     {
         private struct CombiningMark
         {
@@ -37,7 +36,7 @@ namespace GaudiaVedantaPublications
 
         public IPictureDisp GetDiacriticsImage(IRibbonControl control, int index)
         {
-            return LoadImage(String.Format("{0}.png", combiningMarks[index].Id));
+            return LoadImage(string.Format("{0}.png", combiningMarks[index].Id));
         }
 
         public string GetDiacriticsSupertip(IRibbonControl control)

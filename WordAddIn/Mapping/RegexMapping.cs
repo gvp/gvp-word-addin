@@ -18,17 +18,11 @@ namespace GaudiaVedantaPublications
         /// <param name="replacement">A string to replace with.</param>
         public RegexMapping(string pattern, string replacement)
         {
-            this.regex = new Regex(pattern, RegexOptions.Compiled);
+            regex = new Regex(pattern, RegexOptions.Compiled);
             this.replacement = replacement;
         }
 
-        public ITextMapping Inverted
-        {
-            get
-            {
-                throw new InvalidOperationException("Cannot invert regex-based map");
-            }
-        }
+        public ITextMapping Inverted => throw new InvalidOperationException("Cannot invert regex-based map");
 
         public string Apply(string text)
         {
@@ -45,7 +39,7 @@ namespace GaudiaVedantaPublications
 
         public override string ToString()
         {
-            return String.Format("'{0}' → '{1}'", regex, replacement);
+            return string.Format("'{0}' → '{1}'", regex, replacement);
         }
     }
 }

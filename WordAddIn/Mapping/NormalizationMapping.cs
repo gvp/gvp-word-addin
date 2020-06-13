@@ -12,23 +12,14 @@ namespace GaudiaVedantaPublications
 
         public NormalizationMapping(ITextMapping innerMapping)
         {
-            if (innerMapping == null)
-                throw new ArgumentNullException("innerMapping");
-
-            this.innerMapping = innerMapping;
+            this.innerMapping = innerMapping ?? throw new ArgumentNullException("innerMapping");
         }
 
-        public ITextMapping Inverted
-        {
-            get
-            {
-                return new NormalizationMapping(innerMapping.Inverted);
-            }
-        }
+        public ITextMapping Inverted => new NormalizationMapping(innerMapping.Inverted);
 
         public string Apply(string text)
         {
-            return 
+            return
                 innerMapping.Apply(
                     text.Normalize(System.Text.NormalizationForm.FormC).PrivateUseAreaToAnsi()
                 ).Normalize(System.Text.NormalizationForm.FormC);

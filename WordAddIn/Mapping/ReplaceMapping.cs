@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GaudiaVedantaPublications
+﻿namespace GaudiaVedantaPublications
 {
     /// <summary>
     /// Mapping that uses <see cref="string.Replace"/> method.
@@ -20,13 +14,7 @@ namespace GaudiaVedantaPublications
             this.to = to;
         }
 
-        public ITextMapping Inverted
-        {
-            get
-            {
-                return new ReplaceMapping(to, from);
-            }
-        }
+        public ITextMapping Inverted => new ReplaceMapping(to, from);
 
         public string Apply(string text)
         {
@@ -43,7 +31,7 @@ namespace GaudiaVedantaPublications
 
         public override string ToString()
         {
-            return String.Format("'{0}' → '{1}'", from, to);
+            return string.Format("'{0}' → '{1}'", from, to);
         }
     }
 }

@@ -3,7 +3,7 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace GaudiaVedantaPublications
 {
-    class CombiningTransform : ITextTransform
+    internal class CombiningTransform : ITextTransform
     {
         private readonly IEnumerable<ITextTransform> transforms;
 

@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Office.Core;
+﻿using Microsoft.Office.Core;
 
 namespace GaudiaVedantaPublications
 {
-    partial class Ribbon
+    public partial class Ribbon
     {
         public string GetFontConversionLabel(IRibbonControl control)
         {
             /// For specific font we extract the font name from the tag.
-            if (!String.IsNullOrWhiteSpace(control.Tag))
+            if (!string.IsNullOrWhiteSpace(control.Tag))
                 return GetFontConversionLabel(control.Tag);
 
             /// For default button we extract the font name from OperationalFontName setting.
-            if (!String.IsNullOrWhiteSpace(OperationalFontName))
+            if (!string.IsNullOrWhiteSpace(OperationalFontName))
                 return GetFontConversionLabel(OperationalFontName);
 
             /// If operational font is not yet set, we show general title.
@@ -23,7 +20,7 @@ namespace GaudiaVedantaPublications
 
         public bool GetOperationalFontIsSet(IRibbonControl control)
         {
-            return !String.IsNullOrWhiteSpace(OperationalFontName);
+            return !string.IsNullOrWhiteSpace(OperationalFontName);
         }
 
         public void ClearOperationalFont(IRibbonControl control)
@@ -31,9 +28,9 @@ namespace GaudiaVedantaPublications
             OperationalFontName = null;
         }
 
-        private string GetFontConversionLabel(String fontName)
+        private string GetFontConversionLabel(string fontName)
         {
-            return String.Format(Properties.Resources.ConvertToFont_Label, fontName);
+            return string.Format(Properties.Resources.ConvertToFont_Label, fontName);
         }
 
         public void ConvertToUnicode(IRibbonControl conrtol)
@@ -43,12 +40,12 @@ namespace GaudiaVedantaPublications
 
         public void ConvertFromUnicode(IRibbonControl control)
         {
-            if (!String.IsNullOrWhiteSpace(control.Tag))
+            if (!string.IsNullOrWhiteSpace(control.Tag))
                 OperationalFontName = control.Tag;
             ConvertFromUnicode(OperationalFontName);
         }
 
-        private static void ConvertFromUnicode(String fontName)
+        private static void ConvertFromUnicode(string fontName)
         {
             Globals.ThisAddIn.TransformText(new ToUnicodeTransform(), new FromUnicodeTransform(fontName));
         }

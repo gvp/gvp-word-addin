@@ -1,5 +1,4 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 using Microsoft.Office.Core;
 using stdole;
 using Office = Microsoft.Office.Core;
@@ -25,12 +24,12 @@ namespace GaudiaVedantaPublications
 
         public void Ribbon_Load(Office.IRibbonUI ribbonUI)
         {
-            this.ribbon = ribbonUI;
+            ribbon = ribbonUI;
         }
 
         public IPictureDisp LoadImage(string imageId)
         {
-            var image = EmbeddedResourceManager.GetEmbeddedImageResource(String.Format("Images.{0}", imageId));
+            var image = EmbeddedResourceManager.GetEmbeddedImageResource(string.Format("Images.{0}", imageId));
             if (image == null)
                 return null;
             return PictureDispConverter.ToIPictureDisp(image);
@@ -58,7 +57,7 @@ namespace GaudiaVedantaPublications
 
         private static string GetResourceString(string id, string attribute)
         {
-            return Properties.Resources.ResourceManager.GetString(String.Format("{0}_{1}", id, attribute));
+            return Properties.Resources.ResourceManager.GetString(string.Format("{0}_{1}", id, attribute));
         }
 
         public bool GetDebugMode(IRibbonControl control)
