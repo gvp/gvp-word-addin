@@ -118,143 +118,143 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AcuteAccentButton_Label" xml:space="preserve">
-    <value>Acute accent</value>
+    <value>Акут ударение</value>
   </data>
   <data name="CandrabinduButton_Label" xml:space="preserve">
-    <value>Candrabindu</value>
+    <value>Чандрабинду</value>
   </data>
   <data name="ClearOperationalFont_Label" xml:space="preserve">
-    <value>Clear selected font</value>
+    <value>Отменить выбор шрифта</value>
   </data>
   <data name="ClearOperationalFont_Screentip" xml:space="preserve">
-    <value>Clear previously selected font</value>
+    <value>Отменить выбор ранее использованного шрифта</value>
   </data>
   <data name="ClearOperationalFont_Supertip" xml:space="preserve">
-    <value>This command clears the selection of previously used non-unicode font.</value>
+    <value>Эта команда сбрасывает выбор ранее использованного нестандартного шрифта.</value>
   </data>
   <data name="ConvertToFont_Label" xml:space="preserve">
-    <value>Convert to {0} font</value>
+    <value>Преобразовать к шрифту {0}</value>
   </data>
   <data name="ConvertToOperationalFont_Label" xml:space="preserve">
-    <value>Convert to a font</value>
+    <value>Преобразовать к шрифту</value>
   </data>
   <data name="ConvertToOperationalFont_Screentip" xml:space="preserve">
-    <value>Convert to non-standard font with diacritics</value>
+    <value>Преобразовать к нестандартному шрифту с диакритикой</value>
   </data>
   <data name="ConvertToOperationalFont_Supertip" xml:space="preserve">
-    <value>Convert the text so that it would be displayed correctly in selected non-standard font with diacritics.
+    <value>Преобразовать текст так, чтобы он корректно отображался в выбранном нестандартном шрифте с диакритикой.
 
-Currently the following non-standard fonts are supported to convert to.
+Пребразование возможно к следующим нестандартным шрифтам.
 
-Devanagari:
-Not supported yet. Coming soon.
+Деванагари:
+Пока не поддерживается, функция в разработке.
 
-Roman:
-Sca-series
+Латинские:
+Sca-серия
 Rama Garamond Plus
 GVPalatino
 
-Cyrillic:
+Кириллические:
 ThamesM</value>
   </data>
   <data name="ConvertToUnicode_Label" xml:space="preserve">
-    <value>Convert to Unicode</value>
+    <value>Преобразовать к Юникод</value>
   </data>
   <data name="ConvertToUnicode_Screentip" xml:space="preserve">
-    <value>Convert to Unicode</value>
+    <value>Преобразовать к Юникод</value>
   </data>
   <data name="ConvertToUnicode_Supertip" xml:space="preserve">
-    <value>Convert the text so that it would be displayed correctly in all standard Unicode fonts.
+    <value>Преобразовать текст так, чтобы он корректно отображался во всех стандартных шрифтах Юникод.
 
-Currently the following non-standard fonts are supported to convert from.
+Преобразование возможно из следующих нестандартных шрифтов.
 
-Devanagari:
+Деванагари:
 AARitu
 AARituPlus2
 Kalakar
-SDW-series
+SDW-серия
 
-Roman:
+Латинские:
 Amita Times
 Balaram
 DVRoman-TTSurekh
 GVPalatino
 Rama Garamond Plus
-Sca-series
+Sca-серия
 SD1-TTSurekh
 
-Cyrillic:
+Кириллические:
 Amita Times Cyr
 ThamesM
 ThamesSanskrit</value>
   </data>
   <data name="CyrillicFontsSeparator_Title" xml:space="preserve">
-    <value>Cyrillic fonts</value>
+    <value>Кириллические шрифты</value>
   </data>
   <data name="Devanagari2Latin_Label" xml:space="preserve">
     <value>देवनागरी → Devanāgarī</value>
   </data>
   <data name="Devanagari2Latin_Screentip" xml:space="preserve">
-    <value>Devanagari into Roman transliteration</value>
+    <value>Транслитерация Деванагари в Латиницу</value>
   </data>
   <data name="Devanagari2Latin_Supertip" xml:space="preserve">
-    <value>Transliterate Devanagari script into Roman script.</value>
+    <value>Транслитерировать Деванагари в Латиницу.</value>
   </data>
   <data name="DevanagariFontsSeparator_Title" xml:space="preserve">
-    <value>Devanagari fonts</value>
+    <value>Шрифты Деванагари</value>
   </data>
   <data name="DiacriticsButtons_Supertip" xml:space="preserve">
-    <value>Append this diacritical mark to the previous symbol.</value>
+    <value>Добавить этот диакритический знак к предыдущему символу.</value>
   </data>
   <data name="DiacriticsGallery_Label" xml:space="preserve">
-    <value>Insert diacritical mark</value>
+    <value>Вставить диакритику</value>
   </data>
   <data name="DotAboveButton_Label" xml:space="preserve">
-    <value>Dot above</value>
+    <value>Точка сверху</value>
   </data>
   <data name="DotBelowButton_Label" xml:space="preserve">
-    <value>Dot below</value>
+    <value>Точка снизу</value>
   </data>
   <data name="FontTransformationUndoRecord" xml:space="preserve">
-    <value>Font transformation</value>
+    <value>Преобразование шрифта</value>
   </data>
   <data name="GroupDiacritics_Label" xml:space="preserve">
-    <value>Diacritical marks</value>
+    <value>Диакритические знаки</value>
   </data>
   <data name="GroupFontConversion_Label" xml:space="preserve">
-    <value>Font conversion</value>
+    <value>Преобразование шрифта</value>
   </data>
   <data name="Latin2Cyrillic_Label" xml:space="preserve">
     <value>Devanāgarī → Девана̄гарӣ</value>
   </data>
   <data name="Latin2Cyrillic_Screentip" xml:space="preserve">
-    <value>Roman into Cyrillic transliteration</value>
+    <value>Транслитерация Латиницы в Кириллицу.</value>
   </data>
   <data name="Latin2Cyrillic_Supertip" xml:space="preserve">
-    <value>Transliterate Roman script into Cyrillic script.</value>
+    <value>Транслитерировать Латиницу в Кириллицу.</value>
   </data>
   <data name="MacronBelowButton_Label" xml:space="preserve">
-    <value>Macron below</value>
+    <value>Макрон снизу</value>
   </data>
   <data name="MacronButton_Label" xml:space="preserve">
-    <value>Macron</value>
+    <value>Макрон</value>
   </data>
   <data name="OperationalFontSeparator_Title" xml:space="preserve">
-    <value>Operational font</value>
+    <value>Выбранный шрифт</value>
   </data>
   <data name="RomanFontsSeparator_Title" xml:space="preserve">
-    <value>Roman fonts</value>
+    <value>Латинские шрифты</value>
   </data>
   <data name="ScaSeriesMenu_Label" xml:space="preserve">
-    <value>Convert to Sca-fonts</value>
+    <value>Преобразовать к Sca-шрифтам</value>
   </data>
   <data name="TabGVP_Label" xml:space="preserve">
     <value>GVP</value>
   </data>
   <data name="TildeButton_Label" xml:space="preserve">
-    <value>Tilde</value>
+    <value>Тильда</value>
   </data>
   <data name="TransliterationGroup_Label" xml:space="preserve">
-    <value>Transliteration</value>
+    <value>Транслитерация</value>
   </data>
 </root>

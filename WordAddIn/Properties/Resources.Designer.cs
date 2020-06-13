@@ -19,7 +19,7 @@ namespace GaudiaVedantaPublications.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,7 +61,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Акут ударение.
+        ///   Looks up a localized string similar to Acute accent.
         /// </summary>
         internal static string AcuteAccentButton_Label {
             get {
@@ -70,7 +70,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Чандрабинду.
+        ///   Looks up a localized string similar to Candrabindu.
         /// </summary>
         internal static string CandrabinduButton_Label {
             get {
@@ -79,7 +79,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Отменить выбор шрифта.
+        ///   Looks up a localized string similar to Clear selected font.
         /// </summary>
         internal static string ClearOperationalFont_Label {
             get {
@@ -88,7 +88,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Отменить выбор ранее использованного шрифта.
+        ///   Looks up a localized string similar to Clear previously selected font.
         /// </summary>
         internal static string ClearOperationalFont_Screentip {
             get {
@@ -97,7 +97,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Эта команда сбрасывает выбор ранее использованного нестандартного шрифта..
+        ///   Looks up a localized string similar to This command clears the selection of previously used non-unicode font..
         /// </summary>
         internal static string ClearOperationalFont_Supertip {
             get {
@@ -106,7 +106,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать к шрифту {0}.
+        ///   Looks up a localized string similar to Convert to {0} font.
         /// </summary>
         internal static string ConvertToFont_Label {
             get {
@@ -115,7 +115,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать к шрифту.
+        ///   Looks up a localized string similar to Convert to a font.
         /// </summary>
         internal static string ConvertToOperationalFont_Label {
             get {
@@ -124,7 +124,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать к нестандартному шрифту с диакритикой.
+        ///   Looks up a localized string similar to Convert to non-standard font with diacritics.
         /// </summary>
         internal static string ConvertToOperationalFont_Screentip {
             get {
@@ -133,19 +133,19 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать текст так, чтобы он корректно отображался в выбранном нестандартном шрифте с диакритикой.
+        ///   Looks up a localized string similar to Convert the text so that it would be displayed correctly in selected non-standard font with diacritics.
         ///
-        ///Пребразование возможно к следующим нестандартным шрифтам.
+        ///Currently the following non-standard fonts are supported to convert to.
         ///
-        ///Деванагари:
-        ///Пока не поддерживается, функция в разработке.
+        ///Devanagari:
+        ///Not supported yet. Coming soon.
         ///
-        ///Латинские:
-        ///Sca-серия
+        ///Roman:
+        ///Sca-series
         ///Rama Garamond Plus
         ///GVPalatino
         ///
-        ///Кириллические:
+        ///Cyrillic:
         ///ThamesM.
         /// </summary>
         internal static string ConvertToOperationalFont_Supertip {
@@ -155,7 +155,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать к Юникод.
+        ///   Looks up a localized string similar to Convert to Unicode.
         /// </summary>
         internal static string ConvertToUnicode_Label {
             get {
@@ -164,7 +164,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать к Юникод.
+        ///   Looks up a localized string similar to Convert to Unicode.
         /// </summary>
         internal static string ConvertToUnicode_Screentip {
             get {
@@ -173,26 +173,26 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать текст так, чтобы он корректно отображался во всех стандартных шрифтах Юникод.
+        ///   Looks up a localized string similar to Convert the text so that it would be displayed correctly in all standard Unicode fonts.
         ///
-        ///Преобразование возможно из следующих нестандартных шрифтов.
+        ///Currently the following non-standard fonts are supported to convert from.
         ///
-        ///Деванагари:
+        ///Devanagari:
         ///AARitu
         ///AARituPlus2
         ///Kalakar
-        ///SDW-серия
+        ///SDW-series
         ///
-        ///Латинские:
+        ///Roman:
         ///Amita Times
         ///Balaram
         ///DVRoman-TTSurekh
         ///GVPalatino
         ///Rama Garamond Plus
-        ///Sca-серия
+        ///Sca-series
         ///SD1-TTSurekh
         ///
-        ///Кириллические:
+        ///Cyrillic:
         ///Amita Times Cyr
         ///ThamesM
         ///ThamesSanskrit.
@@ -204,7 +204,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Кириллические шрифты.
+        ///   Looks up a localized string similar to Cyrillic fonts.
         /// </summary>
         internal static string CyrillicFontsSeparator_Title {
             get {
@@ -222,7 +222,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Транслитерация Деванагари в Латиницу.
+        ///   Looks up a localized string similar to Devanagari into Roman transliteration.
         /// </summary>
         internal static string Devanagari2Latin_Screentip {
             get {
@@ -231,7 +231,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Транслитерировать Деванагари в Латиницу..
+        ///   Looks up a localized string similar to Transliterate Devanagari script into Roman script..
         /// </summary>
         internal static string Devanagari2Latin_Supertip {
             get {
@@ -240,7 +240,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Шрифты Деванагари.
+        ///   Looks up a localized string similar to Devanagari fonts.
         /// </summary>
         internal static string DevanagariFontsSeparator_Title {
             get {
@@ -249,7 +249,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Добавить этот диакритический знак к предыдущему символу..
+        ///   Looks up a localized string similar to Append this diacritical mark to the previous symbol..
         /// </summary>
         internal static string DiacriticsButtons_Supertip {
             get {
@@ -258,7 +258,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вставить диакритику.
+        ///   Looks up a localized string similar to Insert diacritical mark.
         /// </summary>
         internal static string DiacriticsGallery_Label {
             get {
@@ -267,7 +267,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Точка сверху.
+        ///   Looks up a localized string similar to Dot above.
         /// </summary>
         internal static string DotAboveButton_Label {
             get {
@@ -276,7 +276,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Точка снизу.
+        ///   Looks up a localized string similar to Dot below.
         /// </summary>
         internal static string DotBelowButton_Label {
             get {
@@ -285,7 +285,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразование шрифта.
+        ///   Looks up a localized string similar to Font transformation.
         /// </summary>
         internal static string FontTransformationUndoRecord {
             get {
@@ -294,7 +294,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Диакритические знаки.
+        ///   Looks up a localized string similar to Diacritical marks.
         /// </summary>
         internal static string GroupDiacritics_Label {
             get {
@@ -303,7 +303,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразование шрифта.
+        ///   Looks up a localized string similar to Font conversion.
         /// </summary>
         internal static string GroupFontConversion_Label {
             get {
@@ -321,7 +321,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Транслитерация Латиницы в Кириллицу..
+        ///   Looks up a localized string similar to Roman into Cyrillic transliteration.
         /// </summary>
         internal static string Latin2Cyrillic_Screentip {
             get {
@@ -330,7 +330,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Транслитерировать Латиницу в Кириллицу..
+        ///   Looks up a localized string similar to Transliterate Roman script into Cyrillic script..
         /// </summary>
         internal static string Latin2Cyrillic_Supertip {
             get {
@@ -339,7 +339,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Макрон снизу.
+        ///   Looks up a localized string similar to Macron below.
         /// </summary>
         internal static string MacronBelowButton_Label {
             get {
@@ -348,7 +348,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Макрон.
+        ///   Looks up a localized string similar to Macron.
         /// </summary>
         internal static string MacronButton_Label {
             get {
@@ -357,7 +357,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Выбранный шрифт.
+        ///   Looks up a localized string similar to Operational font.
         /// </summary>
         internal static string OperationalFontSeparator_Title {
             get {
@@ -366,7 +366,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Латинские шрифты.
+        ///   Looks up a localized string similar to Roman fonts.
         /// </summary>
         internal static string RomanFontsSeparator_Title {
             get {
@@ -375,7 +375,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Преобразовать к Sca-шрифтам.
+        ///   Looks up a localized string similar to Convert to Sca-fonts.
         /// </summary>
         internal static string ScaSeriesMenu_Label {
             get {
@@ -393,7 +393,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Тильда.
+        ///   Looks up a localized string similar to Tilde.
         /// </summary>
         internal static string TildeButton_Label {
             get {
@@ -402,7 +402,7 @@ namespace GaudiaVedantaPublications.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Транслитерация.
+        ///   Looks up a localized string similar to Transliteration.
         /// </summary>
         internal static string TransliterationGroup_Label {
             get {
