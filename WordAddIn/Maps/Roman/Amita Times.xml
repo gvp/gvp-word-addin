@@ -1,26 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<map>
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <entry from='&#x00B5;' to='⚬' />
   <entry from='&#x00B7;' to='[lotus]' order='1000' />
   <entry from='&#x00BE;' to='[tilak]' order='1000' />
   <entry from='&#x00BF;' to='⅔' />
   <entry from='&#x00C0;' to='Ṁ' />
-  <entry from='&#x00C1;' to='ē̃' />
-  <entry from='&#x00C2;' to='ō̃' />
+  <entry from='&#x00C1;' to='ē̃' order='3' />
+  <entry from='&#x00C2;' to='ō̃' order='3' />
   <entry from='&#x00C3;' to='ā̃' order='-1' />
   <entry from='&#x00C4;' to='Ā' />
   <entry from='&#x00C5;' to='Ṛ' />
   <entry from='&#x00C7;' to='Ś' />
-  <entry from='&#x00C8;' to='Ṝ' />
+  <entry from='&#x00C8;' to='Ṝ' order='3' />
   <entry from='&#x00C9;' to='Ī' />
   <entry from='&#x00CB;' to='Ṇ' />
   <entry from='&#x00CC;' to='Ṅ' />
-  <entry from='&#x00CD;' to='ī̃' />
+  <entry from='&#x00CD;' to='ī̃' order='3' />
   <entry from='&#x00CE;' to='Ã' />
   <entry from='&#x00CF;' to='Ñ' />
   <entry from='&#x00D1;' to='Ṣ' order='-1' />
   <entry from='&#x00D2;' to='Ḍ' />
-  <entry from='&#x00D3;' to='ū̃' />
+  <entry from='&#x00D3;' to='ū̃' order='3' />
   <entry from='&#x00D6;' to='Ṭ' />
   <entry from='&#x00D8;' to='ī̃' order='-1' />
   <entry from='&#x00D9;' to='Ḥ' />
@@ -34,7 +35,7 @@
   <entry from='&#x00E4;' to='ā' />
   <entry from='&#x00E5;' to='ṛ' />
   <entry from='&#x00E7;' to='ś' />
-  <entry from='&#x00E8;' to='ṝ' />
+  <entry from='&#x00E8;' to='ṝ' order='3' />
   <entry from='&#x00E9;' to='ī' />
   <entry from='&#x00EA;' to='ṙ' />
   <entry from='&#x00EB;' to='ṇ' />
@@ -60,4 +61,4 @@
   <entry from='&#x03BC;' to='⚬' />
   <entry from='&#x2030;' to='•' />
   <entry from='&#x2219;' to='[lotus]' order='999' />
-</map>
+</mapping>

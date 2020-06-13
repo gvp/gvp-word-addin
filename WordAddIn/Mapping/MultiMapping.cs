@@ -4,13 +4,16 @@ using System.Collections.Generic;
 
 namespace GaudiaVedantaPublications
 {
+    /// <summary>
+    /// Combines several mappings and applies them consequently.
+    /// </summary>
     public class MultiMapping : ITextMapping
     {
-        private readonly IEnumerable<ITextMapping> maps;
+        private readonly IEnumerable<ITextMapping> mappings;
 
-        public MultiMapping(IEnumerable<ITextMapping> maps)
+        public MultiMapping(IEnumerable<ITextMapping> mappings)
         {
-            this.maps = maps;
+            this.mappings = mappings;
         }
 
         public ITextMapping Inverted
@@ -19,7 +22,7 @@ namespace GaudiaVedantaPublications
             {
                 return new MultiMapping(
                     (
-                    from map in maps
+                    from map in mappings
                     let inverted = map.Inverted
                     where inverted != null
                     select inverted
@@ -30,7 +33,7 @@ namespace GaudiaVedantaPublications
 
         public string Apply(string text)
         {
-            foreach (var map in maps)
+            foreach (var map in mappings)
             {
                 text = map.Apply(text);
             }

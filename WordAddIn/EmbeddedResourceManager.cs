@@ -28,9 +28,9 @@ namespace GaudiaVedantaPublications
             }
         }
 
-        public static Stream GetEmbeddedResource(String name)
+        public static Stream GetEmbeddedResource(string name, Assembly assembly = null)
         {
-            var assembly = Assembly.GetCallingAssembly();
+            assembly = assembly ?? Assembly.GetCallingAssembly();
             var resourceName = assembly.GetManifestResourceNames().FirstOrDefault(x => x.EndsWith(name));
             if (resourceName == null)
                 return null;

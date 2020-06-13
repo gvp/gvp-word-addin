@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<map fontName="ThamesM">
-  <entry from='&#x0041;' to='а̄̃' />
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <entry from='&#x0041;' to='а̄̃' order='3' />
   <entry from='&#x0042;' to='Ӣ' />
-  <entry from='&#x0043;' to='о̄̃' />
+  <entry from='&#x0043;' to='о̄̃' order='3' />
   <entry from='&#x0044;' to='э̃' />
   <entry from='&#x0045;' to='Ӯ' />
   <entry from='&#x0046;' to='А̄' />
-  <entry from='&#x0047;' to='Р̣̄' />
+  <entry from='&#x0047;' to='Р̣̄' order='3' />
   <entry from='&#x0048;' to='Р̣' />
   <entry from='&#x0049;' to='Ш́' />
   <entry from='&#x004A;' to='о̄' />
@@ -14,7 +15,7 @@
   <entry from='&#x004C;' to='Д̣' />
   <entry from='&#x004E;' to='Т̣' />
   <entry from='&#x004F;' to='Ш̣' />
-  <entry from='&#x0051;' to='ӣ̃' />
+  <entry from='&#x0051;' to='ӣ̃' order='3' />
   <entry from='&#x0052;' to='р̣̄' order='-1' />
   <entry from='&#x0053;' to='н̃' order='-1' />
   <entry from='&#x0054;' to='Н̣' />
@@ -23,14 +24,14 @@
   <entry from='&#x0057;' to='у̃' order='-1' />
   <entry from='&#x0058;' to='Х̣' />
   <entry from='&#x0059;' to='Н̇' />
-  <entry from='&#x005A;' to='ӯ̃' />
+  <entry from='&#x005A;' to='ӯ̃' order='3' />
   <entry from='&#x0061;' to='а̃' />
   <entry from='&#x0062;' to='ӣ' />
   <entry from='&#x0063;' to='е̃' />
   <entry from='&#x0064;' to='е̄' />
   <entry from='&#x0065;' to='ӯ' />
   <entry from='&#x0066;' to='а̄' />
-  <entry from='&#x0067;' to='р̣̄' />
+  <entry from='&#x0067;' to='р̣̄' order='3' />
   <entry from='&#x0068;' to='р̣' />
   <entry from='&#x0069;' to='ш́' />
   <entry from='&#x006A;' to='о̃' />
@@ -46,4 +47,4 @@
   <entry from='&#x0079;' to='н̇' />
   <entry from='&#x007A;' to='у̃' />
   <entry from='&#x007B;' to='х̣' />
-</map>
+</mapping>

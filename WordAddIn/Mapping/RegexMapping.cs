@@ -3,6 +3,9 @@ using System.Text.RegularExpressions;
 
 namespace GaudiaVedantaPublications
 {
+    /// <summary>
+    /// Mapping that uses <see cref="Regex.Replace"/> method.
+    /// </summary>
     public class RegexMapping : ITextMapping
     {
         protected readonly Regex regex;

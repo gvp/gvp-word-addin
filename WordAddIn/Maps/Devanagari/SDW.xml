@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<map>
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <entry from="&#x0021;" to="!"></entry>
   <entry from="&#x0022;" to="‘"></entry>
   <entry from="&#x0023;" to="श्"></entry>
@@ -266,4 +267,4 @@
   <entry from="&#x2039;" to="त्न्"></entry>
   <entry from="&#x203A;" to="ऌ"></entry>
   <entry from="&#x2122;" to="ल"></entry>
-</map>
+</mapping>

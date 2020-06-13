@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+  <mapping name="Combining Signs">
+    <entry from="+" to="़" order="80" comment="Nukta" />
+    <entry from="Û" to="़" order="80" comment="Nukta" />
+    <entry from="¡" to="ँ" order="80" comment="Chandrabindu" />
+    <entry from="a" to="ं" order="80" comment="Anusvara" />
+    <entry from="%" to="ः" order="80" comment="Visarga" />
+  </mapping>
+  <mapping name="Devanagari Fixing">
+    <entry from="ं([ऺऻा-ौ])" to="$1ं" type="regex" order="100" comment="Reorder anusvar and matra" />
+    <entry from="ीे" to="ी" order="110" comment="Extra" />
+    <entry from="।।" to="॥" order="110" comment="Combine double danda" />
+    <entry from="्ा" to="" order="110" comment="Collapse ् and sign" />
+    <entry from="्ऻ" to="ऺ" order="110" comment="Collapse ् and sign" />
+    <entry from="्ॉ" to="ॅ" order="110" comment="Collapse ् and sign" />
+    <entry from="्ॊ" to="ॆ" order="110" comment="Collapse ् and sign" />
+    <entry from="्ो" to="े" order="110" comment="Collapse ् and sign" />
+    <entry from="्ौ" to="ै" order="110" comment="Collapse ् and sign" />
+    <entry from="(\p{Mn})\1+" to="$1" type="regex" order="110" comment="Remove duplicate nonspacing marks" />
+    <entry from="अा" to="आ" order="110" comment="Combine" />
+    <entry from="अऻ" to="ॴ" order="200" comment="VOWEL SIGN OOE" />
+    <entry from="अॏ" to="ॵ" order="200" comment="VOWEL SIGN AW" />
+    <entry from="अॉ" to="ऑ" order="200" comment="Combine" />
+    <entry from="अॊ" to="ऒ" order="200" comment="Combine" />
+    <entry from="अो" to="ओ" order="200" comment="Combine" />
+    <entry from="अौ" to="औ" order="200" comment="Combine" />
+    <entry from="आॅ" to="ऑ" order="200" comment="Combine" />
+    <entry from="आे" to="ओ" order="200" comment="Combine" />
+    <entry from="आै" to="औ" order="200" comment="Combine" />
+    <entry from="आॆ" to="ऒ" order="200" comment="Combine" />
+    <entry from="आऺ" to="ॴ" order="200" comment="VOWEL SIGN OE" />
+    <entry from="एॅ" to="ऍ" order="200" comment="Combine" />
+    <entry from="एॆ" to="ऎ" order="200" comment="Combine" />
+    <entry from="एे" to="ऐ" order="200" comment="Combine" />
+    <entry from="ाॅ" to="ॉ" order="200" comment="Combine" />
+    <entry from="ाे" to="ो" order="200" comment="Combine" />
+    <entry from="ाै" to="ौ" order="200" comment="Combine" />
+    <entry from="ाॆ" to="ॊ" order="200" comment="Combine" />
+    <entry from="ाऺ" to="ऻ" order="200" comment="VOWEL SIGN OE" />
+    <entry from="\u200C\b" to="" type="regex" order="220" comment="Remove ZWNJ in the end of the word" />
+  </mapping>
+  <mapping name="Jumping">
+    <entry from='&#x0066;([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*)' to='$1&#x093F;' type="regex" order="70" comment="consonant+i" />
+    <entry from='&#x00A3;([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*)' to='र्$1&#x093F;' type="regex" order="70" comment="r+consonant+i" />
+    <entry from='&#x00A5;([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*)' to='$1&#x093F;&#x0902;' type="regex" order="70" comment="consonant+im" />
+    <entry from='&#x00B2;([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*)' to='र्$1&#x093F;&#x0902;' type="regex" order="70" comment="r+consonant+im" />
+    <entry from="([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*[&#x93A;&#x93B;&#x93E;-&#x94C;]?)&#x0096;" to="र्$1" type="regex" order="70" comment="Same as r+consonant" />
+    <entry from='([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*[&#x93A;&#x93B;&#x93E;-&#x94C;]?)&#x005A;' to='र्$1' type="regex" order="70" comment="r+consonant" />
+    <entry from="([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*[&#x93A;&#x93B;&#x93E;-&#x94C;]?)&#x0097;" to="र्$1ं" type="regex" order="70" comment="Same as r+consonant+m" />
+    <entry from="([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*[&#x93A;&#x93B;&#x93E;-&#x94C;]?)&#xB1;" to="र्$1ं" type="regex" order="70" comment="r+consonant+m" />
+    <entry from="&#x0096;" to="&#x93F;" order="71" comment="consonant+i" />
+  </mapping>
+</mapping>

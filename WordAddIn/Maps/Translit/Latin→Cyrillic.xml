@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<map>
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <entry from='a' to='а' />
   <entry from='ã' to='а̃' />
   <entry from='ā' to='а̄' />
@@ -106,4 +106,4 @@
   <entry from='Ṣ' to='Ш̣' />
   <entry from='\be' to='э' order='-1' type='regex' />
   <entry from='\bE' to='Э' order='-1' type='regex' />
-</map>
+</mapping>

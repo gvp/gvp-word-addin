@@ -7,9 +7,6 @@ namespace GaudiaVedantaPublications
 {
     partial class Ribbon
     {
-        private static readonly string[] CyrillicFontNames = { "ThamesM" };
-        private static readonly string[] RomanFontNames = { "ScaTimes", "Rama Garamond Plus", "GVPalatino" };
-
         public string GetFontConversionLabel(IRibbonControl control)
         {
             /// For specific font we extract the font name from the tag.
@@ -44,14 +41,14 @@ namespace GaudiaVedantaPublications
             Globals.ThisAddIn.TransformText(new ToUnicodeTransform());
         }
 
-        public void ConvertFont(IRibbonControl control)
+        public void ConvertFromUnicode(IRibbonControl control)
         {
             if (!String.IsNullOrWhiteSpace(control.Tag))
                 OperationalFontName = control.Tag;
-            ConvertFont(OperationalFontName);
+            ConvertFromUnicode(OperationalFontName);
         }
 
-        private static void ConvertFont(String fontName)
+        private static void ConvertFromUnicode(String fontName)
         {
             Globals.ThisAddIn.TransformText(new ToUnicodeTransform(), new FromUnicodeTransform(fontName));
         }

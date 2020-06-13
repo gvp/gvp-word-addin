@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<set>
+  <case ansi="õ" unicode="[GVP logo white]" />
+  <case ansi="nq;kZsèkuk|k%" unicode="दुर्योधनाद्याः" zcomment="Wrong order of र् and े" />
+  <case ansi="dÙk±q" unicode="कर्त्तुं" zcomment="Wrong order of ु and ं" />
+  <case ansi="'kÌknhuka" unicode="शङ्खादीनां" />
+  <case ansi="rstks·a'klaHkoe~" unicode="तेजोंऽशसंभवम्" zcomment="BG page 107 ॥४१॥ Wrong order of anusvar and apostrophe http://gitabase.com/the/gita/eng/BG/10/41" />
+  <case ansi="'qkp%" unicode="शुचः" zcomment="BG page 146 ॥५॥. Wrong order of u-sign and a-sign." />
+  <case ansi="oiqnZèkr*~*" unicode="वपुर्दधत्’’" zcomment="BG page 169 ॥५५॥. Wrong order of virama and apostrophe." />
+  <case ansi="izofÙZkrqa" unicode="प्रवर्त्तितुं" zcomment="BG page 170 ॥५९॥. Wrong order of Z and something" />
+  <case ansi="xhkr'kkL=L;kfi" unicode="गीतशास्त्रस्यापि" zcomment="BG page 172 ॥६४॥. Mistaken a-sign after i-sign." />
+  <case ansi="iq#&quot;k'pkkfèknSore~" unicode="पुरुषश्चाधिदैवतम्" zcomment="BG page 80 ॥४॥ double a-sign" />
+  <case ansi="dk;Zdkj.kdÙkZZ`ZRos" unicode="कार्यकारणकर्त्तृत्वे" zcomment="BG page 129 ॥२१॥ Double Z. Wrong order of `Z." />
+  <case ansi="rn~~?kua" unicode="तद्‌घनं" zcomment="BG page 138 ॥२७॥ Double virama." />
+  <case ansi="ozrkkfu" unicode="व्रतानि" zcomment="BG page 148 ॥१०॥. Triple a-sign." />
+  <case ansi=";rLrr~~" unicode="यतस्तत्" zcomment="BG page 156 ॥२८॥ Double virama" />
+  <case ansi="izzzzzzzzzzzzzzzzzzzÏreuqljke%" unicode="प्रकृतमनुसरामः" zcomment="BG page 161 ॥१८॥ Many zzzzz" />
+  <case ansi="dk;ZsZ" unicode="कार्ये" zcomment="BG page 162 ॥२२॥. Extra Z." />
+  <case ansi="fuxZZzUFkk" unicode="निर्ग्रन्था" zcomment="BG page 169 ॥५५॥. Extra Z" />
+  <case ansi="Hkxoku~dk" unicode="भगवान्‌का" zcomment="Explicit halant, see http://unicode.org/faq/indic.html#2" />
+  <case ansi="Hkxoku~ gh" unicode="भगवान् ही" zcomment="Explicit halant in the end of the word" />
+  <case ansi="QykdkfÀ.kks" unicode="फलाकाङ्क्षिणो" zcomment="BG page 23 ॥४७॥" />
+  <case ansi="lEeksgkr~~" unicode="सम्मोहात्" zcomment="BG page 26 ॥६३॥" />
+  <case ansi="Js;ku~+" unicode="श्रेयाऩ्" zcomment="BG page 37 ॥३५॥" />
+  <case ansi="prqFkkZss" unicode="चतुर्थो" zcomment="BG page 51 ॥४२॥" />
+  <case ansi="fpÙk'kqf¼nk&lt;~îkZTKkunk&lt;~îeso" unicode="चित्तशुद्धिदार्ढ्याज्ज्ञानदाढ्यमेव" zcomment="BG page 52 ॥२॥" />
+  <case ansi="cq¼îkRekdkj;Sso" unicode="बुद्ध्यात्माकारयैव" zcomment="BG page 62 ॥२०–२५॥" />
+  <case ansi="ukjk;.kewfÙZkjso" unicode="नारायणमूर्त्तिरेव" zcomment="BG page 74 ॥१५॥" />
+  <case ansi="deZZRo" unicode="कर्मत्व" zcomment="BG page 74 ॥१६॥" />
+  <case ansi="en~;ksxkdkfÀ.k%" unicode="मद्‌योगाकाङ्क्षिणः" zcomment="BG page 82 ॥१४॥" />
+  <case ansi="eRla;ksxkdkfÀ.kka" unicode="मत्संयोगाकाङ्क्षिणां" zcomment="BG page 101 ॥१०॥" />
+  <case ansi="xHkZ±" unicode="गर्भं" zcomment="BG page 133 ॥३॥" />
+  <case ansi="la{skis.k" unicode="संक्षेपेण" zcomment="BG page 143 ॥१६॥" />
+  <case ansi="oÙZkrs" unicode="वर्त्तते" zcomment="BG page 155 ॥२६॥" />
+  <case ansi="d&#xE096;" unicode="र्क" zcomment="PUA character" />
+  <case ansi="d&#xE097;" unicode="र्कं" zcomment="PUA character" />
+  <case ansi="&#xF076;&#xF06B;&#xF052;&#xF065;&#xF06B;&#xF064;&#xE094;&#xF020;&#xF06A;&#xF067;&#xF04C;&#xF03B;" unicode="आत्माके रहस्य" zcomment="ANSI in PUA" />
+  <case ansi="d&#xE094;" unicode="के" zcomment="E094 is in PUA, but should map unicode 0094, then unicode 201D and then finally unicode े" />
+</set>

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<map>
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <entry from="&#x0021;" to="!"></entry>
   <entry from="&#x0022;" to="ष्"></entry>
   <entry from="&#x0023;" to="रु"></entry>
@@ -281,4 +282,4 @@
   <entry from="&#x203A;" to="ङ्ग" direction="forward"></entry>
   <entry from="&#x0153;" to="☎" direction="forward"></entry>
   <entry from="&#x0178;" to="" direction="forward"></entry>
-</map>
+</mapping>

@@ -1,35 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<map fontName="ThamesSanskrit">
-  <entry from='&#x0042;' to='Ӣ' />
-  <entry from='&#x0045;' to='Ӯ' />
-  <entry from='&#x0046;' to='А̄' />
-  <entry from='&#x0047;' to='Р̣̄' />
-  <entry from='&#x0048;' to='Р̣' />
-  <entry from='&#x0049;' to='Ш́' />
-  <entry from='&#x004B;' to='Л̣' />
-  <entry from='&#x004C;' to='Д̣' />
-  <entry from='&#x004E;' to='Т̣' />
-  <entry from='&#x004F;' to='Ш̣' />
-  <entry from='&#x0054;' to='Н̣' />
-  <entry from='&#x0055;' to='Н̃' />
-  <entry from='&#x0056;' to='М̇' />
-  <entry from='&#x0059;' to='Н̇' />
-  <entry from='&#x005B;' to='Х̣' />
-  <entry from='&#x0062;' to='ӣ' />
-  <entry from='&#x0065;' to='ӯ' />
-  <entry from='&#x0066;' to='а̄' />
-  <entry from='&#x0067;' to='р̣̄' />
-  <entry from='&#x0068;' to='р̣' />
-  <entry from='&#x0069;' to='ш́' />
-  <entry from='&#x006B;' to='л̣' />
-  <entry from='&#x006C;' to='д̣' />
-  <entry from='&#x006E;' to='т̣' />
-  <entry from='&#x006F;' to='ш̣' />
-  <entry from='&#x0074;' to='н̣' />
-  <entry from='&#x0075;' to='н̃' />
-  <entry from='&#x0076;' to='м̇' />
-  <entry from='&#x0079;' to='н̇' />
-  <entry from='&#x007B;' to='х̣' />
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <entry from='&#x0042;' to='Ӣ' order='2' />
+  <entry from='&#x0045;' to='Ӯ' order='2' />
+  <entry from='&#x0046;' to='А̄' order='2' />
+  <entry from='&#x0047;' to='Р̣̄' order='3' />
+  <entry from='&#x0048;' to='Р̣' order='2' />
+  <entry from='&#x0049;' to='Ш́' order='2' />
+  <entry from='&#x004B;' to='Л̣' order='2' />
+  <entry from='&#x004C;' to='Д̣' order='2' />
+  <entry from='&#x004E;' to='Т̣' order='2' />
+  <entry from='&#x004F;' to='Ш̣' order='2' />
+  <entry from='&#x0054;' to='Н̣' order='2' />
+  <entry from='&#x0055;' to='Н̃' order='2' />
+  <entry from='&#x0056;' to='М̇' order='2' />
+  <entry from='&#x0059;' to='Н̇' order='2' />
+  <entry from='&#x005B;' to='Х̣' order='2' />
+  <entry from='&#x0062;' to='ӣ' order='2' />
+  <entry from='&#x0065;' to='ӯ' order='2' />
+  <entry from='&#x0066;' to='а̄' order='2' />
+  <entry from='&#x0067;' to='р̣̄' order='3' />
+  <entry from='&#x0068;' to='р̣' order='2' />
+  <entry from='&#x0069;' to='ш́' order='2' />
+  <entry from='&#x006B;' to='л̣' order='2' />
+  <entry from='&#x006C;' to='д̣' order='2' />
+  <entry from='&#x006E;' to='т̣' order='2' />
+  <entry from='&#x006F;' to='ш̣' order='2' />
+  <entry from='&#x0074;' to='н̣' order='2' />
+  <entry from='&#x0075;' to='н̃' order='2' />
+  <entry from='&#x0076;' to='м̇' order='2' />
+  <entry from='&#x0079;' to='н̇' order='2' />
+  <entry from='&#x007B;' to='х̣' order='2' />
   <entry from='&#x0080;' to='Ђ' />
   <entry from='&#x0081;' to='Ѓ' />
   <entry from='&#x008D;' to='Ќ' />
@@ -126,4 +127,4 @@
   <entry from='&#x0192;' to='ѓ' />
   <entry from='&#x2219;' to='·' />
   <entry from='&#xF0A3;' to='Ј' />
-</map>
+</mapping>

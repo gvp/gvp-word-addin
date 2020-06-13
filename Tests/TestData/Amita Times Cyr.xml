@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<set>
+  <case ansi="к¦п…м¦т…бдхе±" unicode="кр̣па̄мр̣та̄бдхеш́" />
+  <case ansi="ѕ" unicode="[lotus]" />
+  <case ansi="&#xAD;" unicode="ӯ" />
+  <case ansi="&#xB7;" unicode="Т̣" />
+  <case ansi="&#x88;" unicode="л̣" />
+  <case ansi="&#x98;" unicode="м̇" />
+  <case ansi="&#x457;" unicode="&#x0301;" />
+</set>

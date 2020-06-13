@@ -2,11 +2,10 @@
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Xml.Linq;
 
 namespace GaudiaVedantaPublications
 {
-    public static class CharacterExtensions
+    public static partial class Extensions
     {
         /// <summary>
         /// For Fonts without Unicode ranges, Word uses Private Use Area for symbols
@@ -34,27 +33,6 @@ namespace GaudiaVedantaPublications
                 builder.Append(c.PrivateUseAreaToAnsi());
 
             return builder.ToString();
-        }
-
-        public static String AttributeValue(this XElement element, XName name)
-        {
-            return element.AttributeValue(name, null);
-        }
-
-        public static String AttributeValue(this XElement element, XName name, String defaultValue)
-        {
-            var attribute = element.Attribute(name);
-            if (attribute == null)
-                return defaultValue;
-            return attribute.Value;
-        }
-
-        public static String ElementValue(this XElement element, XName name)
-        {
-            var subElement = element.Element(name);
-            if (subElement == null)
-                return null;
-            return subElement.Value;
         }
     }
 }

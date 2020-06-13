@@ -27,7 +27,7 @@
                        >
             <button id="ConvertToOperationalFont"
                     imageMso="ReplaceDialog"
-                    onAction="ConvertFont"
+                    onAction="ConvertFromUnicode"
                     getEnabled="GetOperationalFontIsSet"
                     getLabel="GetFontConversionLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                     />
@@ -36,105 +36,105 @@
                   >
               <menuSeparator idQ="gvp:CyrillicFontsSeparator" getTitle="GetTitle" />
               <button id="ConvertToAmitaTimesCyr"
-                      onAction="ConvertFont"
+                      onAction="ConvertFromUnicode"
                       tag="Amita Times Cyr"
                       getLabel="GetFontConversionLabel"
                       />
               <button id="ConvertToThamesM"
-                      onAction="ConvertFont"
+                      onAction="ConvertFromUnicode"
                       tag="ThamesM"
                       getLabel="GetFontConversionLabel"
                       />
               <button id="ConvertToThamesSanskrit"
-                      onAction="ConvertFont"
+                      onAction="ConvertFromUnicode"
                       tag="ThamesSanskrit"
                       getLabel="GetFontConversionLabel"
                       />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
               <button id="ConvertToAmitaTimes"
-                      onAction="ConvertFont"
+                      onAction="ConvertFromUnicode"
                       tag="Amita Times"
                       getLabel="GetFontConversionLabel"
                       />
               <button id="ConvertToBalaram"
-                      onAction="ConvertFont"
+                      onAction="ConvertFromUnicode"
                       tag="Balaram"
                       getLabel="GetFontConversionLabel"
                       />
               <button id="ConvertToDVRomanTTSurekh"
-                      onAction="ConvertFont"
+                      onAction="ConvertFromUnicode"
                       tag="DVRoman-TTSurekh"
                       getLabel="GetFontConversionLabel"
                       />
               <button id="ConvertToGVPalatino"
-                      onAction="ConvertFont"
+                      onAction="ConvertFromUnicode"
                       tag="GVPalatino"
                       getLabel="GetFontConversionLabel"
                       />
               <button id="ConvertToRamaGaramondPlus"
-                      onAction="ConvertFont"
+                      onAction="ConvertFromUnicode"
                       tag="Rama Garamond Plus"
                       getLabel="GetFontConversionLabel"
                       />
               <menu idQ="gvp:ScaSeriesMenu" getLabel="GetLabel" >
                 <button id="ConvertToScaTimes"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaTimes"
                         getLabel="GetFontConversionLabel"
                         />
                 <button id="ConvertToScaBenguit"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaBenguit"
                         getLabel="GetFontConversionLabel"
                         />
                 <button id="ConvertToScaCheltenham"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaCheltenham"
                         getLabel="GetFontConversionLabel"
                         />
                 <button id="ConvertToScaFelixTitling"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaFelixTitling"
                         getLabel="GetFontConversionLabel"
                         />
                 <button id="ConvertToScaFrizQuadrata"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaFrizQuadrata"
                         getLabel="GetFontConversionLabel"
                         />
                 <button id="ConvertToScaGoudy"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaGoudy"
                         getLabel="GetFontConversionLabel"
                         />
                 <button id="ConvertToScaHelvetica"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaHelvetica"
                         getLabel="GetFontConversionLabel"
                         />
                 <button id="ConvertToScaKorinna"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaKorinna"
                         getLabel="GetFontConversionLabel"
                         />
                 <button id="ConvertToScaOptima"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaOptima"
                         getLabel="GetFontConversionLabel"
                         />
                 <button id="ConvertToScaPalatino"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaPalatino"
                         getLabel="GetFontConversionLabel"
                         />
                 <button id="ConvertToScaSabon"
-                        onAction="ConvertFont"
+                        onAction="ConvertFromUnicode"
                         tag="ScaSabon"
                         getLabel="GetFontConversionLabel"
                         />
               </menu>
               <button id="ConvertToSD1TTSurekh"
-                      onAction="ConvertFont"
+                      onAction="ConvertFromUnicode"
                       tag="SD1-TTSurekh"
                       getLabel="GetFontConversionLabel"
                       />
