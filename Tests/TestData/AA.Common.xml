@@ -37,4 +37,5 @@
   <case ansi="O;fä;ksaesaaa" unicode="व्यक्तियोंमें" zcomment=" Three ◌ं" />
   <case ansi="d±ZZZ" unicode="र्कं" zcomment="Duplicates should be removed before swallowing." />
   <case ansi="gssSS" unicode="है" zcomment="◌ै swallows ◌े. With duplicates." />
+  <case ansi="isz" unicode="प्रे" comment="Wrong order of ◌े and ◌र"/>
 </set>
