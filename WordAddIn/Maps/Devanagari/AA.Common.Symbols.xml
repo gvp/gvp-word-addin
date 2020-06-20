@@ -2,7 +2,8 @@
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <entry from="&amp;" to="–" order="90" />
-  <entry from="µ" to="—" order="90" />
+  <entry from="&#x00B5;" to="—" order="90" />
+  <entry from="&#x03BC;" to="—" order="90" />
   <entry from="]" to="," order="90" />
   <entry from="_" to=";" order="90" />
   <entry from="\" to="?" order="90" />

@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <set>
+  <set name="Symbols" >
+    <case ansi="ý" unicode="[" />
+    <case ansi="»" unicode="÷" />
+    <case ansi="^" unicode="‘" />
+    <case ansi="&#x00B5;" unicode="&#x2014;" comment="Compatibility character, use U+03BC instead"/>
+    <case ansi="&#x03BC;" unicode="&#x2014;" comment="Em dash"/>
+  </set>
   <case ansi="," unicode="ए" />
   <case ansi="[" unicode="ख्" />
-  <case ansi="ý" unicode="[" />
-  <case ansi="»" unicode="÷" />
   <case ansi="mG" unicode="ऊ" />
   <case ansi="JhJhxq#&amp;xkSjkÂkS t;r%" unicode="श्रीश्रीगुरु–गौराङ्गौ जयतः" />
   <case ansi="bZn`'kks" unicode="ईदृशो" />
@@ -13,7 +18,6 @@
   <case ansi="uhZpSjfi" unicode="र्नीचैरपि" />
   <case ansi="loSZxksZihfo&quot;k;da" unicode="सर्वैर्गोपीविषयकं" />
   <case ansi="iq#&quot;kkFkks±dh" unicode="पुरुषार्थोंकी" />
-  <case ansi="^" unicode="‘" />
   <case ansi="fu£o'ks&quot;kcqf¼" unicode="निर्विशेषबुद्धि" />
   <case ansi="tM+cfq¼ls" unicode="जड़बुद्धिसे" zcomment=" Wrong order of ◌ु and ◌ि" />
   <case ansi="D;kas" unicode="क्यों" zcomment=" Wrong order of ◌ो and ◌ं" />

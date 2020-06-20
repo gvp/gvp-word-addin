@@ -56,7 +56,6 @@
     <entry from="¹" to="✕" order="90" />
     <entry from="Ž" to="ᾁ8" order="90" comment="Left arrow" />
     <entry from="&#x8F;" to="ᾁA" order="90" comment="Right arrow" />
-    <entry from="&#x3BC;" to="—" order="90" comment="Only for AARituPlus2-Regular.pfb" />
   </mapping>
   <mapping name="Unknown">
     <entry from="ö" to="[e with chandrabindu]" order="100" comment="вирама с чандрабинду" />
