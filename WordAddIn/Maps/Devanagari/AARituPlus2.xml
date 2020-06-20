@@ -49,8 +49,8 @@
     <entry from="&#xC4;" to="्न" />
   </mapping>
 
-  <xi:include href="AA.Common.Post.xml"/>
   <xi:include href="AA.Common.Symbols.xml"/>
+  <xi:include href="AA.Common.Post.xml"/>
 
   <mapping name="Symbols">
     <entry from="¹" to="✕" order="90" />

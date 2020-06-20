@@ -3,6 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns:xi="http://www.w3.org/2001/XInclude">
   <mapping name="Mistypings">
+    <entry from="&#x002A;&#x002A;" to="&#x00DE;" comment="Double ’ to ”" />
+    <entry from="&#x005E;&#x005E;" to="&#x00DF;" comment="Double ‘ to “" />
     <entry from="fq" to="qf" order="-110" comment="Wrong order of ु and ि" />
     <entry from="~+" to="+~" order="-110" comment="Wrong order of Virama and Nukta" />
     <entry from="·a" to="a·" order="-110" comment="Wrong order of Anusvar and Avagraha" />

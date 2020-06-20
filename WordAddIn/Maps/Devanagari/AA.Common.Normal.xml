@@ -144,7 +144,7 @@
   <entry from="ü" to="ें" comment="ем̇" />
   <entry from="S" to="ै" comment="аи" />
   <entry from="®" to="ैं" comment="аим̣" />
-  <entry from="~" to="्‌" comment="Explicit halant" />
+  <entry from="~" to="&#x094D;&#x200C;" comment="Explicit halant" />
   <entry from="î" to="्य" comment="й (как в ड्य)" />
   <entry from="z" to="्र" comment="ра (как в प्र)" />
   <entry from="ª" to="्र" comment="ра (как в ड्र)" />
