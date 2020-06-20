@@ -10,8 +10,8 @@
   <entry from='&#x00A4;' to='ॄ' />
   <entry from='&#x00D5;' to='ञ्ज्' />
 
-  <xi:include href="AA.Common.Post.xml"/>
   <xi:include href="AA.Common.Symbols.xml"/>
+  <xi:include href="AA.Common.Post.xml"/>
 
   <mapping name="Symbols">
     <entry from='&#x007F;' to='✕' />

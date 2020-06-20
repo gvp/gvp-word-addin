@@ -8,6 +8,7 @@
     <case ansi="&#x03BC;" unicode="&#x2014;" comment="Em dash"/>
     <case ansi="^^" unicode="“" comment="Two single quotation marks should be mapped to one double quotation mark" />
     <case ansi="**" unicode="”" comment="Two single quotation marks should be mapped to one double quotation mark" />
+    <case ansi="AA" unicode="॥" comment="Two dandas should be converted into one double danda" />
   </set>
   <case ansi="," unicode="ए" />
   <case ansi="[" unicode="ख्" />
