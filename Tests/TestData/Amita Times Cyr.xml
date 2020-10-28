@@ -4,7 +4,7 @@
   <case ansi="ѕ" unicode="[lotus]" />
   <case ansi="&#xAD;" unicode="ӯ" />
   <case ansi="&#xB7;" unicode="Т̣" />
-  <case ansi="&#x88;" unicode="л̣" />
-  <case ansi="&#x98;" unicode="м̇" />
+  <case ansi="&#x88;" unicode="л̣" comment="л с точкой внизу"/>
+  <case ansi="&#x98;" unicode="м̇" comment="м с точкой вверху"/>
   <case ansi="&#x457;" unicode="&#x0301;" />
 </set>

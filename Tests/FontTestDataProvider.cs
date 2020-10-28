@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml;
@@ -58,12 +57,12 @@ namespace GaudiaVedantaPublications.Tests
             }
         }
 
-        public static IEnumerable GetFontTestData(FontConversionDirection direction)
+        public static IEnumerable<TestCaseData> GetFontTestData(FontConversionDirection direction)
         {
             return
                 from fontName in GetFontNames(direction)
-                let set = LoadTestSet(fontName)
-                from @case in set.Descendants("case")
+                from set in LoadTestSet(fontName).DescendantsAndSelf("set")
+                from @case in set.Elements("case")
                 orderby fontName
                 let unicode = @case.Attribute("unicode")?.Value.Normalize(NormalizationForm.FormC)
                 let ansi = @case.Attribute("ansi")?.Value.Normalize(NormalizationForm.FormC)
@@ -72,6 +71,11 @@ namespace GaudiaVedantaPublications.Tests
                 select new TestCaseData(fontName, input)
                     .Returns(output)
                     .SetProperty("Font Name", fontName)
+                    .SetProperty("Set",
+                        set.Attribute("name")?.Value ??
+                        set.Attribute(XNamespace.Xml + "base")?.Value?.Replace(".xml", string.Empty) ??
+                        fontName)
+                    .SetArgDisplayNames(fontName, @case.Attribute("comment")?.Value ?? unicode)
                 ;
         }
 

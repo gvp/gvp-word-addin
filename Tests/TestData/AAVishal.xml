@@ -7,6 +7,6 @@
   <case ansi="¹" unicode="&#x2605;" />
   <case ansi="õ" unicode="&#xFD5;" />
   <case ansi="ø" unicode="%" />
-  <case ansi='&#x007F;' unicode="&#x2715;" />
+  <case ansi='&#x007F;' unicode="&#x2715;" comment="MULTIPLICATION X"/>
   <case ansi="Õ" unicode="ञ्ज्" />
 </set>

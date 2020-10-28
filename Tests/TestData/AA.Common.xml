@@ -22,21 +22,21 @@
   <case ansi="loSZxksZihfo&quot;k;da" unicode="सर्वैर्गोपीविषयकं" />
   <case ansi="iq#&quot;kkFkks±dh" unicode="पुरुषार्थोंकी" />
   <case ansi="fu£o'ks&quot;kcqf¼" unicode="निर्विशेषबुद्धि" />
-  <case ansi="tM+cfq¼ls" unicode="जड़बुद्धिसे" zcomment=" Wrong order of ◌ु and ◌ि" />
-  <case ansi="D;kas" unicode="क्यों" zcomment=" Wrong order of ◌ो and ◌ं" />
-  <case ansi="gaS" unicode="हैं" zcomment=" Wrong order of ◌ै and ◌ं" />
+  <case ansi="tM+cfq¼ls" unicode="जड़बुद्धिसे" comment=" Wrong order of ◌ु and ◌ि" />
+  <case ansi="D;kas" unicode="क्यों" comment=" Wrong order of ◌ो and ◌ं" />
+  <case ansi="gaS" unicode="हैं" comment=" Wrong order of ◌ै and ◌ं" />
   <case ansi="Hksndks" unicode="भेदको" />
-  <case ansi="ughsa" unicode="नहीं" zcomment=" Extra ◌े" />
+  <case ansi="ughsa" unicode="नहीं" comment=" Extra ◌े" />
   <case ansi="vkSj" unicode="और" />
   <case ansi="Ük`Âkjjfr" unicode="शृङ्गाररति" />
   <case ansi="¥glk" unicode="हिंसा" />
   <case ansi="nksuksa" unicode="दोनों" />
-  <case ansi="lkefxz;ksasds" unicode="सामग्रियोंके" zcomment=" Extra ◌े" />
-  <case ansi="tM+cqf¼okyss" unicode="जड़बुद्धिवाले" zcomment=" Extra ◌े" />
-  <case ansi="oS&quot;.koèkeZesaa" unicode="वैष्णवधर्ममें" zcomment=" Extra ◌ं" />
-  <case ansi="voLFkkessa" unicode="अवस्थामें" zcomment=" Extra ◌े" />
-  <case ansi="O;fä;ksaesaaa" unicode="व्यक्तियोंमें" zcomment=" Three ◌ं" />
-  <case ansi="d±ZZZ" unicode="र्कं" zcomment="Duplicates should be removed before swallowing." />
-  <case ansi="gssSS" unicode="है" zcomment="◌ै swallows ◌े. With duplicates." />
+  <case ansi="lkefxz;ksasds" unicode="सामग्रियोंके" comment=" Extra ◌े" />
+  <case ansi="tM+cqf¼okyss" unicode="जड़बुद्धिवाले" comment=" Extra ◌े" />
+  <case ansi="oS&quot;.koèkeZesaa" unicode="वैष्णवधर्ममें" comment=" Extra ◌ं" />
+  <case ansi="voLFkkessa" unicode="अवस्थामें" comment=" Extra ◌े" />
+  <case ansi="O;fä;ksaesaaa" unicode="व्यक्तियोंमें" comment=" Three ◌ं" />
+  <case ansi="d±ZZZ" unicode="र्कं" comment="Duplicates should be removed before swallowing." />
+  <case ansi="gssSS" unicode="है" comment="◌ै swallows ◌े. With duplicates." />
   <case ansi="isz" unicode="प्रे" comment="Wrong order of ◌े and ◌र"/>
 </set>
