@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -10,19 +10,17 @@
   <xi:include href="AA.Common.Numbers.xml"/>
   <xi:include href="AA.Common.xml"/>
 
-  <entry from='&#x201A;' to='श्व' />
-  <entry from='&#x2018;' to='ञ्ज' order='-1' />
-  <entry from='&#x00A4;' to='ॄ' />
-  <entry from='&#x00D5;' to='ञ्ज्' />
+  <entry from="&#x82;" to="श्व" />
+  <entry from="&#x91;" to="ञ्ज" />
+  <entry from="&#xA4;" to="ॄ" />
+  <entry from="&#xD5;" to="ञ्ज्" />
+  <entry from="&#x7F;" to="✕" />
+  <entry from="&#xB9;" to="★" />
+  <entry from="&#x9C;" to="›" />
+  <entry from="&#x9B;" to="‹" />
+  <entry from="&#xF5;" to="&#x0FD5;" comment="RIGHT-FACING SVASTI SIGN" />
+  <entry from="&#xF8;" to="%" />
 
   <xi:include href="AA.Common.Post.xml"/>
 
-  <mapping name="Symbols">
-    <entry from='&#x007F;' to='✕' />
-    <entry from="¹" to="★" order="90" />
-    <entry from='&#x0153;' to='›' />
-    <entry from='&#x203A;' to='‹' order='-1' />
-    <entry from="õ" to="&#xFD5;" />
-    <entry from="&#xF8;" to="%" />
-  </mapping>
 </mapping>
