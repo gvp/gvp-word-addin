@@ -20,8 +20,8 @@
     <entry from="sS|Ss" to="S" type="regex" order="-100" comment="AI-matra eats E-matra" />
   </mapping>
   <mapping name="Precombined Vowels">
-    <entry from="bZ" to="ई" order="-10" />
-    <entry from="b±" to="ईं" order="-10" />
-    <entry from="mG" to="ऊ" order="-10" comment="Appendix for the long U." />
+    <entry from="bZ" to="ई" />
+    <entry from="b±" to="ईं" />
+    <entry from="mG" to="ऊ" comment="Appendix for the long U." />
   </mapping>
 </mapping>

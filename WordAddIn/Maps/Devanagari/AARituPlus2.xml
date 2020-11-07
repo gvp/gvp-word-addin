@@ -1,65 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--
-  PFB (Type1) version of the font is without Unicode ranges, and "Microsoft Character Set" is "Symbol".
-  Word uses PUA (\xF000 + code) for all the characters,
-
-  TrueType and OpenType fonts have Unicode ranges, and "Microsoft Character Set" is "CP1252".
-  For these versions, Word uses ANSI codes.
-  And this is the reason why AARituPlus2 is shown badly in the fonts list in Word (http://www.typophile.com/node/17084).
-
-  Type1 version is basic and original (true??).
-
-  That is why we have to convert [\x80..\x9F] range of CP1252 to plain ANSI, and then use
-
-  There are some characters without Unicode code point, but they have glyph name like "_0150".
-  Magically rendering engines use this information to render code points.
-  Example: _0150 = 0x96
-  InDesign maps them to PUA (\xE000 + code).
-
-  -->
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xi="http://www.w3.org/2001/XInclude">
-  <xi:include href="AA.Common.Pre.xml"/>
-  <xi:include href="AA.Common.Normal.xml"/>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <mapping name="Normal characters">
-    <entry from="&#xF0;" to="प्त" />
-    <entry from="&#xC8;" to="ऌ" comment="гласная л" />
-    <entry from="&#x81;" to="क्च" />
-    <entry from="&#xC9;" to="ङ्क्त" comment="н̇кта" />
-    <entry from="&#xC0;" to="ङ्क्ष" comment="н̇кш̣а" />
-    <entry from="&#xCC;" to="ङ्ख" comment="н̇кха" />
-    <entry from="&#xD0;" to="ङ्घ" comment="н̇гха" />
-    <entry from="&#x0080;" to="ञ्च" />
-    <entry from="&#x2018;" to="ञ्ज" comment="н̃джа" />
-    <entry from="&#xCB;" to="ल्ल" comment="лла" />
-    <entry from="&#xFF;" to="ळ" comment="лла" />
-    <entry from="&#x8D;" to="श्च" />
-    <entry from="&#x201A;" to="श्व" comment="ш̣ва" />
-    <entry from="&#xD4;" to="ष्ट" comment="ш̣тта" />
-    <entry from="&#xD7;" to="ष्ठ" comment="ш̣ттха" />
-    <entry from="&#x0092;" to="ु" />
-    <entry from="&#x0093;" to="ू" />
-    <entry from="&#xA4;" to="ॄ" comment="р̣р̣" />
-    <entry from="&#xC6;" to="ॢ" comment="??? гласная лл" />
-    <entry from="&#x0094;" to="े" />
-    <entry from="&#x0095;" to="ै" />
-    <entry from="&#x0099;" to="ैं" />
-    <entry from="&#xC4;" to="्न" />
-  </mapping>
+  <!-- This is needed to support TTF/OTF fonts that were generated from Type 1 font. See wiki. -->
+  <xi:include href="UnicodeToCP1252.xml"/>
 
-  <xi:include href="AA.Common.Symbols.xml"/>
-  <xi:include href="AA.Common.Post.xml"/>
-
-  <mapping name="Symbols">
-    <entry from="¹" to="✕" order="90" />
-    <entry from="Ž" to="ᾁ8" order="90" comment="Left arrow" />
-    <entry from="&#x8F;" to="ᾁA" order="90" comment="Right arrow" />
-  </mapping>
-  <mapping name="Unknown">
-    <entry from="ö" to="[e with chandrabindu]" order="100" comment="вирама с чандрабинду" />
-    <entry from="õ" to="[GVP logo white]" order="100" comment="GVP logo dark" />
-    <entry from="ø" to="[GVP logo black]" order="100" comment="GVP logo light" />
-  </mapping>
+  <xi:include href="AA.Common.Numbers.xml"/>
+  <xi:include href="AARituPlus2.Common.xml"/>
 </mapping>

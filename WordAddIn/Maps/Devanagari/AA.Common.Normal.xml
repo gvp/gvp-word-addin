@@ -13,44 +13,31 @@
 //"Vowel sign",
 -->
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <mapping name="Numbers">
-    <entry from="Œ" to="०" order="20" comment="0" />
-    <entry from="ƒ" to="१" order="20" comment="1" />
-    <entry from="„" to="२" order="20" comment="2" />
-    <entry from="…" to="३" order="20" comment="3" />
-    <entry from="†" to="४" order="20" comment="4" />
-    <entry from="‡" to="५" order="20" comment="5" />
-    <entry from="ˆ" to="६" order="20" comment="6" />
-    <entry from="‰" to="७" order="20" comment="7" />
-    <entry from="Š" to="८" order="20" comment="8" />
-    <entry from="‹" to="९" order="20" comment="9" />
-  </mapping>
-
-  <entry from="¬" to="ॐ" />
+  <entry from="&#xAC;" to="ॐ" />
   <entry from="v" to="अ" comment="а" />
   <entry from="b" to="इ" comment="и" />
   <entry from="m" to="उ" comment="у" />
-  <entry from="Å" to="ऊ" comment="ӯ" />
-  <entry from="½" to="ऋ" comment="р̣" />
-  <entry from="¿" to="ॠ" comment="р̣̄" />
+  <entry from="&#xC5;" to="ऊ" comment="ӯ" />
+  <entry from="&#xBD;" to="ऋ" comment="р̣" />
+  <entry from="&#xBF;" to="ॠ" comment="р̣̄" />
   <entry from="," to="ए" comment="э" />
   <entry from="d" to="क" comment="ка" />
-  <entry from="Ï" to="कृ" comment="кр̣" />
+  <entry from="&#xCF;" to="कृ" comment="кр̣" />
   <entry from="D" to="क्" comment="к" />
-  <entry from="ô" to="क्क" comment="кка" />
-  <entry from="ä" to="क्त" comment="кта" />
-  <entry from="Ø" to="क्र" comment="кра" />
+  <entry from="&#xF4;" to="क्क" comment="кка" />
+  <entry from="&#xE4;" to="क्त" comment="кта" />
+  <entry from="&#xD8;" to="क्र" comment="кра" />
   <entry from="{" to="क्ष्" comment="кш̣" />
   <entry from="[" to="ख्" comment="кх" />
-  <entry from="Ò" to="ख्र" comment="кхра" />
+  <entry from="&#xD2;" to="ख्र" comment="кхра" />
   <entry from="x" to="ग" comment="га" />
   <entry from="X" to="ग्" comment="г" />
   <entry from="?" to="घ्" comment="гх" />
-  <entry from="³" to="ङ" comment="н̇а" />
-  <entry from="Á" to="ङ्क" comment="н̇ка" />
-  <entry from="Â" to="ङ्ग" comment="н̇га" />
+  <entry from="&#xB3;" to="ङ" comment="н̇а" />
+  <entry from="&#xC1;" to="ङ्क" comment="н̇ка" />
+  <entry from="&#xC2;" to="ङ्ग" comment="н̇га" />
   <entry from="p" to="च" comment="ча" />
   <entry from="P" to="च्" comment="ч" />
   <entry from="N" to="छ" comment="чха" />
@@ -58,51 +45,51 @@
   <entry from="T" to="ज्" comment="дж" />
   <entry from="K" to="ज्ञ" comment="джн̃а" />
   <entry from="&gt;" to="झ" comment="джха" />
-  <entry from="Ö" to="झ्" comment="джх" />
-  <entry from="´" to="ञ्" comment="н̃" />
+  <entry from="&#xD6;" to="झ्" comment="джх" />
+  <entry from="&#xB4;" to="ञ्" comment="н̃" />
   <entry from="V" to="ट" comment="т̣а" />
-  <entry from="ê" to="ट्ट" comment="т̣т̣а" />
-  <entry from="ë" to="ट्ठ" comment="т̣т̣ха" />
+  <entry from="&#xEA;" to="ट्ट" comment="т̣т̣а" />
+  <entry from="&#xEB;" to="ट्ठ" comment="т̣т̣ха" />
   <entry from="B" to="ठ" comment="тх̣а" />
-  <entry from="§" to="ठ्ठ" comment="т̣хт̣ха" />
+  <entry from="&#xA7;" to="ठ्ठ" comment="т̣хт̣ха" />
   <entry from="M" to="ड" comment="д̣а" />
-  <entry from="ì" to="ड्ड" comment="д̣д̣а" />
-  <entry from="ï" to="ड्ढ" comment="д̣д̣ха" />
+  <entry from="&#xEC;" to="ड्ड" comment="д̣д̣а" />
+  <entry from="&#xEF;" to="ड्ढ" comment="д̣д̣ха" />
   <entry from="&lt;" to="ढ" comment="дх̣а" />
   <entry from="." to="ण्" comment="н̣" />
   <entry from="r" to="त" comment="та" />
   <entry from="R" to="त्" comment="т" />
-  <entry from="Ù" to="त्त्" comment="тт" />
+  <entry from="&#xD9;" to="त्त्" comment="тт" />
   <entry from="=" to="त्र" comment="тра" />
-  <entry from="«" to="त्र्" comment="тр" />
+  <entry from="&#xAB;" to="त्र्" comment="тр" />
   <entry from="F" to="थ्" comment="тх" />
   <entry from="n" to="द" comment="да" />
-  <entry from="å" to="द्ग" comment="дга" />
-  <entry from="í" to="द्द" comment="дда" />
-  <entry from="¼" to="द्ध" comment="ддха" />
-  <entry from="Ú" to="द्भ" comment="дбха" />
-  <entry from="ù" to="द्म" comment="дма" />
+  <entry from="&#xE5;" to="द्ग" comment="дга" />
+  <entry from="&#xED;" to="द्द" comment="дда" />
+  <entry from="&#xBC;" to="द्ध" comment="ддха" />
+  <entry from="&#xDA;" to="द्भ" comment="дбха" />
+  <entry from="&#xF9;" to="द्म" comment="дма" />
   <entry from="|" to="द्य" comment="дйа" />
-  <entry from="æ" to="द्र" comment="дра" />
+  <entry from="&#xE6;" to="द्र" comment="дра" />
   <entry from="}" to="द्व" comment="два" />
   <entry from="/" to="ध्" comment="дх" />
-  <entry from="è" to="ध्" comment="дх" />
+  <entry from="&#xE8;" to="ध्" comment="дх" />
   <entry from="u" to="न" comment="на" />
   <entry from="U" to="न्" comment="н" />
-  <entry from="é" to="न्न्" comment="нн" />
+  <entry from="&#xE9;" to="न्न्" comment="нн" />
   <entry from="i" to="प" comment="па" />
   <entry from="I" to="प्" comment="п" />
-  <entry from="ç" to="प्र" comment="пра" />
+  <entry from="&#xE7;" to="प्र" comment="пра" />
   <entry from="Q" to="फ" comment="пха" />
-  <entry from="¶" to="फ्" comment="пх" />
-  <entry from="Ý" to="फ्र" comment="пхра" />
+  <entry from="&#xB6;" to="फ्" comment="пх" />
+  <entry from="&#xDD;" to="फ्र" comment="пхра" />
   <entry from="c" to="ब" comment="ба" />
   <entry from="C" to="ब्" comment="б" />
   <entry from="H" to="भ्" comment="бх" />
   <entry from="e" to="म" comment="ма" />
   <entry from="E" to="म्" comment="м" />
   <entry from=";" to="य" comment="йа" />
-  <entry from="¸" to="य्" comment="й" />
+  <entry from="&#xB8;" to="य्" comment="й" />
   <entry from="j" to="र" comment="ра" />
   <entry from="#" to="रु" comment="ру" />
   <entry from=":" to="रू" comment="рӯ" />
@@ -110,43 +97,43 @@
   <entry from="Y" to="ल्" comment="л" />
   <entry from="o" to="व" comment="ва" />
   <entry from="O" to="व्" comment="в" />
-  <entry from="'" to="श्" comment="ш́" />
-  <entry from="Ó" to="श्" comment="ш́ (как в श्क) first letter" />
-  <entry from="Ü" to="श्" comment="ш́ (как в श्र, श्व)" />
+  <entry from="&apos;" to="श्" comment="ш́" />
+  <entry from="&#xD3;" to="श्" comment="ш́ (как в श्क) first letter" />
+  <entry from="&#xDC;" to="श्" comment="ш́ (как в श्र, श्व)" />
   <entry from="J" to="श्र" comment="ш́ра" />
   <entry from="&quot;" to="ष्" comment="ш̣" />
   <entry from="l" to="स" comment="са" />
   <entry from="L" to="स्" comment="с" />
-  <entry from="ó" to="स्त्र" comment="стра" />
-  <entry from="ò" to="स्र" comment="сра" />
+  <entry from="&#xF3;" to="स्त्र" comment="стра" />
+  <entry from="&#xF2;" to="स्र" comment="сра" />
   <entry from="g" to="ह" comment="ха" />
-  <entry from="â" to="हृ" comment="хр̣" />
-  <entry from="º" to="ह्" comment="х" />
-  <entry from="÷" to="ह्ण" comment="хн̣а" />
-  <entry from="Ê" to="ह्न" comment="хна" />
-  <entry from="ã" to="ह्म" comment="хма" />
-  <entry from="á" to="ह्य" comment="хйа" />
-  <entry from="Î" to="ह्र" comment="хра" />
-  <entry from="Í" to="ह्ल" comment="хла" />
-  <entry from="à" to="ह्व" comment="хва" />
-  <entry from="·" to="ऽ" comment="апостроф" />
+  <entry from="&#xE2;" to="हृ" comment="хр̣" />
+  <entry from="&#xBA;" to="ह्" comment="х" />
+  <entry from="&#xF7;" to="ह्ण" comment="хн̣а" />
+  <entry from="&#xCA;" to="ह्न" comment="хна" />
+  <entry from="&#xE3;" to="ह्म" comment="хма" />
+  <entry from="&#xE1;" to="ह्य" comment="хйа" />
+  <entry from="&#xCE;" to="ह्र" comment="хра" />
+  <entry from="&#xCD;" to="ह्ल" comment="хла" />
+  <entry from="&#xE0;" to="ह्व" comment="хва" />
+  <entry from="&#xB7;" to="ऽ" comment="апостроф" />
   <entry from="k" to="ा" comment="а̄" />
   <entry from="h" to="ी" comment="ӣ" />
-  <entry from="°" to="ीं" comment="ӣм̣" />
+  <entry from="&#xB0;" to="ीं" comment="ӣм̣" />
   <entry from="q" to="ु" comment="у" />
-  <entry from="¨" to="ु" comment="у (пониже)" />
+  <entry from="&#xA8;" to="ु" comment="у (пониже)" />
   <entry from="w" to="ू" comment="ӯ" />
-  <entry from="©" to="ू" comment="ӯ (пониже)" />
+  <entry from="&#xA9;" to="ू" comment="ӯ (пониже)" />
   <entry from="`" to="ृ" comment="р̣" />
   <entry from="W" to="ॅ" comment="чандра е" />
   <entry from="s" to="े" comment="е или" />
-  <entry from="˜" to="ें" />
-  <entry from="ü" to="ें" comment="ем̇" />
+  <entry from="&#x2DC;" to="ें" />
+  <entry from="&#xFC;" to="ें" comment="ем̇" />
   <entry from="S" to="ै" comment="аи" />
-  <entry from="®" to="ैं" comment="аим̣" />
-  <entry from="~" to="&#x094D;&#x200C;" comment="Explicit halant" />
-  <entry from="î" to="्य" comment="й (как в ड्य)" />
+  <entry from="&#xAE;" to="ैं" comment="аим̣" />
+  <entry from="~" to="&#x094D;&#x200C;" comment="Explicit halant, with ZWNJ" />
+  <entry from="&#xEE;" to="्य" comment="й (как в ड्य)" />
   <entry from="z" to="्र" comment="ра (как в प्र)" />
-  <entry from="ª" to="्र" comment="ра (как в ड्र)" />
-  <entry from="ú" to="ऺ" comment="udatta or U+093A   DEVANAGARI VOWEL SIGN OE" />
+  <entry from="&#xAA;" to="्र" comment="ра (как в ड्र)" />
+  <entry from="&#xFA;" to="ऺ" comment="udatta or U+093A   DEVANAGARI VOWEL SIGN OE" />
 </mapping>

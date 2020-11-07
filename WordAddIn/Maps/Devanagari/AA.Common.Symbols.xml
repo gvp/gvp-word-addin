@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <entry from="&amp;" to="–" order="90" />
-  <entry from="&#x00B5;" to="—" order="90" />
-  <entry from="&#x03BC;" to="—" order="90" />
-  <entry from="]" to="," order="90" />
-  <entry from="_" to=";" order="90" />
-  <entry from="\" to="?" order="90" />
-  <entry from="-" to="." order="90" />
-  <entry from="A" to="।" order="90" comment="danda" />
-  <entry from="û" to="॥" order="90" comment="double danda" />
-  <entry from="^" to="‘" order="90" />
-  <entry from="*" to="’" order="90" />
-  <entry from="ß" to="“" order="90" />
-  <entry from="Þ" to="”" order="90" />
-  <entry from="ý" to="[" order="90" />
-  <entry from="@" to="/" order="90" />
-  <entry from="ž" to="&lt;" order="90" />
-  <entry from="ñ" to="॰" order="90" />
-  <entry from="$" to="+" order="90" />
-  <entry from="»" to="÷" order="90" />
-  <entry from="¾" to="=" order="90" />
-  <entry from="Ÿ" to="&gt;" order="90" />
-  <entry from="þ" to="]" order="91" />
+  <entry from="&amp;" to="–" />
+  <entry from="&#xB5;" to="—" />
+  <entry from="&#x03BC;" to="—" />
+  <entry from="]" to="," />
+  <entry from="_" to=";" />
+  <entry from="\" to="?" />
+  <entry from="-" to="." />
+  <entry from="A" to="।" comment="danda" />
+  <entry from="&#xFB;" to="॥" comment="double danda" />
+  <entry from="^" to="‘" />
+  <entry from="*" to="’" />
+  <entry from="&#xDF;" to="“" />
+  <entry from="&#xDE;" to="”" />
+  <entry from="&#xFD;" to="[" />
+  <entry from="@" to="/" />
+  <entry from="&#x17E;" to="&lt;" />
+  <entry from="&#xF1;" to="॰" />
+  <entry from="$" to="+" />
+  <entry from="&#xBB;" to="÷" />
+  <entry from="&#xBE;" to="=" />
+  <entry from="&#x178;" to="&gt;" />
+  <entry from="&#xFE;" to="]" order="2" />
 </mapping>

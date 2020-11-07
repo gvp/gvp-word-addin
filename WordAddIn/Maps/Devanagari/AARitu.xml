@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xi="http://www.w3.org/2001/XInclude">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
   <xi:include href="AA.Common.Pre.xml"/>
+  <xi:include href="AA.Common.Numbers.xml"/>
   <xi:include href="AA.Common.Normal.xml"/>
 
   <xi:include href="AA.Common.Symbols.xml"/>
   <xi:include href="AA.Common.Post.xml"/>
 
   <mapping name="Symbols">
-    <entry from="" to="✕" order="90" />
-    <entry from="¹" to="★" order="90" />
-    <entry from="õ" to="&#xFD7;" order="100" />
+    <entry from="&#x7f;" to="✕" />
+    <entry from="&#xB9;" to="★" />
+    <entry from="&#xF5;" to="&#x0FD7;" comment="RIGHT-FACING SVASTI SIGN WITH DOTS" />
   </mapping>
   <mapping name="Unknown">
-    <entry from="ö" to="[e with chandrabindu]" order="100" comment="вирама с чандрабинду" />
+    <entry from="&#xF6;" to="[e with chandrabindu]" order="100" comment="вирама с чандрабинду" />
   </mapping>
 </mapping>
