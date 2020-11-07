@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <set>
-  <set name="Symbols" >
+  <set name="Symbols">
     <case ansi="ý" unicode="[" />
     <case ansi="»" unicode="÷" />
     <case ansi="^" unicode="‘" />
-    <case ansi="&#x00B5;" unicode="&#x2014;" comment="Compatibility character, use U+03BC instead"/>
-    <case ansi="&#x03BC;" unicode="&#x2014;" comment="Em dash"/>
+    <case ansi="&#x00B5;" unicode="&#x2014;" comment="Em dash"/>
     <case ansi="^^" unicode="“" comment="Two single quotation marks should be mapped to one double quotation mark" />
     <case ansi="**" unicode="”" comment="Two single quotation marks should be mapped to one double quotation mark" />
     <case ansi="AA" unicode="॥" comment="Two dandas should be converted into one double danda" />
