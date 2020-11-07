@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mapping name="Devanagari Numbers"
-  xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  >
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <entry from="&#x8C;" to="०" />
   <entry from="&#x83;" to="१" />
