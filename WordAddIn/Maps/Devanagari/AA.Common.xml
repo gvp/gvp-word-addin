@@ -5,9 +5,11 @@
   <entry from="&#x22;" to="ष्" />
   <entry from="&#x23;" to="रु" />
   <entry from="&#x24;" to="+" order="1" />
+  <entry from="&#x25;" to="&#x903;" comment="Visarga" />
   <entry from="&#x26;" to="–" order="1" />
   <entry from="&#x27;" to="श्" />
   <entry from="&#x2A;" to="’" order="1" />
+  <entry from="&#x2B;" to="&#x93C;" comment="Nukta" />
   <entry from="&#x2C;" to="ए" />
   <entry from="&#x2D;" to="." order="1" />
   <entry from="&#x2E;" to="ण्" />
@@ -49,6 +51,7 @@
   <entry from="&#x5E;" to="‘" order="1" />
   <entry from="&#x5F;" to=";" order="1" />
   <entry from="&#x60;" to="ृ" />
+  <entry from="&#x61;" to="&#x902;" comment="Anusvara" />
   <entry from="&#x62;" to="इ" />
   <entry from="&#x63;" to="ब" />
   <entry from="&#x64;" to="क" />
@@ -80,6 +83,7 @@
   <entry from="&#x98;" to="ें" />
   <entry from="&#x9E;" to="&lt;" order="1" />
   <entry from="&#x9F;" to="&gt;" order="1" />
+  <entry from="&#xA1;" to="&#x901;" comment="Chandrabindu" />
   <entry from="&#xA7;" to="ठ्ठ" />
   <entry from="&#xA8;" to="ु" />
   <entry from="&#xA9;" to="ू" />
@@ -113,6 +117,7 @@
   <entry from="&#xD8;" to="क्र" />
   <entry from="&#xD9;" to="त्त्" />
   <entry from="&#xDA;" to="द्भ" />
+  <entry from="&#xDB;" to="&#x93C;" comment="Nukta" />
   <entry from="&#xDC;" to="श्" />
   <entry from="&#xDD;" to="फ्र" />
   <entry from="&#xDE;" to="”" order="1" />
@@ -144,12 +149,4 @@
   <entry from="&#xFC;" to="ें" />
   <entry from="&#xFD;" to="[" order="1" />
   <entry from="&#xFE;" to="]" order="2" comment="This mapping should have order greated than mapping of ]" />
-
-  <mapping name="Combining Signs">
-    <entry from="&#x2B;" to="&#x93C;" comment="Nukta" />
-    <entry from="&#xDB;" to="&#x93C;" comment="Nukta" />
-    <entry from="&#xA1;" to="&#x901;" comment="Chandrabindu" />
-    <entry from="&#x61;" to="&#x902;" comment="Anusvara" />
-    <entry from="&#x25;" to="&#x903;" comment="Visarga" />
-  </mapping>
 </mapping>
