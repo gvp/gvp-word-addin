@@ -3,6 +3,9 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <!-- This is needed to support TTF/OTF fonts that were generated from Type 1 font. See wiki. -->
+  <xi:include href="UnicodeToCP1252.xml"/>
+
   <xi:include href="AA.Common.Pre.xml"/>
   <xi:include href="AA.Common.Numbers.xml"/>
   <xi:include href="AA.Common.xml"/>
