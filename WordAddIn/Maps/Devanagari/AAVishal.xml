@@ -10,14 +10,14 @@
   <xi:include href="AA.Common.Numbers.xml"/>
   <xi:include href="AA.Common.xml"/>
 
+  <entry from="&#x7F;" to="✕" />
   <entry from="&#x82;" to="श्व" />
   <entry from="&#x91;" to="ञ्ज" />
+  <entry from="&#x9B;" to="&lt;" />
+  <entry from="&#x9C;" to="&gt;" />
   <entry from="&#xA4;" to="ॄ" />
-  <entry from="&#xD5;" to="ञ्ज्" />
-  <entry from="&#x7F;" to="✕" />
   <entry from="&#xB9;" to="★" />
-  <entry from="&#x9C;" to="›" />
-  <entry from="&#x9B;" to="‹" />
+  <entry from="&#xD5;" to="ञ्ज्" />
   <entry from="&#xF5;" to="&#x0FD5;" comment="RIGHT-FACING SVASTI SIGN" />
   <entry from="&#xF8;" to="%" />
 
