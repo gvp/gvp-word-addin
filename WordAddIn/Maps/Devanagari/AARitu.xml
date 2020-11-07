@@ -17,7 +17,4 @@
     <entry from="&#xB9;" to="★" />
     <entry from="&#xF5;" to="&#x0FD7;" comment="RIGHT-FACING SVASTI SIGN WITH DOTS" />
   </mapping>
-  <mapping name="Unknown">
-    <entry from="&#xF6;" to="[e with chandrabindu]" order="100" comment="вирама с чандрабинду" />
-  </mapping>
 </mapping>

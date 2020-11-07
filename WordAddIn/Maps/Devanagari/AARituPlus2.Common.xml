@@ -40,7 +40,6 @@
     <entry from="&#x8F;" to="→" />
   </mapping>
   <mapping name="Unknown">
-    <!-- <entry from="&#xF6;" to="[e with chandrabindu]" comment="вирама с чандрабинду" />!!! -->
     <entry from="&#xF5;" to="[GVP logo white]" />
     <entry from="&#xF8;" to="[GVP logo black]" />
   </mapping>

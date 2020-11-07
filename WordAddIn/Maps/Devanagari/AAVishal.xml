@@ -25,8 +25,4 @@
     <entry from="õ" to="&#xFD5;" />
     <entry from="&#xF8;" to="%" />
   </mapping>
-  <mapping name="Unknown">
-    <entry from="ö" to="[e with chandrabindu]" order="100" comment="вирама с чандрабинду" />
-  </mapping>
-
 </mapping>
