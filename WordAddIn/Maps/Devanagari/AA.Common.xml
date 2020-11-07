@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <entry from="&#x22;" to="ष्" />
+  <entry from="&#x23;" to="रु" />
+  <entry from="&#x24;" to="+" order="1" />
+  <entry from="&#x26;" to="–" order="1" />
+  <entry from="&#x27;" to="श्" />
+  <entry from="&#x2A;" to="’" order="1" />
+  <entry from="&#x2C;" to="ए" />
+  <entry from="&#x2D;" to="." order="1" />
+  <entry from="&#x2E;" to="ण्" />
+  <entry from="&#x2F;" to="ध्" />
+  <entry from="&#x3A;" to="रू" />
+  <entry from="&#x3B;" to="य" />
+  <entry from="&#x3C;" to="ढ" />
+  <entry from="&#x3D;" to="त्र" />
+  <entry from="&#x3E;" to="झ" />
+  <entry from="&#x3F;" to="घ्" />
+  <entry from="&#x40;" to="/" order="1" />
+  <entry from="&#x41;" to="।" />
+  <entry from="&#x42;" to="ठ" />
+  <entry from="&#x43;" to="ब्" />
+  <entry from="&#x44;" to="क्" />
+  <entry from="&#x45;" to="म्" />
+  <entry from="&#x46;" to="थ्" />
+  <entry from="&#x48;" to="भ्" />
+  <entry from="&#x49;" to="प्" />
+  <entry from="&#x4A;" to="श्र" />
+  <entry from="&#x4B;" to="ज्ञ" />
+  <entry from="&#x4C;" to="स्" />
+  <entry from="&#x4D;" to="ड" />
+  <entry from="&#x4E;" to="छ" />
+  <entry from="&#x4F;" to="व्" />
+  <entry from="&#x50;" to="च्" />
+  <entry from="&#x51;" to="फ" />
+  <entry from="&#x52;" to="त्" />
+  <entry from="&#x53;" to="ै" />
+  <entry from="&#x54;" to="ज्" />
+  <entry from="&#x55;" to="न्" />
+  <entry from="&#x56;" to="ट" />
+  <entry from="&#x57;" to="ॅ" />
+  <entry from="&#x58;" to="ग्" />
+  <entry from="&#x59;" to="ल्" />
+  <entry from="&#x5B;" to="ख्" />
+  <entry from="&#x5C;" to="?" order="1" />
+  <entry from="&#x5D;" to="," order="1" />
+  <entry from="&#x5E;" to="‘" order="1" />
+  <entry from="&#x5F;" to=";" order="1" />
+  <entry from="&#x60;" to="ृ" />
+  <entry from="&#x62;" to="इ" />
+  <entry from="&#x63;" to="ब" />
+  <entry from="&#x64;" to="क" />
+  <entry from="&#x65;" to="म" />
+  <entry from="&#x67;" to="ह" />
+  <entry from="&#x68;" to="ी" />
+  <entry from="&#x69;" to="प" />
+  <entry from="&#x6A;" to="र" />
+  <entry from="&#x6B;" to="ा" />
+  <entry from="&#x6C;" to="स" />
+  <entry from="&#x6D;" to="उ" />
+  <entry from="&#x6E;" to="द" />
+  <entry from="&#x6F;" to="व" />
+  <entry from="&#x70;" to="च" />
+  <entry from="&#x71;" to="ु" />
+  <entry from="&#x72;" to="त" />
+  <entry from="&#x73;" to="े" />
+  <entry from="&#x74;" to="ज" />
+  <entry from="&#x75;" to="न" />
+  <entry from="&#x76;" to="अ" />
+  <entry from="&#x77;" to="ू" />
+  <entry from="&#x78;" to="ग" />
+  <entry from="&#x79;" to="ल" />
+  <entry from="&#x7A;" to="्र" />
+  <entry from="&#x7B;" to="क्ष्" />
+  <entry from="&#x7C;" to="द्य" />
+  <entry from="&#x7D;" to="द्व" />
+  <entry from="&#x7E;" to="&#x094D;&#x200C;" />
+  <entry from="&#x98;" to="ें" />
+  <entry from="&#x9E;" to="&lt;" order="1" />
+  <entry from="&#x9F;" to="&gt;" order="1" />
+  <entry from="&#xA7;" to="ठ्ठ" />
+  <entry from="&#xA8;" to="ु" />
+  <entry from="&#xA9;" to="ू" />
+  <entry from="&#xAA;" to="्र" />
+  <entry from="&#xAB;" to="त्र्" />
+  <entry from="&#xAC;" to="ॐ" />
+  <entry from="&#xAE;" to="ैं" />
+  <entry from="&#xB0;" to="ीं" />
+  <entry from="&#xB3;" to="ङ" />
+  <entry from="&#xB4;" to="ञ्" />
+  <entry from="&#xB5;" to="—" order="1" />
+  <entry from="&#xB6;" to="फ्" />
+  <entry from="&#xB7;" to="ऽ" />
+  <entry from="&#xB8;" to="य्" />
+  <entry from="&#xBA;" to="ह्" />
+  <entry from="&#xBB;" to="÷" order="1" />
+  <entry from="&#xBC;" to="द्ध" />
+  <entry from="&#xBD;" to="ऋ" />
+  <entry from="&#xBE;" to="=" order="1" />
+  <entry from="&#xBF;" to="ॠ" />
+  <entry from="&#xC1;" to="ङ्क" />
+  <entry from="&#xC2;" to="ङ्ग" />
+  <entry from="&#xC5;" to="ऊ" />
+  <entry from="&#xCA;" to="ह्न" />
+  <entry from="&#xCD;" to="ह्ल" />
+  <entry from="&#xCE;" to="ह्र" />
+  <entry from="&#xCF;" to="कृ" />
+  <entry from="&#xD2;" to="ख्र" />
+  <entry from="&#xD3;" to="श्" />
+  <entry from="&#xD6;" to="झ्" />
+  <entry from="&#xD8;" to="क्र" />
+  <entry from="&#xD9;" to="त्त्" />
+  <entry from="&#xDA;" to="द्भ" />
+  <entry from="&#xDC;" to="श्" />
+  <entry from="&#xDD;" to="फ्र" />
+  <entry from="&#xDE;" to="”" order="1" />
+  <entry from="&#xDF;" to="“" order="1" />
+  <entry from="&#xE0;" to="ह्व" />
+  <entry from="&#xE1;" to="ह्य" />
+  <entry from="&#xE2;" to="हृ" />
+  <entry from="&#xE3;" to="ह्म" />
+  <entry from="&#xE4;" to="क्त" />
+  <entry from="&#xE5;" to="द्ग" />
+  <entry from="&#xE6;" to="द्र" />
+  <entry from="&#xE7;" to="प्र" />
+  <entry from="&#xE8;" to="ध्" />
+  <entry from="&#xE9;" to="न्न्" />
+  <entry from="&#xEA;" to="ट्ट" />
+  <entry from="&#xEB;" to="ट्ठ" />
+  <entry from="&#xEC;" to="ड्ड" />
+  <entry from="&#xED;" to="द्द" />
+  <entry from="&#xEE;" to="्य" />
+  <entry from="&#xEF;" to="ड्ढ" />
+  <entry from="&#xF1;" to="॰" />
+  <entry from="&#xF2;" to="स्र" />
+  <entry from="&#xF3;" to="स्त्र" />
+  <entry from="&#xF4;" to="क्क" />
+  <entry from="&#xF7;" to="ह्ण" />
+  <entry from="&#xF9;" to="द्म" />
+  <entry from="&#xFA;" to="ऺ" />
+  <entry from="&#xFB;" to="॥" />
+  <entry from="&#xFC;" to="ें" />
+  <entry from="&#xFD;" to="[" order="1" />
+  <entry from="&#xFE;" to="]" order="2" comment="This mapping should have order greated than mapping of ]" />
+
+  <mapping name="Combining Signs">
+    <entry from="&#x2B;" to="&#x93C;" comment="Nukta" />
+    <entry from="&#xDB;" to="&#x93C;" comment="Nukta" />
+    <entry from="&#xA1;" to="&#x901;" comment="Chandrabindu" />
+    <entry from="&#x61;" to="&#x902;" comment="Anusvara" />
+    <entry from="&#x25;" to="&#x903;" comment="Visarga" />
+  </mapping>
+</mapping>

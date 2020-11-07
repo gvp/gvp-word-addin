@@ -2,13 +2,6 @@
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xi="http://www.w3.org/2001/XInclude">
-  <mapping name="Combining Signs">
-    <entry from="+" to="़" comment="Nukta" />
-    <entry from="Û" to="़" comment="Nukta" />
-    <entry from="¡" to="ँ" comment="Chandrabindu" />
-    <entry from="a" to="ं" comment="Anusvara" />
-    <entry from="%" to="ः" comment="Visarga" />
-  </mapping>
   <mapping name="Devanagari Fixing">
     <entry from="ं([ऺऻा-ौ])" to="$1ं" type="regex" order="100" comment="Reorder anusvar and matra" />
     <entry from="ीे" to="ी" order="110" comment="Extra" />

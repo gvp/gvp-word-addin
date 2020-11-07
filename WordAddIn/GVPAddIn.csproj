@@ -302,10 +302,9 @@
     <EmbeddedResource Include="Maps\Devanagari\AAVishal.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARituPlus2.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AA.Common.Pre.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\AA.Common.Normal.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AA.Common.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARitu.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AA.Common.Post.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\AA.Common.Symbols.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARituPlus2-Numbers.xml" />
     <EmbeddedResource Include="Maps\Mapping.xsd">
       <SubType>Designer</SubType>

@@ -1,18 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <xi:include href="AA.Common.Pre.xml"/>
   <xi:include href="AA.Common.Numbers.xml"/>
-  <xi:include href="AA.Common.Normal.xml"/>
+  <xi:include href="AA.Common.xml"/>
 
   <entry from='&#x201A;' to='श्व' />
   <entry from='&#x2018;' to='ञ्ज' order='-1' />
   <entry from='&#x00A4;' to='ॄ' />
   <entry from='&#x00D5;' to='ञ्ज्' />
 
-  <xi:include href="AA.Common.Symbols.xml"/>
   <xi:include href="AA.Common.Post.xml"/>
 
   <mapping name="Symbols">
