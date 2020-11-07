@@ -5,11 +5,11 @@
   <entry from="&#x22;" to="ष्" />
   <entry from="&#x23;" to="रु" />
   <entry from="&#x24;" to="+" order="1" />
-  <entry from="&#x25;" to="&#x903;" comment="Visarga" />
+  <entry from="&#x25;" to="&#x0903;" comment="Visarga" />
   <entry from="&#x26;" to="–" order="1" />
   <entry from="&#x27;" to="श्" />
   <entry from="&#x2A;" to="’" order="1" />
-  <entry from="&#x2B;" to="&#x93C;" comment="Nukta" />
+  <entry from="&#x2B;" to="&#x093C;" comment="Nukta" />
   <entry from="&#x2C;" to="ए" />
   <entry from="&#x2D;" to="." order="1" />
   <entry from="&#x2E;" to="ण्" />
@@ -27,6 +27,7 @@
   <entry from="&#x44;" to="क्" />
   <entry from="&#x45;" to="म्" />
   <entry from="&#x46;" to="थ्" />
+  <!-- Codepoint x47 is mapped in Pre -->
   <entry from="&#x48;" to="भ्" />
   <entry from="&#x49;" to="प्" />
   <entry from="&#x4A;" to="श्र" />
@@ -45,17 +46,19 @@
   <entry from="&#x57;" to="ॅ" />
   <entry from="&#x58;" to="ग्" />
   <entry from="&#x59;" to="ल्" />
+  <!-- Codepoint x5A is mapped in Post-->
   <entry from="&#x5B;" to="ख्" />
   <entry from="&#x5C;" to="?" order="1" />
   <entry from="&#x5D;" to="," order="1" />
   <entry from="&#x5E;" to="‘" order="1" />
   <entry from="&#x5F;" to=";" order="1" />
   <entry from="&#x60;" to="ृ" />
-  <entry from="&#x61;" to="&#x902;" comment="Anusvara" />
+  <entry from="&#x61;" to="&#x0902;" comment="Anusvara" />
   <entry from="&#x62;" to="इ" />
   <entry from="&#x63;" to="ब" />
   <entry from="&#x64;" to="क" />
   <entry from="&#x65;" to="म" />
+  <!-- Codepoint x66 is mapped in Post-->
   <entry from="&#x67;" to="ह" />
   <entry from="&#x68;" to="ी" />
   <entry from="&#x69;" to="प" />
@@ -79,45 +82,75 @@
   <entry from="&#x7B;" to="क्ष्" />
   <entry from="&#x7C;" to="द्य" />
   <entry from="&#x7D;" to="द्व" />
-  <entry from="&#x7E;" to="&#x094D;&#x200C;" />
-  <entry from="&#x98;" to="ें" />
-  <entry from="&#x9E;" to="&lt;" order="1" />
+  <entry from="&#x7E;" to="&#x094D;&#x200C;" comment="Explicit halant" />
+  <!-- Codepoint x7F–x82 is fonts-specific -->
+  <!-- Codepoint x83–x8C is mapped in Numbers -->
+  <!-- Codepoint x8D–x8F is fonts-specific -->
+  <!-- Codepoint x90 is not defined -->
+  <!-- Codepoint x91–x9C is fonts-specific -->
+  <!-- Codepoint x9D is not defined -->
+  <entry from="&#x9E;" to="&lt;" order="1" comment="Except for AAVishal"/>
   <entry from="&#x9F;" to="&gt;" order="1" />
-  <entry from="&#xA1;" to="&#x901;" comment="Chandrabindu" />
+  <!-- Codepoint xA0 is not defined -->
+  <entry from="&#xA1;" to="&#x0901;" comment="Chandrabindu" />
+  <!-- Codepoint xA2 is not defined -->
+  <!-- Codepoint xA3 is mapped in Post -->
+  <!-- Codepoint xA4 is fonts-specific -->
+  <!-- Codepoint xA5 is mapped in Post -->
+  <!-- Codepoint xA6 is not defined -->
   <entry from="&#xA7;" to="ठ्ठ" />
   <entry from="&#xA8;" to="ु" />
   <entry from="&#xA9;" to="ू" />
   <entry from="&#xAA;" to="्र" />
   <entry from="&#xAB;" to="त्र्" />
   <entry from="&#xAC;" to="ॐ" />
+  <!-- Codepoint xAD is not defined -->
   <entry from="&#xAE;" to="ैं" />
+  <!-- Codepoint xAF is not defined -->
   <entry from="&#xB0;" to="ीं" />
+  <!-- Codepoint xB1 is mapped in Post -->
+  <!-- Codepoint xB2 is mapped in Post -->
   <entry from="&#xB3;" to="ङ" />
   <entry from="&#xB4;" to="ञ्" />
   <entry from="&#xB5;" to="—" order="1" />
   <entry from="&#xB6;" to="फ्" />
   <entry from="&#xB7;" to="ऽ" />
   <entry from="&#xB8;" to="य्" />
+  <!-- Codepoint xB9 is fonts-specific -->
   <entry from="&#xBA;" to="ह्" />
   <entry from="&#xBB;" to="÷" order="1" />
   <entry from="&#xBC;" to="द्ध" />
   <entry from="&#xBD;" to="ऋ" />
   <entry from="&#xBE;" to="=" order="1" />
   <entry from="&#xBF;" to="ॠ" />
+  <!-- Codepoint xC0 is fonts-specific -->
   <entry from="&#xC1;" to="ङ्क" />
   <entry from="&#xC2;" to="ङ्ग" />
+  <!-- Codepoint xC3 is not defined -->
+  <!-- Codepoint xC4 is fonts-specific -->
   <entry from="&#xC5;" to="ऊ" />
+  <!-- Codepoint xC6 is fonts-specific -->
+  <!-- Codepoint xC7 is not defined -->
+  <!-- Codepoint xC8 is fonts-specific -->
+  <!-- Codepoint xC9 is fonts-specific -->
   <entry from="&#xCA;" to="ह्न" />
+  <!-- Codepoint xCB is fonts-specific -->
+  <!-- Codepoint xCC is fonts-specific -->
   <entry from="&#xCD;" to="ह्ल" />
   <entry from="&#xCE;" to="ह्र" />
   <entry from="&#xCF;" to="कृ" />
+  <!-- Codepoint xD0 is fonts-specific -->
+  <!-- Codepoint xD1 is not defined -->
   <entry from="&#xD2;" to="ख्र" />
   <entry from="&#xD3;" to="श्" />
+  <!-- Codepoint xD4 is fonts-specific -->
+  <!-- Codepoint xD5 is fonts-specific -->
   <entry from="&#xD6;" to="झ्" />
+  <!-- Codepoint xD7 is fonts-specific -->
   <entry from="&#xD8;" to="क्र" />
   <entry from="&#xD9;" to="त्त्" />
   <entry from="&#xDA;" to="द्भ" />
-  <entry from="&#xDB;" to="&#x93C;" comment="Nukta" />
+  <entry from="&#xDB;" to="&#x093C;" comment="Nukta" />
   <entry from="&#xDC;" to="श्" />
   <entry from="&#xDD;" to="फ्र" />
   <entry from="&#xDE;" to="”" order="1" />
@@ -138,16 +171,20 @@
   <entry from="&#xED;" to="द्द" />
   <entry from="&#xEE;" to="्य" />
   <entry from="&#xEF;" to="ड्ढ" />
+  <!-- Codepoint xF0 is fonts-specific -->
   <entry from="&#xF1;" to="॰" />
   <entry from="&#xF2;" to="स्र" />
   <entry from="&#xF3;" to="स्त्र" />
   <entry from="&#xF4;" to="क्क" />
-  <entry from="&#xF6;" to="&#x947;&#x901;" comment="Vowel sign E with chandra bindu" />
+  <!-- Codepoint xF5 is fonts-specific -->
+  <entry from="&#xF6;" to="&#x0947;&#x0901;" comment="Vowel sign E with chandra bindu" />
   <entry from="&#xF7;" to="ह्ण" />
+  <!-- Codepoint xF8 is fonts-specific -->
   <entry from="&#xF9;" to="द्म" />
   <entry from="&#xFA;" to="ऺ" />
   <entry from="&#xFB;" to="॥" />
   <entry from="&#xFC;" to="ें" />
   <entry from="&#xFD;" to="[" order="1" />
   <entry from="&#xFE;" to="]" order="2" comment="This mapping should have order greated than mapping of ]" />
+  <!-- Codepoint xFF is fonts-specific -->
 </mapping>
