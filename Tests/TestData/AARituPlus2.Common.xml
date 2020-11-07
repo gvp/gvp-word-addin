@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <set>
-  <case ansi="õ" unicode="[GVP logo white]" />
+  <case ansi="&#xF5;" unicode="❀" comment="GVP logo light"/>
+  <case ansi="&#xF8;" unicode="✿" comment="GVP logo dark" />
   <case ansi="nq;kZsèkuk|k%" unicode="दुर्योधनाद्याः" comment="Wrong order of र् and े" />
   <case ansi="dÙk±q" unicode="कर्त्तुं" comment="Wrong order of ु and ं" />
   <case ansi="'kÌknhuka" unicode="शङ्खादीनां" />

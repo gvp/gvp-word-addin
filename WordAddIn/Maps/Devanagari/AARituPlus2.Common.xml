@@ -6,41 +6,38 @@
   <xi:include href="AA.Common.Pre.xml"/>
   <xi:include href="AA.Common.xml"/>
 
-  <mapping name="Specific AARituPlus2 Normal characters">
-    <entry from="&#xF0;" to="प्त" />
-    <entry from="&#xC8;" to="ऌ" comment="гласная л" />
-    <entry from="&#x81;" to="क्च" />
-    <entry from="&#xC9;" to="ङ्क्त" comment="н̇кта" />
-    <entry from="&#xC0;" to="ङ्क्ष" comment="н̇кш̣а" />
-    <entry from="&#xCC;" to="ङ्ख" comment="н̇кха" />
-    <entry from="&#xD0;" to="ङ्घ" comment="н̇гха" />
+  <mapping name="Specific AARituPlus2 characters">
     <entry from="&#x80;" to="ञ्च" />
-    <entry from="&#x91;" to="ञ्ज" comment="н̃джа" />
-    <entry from="&#xCB;" to="ल्ल" comment="лла" />
-    <entry from="&#xFF;" to="ळ" comment="лла" />
+    <entry from="&#x81;" to="क्च" />
+    <entry from="&#x82;" to="श्व" />
     <entry from="&#x8D;" to="श्च" />
-    <entry from="&#x82;" to="श्व" comment="ш̣ва" />
-    <entry from="&#xD4;" to="ष्ट" comment="ш̣тта" />
-    <entry from="&#xD7;" to="ष्ठ" comment="ш̣ттха" />
+    <entry from="&#x8E;" to="←" />
+    <entry from="&#x8F;" to="→" />
+    <entry from="&#x91;" to="ञ्ज" />
     <entry from="&#x92;" to="ु" />
     <entry from="&#x93;" to="ू" />
-    <entry from="&#xA4;" to="ॄ" comment="р̣р̣" />
-    <entry from="&#xC6;" to="ॢ" comment="??? гласная лл" />
     <entry from="&#x94;" to="े" />
     <entry from="&#x95;" to="ै" />
+    <entry from="&#x98;" to="ें" />
     <entry from="&#x99;" to="ैं" />
+    <entry from="&#xA4;" to="ॄ" />
+    <entry from="&#xB9;" to="✕" />
+    <entry from="&#xC0;" to="ङ्क्ष" />
     <entry from="&#xC4;" to="्न" />
+    <entry from="&#xC6;" to="ॢ" />
+    <entry from="&#xC8;" to="ऌ" />
+    <entry from="&#xC9;" to="ङ्क्त" />
+    <entry from="&#xCB;" to="ल्ल" />
+    <entry from="&#xCC;" to="ङ्ख" />
+    <entry from="&#xD0;" to="ङ्घ" />
+    <entry from="&#xD4;" to="ष्ट" />
+    <entry from="&#xD7;" to="ष्ठ" />
+    <entry from="&#xF0;" to="प्त" />
+    <entry from="&#xF5;" to="❀" comment="GVP logo light" />
+    <entry from="&#xF8;" to="✿" comment="GVP logo dark" />
+    <entry from="&#xFF;" to="ळ" />
   </mapping>
 
   <xi:include href="AA.Common.Post.xml"/>
 
-  <mapping name="Symbols">
-    <entry from="&#xB9;" to="✕" />
-    <entry from="&#x8E;" to="←" />
-    <entry from="&#x8F;" to="→" />
-  </mapping>
-  <mapping name="Unknown">
-    <entry from="&#xF5;" to="[GVP logo white]" />
-    <entry from="&#xF8;" to="[GVP logo black]" />
-  </mapping>
 </mapping>
