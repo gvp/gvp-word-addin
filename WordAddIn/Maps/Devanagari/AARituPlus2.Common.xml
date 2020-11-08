@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <xi:include href="AA.Common.Pre.xml"/>
+  <xi:include href="AA.Mistypings.xml"/>
   <xi:include href="AA.Common.xml"/>
 
   <mapping name="Specific AARituPlus2 characters">

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <entry from="&#x002A;&#x002A;" to="&#x00DE;" comment="Double ’ to ”" />
+  <entry from="&#x005E;&#x005E;" to="&#x00DF;" comment="Double ‘ to “" />
+  <entry from="fq" to="qf" order="-110" comment="Wrong order of ु and ि" />
+  <entry from="~+" to="+~" order="-110" comment="Wrong order of Virama and Nukta" />
+  <entry from="·a" to="a·" order="-110" comment="Wrong order of Anusvar and Avagraha" />
+  <entry from="*~" to="~*" order="-110" comment="Wrong order of Virama and Apostrophe" />
+  <entry from="([Z±])+([`sq])+" to="$2$1" type="regex" order="-110" comment="R-before should be before E-matra, Ri, U-sign'/&gt;" />
+  <entry from="~(?=[î])" to="" type="regex" order="-110" comment="Mistaken Virama in the middle of the conjunct" />
+  <entry from="([Zqs])k" to="k$1" type="regex" order="-110" comment="Wrong order of A-sign and [R-before, U-sign]" />
+  <entry from="sz" to="zs" comment="Wrong order of virama+ra and e-sign" />
+  <entry from="(?&lt;=h)k+" to="" type="regex" order="-101" comment="a-sign is not allowed after i-sign" />
+  <entry from="(?&lt;=[prtliecK=&amp;lt;;ux|])(k){2,}" to="$1" type="regex" order="-101" comment="Extra A-sign after consonants with vertical line" />
+  <entry from="([ZzSs~])\1+" to="$1" type="regex" order="-101" comment="Duplicate symbol" />
+  <entry from="±Z|Z±" to="±" type="regex" order="-100" comment="r+cons+m eats r+cons" />
+  <entry from="sS|Ss" to="S" type="regex" order="-100" comment="AI-matra eats E-matra" />
+</mapping>
