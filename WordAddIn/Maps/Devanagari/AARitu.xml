@@ -10,11 +10,10 @@
   <xi:include href="AA.Common.Numbers.xml"/>
   <xi:include href="AA.Common.xml"/>
 
+  <entry from="&#x7F;" to="✕" />
+  <entry from="&#xB9;" to="★" />
+  <entry from="&#xF5;" to="&#x0FD7;" comment="RIGHT-FACING SVASTI SIGN WITH DOTS" />
+
   <xi:include href="AA.Common.Post.xml"/>
 
-  <mapping name="Symbols">
-    <entry from="&#x7f;" to="✕" />
-    <entry from="&#xB9;" to="★" />
-    <entry from="&#xF5;" to="&#x0FD7;" comment="RIGHT-FACING SVASTI SIGN WITH DOTS" />
-  </mapping>
 </mapping>
