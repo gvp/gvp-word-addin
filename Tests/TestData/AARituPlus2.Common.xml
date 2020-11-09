@@ -2,8 +2,34 @@
 <set xsi:noNamespaceSchemaLocation="FontConversionTestData.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
+  <case local="&#x82;" unicode="श्व" />
+  <case local="&#x91;" unicode="ञ्ज" />
+  <case local="&#xA4;" unicode="&#x0944;" />
+  <case local="&#xB9;" unicode="✕" />
+  <case local="&#xC0;" unicode="ङ्क्ष" />
+  <case local="&#xC9;" unicode="ङ्क्त" />
+  <case local="&#xCB;" unicode="ल्ल" />
+  <case local="&#xCC;" unicode="ङ्ख" />
+  <case local="&#xD0;" unicode="ङ्घ" />
+  <case local="&#xD4;" unicode="ष्ट" />
+  <case local="&#xD7;" unicode="ष्ठ" />
   <case local="&#xF5;" unicode="❀" comment="GVP logo light"/>
   <case local="&#xF8;" unicode="✿" comment="GVP logo dark" />
+  <case local="&#x80;" unicode="&#x91E;&#x94D;&#x91A;" />
+  <case local="&#x81;" unicode="&#x915;&#x94D;&#x91A;" />
+  <case local="&#x8D;" unicode="&#x936;&#x94D;&#x91A;" />
+  <case local="&#x8E;" unicode="&#x2190;" />
+  <case local="&#x8F;" unicode="&#x2192;" />
+  <case local="&#x94;" unicode="&#x947;" />
+  <case local="&#x95;" unicode="&#x948;" />
+  <case local="&#x98;" unicode="&#x947;&#x902;" />
+  <case local="&#x99;" unicode="&#x948;&#x902;" />
+  <case local="&#xC4;" unicode="&#x94D;&#x928;" />
+  <case local="&#xC6;" unicode="&#x962;" />
+  <case local="&#xC8;" unicode="&#x90C;" />
+  <case local="&#xF0;" unicode="&#x92A;&#x94D;&#x924;" />
+  <case local="&#xFF;" unicode="&#x933;" />
+
   <case local="nq;kZsèkuk|k%" unicode="दुर्योधनाद्याः" comment="Wrong order of र् and े" />
   <case local="dÙk±q" unicode="कर्त्तुं" comment="Wrong order of ु and ं" />
   <case local="'kÌknhuka" unicode="शङ्खादीनां" />

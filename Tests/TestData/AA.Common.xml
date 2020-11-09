@@ -2,17 +2,159 @@
 <set xsi:noNamespaceSchemaLocation="FontConversionTestData.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <set name="Symbols">
-    <case local="ý" unicode="[" />
-    <case local="»" unicode="÷" />
-    <case local="^" unicode="‘" />
-    <case local="&#x00B5;" unicode="&#x2014;" comment="Em dash"/>
-    <case local="^^" unicode="“" comment="Two single quotation marks should be mapped to one double quotation mark" />
-    <case local="**" unicode="”" comment="Two single quotation marks should be mapped to one double quotation mark" />
-    <case local="AA" unicode="॥" comment="Two dandas should be converted into one double danda" />
-  </set>
-  <case local="," unicode="ए" />
-  <case local="[" unicode="ख्" />
+  <case local="&#x20;" unicode=" " />
+  <case local="&#x21;" unicode="!" />
+  <case local="&#x22;" unicode="ष्" />
+  <case local="&#x23;" unicode="रु" />
+  <case local="&#x24;" unicode="+" />
+  <case local="&#x25;" unicode="&#x903;" />
+  <case local="&#x26;" unicode="–" />
+  <case local="&#x27;" unicode="श्" />
+  <case local="&#x28;" unicode="(" />
+  <case local="&#x29;" unicode=")" />
+  <case local="&#x2A;" unicode="’" />
+  <case local="&#x2B;" unicode="&#x93C;" />
+  <case local="&#x2C;" unicode="ए" />
+  <case local="&#x2D;" unicode="." />
+  <case local="&#x2E;" unicode="ण्" />
+  <case local="&#x2F;" unicode="ध्" />
+  <case local="&#x3A;" unicode="रू" />
+  <case local="&#x3B;" unicode="य" />
+  <case local="&#x3C;" unicode="ढ" />
+  <case local="&#x3D;" unicode="त्र" />
+  <case local="&#x3E;" unicode="झ" />
+  <case local="&#x3F;" unicode="घ्" />
+  <case local="&#x40;" unicode="/" />
+  <case local="&#x41;" unicode="।" />
+  <case local="&#x42;" unicode="ठ" />
+  <case local="&#x43;" unicode="ब्" />
+  <case local="&#x44;" unicode="क्" />
+  <case local="&#x45;" unicode="म्" />
+  <case local="&#x46;" unicode="थ्" />
+  <case local="&#x48;" unicode="भ्" />
+  <case local="&#x49;" unicode="प्" />
+  <case local="&#x4A;" unicode="श्र" />
+  <case local="&#x4B;" unicode="ज्ञ" />
+  <case local="&#x4C;" unicode="स्" />
+  <case local="&#x4D;" unicode="ड" />
+  <case local="&#x4E;" unicode="छ" />
+  <case local="&#x4F;" unicode="व्" />
+  <case local="&#x50;" unicode="च्" />
+  <case local="&#x51;" unicode="फ" />
+  <case local="&#x52;" unicode="त्" />
+  <case local="&#x53;" unicode="&#x948;" />
+  <case local="&#x54;" unicode="ज्" />
+  <case local="&#x55;" unicode="न्" />
+  <case local="&#x56;" unicode="ट" />
+  <case local="&#x57;" unicode="&#x945;" />
+  <case local="&#x58;" unicode="ग्" />
+  <case local="&#x59;" unicode="ल्" />
+  <case local="&#x5B;" unicode="ख्" />
+  <case local="&#x5C;" unicode="?" />
+  <case local="&#x5D;" unicode="," />
+  <case local="&#x5E;" unicode="‘" />
+  <case local="&#x5F;" unicode=";" />
+  <case local="&#x60;" unicode="&#x943;" />
+  <case local="&#x61;" unicode="&#x902;" />
+  <case local="&#x62;" unicode="इ" />
+  <case local="&#x63;" unicode="ब" />
+  <case local="&#x64;" unicode="क" />
+  <case local="&#x65;" unicode="म" />
+  <case local="&#x67;" unicode="ह" />
+  <case local="&#x68;" unicode="&#x940;" />
+  <case local="&#x69;" unicode="प" />
+  <case local="&#x6A;" unicode="र" />
+  <case local="&#x6B;" unicode="&#x93E;" />
+  <case local="&#x6C;" unicode="स" />
+  <case local="&#x6D;" unicode="उ" />
+  <case local="&#x6E;" unicode="द" />
+  <case local="&#x6F;" unicode="व" />
+  <case local="&#x70;" unicode="च" />
+  <case local="&#x71;" unicode="&#x941;" />
+  <case local="&#x72;" unicode="त" />
+  <case local="&#x73;" unicode="&#x947;" />
+  <case local="&#x74;" unicode="ज" />
+  <case local="&#x75;" unicode="न" />
+  <case local="&#x76;" unicode="अ" />
+  <case local="&#x77;" unicode="&#x942;" />
+  <case local="&#x78;" unicode="ग" />
+  <case local="&#x79;" unicode="ल" />
+  <case local="&#x7A;" unicode="&#x94D;र" />
+  <case local="&#x7B;" unicode="क्ष्" />
+  <case local="&#x7C;" unicode="द्य" />
+  <case local="&#x7D;" unicode="द्व" />
+  <case local="&#x7E;" unicode="&#x94D;" />
+  <case local="&#xA1;" unicode="&#x901;" />
+  <case local="&#xA7;" unicode="&#x920;&#x94D;&#x920;" />
+  <case local="&#xA8;" unicode="&#x941;" />
+  <case local="&#xA9;" unicode="&#x942;" />
+  <case local="&#xAA;" unicode="&#x94D;&#x930;" />
+  <case local="&#xAB;" unicode="&#x924;&#x94D;&#x930;&#x94D;" />
+  <case local="&#xAC;" unicode="&#x950;" />
+  <case local="&#xAE;" unicode="&#x948;&#x902;" />
+  <case local="&#xB0;" unicode="&#x940;&#x902;" />
+  <case local="&#xB3;" unicode="&#x919;" />
+  <case local="&#xB4;" unicode="&#x91E;&#x94D;" />
+  <case local="&#xB5;" unicode="&#x2014;" />
+  <case local="&#xB6;" unicode="&#x92B;&#x94D;" />
+  <case local="&#xB7;" unicode="&#x93D;" />
+  <case local="&#xB8;" unicode="&#x92F;&#x94D;" />
+  <case local="&#xBA;" unicode="&#x939;&#x94D;" />
+  <case local="&#xBB;" unicode="&#xF7;" />
+  <case local="&#xBC;" unicode="&#x926;&#x94D;&#x927;" />
+  <case local="&#xBD;" unicode="&#x90B;" />
+  <case local="&#xBE;" unicode="=" />
+  <case local="&#xBF;" unicode="&#x960;" />
+  <case local="&#xC1;" unicode="&#x919;&#x94D;&#x915;" />
+  <case local="&#xC2;" unicode="&#x919;&#x94D;&#x917;" />
+  <case local="&#xC5;" unicode="&#x90A;" />
+  <case local="&#xCA;" unicode="&#x939;&#x94D;&#x928;" />
+  <case local="&#xCD;" unicode="&#x939;&#x94D;&#x932;" />
+  <case local="&#xCE;" unicode="&#x939;&#x94D;&#x930;" />
+  <case local="&#xCF;" unicode="&#x915;&#x943;" />
+  <case local="&#xD2;" unicode="&#x916;&#x94D;&#x930;" />
+  <case local="&#xD3;" unicode="&#x936;&#x94D;" />
+  <case local="&#xD6;" unicode="&#x91D;&#x94D;" />
+  <case local="&#xD8;" unicode="&#x915;&#x94D;&#x930;" />
+  <case local="&#xD9;" unicode="&#x924;&#x94D;&#x924;&#x94D;" />
+  <case local="&#xDA;" unicode="&#x926;&#x94D;&#x92D;" />
+  <case local="&#xDB;" unicode="&#x93C;" />
+  <case local="&#xDC;" unicode="&#x936;&#x94D;" />
+  <case local="&#xDD;" unicode="&#x92B;&#x94D;&#x930;" />
+  <case local="&#xDE;" unicode="&#x201D;" />
+  <case local="&#xDF;" unicode="&#x201C;" />
+  <case local="&#xE0;" unicode="&#x939;&#x94D;&#x935;" />
+  <case local="&#xE1;" unicode="&#x939;&#x94D;&#x92F;" />
+  <case local="&#xE2;" unicode="&#x939;&#x943;" />
+  <case local="&#xE3;" unicode="&#x939;&#x94D;&#x92E;" />
+  <case local="&#xE4;" unicode="&#x915;&#x94D;&#x924;" />
+  <case local="&#xE5;" unicode="&#x926;&#x94D;&#x917;" />
+  <case local="&#xE6;" unicode="&#x926;&#x94D;&#x930;" />
+  <case local="&#xE7;" unicode="&#x92A;&#x94D;&#x930;" />
+  <case local="&#xE8;" unicode="&#x927;&#x94D;" />
+  <case local="&#xE9;" unicode="&#x928;&#x94D;&#x928;&#x94D;" />
+  <case local="&#xEA;" unicode="&#x91F;&#x94D;&#x91F;" />
+  <case local="&#xEB;" unicode="&#x91F;&#x94D;&#x920;" />
+  <case local="&#xEC;" unicode="&#x921;&#x94D;&#x921;" />
+  <case local="&#xED;" unicode="&#x926;&#x94D;&#x926;" />
+  <case local="&#xEE;" unicode="&#x94D;&#x92F;" />
+  <case local="&#xEF;" unicode="&#x921;&#x94D;&#x922;" />
+  <case local="&#xF1;" unicode="&#x970;" />
+  <case local="&#xF2;" unicode="&#x938;&#x94D;&#x930;" />
+  <case local="&#xF3;" unicode="&#x938;&#x94D;&#x924;&#x94D;&#x930;" />
+  <case local="&#xF4;" unicode="&#x915;&#x94D;&#x915;" />
+  <case local="&#xF6;" unicode="&#x947;&#x901;" />
+  <case local="&#xF7;" unicode="&#x939;&#x94D;&#x923;" />
+  <case local="&#xF9;" unicode="&#x926;&#x94D;&#x92E;" />
+  <case local="&#xFA;" unicode="&#x93A;" />
+  <case local="&#xFB;" unicode="&#x965;" />
+  <case local="&#xFC;" unicode="&#x947;&#x902;" />
+  <case local="&#xFD;" unicode="[" />
+  <case local="&#xFE;" unicode="]" />
+
+  <case local="^^" unicode="“" comment="Two single quotation marks should be mapped to one double quotation mark" />
+  <case local="**" unicode="”" comment="Two single quotation marks should be mapped to one double quotation mark" />
+  <case local="AA" unicode="॥" comment="Two dandas should be converted into one double danda" />
   <case local="mG" unicode="ऊ" />
   <case local="JhJhxq#&amp;xkSjkÂkS t;r%" unicode="श्रीश्रीगुरु–गौराङ्गौ जयतः" />
   <case local="bZn`'kks" unicode="ईदृशो" />

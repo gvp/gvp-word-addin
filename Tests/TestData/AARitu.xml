@@ -5,7 +5,9 @@
 
   <xi:include href="AA.Common.xml" />
   <xi:include href="AA.Common.Numbers.xml" />
-  <case local="¹" unicode="★" />
-  <case local="õ" unicode="&#xFD7;" comment="RIGHT-FACING SVASTI SIGN WITH DOTS" />
+  <case local="&#x7F;" unicode="&#x2715;" />
+  <case local="&#x9E;" unicode="&lt;" />
+  <case local="&#xB9;" unicode="★" />
+  <case local="&#xF5;" unicode="&#x0FD7;" comment="RIGHT-FACING SVASTI SIGN WITH DOTS" />
   <case local="gqb±" unicode="हुईं" />
 </set>
