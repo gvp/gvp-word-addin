@@ -297,13 +297,16 @@
     <EmbeddedResource Include="Maps\Cyrillic\ThamesSanskrit.xml" />
     <EmbeddedResource Include="Maps\Translit\Devanagari→Latin.xml" />
     <EmbeddedResource Include="Maps\Roman\SD1-TTSurekh.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\AAVishal.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\AARituPlus2.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\AA.Mistypings.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\AA.Common.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\AARitu.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AA.Common.Numbers.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AA.Common.Post.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AA.Common.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AA.Mistypings.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AARitu.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARituPlus2-Numbers.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AARituPlus2.Common.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AARituPlus2.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AAVishal.xml" />
+    <EmbeddedResource Include="Maps\UnicodeToCP1252.xml" />
     <EmbeddedResource Include="Maps\Mapping.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -323,13 +326,6 @@
     <PackageReference Include="Mvp.Xml">
       <Version>2.3.0</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Maps\Devanagari\AA.Common.Numbers.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\AARituPlus2.Common.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Maps\UnicodeToCP1252.xml" />
   </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <PropertyGroup>
