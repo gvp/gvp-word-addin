@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <entry from="&#x8C;" to="०" />
+  <entry from="&#x83;" to="१" />
+  <entry from="&#x84;" to="२" />
+  <entry from="&#x85;" to="३" />
+  <entry from="&#x86;" to="४" />
+  <entry from="&#x87;" to="५" />
+  <entry from="&#x88;" to="६" />
+  <entry from="&#x89;" to="७" />
+  <entry from="&#x8A;" to="८" />
+  <entry from="&#x8B;" to="९" />
+</mapping>
+

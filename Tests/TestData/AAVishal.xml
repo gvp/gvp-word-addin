@@ -1,12 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<set xmlns:xi="http://www.w3.org/2001/XInclude">
+<set xsi:noNamespaceSchemaLocation="FontConversionTestData.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
   <xi:include href="AA.Common.xml" />
   <xi:include href="AA.Common.Numbers.xml" />
-  <case ansi="›" unicode="&#x2039;" />
-  <case ansi="œ" unicode="&#x203A;" />
-  <case ansi="¹" unicode="&#x2605;" />
-  <case ansi="õ" unicode="&#xFD5;" />
-  <case ansi="ø" unicode="%" />
-  <case ansi='&#x007F;' unicode="&#x2715;" comment="MULTIPLICATION X"/>
-  <case ansi="Õ" unicode="ञ्ज्" />
+
+  <case local="&#x7F;" unicode="&#x2715;" />
+  <case local="&#x82;" unicode="श्व" />
+  <case local="&#x91;" unicode="ञ्ज" />
+  <case local="&#x9B;" unicode="&lt;" />
+  <case local="&#x9C;" unicode="&gt;" />
+  <case local="&#xA4;" unicode="&#x0944;" />
+  <case local="&#xB9;" unicode="&#x2605;" />
+  <case local="&#xC0;" unicode="ङ्क्ष" />
+  <case local="&#xC9;" unicode="ङ्क्त" />
+  <case local="&#xCB;" unicode="ल्ल" />
+  <case local="&#xCC;" unicode="ङ्ख" />
+  <case local="&#xD0;" unicode="ङ्घ" />
+  <case local="&#xD4;" unicode="ष्ट" />
+  <case local="&#xD5;" unicode="ज्ज्" />
+  <case local="&#xD7;" unicode="ष्ठ" />
+  <case local="&#xF5;" unicode="&#x0FD5;" />
+  <case local="&#xF8;" unicode="%" />
 </set>

@@ -3,31 +3,34 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <!-- This is needed to support TTF/OTF fonts that were generated from Type 1 font -->
+  <xi:include href="UnicodeToCP1252.xml"/>
+
   <!-- Overriding numbers -->
   <mapping name="Devanagari Numbers">
-    <entry from="0" to="०" order="20" comment="0" />
-    <entry from="1" to="१" order="20" comment="1" />
-    <entry from="2" to="२" order="20" comment="2" />
-    <entry from="3" to="३" order="20" comment="3" />
-    <entry from="4" to="४" order="20" comment="4" />
-    <entry from="5" to="५" order="20" comment="5" />
-    <entry from="6" to="६" order="20" comment="6" />
-    <entry from="7" to="७" order="20" comment="7" />
-    <entry from="8" to="८" order="20" comment="8" />
-    <entry from="9" to="९" order="20" comment="9" />
+    <entry from="0" to="०" />
+    <entry from="1" to="१" />
+    <entry from="2" to="२" />
+    <entry from="3" to="३" />
+    <entry from="4" to="४" />
+    <entry from="5" to="५" />
+    <entry from="6" to="६" />
+    <entry from="7" to="७" />
+    <entry from="8" to="८" />
+    <entry from="9" to="९" />
   </mapping>
   <mapping name="Arabic Numbers">
-    <entry from="Œ" to="0" order="20" comment="0" />
-    <entry from="ƒ" to="1" order="20" comment="1" />
-    <entry from="„" to="2" order="20" comment="2" />
-    <entry from="…" to="3" order="20" comment="3" />
-    <entry from="†" to="4" order="20" comment="4" />
-    <entry from="‡" to="5" order="20" comment="5" />
-    <entry from="ˆ" to="6" order="20" comment="6" />
-    <entry from="‰" to="7" order="20" comment="7" />
-    <entry from="Š" to="8" order="20" comment="8" />
-    <entry from="‹" to="9" order="20" comment="9" />
+    <entry from="&#x8C;" to="0" />
+    <entry from="&#x83;" to="1" />
+    <entry from="&#x84;" to="2" />
+    <entry from="&#x85;" to="3" />
+    <entry from="&#x86;" to="4" />
+    <entry from="&#x87;" to="5" />
+    <entry from="&#x88;" to="6" />
+    <entry from="&#x89;" to="7" />
+    <entry from="&#x8A;" to="8" />
+    <entry from="&#x8B;" to="9" />
   </mapping>
 
-  <xi:include href="AARituPlus2.xml"/>
+  <xi:include href="AARituPlus2.Common.xml"/>
 </mapping>

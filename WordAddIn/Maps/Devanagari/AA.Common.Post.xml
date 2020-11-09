@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xi="http://www.w3.org/2001/XInclude">
-  <mapping name="Combining Signs">
-    <entry from="+" to="़" order="80" comment="Nukta" />
-    <entry from="Û" to="़" order="80" comment="Nukta" />
-    <entry from="¡" to="ँ" order="80" comment="Chandrabindu" />
-    <entry from="a" to="ं" order="80" comment="Anusvara" />
-    <entry from="%" to="ः" order="80" comment="Visarga" />
-  </mapping>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
   <mapping name="Devanagari Fixing">
     <entry from="ं([ऺऻा-ौ])" to="$1ं" type="regex" order="100" comment="Reorder anusvar and matra" />
     <entry from="ीे" to="ी" order="110" comment="Extra" />
@@ -19,7 +12,7 @@
     <entry from="्ॊ" to="ॆ" order="110" comment="Collapse ् and sign" />
     <entry from="्ो" to="े" order="110" comment="Collapse ् and sign" />
     <entry from="्ौ" to="ै" order="110" comment="Collapse ् and sign" />
-    <entry from="(\p{Mn})\1+" to="$1" type="regex" order="110" comment="Remove duplicate nonspacing marks" />
+    <entry from="(\p{Mn})\1+" to="$1" type="regex" order="110" comment="Remove duplicate non-spacing marks" />
     <entry from="अा" to="आ" order="110" comment="Combine" />
     <entry from="अऻ" to="ॴ" order="200" comment="VOWEL SIGN OOE" />
     <entry from="अॏ" to="ॵ" order="200" comment="VOWEL SIGN AW" />
@@ -39,18 +32,23 @@
     <entry from="ाे" to="ो" order="200" comment="Combine" />
     <entry from="ाै" to="ौ" order="200" comment="Combine" />
     <entry from="ाॆ" to="ॊ" order="200" comment="Combine" />
-    <entry from="ाऺ" to="ऻ" order="200" comment="VOWEL SIGN OE" />
+    <entry from="&#x93E;&#x93A;" to="&#x93B;" order="200" comment="VOWEL SIGN OE" />
     <entry from="\u200C\b" to="" type="regex" order="220" comment="Remove ZWNJ in the end of the word" />
   </mapping>
-  <mapping name="Jumping">
-    <entry from='&#x0066;([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*)' to='$1&#x093F;' type="regex" order="70" comment="consonant+i" />
-    <entry from='&#x00A3;([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*)' to='र्$1&#x093F;' type="regex" order="70" comment="r+consonant+i" />
-    <entry from='&#x00A5;([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*)' to='$1&#x093F;&#x0902;' type="regex" order="70" comment="consonant+im" />
-    <entry from='&#x00B2;([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*)' to='र्$1&#x093F;&#x0902;' type="regex" order="70" comment="r+consonant+im" />
-    <entry from="([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*[&#x93A;&#x93B;&#x93E;-&#x94C;]?)&#x0096;" to="र्$1" type="regex" order="70" comment="Same as r+consonant" />
-    <entry from='([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*[&#x93A;&#x93B;&#x93E;-&#x94C;]?)&#x005A;' to='र्$1' type="regex" order="70" comment="r+consonant" />
-    <entry from="([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*[&#x93A;&#x93B;&#x93E;-&#x94C;]?)&#x0097;" to="र्$1ं" type="regex" order="70" comment="Same as r+consonant+m" />
-    <entry from="([&#x915;-&#x939;](&#x94D;[&#x915;-&#x939;])*[&#x93A;&#x93B;&#x93E;-&#x94C;]?)&#xB1;" to="र्$1ं" type="regex" order="70" comment="r+consonant+m" />
-    <entry from="&#x0096;" to="&#x93F;" order="71" comment="consonant+i" />
+  <mapping name="Jumping repha and short i sign">
+    <!--
+      All the consonants are converted to Unicode by the earlier mappings, but the jumping combining symbols not.
+      Thus, Unicode UTF-16 codes are used for consonants and local 8bit codes for combining symbols.
+      “From” uses regex character escape syntax https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-escapes-in-regular-expressions#character-escapes-in-net.
+      “To” uses XML entity syntax.
+    -->
+    <entry from='\x66([\u0915-\u0939](\u094D[\u0915-\u0939])*)' to='$1&#x093F;' type="regex" comment="consonant+i" />
+    <entry from='\xA3([\u0915-\u0939](\u094D[\u0915-\u0939])*)' to='र्$1&#x093F;' type="regex" comment="r+consonant+i" />
+    <entry from='\xA5([\u0915-\u0939](\u094D[\u0915-\u0939])*)' to='$1&#x093F;&#x0902;' type="regex" comment="consonant+im" />
+    <entry from='\xB2([\u0915-\u0939](\u094D[\u0915-\u0939])*)' to='र्$1&#x093F;&#x0902;' type="regex" comment="r+consonant+im" />
+    <entry from='([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\x5A' to='र्$1' type="regex" comment="r+consonant" />
+    <entry from="([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\x96" to="र्$1" type="regex" comment="r+consonant" />
+    <entry from="([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\x97" to="र्$1&#x0902;" type="regex" comment="r+consonant+m" />
+    <entry from="([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\xB1" to="र्$1&#x0902;" type="regex" comment="r+consonant+m" />
   </mapping>
 </mapping>

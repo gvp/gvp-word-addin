@@ -36,8 +36,6 @@ namespace GaudiaVedantaPublications
         private static readonly IDictionary<string, string> FontEquivalence = new Dictionary<string, string>
         {
             { "Sca", "ScaSeries" },
-            { "SDW-", "SDW" },
-            { "KALAKAR", "KALAKAR" },
             { "Krishna Times Plus", "Amita Times Cyr" },
         };
         private static string GeneralizeFontName(string fontName)
@@ -51,7 +49,7 @@ namespace GaudiaVedantaPublications
 
         private static readonly string[] CyrillicFontNames = { "ThamesM", "Amita Times Cyr", "ThamesSanskrit" };
         private static readonly string[] RomanFontNames = { "ScaSeries", "Rama Garamond Plus", "GVPalatino", "Amita Times", "Balaram", "DVRoman-TTSurekh", "SD1-TTSurekh" };
-        private static readonly string[] DevanagariFonts = { "AARitu", "AARituPlus2", "AARituPlus2-Numbers", "AAVishal", "KALAKAR", "SDW" };
+        private static readonly string[] DevanagariFonts = { "AARitu", "AARituPlus2", "AARituPlus2-Numbers", "AAVishal" };
         private static readonly IEnumerable<string> SupportedFontNames = CyrillicFontNames.Union(RomanFontNames).Union(DevanagariFonts);
 
         public static bool SupportsFont(string fontName)

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="AA.Mistypings.xml"/>
+  <xi:include href="AA.Common.xml"/>
+
+  <mapping name="Specific AARituPlus2 characters">
+    <entry from="&#x80;" to="ञ्च" />
+    <entry from="&#x81;" to="क्च" />
+    <entry from="&#x82;" to="श्व" />
+    <entry from="&#x8D;" to="श्च" />
+    <entry from="&#x8E;" to="←" />
+    <entry from="&#x8F;" to="→" />
+    <entry from="&#x91;" to="ञ्ज" />
+    <entry from="&#x92;" to="ु" />
+    <entry from="&#x93;" to="ू" />
+    <entry from="&#x94;" to="े" />
+    <entry from="&#x95;" to="ै" />
+    <entry from="&#x98;" to="ें" />
+    <entry from="&#x99;" to="ैं" />
+    <entry from="&#xA4;" to="ॄ" />
+    <entry from="&#xB9;" to="✕" />
+    <entry from="&#xC0;" to="ङ्क्ष" />
+    <entry from="&#xC4;" to="्न" />
+    <entry from="&#xC6;" to="ॢ" />
+    <entry from="&#xC8;" to="ऌ" />
+    <entry from="&#xC9;" to="ङ्क्त" />
+    <entry from="&#xCB;" to="ल्ल" />
+    <entry from="&#xCC;" to="ङ्ख" />
+    <entry from="&#xD0;" to="ङ्घ" />
+    <entry from="&#xD4;" to="ष्ट" />
+    <entry from="&#xD7;" to="ष्ठ" />
+    <entry from="&#xF0;" to="प्त" />
+    <entry from="&#xF5;" to="❀" comment="GVP logo light" />
+    <entry from="&#xF8;" to="✿" comment="GVP logo dark" />
+    <entry from="&#xFF;" to="ळ" />
+  </mapping>
+
+  <xi:include href="AA.Common.Post.xml"/>
+
+</mapping>

@@ -10,8 +10,8 @@ namespace GaudiaVedantaPublications.Tests
 {
     public enum FontConversionDirection
     {
-        FontToUnicode,
-        UnicodeToFont
+        LocalToUnicode,
+        UnicodeToLocal
     }
 
     public static class FontTestDataProvider
@@ -30,7 +30,7 @@ namespace GaudiaVedantaPublications.Tests
             yield return "SD1-TTSurekh";
 
             /// Some fonts allow only one direction of conversion: to unicode
-            if (direction != FontConversionDirection.FontToUnicode) yield break;
+            if (direction != FontConversionDirection.LocalToUnicode) yield break;
 
             yield return "AARituPlus2";
             yield return "AARituPlus2-Numbers";
@@ -38,11 +38,8 @@ namespace GaudiaVedantaPublications.Tests
             yield return "AAVishal";
         }
 
-        public static IEnumerable<object[]> FontNamesForConversionToUnicode =>
-            GetFontNames(FontConversionDirection.FontToUnicode).Select(fontName => new object[] { fontName });
-
-        public static IEnumerable<object[]> FontNamesForConversionFromUnicode =>
-            GetFontNames(FontConversionDirection.UnicodeToFont).Select(fontName => new object[] { fontName });
+        public static IEnumerable<object[]> GetFontNamesForConversion(FontConversionDirection direction) =>
+            GetFontNames(direction).Select(fontName => new object[] { fontName });
 
         private static readonly XmlResolver xmlResolver = new EmbeddedResourcesXmlResolver();
 
@@ -65,9 +62,9 @@ namespace GaudiaVedantaPublications.Tests
                 from @case in set.Elements("case")
                 orderby fontName
                 let unicode = @case.Attribute("unicode")?.Value.Normalize(NormalizationForm.FormC)
-                let ansi = @case.Attribute("ansi")?.Value.Normalize(NormalizationForm.FormC)
-                let input = direction == FontConversionDirection.FontToUnicode ? ansi : unicode
-                let output = direction == FontConversionDirection.FontToUnicode ? unicode : ansi
+                let local = @case.Attribute("local")?.Value.Normalize(NormalizationForm.FormC)
+                let input = direction == FontConversionDirection.LocalToUnicode ? local : unicode
+                let output = direction == FontConversionDirection.LocalToUnicode ? unicode : local
                 select new TestCaseData(fontName, input)
                     .Returns(output)
                     .SetProperty("Font Name", fontName)
