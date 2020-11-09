@@ -7,8 +7,6 @@ namespace GaudiaVedantaPublications.Tests
     public class MappingManagerTests
     {
         [TestCase("ScaPalatino", "ScaGauda")]
-        [TestCase("SDW", "SDW-Surekh")]
-        [TestCase("KALAKAR", "KALAKAR1")]
         [TestCase("AARituPlus2", "AARituPlus2")]
         [TestCase("ThamesM", "ThamesM")]
         [TestCase("Amita Times Cyr", "Krishna Times Plus")]

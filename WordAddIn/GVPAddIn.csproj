@@ -297,8 +297,6 @@
     <EmbeddedResource Include="Maps\Cyrillic\ThamesSanskrit.xml" />
     <EmbeddedResource Include="Maps\Translit\Devanagari→Latin.xml" />
     <EmbeddedResource Include="Maps\Roman\SD1-TTSurekh.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\SDW.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\KALAKAR.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AAVishal.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARituPlus2.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AA.Common.Pre.xml" />

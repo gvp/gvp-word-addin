@@ -185,10 +185,9 @@ namespace GaudiaVedantaPublications.Properties {
         ///
         ///Devanagari:
         ///AARitu
-        ///AARituPlus2 and AARituPlus2-Numbers
+        ///AARituPlus2
+        ///AARituPlus2-Numbers
         ///AAVishal
-        ///Kalakar
-        ///SDW-series
         ///
         ///Roman:
         ///Amita Times
