@@ -45,6 +45,8 @@ namespace GaudiaVedantaPublications
                         chunk.Font.Name = newFontName;
 #if TRANSFORMATION_COMPARISON
                         chunk.HighlightColorIndex = Word.WdColorIndex.wdYellow;
+                        chunk.InsertAfter("\n");
+                        chunk.Collapse(Word.WdCollapseDirection.wdCollapseEnd);
 #endif
                     }
 
