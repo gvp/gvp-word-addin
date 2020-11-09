@@ -6,7 +6,7 @@
   <entry from="&#x005E;&#x005E;" to="&#x00DF;" comment="Double ‘ to “" />
   <entry from="fq" to="qf" order="-110" comment="Wrong order of ु and ि" />
   <entry from="~+" to="+~" order="-110" comment="Wrong order of Virama and Nukta" />
-  <entry from="·a" to="a·" order="-110" comment="Wrong order of Anusvar and Avagraha" />
+  <entry from="·a" to="a·" order="-110" comment="Wrong order of Anusvara and Avagraha" />
   <entry from="*~" to="~*" order="-110" comment="Wrong order of Virama and Apostrophe" />
   <entry from="([Z±])+([`sq])+" to="$2$1" type="regex" order="-110" comment="R-before should be before E-matra, Ri, U-sign'/&gt;" />
   <entry from="~(?=[î])" to="" type="regex" order="-110" comment="Mistaken Virama in the middle of the conjunct" />

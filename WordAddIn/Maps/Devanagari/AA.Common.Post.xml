@@ -12,7 +12,7 @@
     <entry from="्ॊ" to="ॆ" order="110" comment="Collapse ् and sign" />
     <entry from="्ो" to="े" order="110" comment="Collapse ् and sign" />
     <entry from="्ौ" to="ै" order="110" comment="Collapse ् and sign" />
-    <entry from="(\p{Mn})\1+" to="$1" type="regex" order="110" comment="Remove duplicate nonspacing marks" />
+    <entry from="(\p{Mn})\1+" to="$1" type="regex" order="110" comment="Remove duplicate non-spacing marks" />
     <entry from="अा" to="आ" order="110" comment="Combine" />
     <entry from="अऻ" to="ॴ" order="200" comment="VOWEL SIGN OOE" />
     <entry from="अॏ" to="ॵ" order="200" comment="VOWEL SIGN AW" />
@@ -35,7 +35,7 @@
     <entry from="&#x93E;&#x93A;" to="&#x93B;" order="200" comment="VOWEL SIGN OE" />
     <entry from="\u200C\b" to="" type="regex" order="220" comment="Remove ZWNJ in the end of the word" />
   </mapping>
-  <mapping name="Jumping reph and short i sign">
+  <mapping name="Jumping repha and short i sign">
     <!--
       All the consonants are converted to Unicode by the earlier mappings, but the jumping combining symbols not.
       Thus, Unicode UTF-16 codes are used for consonants and local 8bit codes for combining symbols.

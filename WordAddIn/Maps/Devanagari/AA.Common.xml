@@ -2,7 +2,7 @@
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <mapping name="Precombined Vowels">
+  <mapping name="Pre-combined Vowels">
     <entry from="bZ" to="ई" />
     <entry from="b±" to="ईं" />
     <entry from="mG" to="ऊ" />
@@ -33,7 +33,7 @@
   <entry from="&#x44;" to="क्" />
   <entry from="&#x45;" to="म्" />
   <entry from="&#x46;" to="थ्" />
-  <!-- Codepoint x47 is mapped in Precombined Vowels -->
+  <!-- Codepoint x47 is mapped in Pre-combined Vowels -->
   <entry from="&#x48;" to="भ्" />
   <entry from="&#x49;" to="प्" />
   <entry from="&#x4A;" to="श्र" />
@@ -191,6 +191,6 @@
   <entry from="&#xFB;" to="॥" />
   <entry from="&#xFC;" to="ें" />
   <entry from="&#xFD;" to="[" order="1" />
-  <entry from="&#xFE;" to="]" order="2" comment="This mapping should have order greated than mapping of ]" />
+  <entry from="&#xFE;" to="]" order="2" comment="This mapping should have order greater than mapping of ]" />
   <!-- Codepoint xFF is fonts-specific -->
 </mapping>
