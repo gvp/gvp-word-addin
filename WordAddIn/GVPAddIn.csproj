@@ -299,7 +299,7 @@
     <EmbeddedResource Include="Maps\Roman\SD1-TTSurekh.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AAVishal.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARituPlus2.xml" />
-    <EmbeddedResource Include="Maps\Devanagari\AA.Common.Pre.xml" />
+    <EmbeddedResource Include="Maps\Devanagari\AA.Mistypings.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AA.Common.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AARitu.xml" />
     <EmbeddedResource Include="Maps\Devanagari\AA.Common.Post.xml" />
