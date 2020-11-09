@@ -38,8 +38,10 @@ namespace GaudiaVedantaPublications
         {
             Application.UndoRecord.StartCustomRecord(Properties.Resources.FontTransformationUndoRecord);
             Application.ScreenUpdating = false;
+#if TRACE
             var stopwatch = new Stopwatch();
             stopwatch.Start();
+#endif
             try
             {
                 var range = Application.Selection.Range;
@@ -50,7 +52,9 @@ namespace GaudiaVedantaPublications
             }
             finally
             {
+#if TRACE
                 Trace.WriteLine(stopwatch.Elapsed);
+#endif
                 Application.ScreenUpdating = true;
                 Application.UndoRecord.EndCustomRecord();
             }

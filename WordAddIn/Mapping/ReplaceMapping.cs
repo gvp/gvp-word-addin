@@ -18,14 +18,10 @@
 
         public string Apply(string text)
         {
-#if TRACE_TEXT_TRANSFORMATION
             var oldText = text;
-#endif
             text = text.Replace(from, to);
-#if TRACE_TEXT_TRANSFORMATION
             if (oldText != text)
                 System.Diagnostics.Trace.TraceInformation("'{0}' → '{1}'\twith {2}", oldText, text, this);
-#endif
             return text;
         }
 
