@@ -65,4 +65,5 @@
   <case local="d&#xE097;" unicode="र्कं" comment="PUA character" />
   <case local="&#xF076;&#xF06B;&#xF052;&#xF065;&#xF06B;&#xF064;&#xE094;&#xF020;&#xF06A;&#xF067;&#xF04C;&#xF03B;" unicode="आत्माके रहस्य" comment="Sentence in PUA" />
   <case local="d&#xE094;" unicode="के" comment="E094 is in PUA, but should map to े" />
+  <case local="ukIuqofUr egkReku% laflf¼a ijeka xrk%û" unicode="नाप्नुवन्ति महात्मानः संसिद्धिं परमां गताः॥" />
 </set>
