@@ -184,4 +184,5 @@
   <case local="d±ZZZ" unicode="र्कं" comment="Duplicates should be removed before swallowing." />
   <case local="gssSS" unicode="है" comment="◌ै swallows ◌े. With duplicates." />
   <case local="isz" unicode="प्रे" comment="Wrong order of ◌े and ◌र"/>
+  <case local="Jhew£Zr;ksa" unicode="श्रीमूर्तियों" comment="Extra repha after short i with repha."/>
 </set>

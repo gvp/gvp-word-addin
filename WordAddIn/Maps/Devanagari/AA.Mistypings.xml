@@ -17,4 +17,5 @@
   <entry from="([ZzSs~])\1+" to="$1" type="regex" order="-101" comment="Duplicate symbol" />
   <entry from="±Z|Z±" to="±" type="regex" order="-100" comment="r+cons+m eats r+cons" />
   <entry from="sS|Ss" to="S" type="regex" order="-100" comment="AI-matra eats E-matra" />
+  <entry from="£Z" to="£" comment="Extra repha after short i with repha." />
 </mapping>
