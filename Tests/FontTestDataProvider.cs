@@ -38,11 +38,8 @@ namespace GaudiaVedantaPublications.Tests
             yield return "AAVishal";
         }
 
-        public static IEnumerable<object[]> FontNamesForConversionToUnicode =>
-            GetFontNames(FontConversionDirection.FontToUnicode).Select(fontName => new object[] { fontName });
-
-        public static IEnumerable<object[]> FontNamesForConversionFromUnicode =>
-            GetFontNames(FontConversionDirection.UnicodeToFont).Select(fontName => new object[] { fontName });
+        public static IEnumerable<object[]> GetFontNamesForConversion(FontConversionDirection direction) =>
+            GetFontNames(direction).Select(fontName => new object[] { fontName });
 
         private static readonly XmlResolver xmlResolver = new EmbeddedResourcesXmlResolver();
 

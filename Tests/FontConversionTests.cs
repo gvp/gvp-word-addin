@@ -1,21 +1,14 @@
-﻿using System.Collections;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace GaudiaVedantaPublications.Tests
 {
     public class FontConversionTests
     {
-        public static IEnumerable FontToUnicodeTestCases =>
-            FontTestDataProvider.GetFontTestData(FontConversionDirection.FontToUnicode);
-
-        [TestCaseSource(nameof(FontToUnicodeTestCases))]
+        [TestCaseSource(typeof(FontTestDataProvider), nameof(FontTestDataProvider.GetFontTestData), new object[] { FontConversionDirection.FontToUnicode })]
         public string ToUnicode(string fontName, string ansi) =>
             MappingManager.GetFontToUnicodeMapping(fontName).Apply(ansi);
 
-        public static IEnumerable UnicodeToFontTestCases =>
-            FontTestDataProvider.GetFontTestData(FontConversionDirection.UnicodeToFont);
-
-        [TestCaseSource(nameof(UnicodeToFontTestCases))]
+        [TestCaseSource(typeof(FontTestDataProvider), nameof(FontTestDataProvider.GetFontTestData), new object[] { FontConversionDirection.UnicodeToFont })]
         public string FromUnicode(string fontName, string unicode) =>
             MappingManager.GetUnicodeToFontMapping(fontName).Apply(unicode);
     }
