@@ -2,10 +2,12 @@
 <mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <mapping name="Pre-combined Vowels">
+  <mapping name="Combined letters">
     <entry from="bZ" to="ई" />
     <entry from="b±" to="ईं" />
     <entry from="mG" to="ऊ" />
+    <entry from="iG" to="फ" />
+    <entry from="izG" to="फ्र" />
   </mapping>
 
   <entry from="&#x22;" to="ष्" />
@@ -33,7 +35,7 @@
   <entry from="&#x44;" to="क्" />
   <entry from="&#x45;" to="म्" />
   <entry from="&#x46;" to="थ्" />
-  <!-- Codepoint x47 is mapped in Pre-combined Vowels -->
+  <!-- Codepoint x47 is mapped in Combined letters section -->
   <entry from="&#x48;" to="भ्" />
   <entry from="&#x49;" to="प्" />
   <entry from="&#x4A;" to="श्र" />

@@ -156,6 +156,8 @@
   <case local="**" unicode="”" comment="Two single quotation marks should be mapped to one double quotation mark" />
   <case local="AA" unicode="॥" comment="Two dandas should be converted into one double danda" />
   <case local="mG" unicode="ऊ" />
+  <case local="izG" unicode="फ्र" />
+  <case local="iG" unicode="फ" />
   <case local="JhJhxq#&amp;xkSjkÂkS t;r%" unicode="श्रीश्रीगुरु–गौराङ्गौ जयतः" />
   <case local="bZn`'kks" unicode="ईदृशो" />
   <case local="izsenkukorh.kksZ" unicode="प्रेमदानावतीर्णो" />
