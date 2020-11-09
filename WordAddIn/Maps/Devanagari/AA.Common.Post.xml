@@ -37,7 +37,7 @@
   </mapping>
   <mapping name="Jumping reph and short i sign">
     <!--
-      All the consonants are conveted to Unicode by the earlier mappings, but the jumping combining symbols not.
+      All the consonants are converted to Unicode by the earlier mappings, but the jumping combining symbols not.
       Thus, Unicode UTF-16 codes are used for consonants and local 8bit codes for combining symbols.
       “From” uses regex character escape syntax https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-escapes-in-regular-expressions#character-escapes-in-net.
       “To” uses XML entity syntax.
