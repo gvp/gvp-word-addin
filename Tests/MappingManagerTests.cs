@@ -19,11 +19,11 @@ namespace GaudiaVedantaPublications.Tests
         public void ShouldReturnNullForNonSupportedFont(string name) =>
             Assert.IsNull(MappingManager.GetFontToUnicodeMapping(name));
 
-        [TestCaseSource(typeof(FontTestDataProvider), nameof(FontTestDataProvider.GetFontNamesForConversion), new object[] { FontConversionDirection.FontToUnicode })]
+        [TestCaseSource(typeof(FontTestDataProvider), nameof(FontTestDataProvider.GetFontNamesForConversion), new object[] { FontConversionDirection.LocalToUnicode })]
         public void ShouldReturnFontToUnicodeMapping(string fontName) =>
             Assert.NotNull(MappingManager.GetFontToUnicodeMapping(fontName));
 
-        [TestCaseSource(typeof(FontTestDataProvider), nameof(FontTestDataProvider.GetFontNamesForConversion), new object[] { FontConversionDirection.UnicodeToFont })]
+        [TestCaseSource(typeof(FontTestDataProvider), nameof(FontTestDataProvider.GetFontNamesForConversion), new object[] { FontConversionDirection.UnicodeToLocal })]
         public void ShouldReturnUnicodeToFontMapping(string fontName) =>
             Assert.NotNull(MappingManager.GetUnicodeToFontMapping(fontName));
 
