@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<set xmlns:xi="http://www.w3.org/2001/XInclude">
+<set xsi:noNamespaceSchemaLocation="FontConversionTestData.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
   <xi:include href="AA.Common.xml" />
   <xi:include href="AA.Common.Numbers.xml" />
-  <case ansi="¹" unicode="★" />
-  <case ansi="õ" unicode="&#xFD7;" comment="RIGHT-FACING SVASTI SIGN WITH DOTS" />
-  <case ansi="gqb±" unicode="हुईं" />
+  <case local="¹" unicode="★" />
+  <case local="õ" unicode="&#xFD7;" comment="RIGHT-FACING SVASTI SIGN WITH DOTS" />
+  <case local="gqb±" unicode="हुईं" />
 </set>

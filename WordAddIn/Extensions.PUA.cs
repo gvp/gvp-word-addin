@@ -15,13 +15,13 @@ namespace GaudiaVedantaPublications
         /// http://www.personal.psu.edu/ejp10/blogs/gotunicode/2008/03/micrsoft-word-logic-inserting.html
         /// https://www.microsoft.com/typography/otspec160/recom.htm
         /// </summary>
-        public static char PrivateUseAreaToAnsi(this char c)
+        public static char PrivateUseAreaTo8Bit(this char c)
         {
             /// If the char is in PUA (0xE000-0xF8FF), then we're taking only least significant byte.
             return char.GetUnicodeCategory(c) == UnicodeCategory.PrivateUse ? (char)((byte)c) : c;
         }
 
-        public static string PrivateUseAreaToAnsi(this string source)
+        public static string PrivateUseAreaTo8Bit(this string source)
         {
             /// If no PUA characters, then retrun original string.
             if (!Regex.IsMatch(source, @"\p{IsPrivateUseArea}", RegexOptions.Compiled))
@@ -29,7 +29,7 @@ namespace GaudiaVedantaPublications
 
             var builder = new StringBuilder(source.Length);
             foreach (var c in source)
-                builder.Append(c.PrivateUseAreaToAnsi());
+                builder.Append(c.PrivateUseAreaTo8Bit());
 
             return builder.ToString();
         }

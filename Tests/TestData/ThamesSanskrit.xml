@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<set>
-  <case ansi="äæufíàv òå ’õàv ñà-âèäæufíàì, èäàv âàêøéfìé àiåøàòà{" unicode="джн̃а̄нам̇ те ’хам̇ са-виджн̃а̄нам, идам̇ вакшйа̄мй аш́ешатах̣" />
-  <case ansi="éàäæ äæufòâf íåõà áõeéî ’íéàäæ, äæufòàâéàì àâàièøéàòå" unicode="йадж джн̃а̄тва̄ неха бхӯйо ’нйадж, джн̃а̄тавйам аваш́ишйате" />
-  <case ansi="uf" unicode="н̃а̄" />
-  <case ansi="Ÿ" unicode="[и-с-тильдой-снизу]" />
+<set xsi:noNamespaceSchemaLocation="FontConversionTestData.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <case local="äæufíàv òå ’õàv ñà-âèäæufíàì, èäàv âàêøéfìé àiåøàòà{" unicode="джн̃а̄нам̇ те ’хам̇ са-виджн̃а̄нам, идам̇ вакшйа̄мй аш́ешатах̣" />
+  <case local="éàäæ äæufòâf íåõà áõeéî ’íéàäæ, äæufòàâéàì àâàièøéàòå" unicode="йадж джн̃а̄тва̄ неха бхӯйо ’нйадж, джн̃а̄тавйам аваш́ишйате" />
+  <case local="uf" unicode="н̃а̄" />
+  <case local="Ÿ" unicode="[и-с-тильдой-снизу]" />
 </set>

@@ -62,9 +62,9 @@ namespace GaudiaVedantaPublications.Tests
                 from @case in set.Elements("case")
                 orderby fontName
                 let unicode = @case.Attribute("unicode")?.Value.Normalize(NormalizationForm.FormC)
-                let ansi = @case.Attribute("ansi")?.Value.Normalize(NormalizationForm.FormC)
-                let input = direction == FontConversionDirection.FontToUnicode ? ansi : unicode
-                let output = direction == FontConversionDirection.FontToUnicode ? unicode : ansi
+                let local = @case.Attribute("local")?.Value.Normalize(NormalizationForm.FormC)
+                let input = direction == FontConversionDirection.FontToUnicode ? local : unicode
+                let output = direction == FontConversionDirection.FontToUnicode ? unicode : local
                 select new TestCaseData(fontName, input)
                     .Returns(output)
                     .SetProperty("Font Name", fontName)

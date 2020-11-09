@@ -21,7 +21,7 @@ namespace GaudiaVedantaPublications
         {
             return
                 innerMapping.Apply(
-                    text.Normalize(System.Text.NormalizationForm.FormC).PrivateUseAreaToAnsi()
+                    text.Normalize(System.Text.NormalizationForm.FormC).PrivateUseAreaTo8Bit()
                 ).Normalize(System.Text.NormalizationForm.FormC);
         }
     }

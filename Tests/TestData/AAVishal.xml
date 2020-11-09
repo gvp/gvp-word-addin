@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<set xmlns:xi="http://www.w3.org/2001/XInclude">
+<set xsi:noNamespaceSchemaLocation="FontConversionTestData.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
   <xi:include href="AA.Common.xml" />
   <xi:include href="AA.Common.Numbers.xml" />
-  <case ansi="&#x9B;" unicode="&lt;" />
-  <case ansi="&#x9C;" unicode="&gt;" />
-  <case ansi="&#xB9;" unicode="&#x2605;" />
-  <case ansi="&#xF5;" unicode="&#xFD5;" />
-  <case ansi="&#xF8;" unicode="%" />
-  <case ansi='&#x7F;' unicode="&#x2715;" comment="MULTIPLICATION X"/>
-  <case ansi="&#xD5;" unicode="ञ्ज्" />
+  <case local="&#x9B;" unicode="&lt;" />
+  <case local="&#x9C;" unicode="&gt;" />
+  <case local="&#xB9;" unicode="&#x2605;" />
+  <case local="&#xF5;" unicode="&#xFD5;" />
+  <case local="&#xF8;" unicode="%" />
+  <case local='&#x7F;' unicode="&#x2715;" comment="MULTIPLICATION X"/>
+  <case local="&#xD5;" unicode="ञ्ज्" />
 </set>

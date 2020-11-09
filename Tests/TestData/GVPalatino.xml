@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<set>
-  <case ansi="çréçréguru-gauräìgau jayataù" unicode="śrīśrīguru-gaurāṅgau jayataḥ" />
-  <case ansi="ï" unicode="ñ" />
-  <case ansi="ñ" unicode="ṣ" />
+<set xsi:noNamespaceSchemaLocation="FontConversionTestData.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <case local="çréçréguru-gauräìgau jayataù" unicode="śrīśrīguru-gaurāṅgau jayataḥ" />
+  <case local="ï" unicode="ñ" />
+  <case local="ñ" unicode="ṣ" />
 </set>

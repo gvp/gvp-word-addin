@@ -1,41 +1,43 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<set>
+<set xsi:noNamespaceSchemaLocation="FontConversionTestData.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
   <set name="Symbols">
-    <case ansi="ý" unicode="[" />
-    <case ansi="»" unicode="÷" />
-    <case ansi="^" unicode="‘" />
-    <case ansi="&#x00B5;" unicode="&#x2014;" comment="Em dash"/>
-    <case ansi="^^" unicode="“" comment="Two single quotation marks should be mapped to one double quotation mark" />
-    <case ansi="**" unicode="”" comment="Two single quotation marks should be mapped to one double quotation mark" />
-    <case ansi="AA" unicode="॥" comment="Two dandas should be converted into one double danda" />
+    <case local="ý" unicode="[" />
+    <case local="»" unicode="÷" />
+    <case local="^" unicode="‘" />
+    <case local="&#x00B5;" unicode="&#x2014;" comment="Em dash"/>
+    <case local="^^" unicode="“" comment="Two single quotation marks should be mapped to one double quotation mark" />
+    <case local="**" unicode="”" comment="Two single quotation marks should be mapped to one double quotation mark" />
+    <case local="AA" unicode="॥" comment="Two dandas should be converted into one double danda" />
   </set>
-  <case ansi="," unicode="ए" />
-  <case ansi="[" unicode="ख्" />
-  <case ansi="mG" unicode="ऊ" />
-  <case ansi="JhJhxq#&amp;xkSjkÂkS t;r%" unicode="श्रीश्रीगुरु–गौराङ्गौ जयतः" />
-  <case ansi="bZn`'kks" unicode="ईदृशो" />
-  <case ansi="izsenkukorh.kksZ" unicode="प्रेमदानावतीर्णो" />
-  <case ansi="bR;FkZ%" unicode="इत्यर्थः" />
-  <case ansi="ijenqyZHkRokr~" unicode="परमदुर्लभत्वात्" />
-  <case ansi="uhZpSjfi" unicode="र्नीचैरपि" />
-  <case ansi="loSZxksZihfo&quot;k;da" unicode="सर्वैर्गोपीविषयकं" />
-  <case ansi="iq#&quot;kkFkks±dh" unicode="पुरुषार्थोंकी" />
-  <case ansi="fu£o'ks&quot;kcqf¼" unicode="निर्विशेषबुद्धि" />
-  <case ansi="tM+cfq¼ls" unicode="जड़बुद्धिसे" comment=" Wrong order of ◌ु and ◌ि" />
-  <case ansi="D;kas" unicode="क्यों" comment=" Wrong order of ◌ो and ◌ं" />
-  <case ansi="gaS" unicode="हैं" comment=" Wrong order of ◌ै and ◌ं" />
-  <case ansi="Hksndks" unicode="भेदको" />
-  <case ansi="ughsa" unicode="नहीं" comment=" Extra ◌े" />
-  <case ansi="vkSj" unicode="और" />
-  <case ansi="Ük`Âkjjfr" unicode="शृङ्गाररति" />
-  <case ansi="¥glk" unicode="हिंसा" />
-  <case ansi="nksuksa" unicode="दोनों" />
-  <case ansi="lkefxz;ksasds" unicode="सामग्रियोंके" comment=" Extra ◌े" />
-  <case ansi="tM+cqf¼okyss" unicode="जड़बुद्धिवाले" comment=" Extra ◌े" />
-  <case ansi="oS&quot;.koèkeZesaa" unicode="वैष्णवधर्ममें" comment=" Extra ◌ं" />
-  <case ansi="voLFkkessa" unicode="अवस्थामें" comment=" Extra ◌े" />
-  <case ansi="O;fä;ksaesaaa" unicode="व्यक्तियोंमें" comment=" Three ◌ं" />
-  <case ansi="d±ZZZ" unicode="र्कं" comment="Duplicates should be removed before swallowing." />
-  <case ansi="gssSS" unicode="है" comment="◌ै swallows ◌े. With duplicates." />
-  <case ansi="isz" unicode="प्रे" comment="Wrong order of ◌े and ◌र"/>
+  <case local="," unicode="ए" />
+  <case local="[" unicode="ख्" />
+  <case local="mG" unicode="ऊ" />
+  <case local="JhJhxq#&amp;xkSjkÂkS t;r%" unicode="श्रीश्रीगुरु–गौराङ्गौ जयतः" />
+  <case local="bZn`'kks" unicode="ईदृशो" />
+  <case local="izsenkukorh.kksZ" unicode="प्रेमदानावतीर्णो" />
+  <case local="bR;FkZ%" unicode="इत्यर्थः" />
+  <case local="ijenqyZHkRokr~" unicode="परमदुर्लभत्वात्" />
+  <case local="uhZpSjfi" unicode="र्नीचैरपि" />
+  <case local="loSZxksZihfo&quot;k;da" unicode="सर्वैर्गोपीविषयकं" />
+  <case local="iq#&quot;kkFkks±dh" unicode="पुरुषार्थोंकी" />
+  <case local="fu£o'ks&quot;kcqf¼" unicode="निर्विशेषबुद्धि" />
+  <case local="tM+cfq¼ls" unicode="जड़बुद्धिसे" comment=" Wrong order of ◌ु and ◌ि" />
+  <case local="D;kas" unicode="क्यों" comment=" Wrong order of ◌ो and ◌ं" />
+  <case local="gaS" unicode="हैं" comment=" Wrong order of ◌ै and ◌ं" />
+  <case local="Hksndks" unicode="भेदको" />
+  <case local="ughsa" unicode="नहीं" comment=" Extra ◌े" />
+  <case local="vkSj" unicode="और" />
+  <case local="Ük`Âkjjfr" unicode="शृङ्गाररति" />
+  <case local="¥glk" unicode="हिंसा" />
+  <case local="nksuksa" unicode="दोनों" />
+  <case local="lkefxz;ksasds" unicode="सामग्रियोंके" comment=" Extra ◌े" />
+  <case local="tM+cqf¼okyss" unicode="जड़बुद्धिवाले" comment=" Extra ◌े" />
+  <case local="oS&quot;.koèkeZesaa" unicode="वैष्णवधर्ममें" comment=" Extra ◌ं" />
+  <case local="voLFkkessa" unicode="अवस्थामें" comment=" Extra ◌े" />
+  <case local="O;fä;ksaesaaa" unicode="व्यक्तियोंमें" comment=" Three ◌ं" />
+  <case local="d±ZZZ" unicode="र्कं" comment="Duplicates should be removed before swallowing." />
+  <case local="gssSS" unicode="है" comment="◌ै swallows ◌े. With duplicates." />
+  <case local="isz" unicode="प्रे" comment="Wrong order of ◌े and ◌र"/>
 </set>
