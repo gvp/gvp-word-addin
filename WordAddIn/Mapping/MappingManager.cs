@@ -27,7 +27,9 @@ namespace GaudiaVedantaPublications
 
         public static ITextMapping GetUnicodeToFontMapping(string fontName)
         {
-            return GetMapping(GeneralizeFontName(fontName)).Inverted;
+            return DevanagariFonts.Contains(fontName)
+                ? GetMapping(string.Format("UnicodeTo{0}", fontName))
+                : GetMapping(GeneralizeFontName(fontName)).Inverted;
         }
 
         /// <summary>
