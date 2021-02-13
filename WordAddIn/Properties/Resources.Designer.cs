@@ -138,7 +138,7 @@ namespace GaudiaVedantaPublications.Properties {
         ///Currently the following non-standard fonts are supported to convert to.
         ///
         ///Devanagari:
-        ///Not supported.
+        ///AARituPlus2
         ///
         ///Roman:
         ///Amita Times
