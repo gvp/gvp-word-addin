@@ -7,6 +7,7 @@
     <xs:attribute name="local" type="xs:string" use="required" />
     <xs:attribute name="unicode" type="xs:string" use="required" />
     <xs:attribute name="comment" type="xs:string" use="optional" />
+    <xs:attribute name="direction" type="direction" />
   </xs:complexType>
   <xs:complexType name="set">
     <xs:choice maxOccurs="unbounded">
@@ -16,4 +17,11 @@
     </xs:choice>
     <xs:attribute name="name" type="xs:string" />
   </xs:complexType>
+  <xs:simpleType name="direction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="to-unicode" />
+      <xs:enumeration value="from-unicode" />
+      <xs:enumeration value="both" />
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>
