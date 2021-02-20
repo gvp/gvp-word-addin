@@ -28,11 +28,11 @@ namespace GaudiaVedantaPublications.Tests
             yield return "Rama Garamond Plus";
             yield return "ScaSeries";
             yield return "SD1-TTSurekh";
+            yield return "AARituPlus2";
 
             /// Some fonts allow only one direction of conversion: to unicode
             if (direction != FontConversionDirection.LocalToUnicode) yield break;
 
-            yield return "AARituPlus2";
             yield return "AARituPlus2-Numbers";
             yield return "AARitu";
             yield return "AAVishal";
@@ -54,27 +54,26 @@ namespace GaudiaVedantaPublications.Tests
             }
         }
 
-        public static IEnumerable<TestCaseData> GetFontTestData(FontConversionDirection direction)
-        {
-            return
-                from fontName in GetFontNames(direction)
-                from set in LoadTestSet(fontName).DescendantsAndSelf("set")
-                from @case in set.Elements("case")
-                orderby fontName
-                let unicode = @case.Attribute("unicode")?.Value.Normalize(NormalizationForm.FormC)
-                let local = @case.Attribute("local")?.Value.Normalize(NormalizationForm.FormC)
-                let input = direction == FontConversionDirection.LocalToUnicode ? local : unicode
-                let output = direction == FontConversionDirection.LocalToUnicode ? unicode : local
-                select new TestCaseData(fontName, input)
-                    .Returns(output)
-                    .SetProperty("Font Name", fontName)
-                    .SetProperty("Set",
-                        set.Attribute("name")?.Value ??
-                        set.Attribute(XNamespace.Xml + "base")?.Value?.Replace(".xml", string.Empty) ??
-                        fontName)
-                    .SetArgDisplayNames(fontName, @case.Attribute("comment")?.Value ?? unicode)
+        public static IEnumerable<TestCaseData> GetFontTestData(FontConversionDirection direction) =>
+            from fontName in GetFontNames(direction)
+            from set in LoadTestSet(fontName).DescendantsAndSelf("set")
+            from @case in set.Elements("case")
+            let caseDirection = @case.Attribute("direction")?.Value ?? "both"
+            where caseDirection == "both" || caseDirection == (direction == FontConversionDirection.LocalToUnicode ? "to-unicode" : "from-unicode")
+            orderby fontName
+            let unicode = @case.Attribute("unicode")?.Value.Normalize(NormalizationForm.FormC)
+            let local = @case.Attribute("local")?.Value.Normalize(NormalizationForm.FormC)
+            let input = direction == FontConversionDirection.LocalToUnicode ? local : unicode
+            let output = direction == FontConversionDirection.LocalToUnicode ? unicode : local
+            select new TestCaseData(fontName, input)
+                .Returns(output)
+                .SetProperty("Font Name", fontName)
+                .SetProperty("Set",
+                    set.Attribute("name")?.Value ??
+                    set.Attribute(XNamespace.Xml + "base")?.Value?.Replace(".xml", string.Empty) ??
+                    fontName)
+                .SetArgDisplayNames(fontName, @case.Attribute("comment")?.Value ?? unicode)
                 ;
-        }
 
     }
 }
