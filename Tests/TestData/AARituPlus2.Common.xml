@@ -2,68 +2,68 @@
 <set xsi:noNamespaceSchemaLocation="FontConversionTestData.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <case local="&#x82;" unicode="श्व" />
-  <case local="&#x91;" unicode="ञ्ज" />
+  <case local="&#x82;" unicode="श्व" direction="to-unicode" />
+  <case local="&#x91;" unicode="ञ्ज" direction="to-unicode" />
   <case local="&#xA4;" unicode="&#x0944;" />
-  <case local="&#xB9;" unicode="✕" />
+  <case local="&#xB9;" unicode="✕" direction="to-unicode" />
   <case local="&#xC0;" unicode="ङ्क्ष" />
   <case local="&#xC9;" unicode="ङ्क्त" />
-  <case local="&#xCB;" unicode="ल्ल" />
+  <case local="&#xCB;" unicode="ल्ल" direction="to-unicode" />
   <case local="&#xCC;" unicode="ङ्ख" />
   <case local="&#xD0;" unicode="ङ्घ" />
-  <case local="&#xD4;" unicode="ष्ट" />
-  <case local="&#xD7;" unicode="ष्ठ" />
-  <case local="&#xF5;" unicode="❀" comment="GVP logo light"/>
-  <case local="&#xF8;" unicode="✿" comment="GVP logo dark" />
-  <case local="&#x80;" unicode="&#x91E;&#x94D;&#x91A;" />
-  <case local="&#x81;" unicode="&#x915;&#x94D;&#x91A;" />
-  <case local="&#x8D;" unicode="&#x936;&#x94D;&#x91A;" />
-  <case local="&#x8E;" unicode="&#x2190;" />
-  <case local="&#x8F;" unicode="&#x2192;" />
-  <case local="&#x94;" unicode="&#x947;" />
-  <case local="&#x95;" unicode="&#x948;" />
-  <case local="&#x98;" unicode="&#x947;&#x902;" />
-  <case local="&#x99;" unicode="&#x948;&#x902;" />
-  <case local="&#xC4;" unicode="&#x94D;&#x928;" />
+  <case local="&#xD4;" unicode="ष्ट" direction="to-unicode" />
+  <case local="&#xD7;" unicode="ष्ठ" direction="to-unicode" />
+  <case local="&#xF5;" unicode="❀" comment="GVP logo light" direction="to-unicode" />
+  <case local="&#xF8;" unicode="✿" comment="GVP logo dark" direction="to-unicode" />
+  <case local="&#x80;" unicode="&#x91E;&#x94D;&#x91A;" direction="to-unicode" />
+  <case local="&#x81;" unicode="&#x915;&#x94D;&#x91A;" direction="to-unicode" />
+  <case local="&#x8D;" unicode="&#x936;&#x94D;&#x91A;" direction="to-unicode" />
+  <case local="&#x8E;" unicode="&#x2190;" direction="to-unicode" />
+  <case local="&#x8F;" unicode="&#x2192;" direction="to-unicode" />
+  <case local="&#x94;" unicode="&#x947;" direction="to-unicode" />
+  <case local="&#x95;" unicode="&#x948;" direction="to-unicode" />
+  <case local="&#x98;" unicode="&#x947;&#x902;" direction="to-unicode" />
+  <case local="&#x99;" unicode="&#x948;&#x902;" direction="to-unicode" />
+  <case local="&#xC4;" unicode="&#x94D;&#x928;" direction="to-unicode" />
   <case local="&#xC6;" unicode="&#x962;" />
   <case local="&#xC8;" unicode="&#x90C;" />
   <case local="&#xF0;" unicode="&#x92A;&#x94D;&#x924;" />
   <case local="&#xFF;" unicode="&#x933;" />
 
-  <case local="nq;kZsèkuk|k%" unicode="दुर्योधनाद्याः" comment="Wrong order of र् and े" />
-  <case local="dÙk±q" unicode="कर्त्तुं" comment="Wrong order of ु and ं" />
+  <case local="nq;kZsèkuk|k%" unicode="दुर्योधनाद्याः" comment="Wrong order of र् and े" direction="to-unicode" />
+  <case local="dÙk±q" unicode="कर्त्तुं" comment="Wrong order of ु and ं" direction="to-unicode" />
   <case local="'kÌknhuka" unicode="शङ्खादीनां" />
-  <case local="rstks·a'klaHkoe~" unicode="तेजोंऽशसंभवम्" comment="BG page 107 ॥४१॥ Wrong order of anusvar and apostrophe http://gitabase.com/the/gita/eng/BG/10/41" />
-  <case local="'qkp%" unicode="शुचः" comment="BG page 146 ॥५॥. Wrong order of u-sign and a-sign." />
-  <case local="oiqnZèkr*~*" unicode="वपुर्दधत्”" comment="BG page 169 ॥५५॥. Wrong order of virama and apostrophe." />
-  <case local="izofÙZkrqa" unicode="प्रवर्त्तितुं" comment="BG page 170 ॥५९॥. Wrong order of Z and something" />
-  <case local="xhkr'kkL=L;kfi" unicode="गीतशास्त्रस्यापि" comment="BG page 172 ॥६४॥. Mistaken a-sign after i-sign." />
-  <case local="iq#&quot;k'pkkfèknSore~" unicode="पुरुषश्चाधिदैवतम्" comment="BG page 80 ॥४॥ double a-sign" />
-  <case local="dk;Zdkj.kdÙkZZ`ZRos" unicode="कार्यकारणकर्त्तृत्वे" comment="BG page 129 ॥२१॥ Double Z. Wrong order of `Z." />
-  <case local="rn~~?kua" unicode="तद्‌घनं" comment="BG page 138 ॥२७॥ Double virama." />
-  <case local="ozrkkfu" unicode="व्रतानि" comment="BG page 148 ॥१०॥. Triple a-sign." />
-  <case local=";rLrr~~" unicode="यतस्तत्" comment="BG page 156 ॥२८॥ Double virama" />
-  <case local="izzzzzzzzzzzzzzzzzzzÏreuqljke%" unicode="प्रकृतमनुसरामः" comment="BG page 161 ॥१८॥ Many zzzzz" />
-  <case local="dk;ZsZ" unicode="कार्ये" comment="BG page 162 ॥२२॥. Extra Z." />
-  <case local="fuxZZzUFkk" unicode="निर्ग्रन्था" comment="BG page 169 ॥५५॥. Extra Z" />
-  <case local="Hkxoku~dk" unicode="भगवान्‌का" comment="Explicit halant, see http://unicode.org/faq/indic.html#2" />
-  <case local="Hkxoku~ gh" unicode="भगवान् ही" comment="Explicit halant in the end of the word" />
+  <case local="rstks·a'klaHkoe~" unicode="तेजोंऽशसंभवम्" comment="BG page 107 ॥४१॥ Wrong order of anusvar and apostrophe http://gitabase.com/the/gita/eng/BG/10/41" direction="to-unicode" />
+  <case local="'qkp%" unicode="शुचः" comment="BG page 146 ॥५॥. Wrong order of u-sign and a-sign." direction="to-unicode" />
+  <case local="oiqnZèkr*~*" unicode="वपुर्दधत्”" comment="BG page 169 ॥५५॥. Wrong order of virama and apostrophe." direction="to-unicode" />
+  <case local="izofÙZkrqa" unicode="प्रवर्त्तितुं" comment="BG page 170 ॥५९॥. Wrong order of Z and something" direction="to-unicode" />
+  <case local="xhkr'kkL=L;kfi" unicode="गीतशास्त्रस्यापि" comment="BG page 172 ॥६४॥. Mistaken a-sign after i-sign." direction="to-unicode" />
+  <case local="iq#&quot;k'pkkfèknSore~" unicode="पुरुषश्चाधिदैवतम्" comment="BG page 80 ॥४॥ double a-sign" direction="to-unicode" />
+  <case local="dk;Zdkj.kdÙkZZ`ZRos" unicode="कार्यकारणकर्त्तृत्वे" comment="BG page 129 ॥२१॥ Double Z. Wrong order of `Z." direction="to-unicode" />
+  <case local="rn~~?kua" unicode="तद्‌घनं" comment="BG page 138 ॥२७॥ Double virama." direction="to-unicode" />
+  <case local="ozrkkfu" unicode="व्रतानि" comment="BG page 148 ॥१०॥. Triple a-sign." direction="to-unicode" />
+  <case local=";rLrr~~" unicode="यतस्तत्" comment="BG page 156 ॥२८॥ Double virama" direction="to-unicode" />
+  <case local="izzzzzzzzzzzzzzzzzzzÏreuqljke%" unicode="प्रकृतमनुसरामः" comment="BG page 161 ॥१८॥ Many zzzzz" direction="to-unicode" />
+  <case local="dk;ZsZ" unicode="कार्ये" comment="BG page 162 ॥२२॥. Extra Z." direction="to-unicode" />
+  <case local="fuxZZzUFkk" unicode="निर्ग्रन्था" comment="BG page 169 ॥५५॥. Extra Z" direction="to-unicode" />
+  <case local="Hkxoku~dk" unicode="भगवान्‌का" comment="Explicit halant, see http://unicode.org/faq/indic.html#2" direction="to-unicode" />
+  <case local="Hkxoku~ gh" unicode="भगवान् ही" comment="Explicit halant in the end of the word" direction="to-unicode" />
   <case local="QykdkfÀ.kks" unicode="फलाकाङ्क्षिणो" comment="BG page 23 ॥४७॥" />
-  <case local="lEeksgkr~~" unicode="सम्मोहात्" comment="BG page 26 ॥६३॥" />
-  <case local="Js;ku~+" unicode="श्रेयाऩ्" comment="BG page 37 ॥३५॥" />
-  <case local="prqFkkZss" unicode="चतुर्थो" comment="BG page 51 ॥४२॥" />
-  <case local="fpÙk'kqf¼nk&lt;~îkZTKkunk&lt;~îeso" unicode="चित्तशुद्धिदार्ढ्याज्ज्ञानदाढ्यमेव" comment="BG page 52 ॥२॥" />
-  <case local="cq¼îkRekdkj;Sso" unicode="बुद्ध्यात्माकारयैव" comment="BG page 62 ॥२०–२५॥" />
-  <case local="ukjk;.kewfÙZkjso" unicode="नारायणमूर्त्तिरेव" comment="BG page 74 ॥१५॥" />
-  <case local="deZZRo" unicode="कर्मत्व" comment="BG page 74 ॥१६॥" />
+  <case local="lEeksgkr~~" unicode="सम्मोहात्" comment="BG page 26 ॥६३॥" direction="to-unicode" />
+  <case local="Js;ku~" unicode="श्रेयान्" comment="BG page 37 ॥३५॥" direction="to-unicode" />
+  <case local="prqFkkZss" unicode="चतुर्थो" comment="BG page 51 ॥४२॥" direction="to-unicode" />
+  <case local="fpÙk'kqf¼nk&lt;îkZTKkunk&lt;îeso" unicode="चित्तशुद्धिदार्ढ्याज्ज्ञानदाढ्यमेव" comment="BG page 52 ॥२॥" />
+  <case local="cq¼îkRekdkj;So" unicode="बुद्ध्यात्माकारयैव" comment="BG page 62 ॥२०–२५॥" />
+  <case local="ukjk;.kewfÙZkjso" unicode="नारायणमूर्त्तिरेव" comment="BG page 74 ॥१५॥" direction="to-unicode" />
+  <case local="deZZRo" unicode="कर्मत्व" comment="BG page 74 ॥१६॥" direction="to-unicode" />
   <case local="en~;ksxkdkfÀ.k%" unicode="मद्‌योगाकाङ्क्षिणः" comment="BG page 82 ॥१४॥" />
   <case local="eRla;ksxkdkfÀ.kka" unicode="मत्संयोगाकाङ्क्षिणां" comment="BG page 101 ॥१०॥" />
-  <case local="xHkZ±" unicode="गर्भं" comment="BG page 133 ॥३॥" />
-  <case local="la{skis.k" unicode="संक्षेपेण" comment="BG page 143 ॥१६॥" />
-  <case local="oÙZkrs" unicode="वर्त्तते" comment="BG page 155 ॥२६॥" />
-  <case local="d&#xE096;" unicode="र्क" comment="PUA character" />
-  <case local="d&#xE097;" unicode="र्कं" comment="PUA character" />
-  <case local="&#xF076;&#xF06B;&#xF052;&#xF065;&#xF06B;&#xF064;&#xE094;&#xF020;&#xF06A;&#xF067;&#xF04C;&#xF03B;" unicode="आत्माके रहस्य" comment="Sentence in PUA" />
-  <case local="d&#xE094;" unicode="के" comment="E094 is in PUA, but should map to े" />
-  <case local="ukIuqofUr egkReku% laflf¼a ijeka xrk%û" unicode="नाप्नुवन्ति महात्मानः संसिद्धिं परमां गताः॥" />
+  <case local="xHkZ±" unicode="गर्भं" comment="BG page 133 ॥३॥ double half-r" direction="to-unicode" />
+  <case local="la{skis.k" unicode="संक्षेपेण" comment="BG page 143 ॥१६॥" direction="to-unicode" />
+  <case local="oÙZkrs" unicode="वर्त्तते" comment="BG page 155 ॥२६॥" direction="to-unicode" />
+  <case local="d&#xE096;" unicode="र्क" comment="PUA character" direction="to-unicode" />
+  <case local="d&#xE097;" unicode="र्कं" comment="PUA character" direction="to-unicode" />
+  <case local="&#xF076;&#xF06B;&#xF052;&#xF065;&#xF06B;&#xF064;&#xE094;&#xF020;&#xF06A;&#xF067;&#xF04C;&#xF03B;" unicode="आत्माके रहस्य" comment="Sentence in PUA" direction="to-unicode" />
+  <case local="d&#xE094;" unicode="के" comment="E094 is in PUA, but should map to े" direction="to-unicode" />
+  <case local="ukIuqofUr egkReku% laflf¼a ijeka xrk%û" unicode="नाप्नुवन्ति महात्मानः संसिद्धिं परमां गताः॥" direction="to-unicode" />
 </set>

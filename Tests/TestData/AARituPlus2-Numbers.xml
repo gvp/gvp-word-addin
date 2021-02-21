@@ -7,7 +7,7 @@
   <xi:include href="AARituPlus2.Common.xml" />
 
   <case local="0123456789" unicode="०१२३४५६७८९" />
-  <case local="ƒ„…†‡ˆ‰Š‹Œ" unicode="1234567890" comment="Unicode version of numbers"/>
-  <case local="&#x83;&#x84;&#x85;&#x86;&#x87;&#x88;&#x89;&#x8A;&#x8B;&#x8C;" unicode="1234567890" comment="CP1252 version of the numbers"/>
+  <case local="ƒ„…†‡ˆ‰Š‹Œ" unicode="1234567890" comment="Unicode version of numbers" />
+  <case local="&#x83;&#x84;&#x85;&#x86;&#x87;&#x88;&#x89;&#x8A;&#x8B;&#x8C;" unicode="1234567890" comment="CP1252 version of the numbers" />
   <case local="&#xF083;&#xF084;&#xF085;&#xF086;&#xF087;&#xF088;&#xF089;&#xF08A;&#xF08B;&#xF08C;" unicode="1234567890" comment="CP1252 in PUA version of the numbers"/>
 </set>

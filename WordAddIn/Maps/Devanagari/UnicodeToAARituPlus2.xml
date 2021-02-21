@@ -8,7 +8,7 @@
   <entry from='र्([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\u093F' to='&#xA3;$1' type="regex" comment="r+consonant+i" />
   <entry from='र्([\u0915-\u0939]\u094D)*\u0915\u0902' to='$1&#2325;&#x97;' type="regex" comment="r+k+m" /> 
   <entry from='र्([\u0915-\u0939]\u094D)*\u0915' to='$1&#2325;&#x96;' type="regex" comment="r+k" /> 
-  <entry from='र्([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\u0092' to='$1&#xB1;' type="regex" comment="r+consonant+m" /> 
+  <entry from='र्([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\u0902' to='$1&#xB1;' type="regex" comment="r+consonant+m" /> 
   <entry from='र्([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)' to='$1&#x5A;' type="regex" comment="r+consonant" /> 
   <entry from='([\u0915-\u0939](\u094D[\u0915-\u0939])*)\u093F\u0902' to='&#xA5;$1' type="regex" comment="consonant+im"  />
   <entry from='([\u0915-\u0939](\u094D[\u0915-\u0939])*)\u093F' to='&#x66;$1' type="regex" comment="consonant+i" />
@@ -18,10 +18,10 @@
   <entry from='–' to='&#x26;' />
   <entry from='—' to='&#xB5;' />
   <entry from='+' to='&#x24;' />
-  <entry from='”' to='&#x2A;&#x2A;' />
+  <entry from='”' to='&#xDE;' />
   <entry from='’' to='&#x2A;' />
   <entry from='/' to='&#x40;' />
-  <entry from='“' to='&#x5E;&#x5E;' />
+  <entry from='“' to='&#xDF;' />
   <entry from='‘' to='&#x5E;' />
   <entry from=';' to='&#x5F;' />
   <entry from='&lt;' to='&#x9E;' />
@@ -29,7 +29,6 @@
   <entry from='÷' to='&#xBB;' />
   <entry from='=' to='&#xBE;' />
   <entry from='&#x0903;' to='&#x25;' comment="Visarga" />
-  <entry from='ऺ' to='&#xFA;' />
   <entry from='।' to='&#x41;' />
   <entry from='॥' to='&#xFB;' />
   <entry from='[' to='&#xFD;' />
@@ -40,10 +39,17 @@
   <entry from=',' to='&#x5D;' />
 
 <!-- Conjuncts-->
+  <entry from='ङ्क्ष' to='&#xC0;' />
+  <entry from='ङ्क्त' to='&#xC9;' />
+  <entry from='ङ्क' to='&#xC1;' />
+  <entry from='ङ्ग' to='&#xC2;' />
+  <entry from='ङ्ख' to='&#xCC;' />
+  <entry from='ङ्घ' to='&#xD0;' />
   <entry from='क्ष्' to='&#x7B;' />
   <entry from='क्ष' to='&#x7B;&#x6B;' />
   <entry from='द्य' to='&#x7C;' />
   <entry from='द्व' to='&#x7D;' />
+  <entry from='शृ' to='&#xDC;&#x6B;&#x60;' />
   <entry from='रु' to='&#x23;' />
   <entry from='रू' to='&#x3A;' />
   <entry from='त्र्' to='&#xAB;' />
@@ -54,6 +60,7 @@
   <entry from='क्र' to='&#xD8;' />
   <entry from='ख्र' to='&#xD2;' />
   <entry from='छ्र' to='&#x4E;&#xAA;' />
+  <entry from='ह्र' to='&#xCE;' />
   <entry from='ट्र' to='&#x56;&#xAA;' />
   <entry from='ठ्र' to='&#x42;&#xAA;' />
   <entry from='ड्र' to='&#x4D;&#xAA;' />
@@ -63,17 +70,13 @@
   <entry from='ह्र' to='&#x56;&#xAA;' />
   <entry from='ॐ' to='&#xAC;' />
   <entry from='द्ध' to='&#xBC;' />
-  <entry from='ङ्क्ष' to='&#xC0;' />
-  <entry from='ङ्क्त' to='&#xC9;' />
-  <entry from='ङ्क' to='&#xC1;' />
-  <entry from='ङ्ग' to='&#xC2;' />
-  <entry from='ङ्ख' to='&#xCC;' />
-  <entry from='ङ्घ' to='&#xD0;' />
+  <entry from='ढ्य' to='&#x3C;&#xEE;' />
+  <entry from='द्ध्य' to='&#xBC;&#xEE;' />
   <entry from='ह्न' to='&#xCA;' />
   <entry from='ह्ल' to='&#xCD;' />
-  <entry from='ह्र' to='&#xCE;' />
   <entry from='कृ' to='&#xCF;' />
   <entry from='त्त्' to='&#xD9;' />
+  <entry from='त्त' to='&#xD9;&#x6B;' />
   <entry from='द्भ' to='&#xDA;' />
   <entry from='ह्व' to='&#xE0;' />
   <entry from='ह्य' to='&#xE1;' />
@@ -85,6 +88,7 @@
   <entry from='न्न्' to='&#xE9;' />
   <entry from='ट्ट' to='&#xEA;' />
   <entry from='ट्ठ' to='&#xEB;' />
+  <entry from='ठ्ठ' to='&#xA7;' />
   <entry from='ड्ड' to='&#xEC;' />
   <entry from='द्द' to='&#xED;' />
   <entry from='ड्ढ' to='&#xEF;' />
@@ -96,6 +100,7 @@
   
 <!-- Vowels-->
   <entry from='अ' to='&#x76;' />
+  <entry from='ऑ' to='&#x76;&#x6B;&#x57;' />
   <entry from='आ' to='&#x76;&#x6B;' />
   <entry from='इ' to='&#x62;' />
   <entry from='ई' to='&#x62;&#x5A;' />
@@ -104,10 +109,15 @@
   <entry from='ऋ' to='&#xBD;' />
   <entry from='ॠ' to='&#xBF;' />
   <entry from='ऌ' to='&#xC8;' />
+  <entry from='ऍ' to='&#x2C;&#x57;' />
   <entry from='ए' to='&#x2C;' />
   <entry from='ऐ' to='&#x2C;&#x73;' />
   <entry from='ओ' to='&#x76;&#x6B;&#x73;' />
   <entry from='औ' to='&#x76;&#x6B;&#x53;' />
+  <entry from='ऍ' to='&#x2C;&#x57;' />
+  <entry from='&#x947;&#x901;' to='&#xF6;' />
+  <entry from='ऺ' to='&#xFA;' />
+  <entry from='ॉ' to='&#x6B;&#x57;' />
   <entry from='ा' to='&#x6B;' />
   <entry from='ी' to='&#x68;' />
   <entry from='ु' to='&#x71;' />
@@ -121,8 +131,10 @@
   <entry from='ौ' to='&#x6B;&#x53;' />
   <entry from='ँ' to='&#xA1;' />
   <entry from='ऽ' to='&#xB7;' />
-  <entry from='&#x0902;' to='&#x61;' comment="Anusvara" />
+  <entry from='&#x902;' to='&#x61;' comment="Anusvara" />
   <entry from='ॅ' to='&#x57;' />
+  <entry from='॰' to='&#xF1;' />
+  <entry from='़' to='&#x2B;' />
   
 <!-- Consonants-->
   <entry from='ष्' to='&#x22;' />
@@ -160,6 +172,7 @@
   <entry from='च्' to='&#x50;' />
   <entry from='फ' to='&#x51;' />
   <entry from='त्' to='&#x52;' />
+  <entry from='त' to='&#x72;' />
   <entry from='ज्' to='&#x54;' />
   <entry from='न्' to='&#x55;' />
   <entry from='ट' to='&#x56;' />
@@ -177,7 +190,6 @@
   <entry from='द' to='&#x6E;' />
   <entry from='व' to='&#x6F;' />
   <entry from='च' to='&#x70;' />
-  <entry from='त' to='&#x72;' />
   <entry from='ज' to='&#x74;' />
   <entry from='न' to='&#x75;' />
   <entry from='अ' to='&#x76;' />
@@ -188,25 +200,33 @@
   <entry from='ळ' to='&#xFF;' />
   
 <!-- Numbers-->
-  <entry from='१' to='&#x83;' />
-  <entry from='२' to='&#x84;' />
-  <entry from='३' to='&#x85;' />
-  <entry from='४' to='&#x86;' />
-  <entry from='५' to='&#x87;' />
-  <entry from='६' to='&#x88;' />
-  <entry from='७' to='&#x89;' />
-  <entry from='८' to='&#x8A;' />
-  <entry from='९' to='&#x8B;' />
-  <entry from='०' to='&#x8C;' />
-  <entry from='1' to='&#x83;' />
-  <entry from='2' to='&#x84;' />
-  <entry from='3' to='&#x85;' />
-  <entry from='4' to='&#x86;' />
-  <entry from='5' to='&#x87;' />
-  <entry from='6' to='&#x88;' />
-  <entry from='7' to='&#x89;' />
-  <entry from='8' to='&#x8A;' />
-  <entry from='9' to='&#x8B;' />
-  <entry from='0' to='&#x8C;' />
+  <entry from='१' to='ƒ' />
+  <entry from='२' to='„' />
+  <entry from='३' to='…' />
+  <entry from='४' to='†' />
+  <entry from='५' to='‡' />
+  <entry from='६' to='ˆ' />
+  <entry from='७' to='‰' />
+  <entry from='८' to='Š' />
+  <entry from='९' to='‹' />
+  <entry from='०' to='Œ' />
+  <entry from='1' to='ƒ' />
+  <entry from='2' to='„' />
+  <entry from='3' to='…' />
+  <entry from='4' to='†' />
+  <entry from='5' to='‡' />
+  <entry from='6' to='ˆ' />
+  <entry from='7' to='‰' />
+  <entry from='8' to='Š' />
+  <entry from='9' to='‹' />
+  <entry from='0' to='Œ' />
+
+<!-- Halant-->
+  <entry from='्' to='&#x7E;' />
+  <entry from='HkxokU' to='Hkxoku~' />
+
+
+  
+  
   
 </mapping>
