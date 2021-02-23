@@ -79,20 +79,20 @@
   <case local="&#x77;" unicode="&#x942;" />
   <case local="&#x78;" unicode="ग" />
   <case local="&#x79;" unicode="ल" />
-  <case local="&#x7A;" unicode="&#x94D;र" />
+  <case local="&#x7A;" unicode="&#x94D;र" direction="to-unicode" />
   <case local="&#x7B;" unicode="क्ष्" />
   <case local="&#x7C;" unicode="द्य" />
   <case local="&#x7D;" unicode="द्व" />
   <case local="&#x7E;" unicode="&#x94D;" />
   <case local="&#xA1;" unicode="&#x901;" />
   <case local="&#xA7;" unicode="&#x920;&#x94D;&#x920;" />
-  <case local="&#xA8;" unicode="&#x941;" />
-  <case local="&#xA9;" unicode="&#x942;" />
-  <case local="&#xAA;" unicode="&#x94D;&#x930;" />
+  <case local="&#xA8;" unicode="&#x941;" direction="to-unicode" />
+  <case local="&#xA9;" unicode="&#x942;" direction="to-unicode" />
+  <case local="&#xAA;" unicode="&#x94D;&#x930;" direction="to-unicode" />
   <case local="&#xAB;" unicode="&#x924;&#x94D;&#x930;&#x94D;" />
   <case local="&#xAC;" unicode="&#x950;" />
-  <case local="&#xAE;" unicode="&#x948;&#x902;" />
-  <case local="&#xB0;" unicode="&#x940;&#x902;" />
+  <case local="&#xAE;" unicode="&#x948;&#x902;" direction="to-unicode" />
+  <case local="&#xB0;" unicode="&#x940;&#x902;" direction="to-unicode" />
   <case local="&#xB3;" unicode="&#x919;" />
   <case local="&#xB4;" unicode="&#x91E;&#x94D;" />
   <case local="&#xB5;" unicode="&#x2014;" />
@@ -113,13 +113,13 @@
   <case local="&#xCE;" unicode="&#x939;&#x94D;&#x930;" />
   <case local="&#xCF;" unicode="&#x915;&#x943;" />
   <case local="&#xD2;" unicode="&#x916;&#x94D;&#x930;" />
-  <case local="&#xD3;" unicode="&#x936;&#x94D;" />
+  <case local="&#xD3;" unicode="&#x936;&#x94D;" direction="to-unicode" />
   <case local="&#xD6;" unicode="&#x91D;&#x94D;" />
   <case local="&#xD8;" unicode="&#x915;&#x94D;&#x930;" />
   <case local="&#xD9;" unicode="&#x924;&#x94D;&#x924;&#x94D;" />
   <case local="&#xDA;" unicode="&#x926;&#x94D;&#x92D;" />
   <case local="&#xDB;" unicode="&#x93C;" />
-  <case local="&#xDC;" unicode="&#x936;&#x94D;" />
+  <case local="&#xDC;" unicode="&#x936;&#x94D;" direction="to-unicode" />
   <case local="&#xDD;" unicode="&#x92B;&#x94D;&#x930;" />
   <case local="&#xDE;" unicode="&#x201D;" />
   <case local="&#xDF;" unicode="&#x201C;" />
@@ -131,7 +131,7 @@
   <case local="&#xE5;" unicode="&#x926;&#x94D;&#x917;" />
   <case local="&#xE6;" unicode="&#x926;&#x94D;&#x930;" />
   <case local="&#xE7;" unicode="&#x92A;&#x94D;&#x930;" />
-  <case local="&#xE8;" unicode="&#x927;&#x94D;" />
+  <case local="&#xE8;" unicode="&#x927;&#x94D;" direction="to-unicode" />
   <case local="&#xE9;" unicode="&#x928;&#x94D;&#x928;&#x94D;" />
   <case local="&#xEA;" unicode="&#x91F;&#x94D;&#x91F;" />
   <case local="&#xEB;" unicode="&#x91F;&#x94D;&#x920;" />
@@ -141,48 +141,48 @@
   <case local="&#xEF;" unicode="&#x921;&#x94D;&#x922;" />
   <case local="&#xF1;" unicode="&#x970;" />
   <case local="&#xF2;" unicode="&#x938;&#x94D;&#x930;" />
-  <case local="&#xF3;" unicode="&#x938;&#x94D;&#x924;&#x94D;&#x930;" />
-  <case local="&#xF4;" unicode="&#x915;&#x94D;&#x915;" />
+  <case local="&#xF3;" unicode="&#x938;&#x94D;&#x924;&#x94D;&#x930;" direction="to-unicode" />
+  <case local="&#xF4;" unicode="&#x915;&#x94D;&#x915;" direction="to-unicode" />
   <case local="&#xF6;" unicode="&#x947;&#x901;" />
   <case local="&#xF7;" unicode="&#x939;&#x94D;&#x923;" />
   <case local="&#xF9;" unicode="&#x926;&#x94D;&#x92E;" />
   <case local="&#xFA;" unicode="&#x93A;" />
   <case local="&#xFB;" unicode="&#x965;" />
-  <case local="&#xFC;" unicode="&#x947;&#x902;" />
+  <case local="&#xFC;" unicode="&#x947;&#x902;"  direction="to-unicode" />
   <case local="&#xFD;" unicode="[" />
   <case local="&#xFE;" unicode="]" />
 
-  <case local="^^" unicode="“" comment="Two single quotation marks should be mapped to one double quotation mark" />
-  <case local="**" unicode="”" comment="Two single quotation marks should be mapped to one double quotation mark" />
-  <case local="AA" unicode="॥" comment="Two dandas should be converted into one double danda" />
-  <case local="mG" unicode="ऊ" />
-  <case local="izG" unicode="फ्र" />
-  <case local="iG" unicode="फ" />
-  <case local="JhJhxq#&amp;xkSjkÂkS t;r%" unicode="श्रीश्रीगुरु–गौराङ्गौ जयतः" />
+  <case local="^^" unicode="“" comment="Two single quotation marks should be mapped to one double quotation mark" direction="to-unicode" />
+  <case local="**" unicode="”" comment="Two single quotation marks should be mapped to one double quotation mark" direction="to-unicode" />
+  <case local="AA" unicode="॥" comment="Two dandas should be converted into one double danda" direction="to-unicode"/>
+  <case local="mG" unicode="ऊ" direction="to-unicode" />
+  <case local="izG" unicode="फ्र" direction="to-unicode" />
+  <case local="iG" unicode="फ" direction="to-unicode" />
+  <case local="JhJhxq#&amp;xkSjkÂkS t;r%" unicode="श्रीश्रीगुरु–गौराङ्गौ जयतः" direction="to-unicode" />
   <case local="bZn`'kks" unicode="ईदृशो" />
-  <case local="izsenkukorh.kksZ" unicode="प्रेमदानावतीर्णो" />
+  <case local="izsenkukorh.kksZ" unicode="प्रेमदानावतीर्णो" direction="to-unicode" />
   <case local="bR;FkZ%" unicode="इत्यर्थः" />
   <case local="ijenqyZHkRokr~" unicode="परमदुर्लभत्वात्" />
   <case local="uhZpSjfi" unicode="र्नीचैरपि" />
   <case local="loSZxksZihfo&quot;k;da" unicode="सर्वैर्गोपीविषयकं" />
   <case local="iq#&quot;kkFkks±dh" unicode="पुरुषार्थोंकी" />
   <case local="fu£o'ks&quot;kcqf¼" unicode="निर्विशेषबुद्धि" />
-  <case local="tM+cfq¼ls" unicode="जड़बुद्धिसे" comment=" Wrong order of ◌ु and ◌ि" />
-  <case local="D;kas" unicode="क्यों" comment=" Wrong order of ◌ो and ◌ं" />
-  <case local="gaS" unicode="हैं" comment=" Wrong order of ◌ै and ◌ं" />
+  <case local="tM+cfq¼ls" unicode="जड़बुद्धिसे" comment=" Wrong order of ◌ु and ◌ि" direction="to-unicode" />
+  <case local="D;kas" unicode="क्यों" comment=" Wrong order of ◌ो and ◌ं" direction="to-unicode" />
+  <case local="gaS" unicode="हैं" comment=" Wrong order of ◌ै and ◌ं" direction="to-unicode" />
   <case local="Hksndks" unicode="भेदको" />
-  <case local="ughsa" unicode="नहीं" comment=" Extra ◌े" />
+  <case local="ughsa" unicode="नहीं" comment=" Extra ◌े" direction="to-unicode" />
   <case local="vkSj" unicode="और" />
   <case local="Ük`Âkjjfr" unicode="शृङ्गाररति" />
   <case local="¥glk" unicode="हिंसा" />
   <case local="nksuksa" unicode="दोनों" />
-  <case local="lkefxz;ksasds" unicode="सामग्रियोंके" comment=" Extra ◌े" />
-  <case local="tM+cqf¼okyss" unicode="जड़बुद्धिवाले" comment=" Extra ◌े" />
-  <case local="oS&quot;.koèkeZesaa" unicode="वैष्णवधर्ममें" comment=" Extra ◌ं" />
-  <case local="voLFkkessa" unicode="अवस्थामें" comment=" Extra ◌े" />
-  <case local="O;fä;ksaesaaa" unicode="व्यक्तियोंमें" comment=" Three ◌ं" />
-  <case local="d±ZZZ" unicode="र्कं" comment="Duplicates should be removed before swallowing." />
-  <case local="gssSS" unicode="है" comment="◌ै swallows ◌े. With duplicates." />
-  <case local="isz" unicode="प्रे" comment="Wrong order of ◌े and ◌र"/>
-  <case local="Jhew£Zr;ksa" unicode="श्रीमूर्तियों" comment="Extra repha after short i with repha."/>
+  <case local="lkefxz;ksasds" unicode="सामग्रियोंके" comment=" Extra ◌े" direction="to-unicode" />
+  <case local="tM+cqf¼okyss" unicode="जड़बुद्धिवाले" comment=" Extra ◌े" direction="to-unicode" />
+  <case local="oS&quot;.koèkeZesaa" unicode="वैष्णवधर्ममें" comment=" Extra ◌ं" direction="to-unicode" />
+  <case local="voLFkkessa" unicode="अवस्थामें" comment=" Extra ◌े" direction="to-unicode" />
+  <case local="O;fä;ksaesaaa" unicode="व्यक्तियोंमें" comment=" Three ◌ं" direction="to-unicode" />
+  <case local="d±ZZZ" unicode="र्कं" comment="Duplicates should be removed before swallowing." direction="to-unicode" />
+  <case local="gssSS" unicode="है" comment="◌ै swallows ◌े. With duplicates." direction="to-unicode" />
+  <case local="isz" unicode="प्रे" comment="Wrong order of ◌े and ◌र" direction="to-unicode" />
+  <case local="Jhew£Zr;ksa" unicode="श्रीमूर्तियों" comment="Extra repha after short i with repha." direction="to-unicode" />
 </set>

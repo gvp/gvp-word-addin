@@ -34,6 +34,12 @@
             <menu idQ="gvp:FontsMenu"
                   getLabel="GetLabel" getScreentip="GetScreentip" getSupertip="GetSupertip"
                   >
+              <menuSeparator idQ="gvp:DevanagariFontsSeparator" getTitle="GetTitle" />
+              <button id="ConvertToAARituPlus2"
+                      onAction="ConvertFromUnicode"
+                      tag="AARituPlus2"
+                      getLabel="GetFontConversionLabel"
+                      />
               <menuSeparator idQ="gvp:RomanFontsSeparator" getTitle="GetTitle" />
               <button id="ConvertToAmitaTimes"
                       onAction="ConvertFromUnicode"

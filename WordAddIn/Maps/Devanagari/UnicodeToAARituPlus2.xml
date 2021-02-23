@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mapping xsi:noNamespaceSchemaLocation="..\Mapping.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Small I and Half R-->
+  <entry from='र्([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\u093F\u0902' to='&#xB2;$1' type="regex" comment="r+consonant+im" />
+  <entry from='र्([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\u093F' to='&#xA3;$1' type="regex" comment="r+consonant+i" />
+  <entry from='र्([\u0915-\u0939]\u094D)*\u0915\u0902' to='$1&#2325;&#x97;' type="regex" comment="r+k+m" /> 
+  <entry from='र्([\u0915-\u0939]\u094D)*\u0915' to='$1&#2325;&#x96;' type="regex" comment="r+k" /> 
+  <entry from='र्([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)\u0902' to='$1&#xB1;' type="regex" comment="r+consonant+m" /> 
+  <entry from='र्([\u0915-\u0939](\u094D[\u0915-\u0939])*[\u093A\u093B\u093E-\u094C]?)' to='$1&#x5A;' type="regex" comment="r+consonant" /> 
+  <entry from='([\u0915-\u0939](\u094D[\u0915-\u0939])*)\u093F\u0902' to='&#xA5;$1' type="regex" comment="consonant+im"  />
+  <entry from='([\u0915-\u0939](\u094D[\u0915-\u0939])*)\u093F' to='&#x66;$1' type="regex" comment="consonant+i" />
+  
+<!-- Punctuation-->
+  <entry from='-' to='&#x26;' />
+  <entry from='–' to='&#x26;' />
+  <entry from='—' to='&#xB5;' />
+  <entry from='+' to='&#x24;' />
+  <entry from='”' to='&#xDE;' />
+  <entry from='’' to='&#x2A;' />
+  <entry from='/' to='&#x40;' />
+  <entry from='“' to='&#xDF;' />
+  <entry from='‘' to='&#x5E;' />
+  <entry from=';' to='&#x5F;' />
+  <entry from='&lt;' to='&#x9E;' />
+  <entry from='&gt;' to='&#x9F;' />
+  <entry from='÷' to='&#xBB;' />
+  <entry from='=' to='&#xBE;' />
+  <entry from='&#x0903;' to='&#x25;' comment="Visarga" />
+  <entry from='।' to='&#x41;' />
+  <entry from='॥' to='&#xFB;' />
+  <entry from='[' to='&#xFD;' />
+  <entry from=']' to='&#xFE;' />
+  <entry from=':' to='&#x25;' />
+  <entry from='.' to='&#x2D;' />
+  <entry from='?' to='&#x5C;' />
+  <entry from=',' to='&#x5D;' />
+
+<!-- Conjuncts-->
+  <entry from='ङ्क्ष' to='&#xC0;' />
+  <entry from='ङ्क्त' to='&#xC9;' />
+  <entry from='ङ्क' to='&#xC1;' />
+  <entry from='ङ्ग' to='&#xC2;' />
+  <entry from='ङ्ख' to='&#xCC;' />
+  <entry from='ङ्घ' to='&#xD0;' />
+  <entry from='क्ष्' to='&#x7B;' />
+  <entry from='क्ष' to='&#x7B;&#x6B;' />
+  <entry from='द्य' to='&#x7C;' />
+  <entry from='द्व' to='&#x7D;' />
+  <entry from='शृ' to='&#xDC;&#x6B;&#x60;' />
+  <entry from='रु' to='&#x23;' />
+  <entry from='रू' to='&#x3A;' />
+  <entry from='त्र्' to='&#xAB;' />
+  <entry from='ॐ' to='&#xAC;' />
+  <entry from='त्र' to='&#x3D;' />
+  <entry from='श्र' to='&#x4A;' />
+  <entry from='ज्ञ' to='&#x4B;' />
+  <entry from='क्र' to='&#xD8;' />
+  <entry from='ख्र' to='&#xD2;' />
+  <entry from='छ्र' to='&#x4E;&#xAA;' />
+  <entry from='ह्र' to='&#xCE;' />
+  <entry from='ट्र' to='&#x56;&#xAA;' />
+  <entry from='ठ्र' to='&#x42;&#xAA;' />
+  <entry from='ड्र' to='&#x4D;&#xAA;' />
+  <entry from='ढ्र' to='&#x3C;&#xAA;' />
+  <entry from='फ्र' to='&#xDD;' />
+  <entry from='ल्र' to='&#x79;&#xAA;' />
+  <entry from='ह्र' to='&#x56;&#xAA;' />
+  <entry from='ॐ' to='&#xAC;' />
+  <entry from='द्ध' to='&#xBC;' />
+  <entry from='ढ्य' to='&#x3C;&#xEE;' />
+  <entry from='द्ध्य' to='&#xBC;&#xEE;' />
+  <entry from='ह्न' to='&#xCA;' />
+  <entry from='ह्ल' to='&#xCD;' />
+  <entry from='कृ' to='&#xCF;' />
+  <entry from='त्त्' to='&#xD9;' />
+  <entry from='त्त' to='&#xD9;&#x6B;' />
+  <entry from='द्भ' to='&#xDA;' />
+  <entry from='ह्व' to='&#xE0;' />
+  <entry from='ह्य' to='&#xE1;' />
+  <entry from='हृ' to='&#xE2;' />
+  <entry from='ह्म' to='&#xE3;' />
+  <entry from='क्त' to='&#xE4;' />
+  <entry from='द्ग' to='&#xE5;' />
+  <entry from='द्र' to='&#xE6;' />
+  <entry from='न्न्' to='&#xE9;' />
+  <entry from='ट्ट' to='&#xEA;' />
+  <entry from='ट्ठ' to='&#xEB;' />
+  <entry from='ठ्ठ' to='&#xA7;' />
+  <entry from='ड्ड' to='&#xEC;' />
+  <entry from='द्द' to='&#xED;' />
+  <entry from='ड्ढ' to='&#xEF;' />
+  <entry from='स्र' to='&#xF2;' />
+  <entry from='ह्ण' to='&#xF7;' />
+  <entry from='द्म' to='&#xF9;' />
+  <entry from='प्त' to='&#xF0;' />
+  <entry from='प्र' to='&#xE7;' />
+  
+<!-- Vowels-->
+  <entry from='अ' to='&#x76;' />
+  <entry from='ऑ' to='&#x76;&#x6B;&#x57;' />
+  <entry from='आ' to='&#x76;&#x6B;' />
+  <entry from='इ' to='&#x62;' />
+  <entry from='ई' to='&#x62;&#x5A;' />
+  <entry from='उ' to='&#x6D;' />
+  <entry from='ऊ' to='&#xC5;' />
+  <entry from='ऋ' to='&#xBD;' />
+  <entry from='ॠ' to='&#xBF;' />
+  <entry from='ऌ' to='&#xC8;' />
+  <entry from='ऍ' to='&#x2C;&#x57;' />
+  <entry from='ए' to='&#x2C;' />
+  <entry from='ऐ' to='&#x2C;&#x73;' />
+  <entry from='ओ' to='&#x76;&#x6B;&#x73;' />
+  <entry from='औ' to='&#x76;&#x6B;&#x53;' />
+  <entry from='ऍ' to='&#x2C;&#x57;' />
+  <entry from='&#x947;&#x901;' to='&#xF6;' />
+  <entry from='ऺ' to='&#xFA;' />
+  <entry from='ॉ' to='&#x6B;&#x57;' />
+  <entry from='ा' to='&#x6B;' />
+  <entry from='ी' to='&#x68;' />
+  <entry from='ु' to='&#x71;' />
+  <entry from='ू' to='&#x77;' />
+  <entry from='ृ' to='&#x60;' />
+  <entry from='ॄ' to='&#xA4;' />
+  <entry from='ॢ' to='&#xC6;' />
+  <entry from='े' to='&#x73;' />
+  <entry from='ै' to='&#x53;' />
+  <entry from='ो' to='&#x6B;&#x73;' />
+  <entry from='ौ' to='&#x6B;&#x53;' />
+  <entry from='ँ' to='&#xA1;' />
+  <entry from='ऽ' to='&#xB7;' />
+  <entry from='&#x902;' to='&#x61;' comment="Anusvara" />
+  <entry from='ॅ' to='&#x57;' />
+  <entry from='॰' to='&#xF1;' />
+  <entry from='़' to='&#x2B;' />
+  
+<!-- Consonants-->
+  <entry from='ष्' to='&#x22;' />
+  <entry from='ष' to='&#x22;&#x6B;' />
+  <entry from='श्' to='&#x27;' />
+  <entry from='श' to='&#x27;&#x6B;' />
+  <entry from='&#x093C;' to='&#x2B;' comment="Nukta" />
+  <entry from='ण्' to='&#x2E;' />
+  <entry from='ण' to='&#x2E;&#x6B;' />
+  <entry from='ध्' to='&#x2F;' />
+  <entry from='ध' to='&#x2F;&#x6B;' />
+  <entry from='ञ्' to='&#xB4;' />
+  <entry from='फ्' to='&#xB6;' />
+  <entry from='य्' to='&#xB8;' />
+  <entry from='ह्' to='&#xBA;' />
+  <entry from='झ्' to='&#xD6;' />
+  <entry from='य' to='&#x3B;' />
+  <entry from='ढ' to='&#x3C;' />
+  <entry from='झ' to='&#x3E;' />
+  <entry from='घ्' to='&#x3F;' />
+  <entry from='घ' to='&#x3F;&#x6B;' />
+  <entry from='ठ' to='&#x42;' />
+  <entry from='ब्' to='&#x43;' />
+  <entry from='क्' to='&#x44;' />
+  <entry from='म्' to='&#x45;' />
+  <entry from='थ्' to='&#x46;' />
+  <entry from='थ' to='&#x46;&#x6B;' />
+  <entry from='भ्' to='&#x48;' />
+  <entry from='भ' to='&#x48;&#x6B;' />
+  <entry from='प्' to='&#x49;' />
+  <entry from='स्' to='&#x4C;' />
+  <entry from='ड' to='&#x4D;' />
+  <entry from='छ' to='&#x4E;' />
+  <entry from='व्' to='&#x4F;' />
+  <entry from='च्' to='&#x50;' />
+  <entry from='फ' to='&#x51;' />
+  <entry from='त्' to='&#x52;' />
+  <entry from='त' to='&#x72;' />
+  <entry from='ज्' to='&#x54;' />
+  <entry from='न्' to='&#x55;' />
+  <entry from='ट' to='&#x56;' />
+  <entry from='ग्' to='&#x58;' />
+  <entry from='ल्' to='&#x59;' />
+  <entry from='ख्' to='&#x5B;' />
+  <entry from='ख' to='&#x5B;&#x6B;' />
+  <entry from='ब' to='&#x63;' />
+  <entry from='क' to='&#x64;' />
+  <entry from='म' to='&#x65;' />
+  <entry from='ह' to='&#x67;' />
+  <entry from='प' to='&#x69;' />
+  <entry from='र' to='&#x6A;' />
+  <entry from='स' to='&#x6C;' />
+  <entry from='द' to='&#x6E;' />
+  <entry from='व' to='&#x6F;' />
+  <entry from='च' to='&#x70;' />
+  <entry from='ज' to='&#x74;' />
+  <entry from='न' to='&#x75;' />
+  <entry from='अ' to='&#x76;' />
+  <entry from='ग' to='&#x78;' />
+  <entry from='ल' to='&#x79;' />
+  <entry from='्र' to='&#x7A;' />
+  <entry from='ङ' to='&#xB3;' />
+  <entry from='ळ' to='&#xFF;' />
+  
+<!-- Numbers-->
+  <entry from='१' to='ƒ' />
+  <entry from='२' to='„' />
+  <entry from='३' to='…' />
+  <entry from='४' to='†' />
+  <entry from='५' to='‡' />
+  <entry from='६' to='ˆ' />
+  <entry from='७' to='‰' />
+  <entry from='८' to='Š' />
+  <entry from='९' to='‹' />
+  <entry from='०' to='Œ' />
+  <entry from='1' to='ƒ' />
+  <entry from='2' to='„' />
+  <entry from='3' to='…' />
+  <entry from='4' to='†' />
+  <entry from='5' to='‡' />
+  <entry from='6' to='ˆ' />
+  <entry from='7' to='‰' />
+  <entry from='8' to='Š' />
+  <entry from='9' to='‹' />
+  <entry from='0' to='Œ' />
+
+<!-- Halant-->
+  <entry from='्' to='&#x7E;' />
+  <entry from='HkxokU' to='Hkxoku~' />
+
+
+  
+  
+  
+</mapping>

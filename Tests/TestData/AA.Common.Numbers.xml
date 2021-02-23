@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <set xsi:noNamespaceSchemaLocation="FontConversionTestData.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <case local="0123456789" unicode="0123456789" />
+  <case local="0123456789" unicode="0123456789" direction="to-unicode" />
   <case local="ƒ„…†‡ˆ‰Š‹Œ" unicode="१२३४५६७८९०" comment="Unicode version of numbers"/>
-  <case local="&#x83;&#x84;&#x85;&#x86;&#x87;&#x88;&#x89;&#x8A;&#x8B;&#x8C;" unicode="१२३४५६७८९०" comment="CP1252 version of the numbers"/>
-  <case local="&#xF083;&#xF084;&#xF085;&#xF086;&#xF087;&#xF088;&#xF089;&#xF08A;&#xF08B;&#xF08C;" unicode="१२३४५६७८९०" comment="CP1252 in PUA version of the numbers"/>
+  <case local="&#x83;&#x84;&#x85;&#x86;&#x87;&#x88;&#x89;&#x8A;&#x8B;&#x8C;" unicode="१२३४५६७८९०" comment="CP1252 version of the numbers" />
+  <case local="&#xF083;&#xF084;&#xF085;&#xF086;&#xF087;&#xF088;&#xF089;&#xF08A;&#xF08B;&#xF08C;" unicode="१२३४५६७८९०" comment="CP1252 in PUA version of the numbers" direction="to-unicode" />
 </set>
